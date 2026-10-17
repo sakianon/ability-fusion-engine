@@ -223,7 +223,13 @@ function setSelected(id, selected) {
   if (selected) next.push(id);
   settings.selectedIds = [...new Set(next)];
   saveSettings();
-  renderPanel();
+  const selectedOnly = panelRoot?.querySelector("#afe-selected-filter")?.getAttribute("aria-pressed") === "true";
+  if (selectedOnly && !selected) {
+    refreshPanel();
+  } else {
+    updateAbilityCardSelection(id, selected);
+    renderLoadout();
+  }
   setStatus(selected ? "已加入外挂，下次生成会带上它。" : "已取消外挂，下次生成不再带上它。");
 }
 
@@ -417,6 +423,7 @@ function createAbilityCard(ability) {
   const card = document.createElement("article");
   const selected = isSelected(ability.id);
   card.className = `afe-card${selected ? " is-selected" : ""}`;
+  card.dataset.id = ability.id;
   card.tabIndex = 0;
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `查看 ${ability.name} 的完整信息`);
@@ -484,6 +491,19 @@ function createAbilityCard(ability) {
   return card;
 }
 
+function updateAbilityCardSelection(id, selected) {
+  if (!panelRoot) return;
+  const card = [...panelRoot.querySelectorAll(".afe-card")].find((item) => item.dataset.id === id);
+  if (!card) return;
+  card.classList.toggle("is-selected", selected);
+  card.dataset.selected = String(selected);
+  const action = card.querySelector(".afe-card-action");
+  if (!action) return;
+  action.setAttribute("aria-pressed", String(selected));
+  action.dataset.state = selected ? "selected" : "available";
+  action.textContent = selected ? "已加入" : "加入外挂";
+}
+
 function filterAbilities() {
   const search = panelRoot.querySelector("#afe-search").value.trim().toLowerCase();
   const category = panelRoot.querySelector(".afe-category.is-active")?.dataset.category ?? "all";
@@ -539,13 +559,14 @@ function renderWorkOptions() {
   }
 }
 
-function renderResults() {
+function renderResults(animate = false) {
   const results = panelRoot.querySelector("#afe-results");
   const empty = panelRoot.querySelector("#afe-empty");
   const filtered = filterAbilities();
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   currentPage = Math.min(currentPage, totalPages);
   const start = (currentPage - 1) * PAGE_SIZE;
+  results.classList.toggle("is-entering", animate);
   results.replaceChildren(...filtered.slice(start, start + PAGE_SIZE).map(createAbilityCard));
   panelRoot.querySelector("#afe-results-count").textContent = `${filtered.length} 条`;
   empty.hidden = filtered.length > 0;
@@ -561,14 +582,16 @@ function renderResults() {
   if (next) next.disabled = currentPage >= totalPages;
 }
 
-function renderLoadout() {
+function renderLoadout(animate = false) {
   const selected = selectedAbilities();
   const list = panelRoot.querySelector("#afe-loadout-list");
   const empty = panelRoot.querySelector("#afe-loadout-empty");
+  list.classList.toggle("is-entering", animate);
   list.replaceChildren();
   for (const ability of selected) {
     const item = document.createElement("div");
     item.className = "afe-loadout-item";
+    item.dataset.id = ability.id;
     item.dataset.category = ability.category;
     const copy = document.createElement("div");
     const name = document.createElement("strong");
@@ -579,9 +602,9 @@ function renderLoadout() {
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "afe-remove-button";
+    remove.dataset.id = ability.id;
     remove.setAttribute("aria-label", `取消 ${ability.name}`);
     remove.textContent = "×";
-    subscribeDom(remove, "click", () => setSelected(ability.id, false));
     item.append(copy, remove);
     list.append(item);
   }
@@ -597,14 +620,14 @@ function renderMasterSwitch() {
   panelRoot.querySelector("#afe-master-state").textContent = enabled ? "正在注入" : "已关闭";
 }
 
-function renderPanel() {
+function renderPanel({ animate = false } = {}) {
   if (!panelRoot) return;
   clearDomSubscriptions();
   renderWorkOptions();
   renderCategoryCounts();
   renderMasterSwitch();
-  renderResults();
-  renderLoadout();
+  renderResults(animate);
+  renderLoadout(animate);
   setPanelError(dataLoadError);
 
   subscribeDom(panelRoot.querySelector("#afe-enabled"), "change", (event) => {
@@ -645,6 +668,10 @@ function renderPanel() {
     event.currentTarget.setAttribute("aria-pressed", String(next));
     event.currentTarget.classList.toggle("is-active", next);
     refreshPanel();
+  });
+  subscribeDom(panelRoot.querySelector("#afe-loadout-list"), "click", (event) => {
+    const remove = event.target.closest(".afe-remove-button");
+    if (remove?.dataset.id) setSelected(remove.dataset.id, false);
   });
   for (const button of panelRoot.querySelectorAll(".afe-category")) {
     subscribeDom(button, "click", () => {
@@ -785,7 +812,7 @@ async function mountPanel() {
     const detailModal = panelRoot.querySelector("#afe-detail-modal");
     if (editorModal) document.body.append(editorModal);
     if (detailModal) document.body.append(detailModal);
-    renderPanel();
+    renderPanel({ animate: true });
     setPanelError(dataLoadError);
   } catch (error) {
     console.error(`[${MODULE_ID}] failed to open ability panel`, error);
