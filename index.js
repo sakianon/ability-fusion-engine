@@ -166,7 +166,12 @@ function setPanelError(message) {
 }
 
 function setStatus(message) {
-  panelRoot?.querySelector("#afe-status")?.replaceChildren(document.createTextNode(message));
+  const status = panelRoot?.querySelector("#afe-status");
+  if (!status) return;
+  status.replaceChildren(document.createTextNode(message));
+  status.classList.remove("is-flashing");
+  void status.offsetWidth;
+  status.classList.add("is-flashing");
 }
 
 function setSelected(id, selected) {
@@ -194,6 +199,8 @@ function createAbilityCard(ability) {
   const card = document.createElement("article");
   const selected = isSelected(ability.id);
   card.className = `afe-card${selected ? " is-selected" : ""}`;
+  card.dataset.category = ability.category;
+  card.dataset.selected = String(selected);
 
   const top = document.createElement("div");
   top.className = "afe-card-top";
@@ -220,6 +227,7 @@ function createAbilityCard(ability) {
   action.type = "button";
   action.className = "afe-card-action";
   action.setAttribute("aria-pressed", String(selected));
+  action.dataset.state = selected ? "selected" : "available";
   action.textContent = selected ? "已加入" : "加入外挂";
   subscribeDom(action, "click", () => setSelected(ability.id, !isSelected(ability.id)));
 
@@ -280,6 +288,7 @@ function renderLoadout() {
   for (const ability of selected) {
     const item = document.createElement("div");
     item.className = "afe-loadout-item";
+    item.dataset.category = ability.category;
     const copy = document.createElement("div");
     const name = document.createElement("strong");
     name.textContent = ability.name;
