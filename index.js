@@ -28,6 +28,7 @@ let dataLoadError = "";
 let currentPage = 1;
 let editingAbilityId = "";
 let detailAbilityId = "";
+let detailTrigger = null;
 let workOptionsExpanded = false;
 let panelRoot = null;
 let panelShell = null;
@@ -294,22 +295,28 @@ function renderAbilityDetails(ability) {
   }
 }
 
-function openAbilityDetails(abilityId) {
+function openAbilityDetails(abilityId, trigger = null) {
   const ability = getAbility(abilityId);
   const modal = panelRoot?.querySelector("#afe-detail-modal");
   const title = panelRoot?.querySelector("#afe-detail-title");
   if (!ability || !modal || !title) return;
+  const scrollTop = panelRoot.scrollTop;
   detailAbilityId = abilityId;
+  detailTrigger = trigger ?? document.activeElement;
   title.textContent = ability.name;
   renderAbilityDetails(ability);
   modal.hidden = false;
-  panelRoot.querySelector("#afe-detail-close")?.focus();
+  panelRoot.querySelector("#afe-detail-close")?.focus({ preventScroll: true });
+  panelRoot.scrollTop = scrollTop;
 }
 
-function closeAbilityDetails() {
+function closeAbilityDetails({ restoreFocus = true } = {}) {
+  const trigger = detailTrigger;
   detailAbilityId = "";
+  detailTrigger = null;
   const modal = panelRoot?.querySelector("#afe-detail-modal");
   if (modal) modal.hidden = true;
+  if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
 }
 
 function applyAbilityTemplate() {
@@ -409,13 +416,13 @@ function createAbilityCard(ability) {
   card.dataset.selected = String(selected);
   subscribeDom(card, "click", (event) => {
     if (event.target.closest("button, a")) return;
-    openAbilityDetails(ability.id);
+    openAbilityDetails(ability.id, card);
   });
   subscribeDom(card, "keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
     if (event.target !== card) return;
     event.preventDefault();
-    openAbilityDetails(ability.id);
+    openAbilityDetails(ability.id, card);
   });
 
   const top = document.createElement("div");
@@ -484,8 +491,12 @@ function filterAbilities() {
 }
 
 function renderCategoryCounts() {
-  const counts = { all: abilities.length, ability: 0, cultivation: 0, skill: 0, system: 0 };
-  for (const ability of abilities) counts[ability.category] += 1;
+  const selectedWork = panelRoot.querySelector("#afe-work-filter")?.value ?? "";
+  const visibleAbilities = selectedWork
+    ? abilities.filter((ability) => ability.work === selectedWork)
+    : abilities;
+  const counts = { all: visibleAbilities.length, ability: 0, cultivation: 0, skill: 0, system: 0 };
+  for (const ability of visibleAbilities) counts[ability.category] += 1;
   for (const [key, count] of Object.entries(counts)) {
     const target = panelRoot.querySelector(`[data-count="${key}"]`);
     if (target) target.textContent = String(count);
@@ -581,8 +592,8 @@ function renderMasterSwitch() {
 function renderPanel() {
   if (!panelRoot) return;
   clearDomSubscriptions();
-  renderCategoryCounts();
   renderWorkOptions();
+  renderCategoryCounts();
   renderMasterSwitch();
   renderResults();
   renderLoadout();
@@ -715,7 +726,7 @@ async function openPanel() {
 
 function closePanel() {
   if (!panelShell) return;
-  closeAbilityDetails();
+  closeAbilityDetails({ restoreFocus: false });
   panelShell.hidden = true;
   menuEntry?.setAttribute("aria-expanded", "false");
   if (documentKeyHandler) document.removeEventListener("keydown", documentKeyHandler);
