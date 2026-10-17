@@ -670,11 +670,11 @@ function renderPanel() {
   });
   const detailModal = panelRoot.querySelector("#afe-detail-modal");
   if (detailModal) subscribeDom(detailModal, "click", (event) => {
-    if (event.target === detailModal) closeAbilityDetails();
+    if (event.target === event.currentTarget) closeAbilityDetails();
   });
   const editorModal = panelRoot.querySelector("#afe-editor-modal");
   if (editorModal) subscribeDom(editorModal, "click", (event) => {
-    if (event.target === editorModal) closeAbilityEditor();
+    if (event.target === event.currentTarget) closeAbilityEditor();
   });
 }
 
