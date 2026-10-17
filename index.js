@@ -27,6 +27,7 @@ let abilities = [];
 let dataLoadError = "";
 let currentPage = 1;
 let editingAbilityId = "";
+let editorTrigger = null;
 let detailAbilityId = "";
 let detailTrigger = null;
 let workOptionsExpanded = false;
@@ -244,13 +245,16 @@ function setEditorField(id, value) {
   if (field) field.value = value ?? "";
 }
 
-function openAbilityEditor(abilityId = "") {
+function openAbilityEditor(abilityId = "", trigger = null) {
   if (!panelRoot) return;
   editingAbilityId = abilityId;
+  editorTrigger = trigger ?? document.activeElement;
   const ability = abilityId ? getAbility(abilityId) : null;
+  const editorModal = panelRoot.querySelector("#afe-editor-modal");
   const editor = panelRoot.querySelector("#afe-editor");
-  if (!editor) return;
-  editor.hidden = false;
+  if (!editorModal || !editor) return;
+  const scrollTop = panelRoot.scrollTop;
+  editorModal.hidden = false;
   panelRoot.querySelector("#afe-editor-title").textContent = ability ? "编辑外挂条目" : "新建外挂条目";
   panelRoot.querySelector("#afe-editor-mode").textContent = ability
     ? (baseAbilities.some((item) => item.id === ability.id) ? "修改内置条目" : "修改自定义条目")
@@ -261,13 +265,17 @@ function openAbilityEditor(abilityId = "") {
   setEditorField("afe-editor-tags", ability?.tags?.join(", ") ?? "自定义");
   setEditorField("afe-editor-description", ability?.description ?? "描述这条外挂能做什么，以及它的边界。");
   setEditorField("afe-editor-prompt", ability?.prompt ?? "外挂能力：请在这里写入会注入给模型的完整设定，并明确限制条件。");
-  panelRoot.querySelector("#afe-editor-name")?.focus();
+  panelRoot.querySelector("#afe-editor-name")?.focus({ preventScroll: true });
+  panelRoot.scrollTop = scrollTop;
 }
 
-function closeAbilityEditor() {
+function closeAbilityEditor({ restoreFocus = true } = {}) {
+  const trigger = editorTrigger;
   editingAbilityId = "";
-  const editor = panelRoot?.querySelector("#afe-editor");
-  if (editor) editor.hidden = true;
+  editorTrigger = null;
+  const editorModal = panelRoot?.querySelector("#afe-editor-modal");
+  if (editorModal) editorModal.hidden = true;
+  if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
 }
 
 function renderAbilityDetails(ability) {
@@ -463,7 +471,7 @@ function createAbilityCard(ability) {
   edit.className = "afe-card-edit";
   edit.setAttribute("aria-label", `编辑 ${ability.name}`);
   edit.textContent = "编辑";
-  subscribeDom(edit, "click", () => openAbilityEditor(ability.id));
+  subscribeDom(edit, "click", () => openAbilityEditor(ability.id, edit));
   const remove = document.createElement("button");
   remove.type = "button";
   remove.className = "afe-card-delete";
@@ -617,7 +625,7 @@ function renderPanel() {
       refreshPanel();
     });
   }
-  subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", () => openAbilityEditor());
+  subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", (event) => openAbilityEditor("", event.currentTarget));
   subscribeDom(panelRoot.querySelector("#afe-editor-form"), "submit", (event) => {
     event.preventDefault();
     saveAbilityFromEditor();
@@ -663,6 +671,10 @@ function renderPanel() {
   const detailModal = panelRoot.querySelector("#afe-detail-modal");
   if (detailModal) subscribeDom(detailModal, "click", (event) => {
     if (event.target === detailModal) closeAbilityDetails();
+  });
+  const editorModal = panelRoot.querySelector("#afe-editor-modal");
+  if (editorModal) subscribeDom(editorModal, "click", (event) => {
+    if (event.target === editorModal) closeAbilityEditor();
   });
 }
 
@@ -718,6 +730,7 @@ async function openPanel() {
   documentKeyHandler ??= (event) => {
     if (event.key !== "Escape") return;
     if (detailAbilityId) closeAbilityDetails();
+    else if (!panelRoot?.querySelector("#afe-editor-modal")?.hidden) closeAbilityEditor();
     else closePanel();
   };
   document.addEventListener("keydown", documentKeyHandler);
@@ -726,6 +739,7 @@ async function openPanel() {
 
 function closePanel() {
   if (!panelShell) return;
+  closeAbilityEditor({ restoreFocus: false });
   closeAbilityDetails({ restoreFocus: false });
   panelShell.hidden = true;
   menuEntry?.setAttribute("aria-expanded", "false");

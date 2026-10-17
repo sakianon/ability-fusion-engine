@@ -45,27 +45,29 @@
     <button id="afe-selected-filter" class="afe-filter-toggle" type="button" aria-pressed="false"><span class="afe-filter-icon" aria-hidden="true">◎</span>只看已选 <span id="afe-selected-filter-count">0</span></button>
   </div>
 
-  <section id="afe-editor" class="afe-editor" hidden aria-labelledby="afe-editor-title">
-    <div class="afe-editor-heading">
-      <div>
-        <span class="afe-section-kicker"><span class="afe-kicker-pulse"></span>EDITOR / 条目编辑器</span>
-        <h3 id="afe-editor-title">新建外挂条目</h3>
-        <p id="afe-editor-mode">用户资料库 / 新条目</p>
+  <section id="afe-editor-modal" class="afe-editor-modal" hidden role="dialog" aria-modal="true" aria-labelledby="afe-editor-title">
+    <section id="afe-editor" class="afe-editor" aria-labelledby="afe-editor-title">
+      <div class="afe-editor-heading">
+        <div>
+          <span class="afe-section-kicker"><span class="afe-kicker-pulse"></span>EDITOR / 条目编辑器</span>
+          <h3 id="afe-editor-title">新建外挂条目</h3>
+          <p id="afe-editor-mode">用户资料库 / 新条目</p>
+        </div>
+        <button id="afe-editor-template" class="afe-editor-template" type="button">载入设定模板</button>
       </div>
-      <button id="afe-editor-template" class="afe-editor-template" type="button">载入设定模板</button>
-    </div>
-    <form id="afe-editor-form" class="afe-editor-form">
-      <label class="afe-field afe-field-category">类型<select id="afe-editor-category"><option value="ability">能力</option><option value="cultivation">功法</option><option value="skill">技能</option><option value="system">系统</option></select></label>
-      <label class="afe-field">名称<input id="afe-editor-name" type="text" maxlength="80" placeholder="例如：镜界步" required></label>
-      <label class="afe-field">作品 / 来源<input id="afe-editor-work" type="text" maxlength="120" placeholder="例如：用户自定义作品"></label>
-      <label class="afe-field">标签<input id="afe-editor-tags" type="text" maxlength="180" placeholder="用逗号分隔，最多 6 个"></label>
-      <label class="afe-field afe-field-wide">简介<textarea id="afe-editor-description" rows="2" maxlength="280" placeholder="面板中看到的短说明"></textarea></label>
-      <label class="afe-field afe-field-wide">注入设定<textarea id="afe-editor-prompt" rows="5" maxlength="2400" placeholder="真正注入给模型的完整设定与限制条件" required></textarea></label>
-      <div class="afe-editor-actions">
-        <button id="afe-editor-cancel" class="afe-editor-cancel" type="button">取消</button>
-        <button class="afe-editor-save" type="submit">保存条目</button>
-      </div>
-    </form>
+      <form id="afe-editor-form" class="afe-editor-form">
+        <label class="afe-field afe-field-category">类型<select id="afe-editor-category"><option value="ability">能力</option><option value="cultivation">功法</option><option value="skill">技能</option><option value="system">系统</option></select></label>
+        <label class="afe-field">名称<input id="afe-editor-name" type="text" maxlength="80" placeholder="例如：镜界步" required></label>
+        <label class="afe-field">作品 / 来源<input id="afe-editor-work" type="text" maxlength="120" placeholder="例如：用户自定义作品"></label>
+        <label class="afe-field">标签<input id="afe-editor-tags" type="text" maxlength="180" placeholder="用逗号分隔，最多 6 个"></label>
+        <label class="afe-field afe-field-wide">简介<textarea id="afe-editor-description" rows="2" maxlength="280" placeholder="面板中看到的短说明"></textarea></label>
+        <label class="afe-field afe-field-wide">注入设定<textarea id="afe-editor-prompt" rows="5" maxlength="2400" placeholder="真正注入给模型的完整设定与限制条件" required></textarea></label>
+        <div class="afe-editor-actions">
+          <button id="afe-editor-cancel" class="afe-editor-cancel" type="button">取消</button>
+          <button class="afe-editor-save" type="submit">保存条目</button>
+        </div>
+      </form>
+    </section>
   </section>
 
   <section id="afe-detail-modal" class="afe-detail-modal" hidden role="dialog" aria-modal="true" aria-labelledby="afe-detail-title">
