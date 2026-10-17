@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sample-luminous-body",
+    "category": "ability",
+    "name": "不灭琉璃体",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["防御", "体质"],
+    "description": "身体获得稳定的恢复力与抗性，但不会替角色自动做出行动。",
+    "prompt": "外挂能力：不灭琉璃体。用户拥有稳定的身体恢复力和较强抗性；请把它当作用户设定的一部分，在冲突场景中保持前后一致，不要凭空增加无限复活。"
+  },
+  {
+    "id": "sample-mirror-step",
+    "category": "skill",
+    "name": "镜界步",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["移动", "空间"],
+    "description": "短距离借助镜面或反光面转移，使用条件和距离需要符合场景。",
+    "prompt": "外挂技能：镜界步。用户可以借助可见的镜面或强反光面进行短距离位移；每次使用都要遵守距离、视线和环境条件，不能无成本穿越任意障碍。"
+  },
+  {
+    "id": "sample-void-manual",
+    "category": "cultivation",
+    "name": "太虚引气诀",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["修炼", "能量"],
+    "description": "一种强调感知、蓄积和控制的基础功法。",
+    "prompt": "外挂功法：太虚引气诀。用户能够通过呼吸和专注感知并缓慢蓄积环境能量；修炼需要时间，效果受环境和状态影响，不要直接跳过成长过程。"
+  },
+  {
+    "id": "sample-quest-core",
+    "category": "system",
+    "name": "万界任务核心",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["任务", "辅助"],
+    "description": "提供目标、提醒和有限反馈，不替用户决定剧情。",
+    "prompt": "外挂系统：万界任务核心。系统可以在需要时给出清晰的任务目标、进度提醒和有限奖励说明；系统不能替用户发言、不能强制改写角色意志，也不能凭空完成任务。"
+  },
+  {
+    "id": "sample-sword-intent",
+    "category": "ability",
+    "name": "万象剑意",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["战斗", "感知"],
+    "description": "将观察到的攻势抽象成可理解的节奏，帮助使用者应对战斗。",
+    "prompt": "外挂能力：万象剑意。用户能从对手的动作中捕捉攻势节奏并改进应对，但仍会受到速度、体力、信息不足和伤势限制。"
+  },
+  {
+    "id": "sample-alchemy-foundation",
+    "category": "cultivation",
+    "name": "九转炼元篇",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["炼体", "成长"],
+    "description": "通过阶段性锻炼提升身体对能量的承载力。",
+    "prompt": "外挂功法：九转炼元篇。用户可以通过阶段性锻炼提升能量承载力；每一阶段都需要代价、训练或材料，不要把功法写成即时无敌。"
+  },
+  {
+    "id": "sample-memory-palace",
+    "category": "skill",
+    "name": "星图记忆宫",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["记忆", "学习"],
+    "description": "用空间化结构整理已接触的信息，不能读取未知事实。",
+    "prompt": "外挂技能：星图记忆宫。用户能更可靠地整理和回忆已经观察、阅读或亲身经历的信息；它不能读取未知内容，也不能保证记忆绝对正确。"
+  },
+  {
+    "id": "sample-fate-ledger",
+    "category": "system",
+    "name": "因果账簿",
+    "work": "示例·原创能力库",
+    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
+    "tags": ["因果", "记录"],
+    "description": "记录承诺和代价，提醒因果关系，不直接改写命运。",
+    "prompt": "外挂系统：因果账簿。系统可以记录角色做出的承诺、交换和代价，并在相关情节出现时提醒一致性；它不能直接决定结果，也不能替故事强行制造因果。"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "display_name": "外挂能力聚合引擎",
+  "loading_order": 120,
+  "dependencies": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "TavernWeave",
+  "version": "0.1.0",
+  "auto_update": false,
+  "minimum_client_version": "1.18.0",
+  "generate_interceptor": "AbilityFusion_interceptGeneration",
+  "hooks": {
+    "install": "onInstall",
+    "update": "onUpdate",
+    "delete": "onDelete",
+    "enable": "onEnable",
+    "disable": "onDisable",
+    "activate": "onActivate",
+    "clean": "onClean"
+  }
+}

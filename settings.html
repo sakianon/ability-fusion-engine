@@ -1,0 +1,66 @@
+<section id="afe-panel" class="afe-panel" aria-labelledby="afe-title">
+  <header class="afe-header">
+    <div class="afe-heading">
+      <div class="afe-eyebrow"><span class="afe-sigil" aria-hidden="true">✦</span> LOADOUT ARCHIVE</div>
+      <h2 id="afe-title">外挂能力聚合引擎</h2>
+      <p>挑选你想带入故事的能力。只会注入你勾选的内容。</p>
+    </div>
+    <label class="afe-master-switch" for="afe-enabled">
+      <input id="afe-enabled" type="checkbox">
+      <span class="afe-switch-track" aria-hidden="true"><span></span></span>
+      <span class="afe-switch-copy"><strong>注入开关</strong><small id="afe-master-state">已关闭</small></span>
+    </label>
+  </header>
+
+  <div class="afe-controls">
+    <label class="afe-search-wrap">
+      <span class="afe-visually-hidden">搜索外挂名称、作品或说明</span>
+      <span class="afe-search-mark" aria-hidden="true">⌕</span>
+      <input id="afe-search" type="search" placeholder="搜能力、功法、技能或作品…" autocomplete="off">
+    </label>
+    <label class="afe-work-wrap">
+      <span class="afe-visually-hidden">按作品筛选</span>
+      <select id="afe-work-filter">
+        <option value="">全部作品</option>
+      </select>
+    </label>
+    <button id="afe-selected-filter" class="afe-filter-toggle" type="button" aria-pressed="false">只看已选 <span id="afe-selected-filter-count">0</span></button>
+  </div>
+
+  <nav class="afe-categories" aria-label="按外挂类型筛选">
+    <button type="button" class="afe-category is-active" data-category="all" aria-pressed="true">全部 <span data-count="all">0</span></button>
+    <button type="button" class="afe-category" data-category="ability" aria-pressed="false">能力 <span data-count="ability">0</span></button>
+    <button type="button" class="afe-category" data-category="cultivation" aria-pressed="false">功法 <span data-count="cultivation">0</span></button>
+    <button type="button" class="afe-category" data-category="skill" aria-pressed="false">技能 <span data-count="skill">0</span></button>
+    <button type="button" class="afe-category" data-category="system" aria-pressed="false">系统 <span data-count="system">0</span></button>
+  </nav>
+
+  <div class="afe-workspace">
+    <section class="afe-library" aria-labelledby="afe-library-title">
+      <div class="afe-section-heading">
+        <div><span class="afe-section-kicker">LIBRARY / 资料库</span><h3 id="afe-library-title">外挂条目</h3></div>
+        <span id="afe-results-count" class="afe-results-count">0 条</span>
+      </div>
+      <div id="afe-results" class="afe-results" aria-live="polite"></div>
+      <p id="afe-empty" class="afe-empty" hidden>没有找到匹配项。试试换个关键词或分类。</p>
+      <p id="afe-error" class="afe-error" role="status" hidden></p>
+    </section>
+
+    <aside class="afe-loadout" aria-labelledby="afe-loadout-title">
+      <div class="afe-section-heading afe-loadout-heading">
+        <div><span class="afe-section-kicker">ACTIVE / 当前选择</span><h3 id="afe-loadout-title">我的外挂</h3></div>
+        <span id="afe-loadout-count" class="afe-loadout-count">0</span>
+      </div>
+      <p class="afe-loadout-note">生成前作为临时设定加入，不会改写角色卡正文。</p>
+      <div id="afe-loadout-list" class="afe-loadout-list"></div>
+      <p id="afe-loadout-empty" class="afe-loadout-empty">还没有选择。点左侧“加入”开始搭配。</p>
+      <div class="afe-loadout-footer"><span>提示词估算</span><strong id="afe-token-estimate">0 字</strong></div>
+    </aside>
+  </div>
+
+  <footer class="afe-footer">
+    <span class="afe-footer-mark" aria-hidden="true">✦</span>
+    <span id="afe-status" role="status">选择已保存在酒馆设置中。</span>
+    <span class="afe-footer-hint">示例资料 · 可继续扩充</span>
+  </footer>
+</section>
