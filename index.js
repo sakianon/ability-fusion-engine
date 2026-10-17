@@ -443,12 +443,25 @@ function renderCategoryCounts() {
 
 function renderWorkOptions() {
   const select = panelRoot.querySelector("#afe-work-filter");
+  const options = panelRoot.querySelector("#afe-work-options");
   const current = select.value;
+  const works = [...new Set(abilities.map((ability) => ability.work))].sort((a, b) => a.localeCompare(b));
   select.replaceChildren(new Option("全部作品", ""));
-  for (const work of [...new Set(abilities.map((ability) => ability.work))].sort((a, b) => a.localeCompare(b))) {
+  for (const work of works) {
     select.append(new Option(work, work));
   }
-  select.value = current;
+  select.value = works.includes(current) ? current : "";
+  options.replaceChildren();
+  const allWorks = ["", ...works];
+  for (const work of allWorks) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `afe-work-category${work === select.value ? " is-active" : ""}`;
+    button.dataset.work = work;
+    button.setAttribute("aria-pressed", String(work === select.value));
+    button.textContent = work || "全部作品";
+    options.append(button);
+  }
 }
 
 function renderResults() {
@@ -527,6 +540,12 @@ function renderPanel() {
   });
   subscribeDom(panelRoot.querySelector("#afe-search"), "input", refreshPanel);
   subscribeDom(panelRoot.querySelector("#afe-work-filter"), "change", refreshPanel);
+  for (const button of panelRoot.querySelectorAll(".afe-work-category")) {
+    subscribeDom(button, "click", () => {
+      panelRoot.querySelector("#afe-work-filter").value = button.dataset.work;
+      refreshPanel();
+    });
+  }
   subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", () => openAbilityEditor());
   subscribeDom(panelRoot.querySelector("#afe-editor-form"), "submit", (event) => {
     event.preventDefault();
