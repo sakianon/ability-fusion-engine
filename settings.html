@@ -68,6 +68,37 @@
     </form>
   </section>
 
+  <section id="afe-detail-modal" class="afe-detail-modal" hidden role="dialog" aria-modal="true" aria-labelledby="afe-detail-title">
+    <div class="afe-detail-card">
+      <header class="afe-detail-header">
+        <div>
+          <span class="afe-section-kicker"><span class="afe-kicker-pulse is-amber"></span>DETAIL / 完整信息</span>
+          <h3 id="afe-detail-title">外挂条目</h3>
+          <p id="afe-detail-work">未标注作品</p>
+        </div>
+        <button id="afe-detail-close" class="afe-close" type="button" aria-label="关闭条目详情"><span aria-hidden="true">×</span></button>
+      </header>
+      <div class="afe-detail-meta">
+        <span id="afe-detail-category" class="afe-card-category">能力</span>
+        <span id="afe-detail-source" class="afe-tag">资料整理</span>
+        <div id="afe-detail-tags" class="afe-detail-tags"></div>
+      </div>
+      <div class="afe-detail-body">
+        <section class="afe-detail-section">
+          <span class="afe-detail-label">DESCRIPTION / 简介</span>
+          <p id="afe-detail-description"></p>
+        </section>
+        <section class="afe-detail-section">
+          <span class="afe-detail-label">INJECTION / 注入设定</span>
+          <pre id="afe-detail-prompt"></pre>
+        </section>
+      </div>
+      <div class="afe-detail-actions">
+        <button id="afe-detail-action" class="afe-card-action" type="button">加入外挂</button>
+      </div>
+    </div>
+  </section>
+
   <nav class="afe-categories" aria-label="按外挂类型筛选">
     <div class="afe-category-line" aria-hidden="true"></div>
     <button type="button" class="afe-category is-active" data-category="all" aria-pressed="true"><span class="afe-category-glyph">◌</span>全部 <span data-count="all">0</span></button>
@@ -78,7 +109,11 @@
   </nav>
 
   <nav class="afe-work-categories" aria-label="按作品筛选">
-    <span class="afe-work-categories-label"><span class="afe-work-categories-mark" aria-hidden="true">◈</span>作品</span>
+    <button id="afe-work-toggle" class="afe-work-toggle" type="button" aria-expanded="false" aria-controls="afe-work-options">
+      <span class="afe-work-categories-label"><span class="afe-work-categories-mark" aria-hidden="true">◈</span>作品</span>
+      <span id="afe-work-current" class="afe-work-current">全部作品</span>
+      <span class="afe-work-toggle-icon" aria-hidden="true">⌄</span>
+    </button>
     <div id="afe-work-options" class="afe-work-options"></div>
   </nav>
 

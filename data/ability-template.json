@@ -5,8 +5,7 @@
   "work": "用户自定义作品",
   "source": {
     "status": "custom",
-    "label": "用户自定义",
-    "url": null
+    "label": "用户自定义"
   },
   "tags": ["标签一", "标签二"],
   "description": "用一句话说明这条外挂的作用、触发条件和不能做什么。",

@@ -18,7 +18,7 @@
 - 总注入开关；
 - 生成前通过 `generate_interceptor` 插入附加设定；
 - `data/abilities.json` 可继续扩充的本地数据格式；
-- 内置小说、动漫能力资料，条目带来源标签和来源链接。
+- 内置小说、动漫能力资料，条目带来源标签。
 
 ## 安装位置
 
@@ -45,7 +45,7 @@
   "category": "ability",
   "name": "名称",
   "work": "作品名",
-  "source": { "status": "verified | reference | unverified | custom", "label": "来源说明", "url": null },
+  "source": { "status": "verified | reference | unverified | custom", "label": "来源说明" },
   "tags": ["标签"],
   "description": "面板中的短说明",
   "prompt": "真正注入给模型的说明"

@@ -27,6 +27,8 @@ let abilities = [];
 let dataLoadError = "";
 let currentPage = 1;
 let editingAbilityId = "";
+let detailAbilityId = "";
+let workOptionsExpanded = false;
 let panelRoot = null;
 let panelShell = null;
 let menuEntry = null;
@@ -148,11 +150,8 @@ function normalizeAbilities(value) {
         ? {
           status: typeof item.source.status === "string" ? item.source.status : "unverified",
           label: typeof item.source.label === "string" ? item.source.label : "来源未标注",
-          url: typeof item.source.url === "string" && /^https?:\/\//i.test(item.source.url)
-            ? item.source.url
-            : null,
         }
-        : { status: "unverified", label: "来源未标注", url: null },
+        : { status: "unverified", label: "来源未标注" },
     }));
 }
 
@@ -270,6 +269,49 @@ function closeAbilityEditor() {
   if (editor) editor.hidden = true;
 }
 
+function renderAbilityDetails(ability) {
+  if (!panelRoot || !ability) return;
+  const category = panelRoot.querySelector("#afe-detail-category");
+  const source = panelRoot.querySelector("#afe-detail-source");
+  const work = panelRoot.querySelector("#afe-detail-work");
+  const tags = panelRoot.querySelector("#afe-detail-tags");
+  const description = panelRoot.querySelector("#afe-detail-description");
+  const prompt = panelRoot.querySelector("#afe-detail-prompt");
+  const action = panelRoot.querySelector("#afe-detail-action");
+  if (category) {
+    category.textContent = CATEGORY_LABELS[ability.category];
+    category.className = `afe-card-category afe-category-${ability.category}`;
+  }
+  if (source) source.textContent = ability.source.label;
+  if (work) work.textContent = ability.work;
+  if (tags) tags.replaceChildren(...ability.tags.map(createTag));
+  if (description) description.textContent = ability.description;
+  if (prompt) prompt.textContent = ability.prompt;
+  if (action) {
+    const selected = isSelected(ability.id);
+    action.textContent = selected ? "取消外挂" : "加入外挂";
+    action.setAttribute("aria-pressed", String(selected));
+  }
+}
+
+function openAbilityDetails(abilityId) {
+  const ability = getAbility(abilityId);
+  const modal = panelRoot?.querySelector("#afe-detail-modal");
+  const title = panelRoot?.querySelector("#afe-detail-title");
+  if (!ability || !modal || !title) return;
+  detailAbilityId = abilityId;
+  title.textContent = ability.name;
+  renderAbilityDetails(ability);
+  modal.hidden = false;
+  panelRoot.querySelector("#afe-detail-close")?.focus();
+}
+
+function closeAbilityDetails() {
+  detailAbilityId = "";
+  const modal = panelRoot?.querySelector("#afe-detail-modal");
+  if (modal) modal.hidden = true;
+}
+
 function applyAbilityTemplate() {
   setEditorField("afe-editor-category", "ability");
   setEditorField("afe-editor-name", "新外挂名称");
@@ -360,8 +402,21 @@ function createAbilityCard(ability) {
   const card = document.createElement("article");
   const selected = isSelected(ability.id);
   card.className = `afe-card${selected ? " is-selected" : ""}`;
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", `查看 ${ability.name} 的完整信息`);
   card.dataset.category = ability.category;
   card.dataset.selected = String(selected);
+  subscribeDom(card, "click", (event) => {
+    if (event.target.closest("button, a")) return;
+    openAbilityDetails(ability.id);
+  });
+  subscribeDom(card, "keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    if (event.target !== card) return;
+    event.preventDefault();
+    openAbilityDetails(ability.id);
+  });
 
   const top = document.createElement("div");
   top.className = "afe-card-top";
@@ -373,16 +428,6 @@ function createAbilityCard(ability) {
   source.className = "afe-tag";
   source.textContent = ability.source.label;
   top.append(source);
-  if (ability.source.url) {
-    const sourceLink = document.createElement("a");
-    sourceLink.className = "afe-source-link";
-    sourceLink.href = ability.source.url;
-    sourceLink.target = "_blank";
-    sourceLink.rel = "noreferrer noopener";
-    sourceLink.textContent = "来源";
-    sourceLink.title = ability.source.url;
-    top.append(sourceLink);
-  }
   for (const tag of ability.tags) top.append(createTag(tag));
 
   const title = document.createElement("h4");
@@ -449,6 +494,8 @@ function renderCategoryCounts() {
 
 function renderWorkOptions() {
   const select = panelRoot.querySelector("#afe-work-filter");
+  const toggle = panelRoot.querySelector("#afe-work-toggle");
+  const currentLabel = panelRoot.querySelector("#afe-work-current");
   const options = panelRoot.querySelector("#afe-work-options");
   const current = select.value;
   const works = [...new Set(abilities.map((ability) => ability.work))].sort((a, b) => a.localeCompare(b));
@@ -457,6 +504,9 @@ function renderWorkOptions() {
     select.append(new Option(work, work));
   }
   select.value = works.includes(current) ? current : "";
+  if (toggle) toggle.setAttribute("aria-expanded", String(workOptionsExpanded));
+  if (currentLabel) currentLabel.textContent = select.value || "全部作品";
+  options.hidden = !workOptionsExpanded;
   options.replaceChildren();
   const allWorks = ["", ...works];
   for (const work of allWorks) {
@@ -546,6 +596,10 @@ function renderPanel() {
   });
   subscribeDom(panelRoot.querySelector("#afe-search"), "input", refreshPanel);
   subscribeDom(panelRoot.querySelector("#afe-work-filter"), "change", refreshPanel);
+  subscribeDom(panelRoot.querySelector("#afe-work-toggle"), "click", () => {
+    workOptionsExpanded = !workOptionsExpanded;
+    renderPanel();
+  });
   for (const button of panelRoot.querySelectorAll(".afe-work-category")) {
     subscribeDom(button, "click", () => {
       panelRoot.querySelector("#afe-work-filter").value = button.dataset.work;
@@ -586,6 +640,19 @@ function renderPanel() {
 
   const closeButton = panelRoot.querySelector("#afe-close");
   if (closeButton) subscribeDom(closeButton, "click", closePanel);
+  const detailClose = panelRoot.querySelector("#afe-detail-close");
+  if (detailClose) subscribeDom(detailClose, "click", closeAbilityDetails);
+  const detailAction = panelRoot.querySelector("#afe-detail-action");
+  if (detailAction) subscribeDom(detailAction, "click", () => {
+    if (!detailAbilityId) return;
+    const abilityId = detailAbilityId;
+    setSelected(abilityId, !isSelected(abilityId));
+    openAbilityDetails(abilityId);
+  });
+  const detailModal = panelRoot.querySelector("#afe-detail-modal");
+  if (detailModal) subscribeDom(detailModal, "click", (event) => {
+    if (event.target === detailModal) closeAbilityDetails();
+  });
 }
 
 function refreshPanel() {
@@ -638,7 +705,9 @@ async function openPanel() {
   panelShell.hidden = false;
   menuEntry?.setAttribute("aria-expanded", "true");
   documentKeyHandler ??= (event) => {
-    if (event.key === "Escape") closePanel();
+    if (event.key !== "Escape") return;
+    if (detailAbilityId) closeAbilityDetails();
+    else closePanel();
   };
   document.addEventListener("keydown", documentKeyHandler);
   panelRoot.querySelector("#afe-search")?.focus();
@@ -646,6 +715,7 @@ async function openPanel() {
 
 function closePanel() {
   if (!panelShell) return;
+  closeAbilityDetails();
   panelShell.hidden = true;
   menuEntry?.setAttribute("aria-expanded", "false");
   if (documentKeyHandler) document.removeEventListener("keydown", documentKeyHandler);
