@@ -83,8 +83,9 @@
 .afe-switch-copy small { color: var(--afe-muted); font-size: 10px; }
 .afe-close { width: 35px; height: 35px; border: 1px solid var(--afe-line); border-radius: 10px; color: var(--afe-muted); background: transparent; font-size: 24px; line-height: 1; }
 .afe-close:hover { border-color: color-mix(in srgb, var(--afe-danger) 55%, transparent); color: var(--afe-danger); background: color-mix(in srgb, var(--afe-danger) 10%, transparent); }
-.afe-launcher { display: inline-grid !important; width: 34px; height: 34px; margin-left: 4px; place-items: center; border: 0; border-radius: 8px; color: var(--afe-cyan-strong); background: color-mix(in srgb, var(--afe-cyan) 10%, transparent); }
-.afe-launcher:hover, .afe-launcher[aria-expanded="true"] { color: #071018; background: var(--afe-cyan); }
+.afe-menu-entry { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.afe-menu-entry .extensionsMenuExtensionButton { width: 1.25em; text-align: center; }
+.afe-menu-entry:focus-visible { outline: 2px solid var(--afe-cyan); outline-offset: -2px; }
 
 .afe-controls { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(150px, 200px) auto; gap: 10px; padding: 18px 30px 12px; }
 .afe-search-wrap, .afe-work-wrap { position: relative; display: flex; align-items: center; }

@@ -31,8 +31,9 @@ let abilities = [];
 let dataLoadError = "";
 let panelRoot = null;
 let panelShell = null;
-let launcherButton = null;
-let launcherClickHandler = null;
+let menuEntry = null;
+let menuEntryClickHandler = null;
+let menuEntryKeyHandler = null;
 let documentKeyHandler = null;
 let runtimeActive = true;
 let hostSubscriptions = [];
@@ -108,10 +109,12 @@ function findHostEvent(name) {
 function bindHostEvents() {
   clearHostSubscriptions();
   const appReady = findHostEvent("APP_READY");
+  const chatChanged = findHostEvent("CHAT_CHANGED");
   const generationEnded = findHostEvent("GENERATION_ENDED");
   const generationStopped = findHostEvent("GENERATION_STOPPED");
   const messageReceived = findHostEvent("MESSAGE_RECEIVED");
-  subscribeHost(appReady, mountLauncher);
+  subscribeHost(appReady, mountMenuEntry);
+  subscribeHost(chatChanged, mountMenuEntry);
   subscribeHost(generationEnded, cleanupInjectedMessages);
   subscribeHost(generationStopped, cleanupInjectedMessages);
   subscribeHost(messageReceived, cleanupInjectedMessages);
@@ -348,29 +351,41 @@ function refreshPanel() {
   renderPanel();
 }
 
-function mountLauncher() {
-  if (launcherButton || !runtimeActive) return;
-  const host = document.querySelector("#leftSendForm, #send_form");
-  if (!host) return;
+function mountMenuEntry() {
+  if (!runtimeActive || menuEntry?.isConnected) return;
+  if (menuEntry) {
+    menuEntry.removeEventListener("click", menuEntryClickHandler);
+    menuEntry.removeEventListener("keydown", menuEntryKeyHandler);
+    menuEntry = null;
+  }
+  const menu = document.querySelector("#extensionsMenu, .extensionsMenu");
+  if (!menu) return;
 
-  launcherButton = document.createElement("button");
-  launcherButton.type = "button";
-  launcherButton.id = "afe-launcher";
-  launcherButton.className = "afe-launcher menu_button";
-  launcherButton.title = "打开外挂能力聚合引擎";
-  launcherButton.setAttribute("aria-label", "打开外挂能力聚合引擎");
-  launcherButton.setAttribute("aria-controls", "afe-panel-shell");
-  launcherButton.setAttribute("aria-expanded", "false");
-  launcherButton.innerHTML = '<i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i>';
-  launcherClickHandler = () => {
-    if (panelShell?.hidden === false) closePanel();
-    else openPanel();
+  menuEntry = document.createElement("div");
+  menuEntry.id = "afe-menu-entry";
+  menuEntry.className = "list-group-item flex-container flexGap5 interactable afe-menu-entry";
+  menuEntry.tabIndex = 0;
+  menuEntry.setAttribute("role", "button");
+  menuEntry.setAttribute("aria-controls", "afe-panel-shell");
+  menuEntry.setAttribute("aria-haspopup", "dialog");
+  menuEntry.setAttribute("aria-expanded", "false");
+
+  const icon = document.createElement("div");
+  icon.className = "fa-solid fa-wand-sparkles extensionsMenuExtensionButton";
+  icon.setAttribute("aria-hidden", "true");
+  const label = document.createElement("span");
+  label.textContent = "外挂能力聚合引擎";
+  menuEntry.append(icon, label);
+
+  menuEntryClickHandler = () => openPanel();
+  menuEntryKeyHandler = (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    openPanel();
   };
-  launcherButton.addEventListener("click", launcherClickHandler);
-
-  const reference = host.querySelector("#options_button, #extensionsMenuButton, .extensionsMenuButton");
-  if (reference) reference.insertAdjacentElement("afterend", launcherButton);
-  else host.prepend(launcherButton);
+  menuEntry.addEventListener("click", menuEntryClickHandler);
+  menuEntry.addEventListener("keydown", menuEntryKeyHandler);
+  menu.append(menuEntry);
 }
 
 async function openPanel() {
@@ -378,7 +393,7 @@ async function openPanel() {
   if (!panelRoot) await mountPanel();
   if (!panelShell) return;
   panelShell.hidden = false;
-  launcherButton?.setAttribute("aria-expanded", "true");
+  menuEntry?.setAttribute("aria-expanded", "true");
   documentKeyHandler ??= (event) => {
     if (event.key === "Escape") closePanel();
   };
@@ -389,8 +404,9 @@ async function openPanel() {
 function closePanel() {
   if (!panelShell) return;
   panelShell.hidden = true;
-  launcherButton?.setAttribute("aria-expanded", "false");
+  menuEntry?.setAttribute("aria-expanded", "false");
   if (documentKeyHandler) document.removeEventListener("keydown", documentKeyHandler);
+  if (menuEntry?.isConnected) menuEntry.focus();
 }
 
 async function mountPanel() {
@@ -430,17 +446,19 @@ async function mountPanel() {
     renderPanel();
     setPanelError(dataLoadError);
   } catch (error) {
-    console.error(`[${MODULE_ID}] failed to mount settings panel`, error);
+    console.error(`[${MODULE_ID}] failed to open ability panel`, error);
   }
 }
 
 function removePanel() {
   closePanel();
   clearDomSubscriptions();
-  if (launcherButton && launcherClickHandler) launcherButton.removeEventListener("click", launcherClickHandler);
-  launcherButton?.remove();
-  launcherButton = null;
-  launcherClickHandler = null;
+  if (menuEntry && menuEntryClickHandler) menuEntry.removeEventListener("click", menuEntryClickHandler);
+  if (menuEntry && menuEntryKeyHandler) menuEntry.removeEventListener("keydown", menuEntryKeyHandler);
+  menuEntry?.remove();
+  menuEntry = null;
+  menuEntryClickHandler = null;
+  menuEntryKeyHandler = null;
   panelShell?.remove();
   panelShell = null;
   panelRoot = null;
@@ -507,7 +525,7 @@ export async function onActivate() {
   bindHostEvents();
   const start = async () => {
     await loadAbilities();
-    mountLauncher();
+    mountMenuEntry();
   };
   if (document.readyState === "loading") subscribeDom(document, "DOMContentLoaded", start);
   else void start();
@@ -521,7 +539,7 @@ export function onEnable() {
   runtimeActive = true;
   bindHostEvents();
   loadAbilities().then(() => {
-    mountLauncher();
+    mountMenuEntry();
   });
 }
 
