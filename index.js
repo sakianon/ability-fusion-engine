@@ -30,6 +30,10 @@ const FALLBACK_ABILITIES = [
 let abilities = [];
 let dataLoadError = "";
 let panelRoot = null;
+let panelShell = null;
+let launcherButton = null;
+let launcherClickHandler = null;
+let documentKeyHandler = null;
 let runtimeActive = true;
 let hostSubscriptions = [];
 let domSubscriptions = [];
@@ -107,7 +111,7 @@ function bindHostEvents() {
   const generationEnded = findHostEvent("GENERATION_ENDED");
   const generationStopped = findHostEvent("GENERATION_STOPPED");
   const messageReceived = findHostEvent("MESSAGE_RECEIVED");
-  subscribeHost(appReady, mountPanel);
+  subscribeHost(appReady, mountLauncher);
   subscribeHost(generationEnded, cleanupInjectedMessages);
   subscribeHost(generationStopped, cleanupInjectedMessages);
   subscribeHost(messageReceived, cleanupInjectedMessages);
@@ -334,6 +338,9 @@ function renderPanel() {
       refreshPanel();
     });
   }
+
+  const closeButton = panelRoot.querySelector("#afe-close");
+  if (closeButton) subscribeDom(closeButton, "click", closePanel);
 }
 
 function refreshPanel() {
@@ -341,10 +348,53 @@ function refreshPanel() {
   renderPanel();
 }
 
+function mountLauncher() {
+  if (launcherButton || !runtimeActive) return;
+  const host = document.querySelector("#leftSendForm, #send_form");
+  if (!host) return;
+
+  launcherButton = document.createElement("button");
+  launcherButton.type = "button";
+  launcherButton.id = "afe-launcher";
+  launcherButton.className = "afe-launcher menu_button";
+  launcherButton.title = "打开外挂能力聚合引擎";
+  launcherButton.setAttribute("aria-label", "打开外挂能力聚合引擎");
+  launcherButton.setAttribute("aria-controls", "afe-panel-shell");
+  launcherButton.setAttribute("aria-expanded", "false");
+  launcherButton.innerHTML = '<i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i>';
+  launcherClickHandler = () => {
+    if (panelShell?.hidden === false) closePanel();
+    else openPanel();
+  };
+  launcherButton.addEventListener("click", launcherClickHandler);
+
+  const reference = host.querySelector("#options_button, #extensionsMenuButton, .extensionsMenuButton");
+  if (reference) reference.insertAdjacentElement("afterend", launcherButton);
+  else host.prepend(launcherButton);
+}
+
+async function openPanel() {
+  if (!runtimeActive) return;
+  if (!panelRoot) await mountPanel();
+  if (!panelShell) return;
+  panelShell.hidden = false;
+  launcherButton?.setAttribute("aria-expanded", "true");
+  documentKeyHandler ??= (event) => {
+    if (event.key === "Escape") closePanel();
+  };
+  document.addEventListener("keydown", documentKeyHandler);
+  panelRoot.querySelector("#afe-search")?.focus();
+}
+
+function closePanel() {
+  if (!panelShell) return;
+  panelShell.hidden = true;
+  launcherButton?.setAttribute("aria-expanded", "false");
+  if (documentKeyHandler) document.removeEventListener("keydown", documentKeyHandler);
+}
+
 async function mountPanel() {
   if (panelRoot || !runtimeActive) return;
-  const host = document.querySelector("#extensions_settings2") || document.querySelector("#extensions_settings");
-  if (!host) return;
   try {
     const context = getContext();
     let html;
@@ -365,7 +415,18 @@ async function mountPanel() {
     const fragment = document.createRange().createContextualFragment(html);
     panelRoot = fragment.querySelector("#afe-panel");
     if (!panelRoot) throw new Error("settings template is missing #afe-panel");
-    host.append(panelRoot);
+    panelShell = document.createElement("div");
+    panelShell.id = "afe-panel-shell";
+    panelShell.className = "afe-panel-shell";
+    panelShell.hidden = true;
+    panelShell.setAttribute("role", "dialog");
+    panelShell.setAttribute("aria-modal", "true");
+    panelShell.setAttribute("aria-labelledby", "afe-title");
+    panelShell.append(panelRoot);
+    panelShell.addEventListener("click", (event) => {
+      if (event.target === panelShell) closePanel();
+    });
+    document.body.append(panelShell);
     renderPanel();
     setPanelError(dataLoadError);
   } catch (error) {
@@ -374,8 +435,14 @@ async function mountPanel() {
 }
 
 function removePanel() {
+  closePanel();
   clearDomSubscriptions();
-  panelRoot?.remove();
+  if (launcherButton && launcherClickHandler) launcherButton.removeEventListener("click", launcherClickHandler);
+  launcherButton?.remove();
+  launcherButton = null;
+  launcherClickHandler = null;
+  panelShell?.remove();
+  panelShell = null;
   panelRoot = null;
 }
 
@@ -440,8 +507,7 @@ export async function onActivate() {
   bindHostEvents();
   const start = async () => {
     await loadAbilities();
-    if (panelRoot) renderPanel();
-    else await mountPanel();
+    mountLauncher();
   };
   if (document.readyState === "loading") subscribeDom(document, "DOMContentLoaded", start);
   else void start();
@@ -455,8 +521,7 @@ export function onEnable() {
   runtimeActive = true;
   bindHostEvents();
   loadAbilities().then(() => {
-    if (panelRoot) renderPanel();
-    else return mountPanel();
+    mountLauncher();
   });
 }
 
