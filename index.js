@@ -6,7 +6,12 @@ const DATA_URL = new URL("./data/abilities.json", import.meta.url);
 const DEFAULT_SETTINGS = Object.freeze({
   enabled: false,
   selectedIds: [],
+  customAbilities: [],
+  abilityOverrides: {},
+  deletedIds: [],
 });
+
+const PAGE_SIZE = 6;
 
 const CATEGORY_LABELS = Object.freeze({
   ability: "能力",
@@ -27,8 +32,11 @@ const FALLBACK_ABILITIES = [
   },
 ];
 
+let baseAbilities = [];
 let abilities = [];
 let dataLoadError = "";
+let currentPage = 1;
+let editingAbilityId = "";
 let panelRoot = null;
 let panelShell = null;
 let menuEntry = null;
@@ -53,10 +61,25 @@ function getSettings() {
   const selectedIds = Array.isArray(current.selectedIds)
     ? [...new Set(current.selectedIds.filter((id) => typeof id === "string"))]
     : [];
+  const customAbilities = Array.isArray(current.customAbilities)
+    ? normalizeAbilities(current.customAbilities).map((ability) => ({
+      ...ability,
+      source: { status: "custom", label: "用户自定义" },
+    }))
+    : [];
+  const deletedIds = Array.isArray(current.deletedIds)
+    ? [...new Set(current.deletedIds.filter((id) => typeof id === "string"))]
+    : [];
+  const abilityOverrides = current.abilityOverrides && typeof current.abilityOverrides === "object"
+    ? current.abilityOverrides
+    : {};
   context.extensionSettings[MODULE_ID] = {
     ...DEFAULT_SETTINGS,
     ...current,
     selectedIds,
+    customAbilities,
+    abilityOverrides,
+    deletedIds,
   };
   return context.extensionSettings[MODULE_ID];
 }
@@ -137,16 +160,39 @@ function normalizeAbilities(value) {
     }));
 }
 
+function rebuildAbilities() {
+  const settings = getSettings();
+  const deletedIds = new Set(settings.deletedIds);
+  const overrides = settings.abilityOverrides ?? {};
+  const builtInAbilities = baseAbilities
+    .filter((ability) => !deletedIds.has(ability.id))
+    .map((ability) => {
+      const override = overrides[ability.id];
+      if (!override || typeof override !== "object") return ability;
+      const edited = normalizeAbilities([{ ...ability, ...override, id: ability.id }])[0];
+      return edited
+        ? { ...edited, source: { status: "custom", label: "用户修改" } }
+        : ability;
+    });
+  const customAbilities = normalizeAbilities(settings.customAbilities).map((ability) => ({
+    ...ability,
+    source: { status: "custom", label: "用户自定义" },
+  }));
+  abilities = [...builtInAbilities, ...customAbilities];
+}
+
 async function loadAbilities() {
   try {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const loaded = normalizeAbilities(await response.json());
     if (!loaded.length) throw new Error("empty ability data");
-    abilities = loaded;
+    baseAbilities = loaded;
+    rebuildAbilities();
     dataLoadError = "";
   } catch (error) {
-    abilities = FALLBACK_ABILITIES;
+    baseAbilities = FALLBACK_ABILITIES;
+    rebuildAbilities();
     dataLoadError = `资料文件暂时读不到，已切换到本地示例。${error instanceof Error ? `（${error.message}）` : ""}`;
   }
 }
@@ -186,6 +232,125 @@ function setSelected(id, selected) {
 
 function isSelected(id) {
   return getSettings().selectedIds.includes(id);
+}
+
+function getAbility(id) {
+  return abilities.find((ability) => ability.id === id) ?? null;
+}
+
+function makeCustomId() {
+  const suffix = globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+  return `custom-${suffix}`;
+}
+
+function setEditorField(id, value) {
+  const field = panelRoot?.querySelector(`#${id}`);
+  if (field) field.value = value ?? "";
+}
+
+function openAbilityEditor(abilityId = "") {
+  if (!panelRoot) return;
+  editingAbilityId = abilityId;
+  const ability = abilityId ? getAbility(abilityId) : null;
+  const editor = panelRoot.querySelector("#afe-editor");
+  if (!editor) return;
+  editor.hidden = false;
+  panelRoot.querySelector("#afe-editor-title").textContent = ability ? "编辑外挂条目" : "新建外挂条目";
+  panelRoot.querySelector("#afe-editor-mode").textContent = ability
+    ? (baseAbilities.some((item) => item.id === ability.id) ? "修改内置条目" : "修改自定义条目")
+    : "用户资料库 / 新条目";
+  setEditorField("afe-editor-category", ability?.category ?? "ability");
+  setEditorField("afe-editor-name", ability?.name ?? "未命名外挂");
+  setEditorField("afe-editor-work", ability?.work ?? "用户自定义");
+  setEditorField("afe-editor-tags", ability?.tags?.join(", ") ?? "自定义");
+  setEditorField("afe-editor-description", ability?.description ?? "描述这条外挂能做什么，以及它的边界。");
+  setEditorField("afe-editor-prompt", ability?.prompt ?? "外挂能力：请在这里写入会注入给模型的完整设定，并明确限制条件。");
+  panelRoot.querySelector("#afe-editor-name")?.focus();
+}
+
+function closeAbilityEditor() {
+  editingAbilityId = "";
+  const editor = panelRoot?.querySelector("#afe-editor");
+  if (editor) editor.hidden = true;
+}
+
+function applyAbilityTemplate() {
+  setEditorField("afe-editor-category", "ability");
+  setEditorField("afe-editor-name", "新外挂名称");
+  setEditorField("afe-editor-work", "用户自定义作品");
+  setEditorField("afe-editor-tags", "标签一, 标签二");
+  setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
+  setEditorField("afe-editor-prompt", "外挂能力：新外挂名称。用户可以在明确条件下使用这项能力；请保持能力边界、代价和已知信息一致，不要把它写成无条件万能能力。");
+  panelRoot?.querySelector("#afe-editor-name")?.focus();
+  setStatus("已载入外挂条目模板，可以直接修改后保存。");
+}
+
+function readAbilityEditor() {
+  const category = panelRoot?.querySelector("#afe-editor-category")?.value ?? "ability";
+  const name = panelRoot?.querySelector("#afe-editor-name")?.value.trim() ?? "";
+  const work = panelRoot?.querySelector("#afe-editor-work")?.value.trim() ?? "";
+  const tags = (panelRoot?.querySelector("#afe-editor-tags")?.value ?? "")
+    .split(/[,，、]/)
+    .map((tag) => tag.trim())
+    .filter(Boolean)
+    .slice(0, 6);
+  const description = panelRoot?.querySelector("#afe-editor-description")?.value.trim() ?? "";
+  const prompt = panelRoot?.querySelector("#afe-editor-prompt")?.value.trim() ?? "";
+  if (!name || !prompt) {
+    setStatus("至少填写外挂名称和注入设定。");
+    panelRoot?.querySelector(!name ? "#afe-editor-name" : "#afe-editor-prompt")?.focus();
+    return null;
+  }
+  return {
+    id: editingAbilityId || makeCustomId(),
+    category: Object.hasOwn(CATEGORY_LABELS, category) ? category : "ability",
+    name,
+    work: work || "用户自定义",
+    tags,
+    description: description || "暂无说明。",
+    prompt,
+    source: { status: "custom", label: editingAbilityId ? "用户修改" : "用户自定义" },
+  };
+}
+
+function saveAbilityFromEditor() {
+  const draft = readAbilityEditor();
+  if (!draft) return;
+  const settings = getSettings();
+  const isBuiltIn = baseAbilities.some((ability) => ability.id === draft.id);
+  if (isBuiltIn) {
+    settings.abilityOverrides[draft.id] = draft;
+  } else {
+    const next = settings.customAbilities.filter((ability) => ability.id !== draft.id);
+    next.push(draft);
+    settings.customAbilities = next;
+  }
+  saveSettings();
+  rebuildAbilities();
+  closeAbilityEditor();
+  currentPage = 1;
+  renderPanel();
+  setStatus(isBuiltIn ? "外挂条目已修改并保存。" : "外挂条目已新增并保存。" );
+}
+
+function deleteAbility(id) {
+  const ability = getAbility(id);
+  if (!ability) return;
+  if (!globalThis.confirm?.(`确定删除“${ability.name}”吗？`)) return;
+  const settings = getSettings();
+  const isBuiltIn = baseAbilities.some((item) => item.id === id);
+  if (isBuiltIn) {
+    settings.deletedIds = [...new Set([...settings.deletedIds, id])];
+    delete settings.abilityOverrides[id];
+  } else {
+    settings.customAbilities = settings.customAbilities.filter((item) => item.id !== id);
+  }
+  settings.selectedIds = settings.selectedIds.filter((selectedId) => selectedId !== id);
+  saveSettings();
+  rebuildAbilities();
+  currentPage = Math.max(1, currentPage - 1);
+  renderPanel();
+  setStatus("外挂条目已删除。");
 }
 
 function createTag(text) {
@@ -233,7 +398,22 @@ function createAbilityCard(ability) {
 
   const footer = document.createElement("div");
   footer.className = "afe-card-footer";
-  footer.append(work, action);
+  const actions = document.createElement("div");
+  actions.className = "afe-card-actions";
+  const edit = document.createElement("button");
+  edit.type = "button";
+  edit.className = "afe-card-edit";
+  edit.setAttribute("aria-label", `编辑 ${ability.name}`);
+  edit.textContent = "编辑";
+  subscribeDom(edit, "click", () => openAbilityEditor(ability.id));
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.className = "afe-card-delete";
+  remove.setAttribute("aria-label", `删除 ${ability.name}`);
+  remove.textContent = "删除";
+  subscribeDom(remove, "click", () => deleteAbility(ability.id));
+  actions.append(edit, remove, action);
+  footer.append(work, actions);
   card.append(top, title, description, footer);
   return card;
 }
@@ -275,9 +455,22 @@ function renderResults() {
   const results = panelRoot.querySelector("#afe-results");
   const empty = panelRoot.querySelector("#afe-empty");
   const filtered = filterAbilities();
-  results.replaceChildren(...filtered.map(createAbilityCard));
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  currentPage = Math.min(currentPage, totalPages);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  results.replaceChildren(...filtered.slice(start, start + PAGE_SIZE).map(createAbilityCard));
   panelRoot.querySelector("#afe-results-count").textContent = `${filtered.length} 条`;
   empty.hidden = filtered.length > 0;
+  const pagination = panelRoot.querySelector("#afe-pagination");
+  if (pagination) pagination.hidden = filtered.length <= PAGE_SIZE;
+  const current = panelRoot.querySelector("#afe-page-current");
+  const total = panelRoot.querySelector("#afe-page-total");
+  const previous = panelRoot.querySelector("#afe-page-prev");
+  const next = panelRoot.querySelector("#afe-page-next");
+  if (current) current.textContent = String(currentPage);
+  if (total) total.textContent = String(totalPages);
+  if (previous) previous.disabled = currentPage <= 1;
+  if (next) next.disabled = currentPage >= totalPages;
 }
 
 function renderLoadout() {
@@ -334,6 +527,21 @@ function renderPanel() {
   });
   subscribeDom(panelRoot.querySelector("#afe-search"), "input", refreshPanel);
   subscribeDom(panelRoot.querySelector("#afe-work-filter"), "change", refreshPanel);
+  subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", () => openAbilityEditor());
+  subscribeDom(panelRoot.querySelector("#afe-editor-form"), "submit", (event) => {
+    event.preventDefault();
+    saveAbilityFromEditor();
+  });
+  subscribeDom(panelRoot.querySelector("#afe-editor-template"), "click", applyAbilityTemplate);
+  subscribeDom(panelRoot.querySelector("#afe-editor-cancel"), "click", closeAbilityEditor);
+  subscribeDom(panelRoot.querySelector("#afe-page-prev"), "click", () => {
+    currentPage = Math.max(1, currentPage - 1);
+    renderPanel();
+  });
+  subscribeDom(panelRoot.querySelector("#afe-page-next"), "click", () => {
+    currentPage += 1;
+    renderPanel();
+  });
   subscribeDom(panelRoot.querySelector("#afe-selected-filter"), "click", (event) => {
     const next = event.currentTarget.getAttribute("aria-pressed") !== "true";
     event.currentTarget.setAttribute("aria-pressed", String(next));
@@ -357,6 +565,7 @@ function renderPanel() {
 
 function refreshPanel() {
   if (!panelRoot) return;
+  currentPage = 1;
   renderPanel();
 }
 
