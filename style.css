@@ -178,6 +178,9 @@
 
 .afe-detail-modal { position: fixed; z-index: 10001; inset: 0; display: grid; place-items: center; padding: 28px; background: rgba(1, 6, 14, 0.72); backdrop-filter: blur(8px); }
 .afe-detail-modal[hidden] { display: none; }
+.afe-detail-modal, .afe-editor-modal { --afe-ink: #f3fbff; --afe-muted: #c2dce5; --afe-dim: #9bbbc7; --afe-line: rgba(145, 216, 230, 0.27); --afe-cyan: #48f4dc; --afe-cyan-strong: #b6fff3; --afe-amber: #ffc96f; --afe-lilac: #ac8cff; --afe-pink: #ff74c8; --afe-danger: #ff8f9a; box-sizing: border-box; color: var(--afe-ink); font-family: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+.afe-detail-modal *, .afe-editor-modal * { box-sizing: border-box; }
+.afe-detail-modal button, .afe-detail-modal input, .afe-detail-modal select, .afe-detail-modal textarea, .afe-editor-modal button, .afe-editor-modal input, .afe-editor-modal select, .afe-editor-modal textarea { font: inherit; }
 .afe-detail-card { width: min(680px, 100%); max-height: 100%; overflow: auto; border: 1px solid rgba(72, 244, 220, 0.42); border-radius: 17px; background: linear-gradient(145deg, rgba(13, 35, 51, 0.98), rgba(4, 14, 26, 0.98)); box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48), 0 0 32px rgba(72, 244, 220, 0.1); animation: afe-detail-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .afe-detail-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 22px 22px 16px; border-bottom: 1px solid var(--afe-line); }
 .afe-detail-header h3 { margin: 8px 0 4px; color: #f5fcff; font-size: 22px; letter-spacing: -0.035em; text-wrap: balance; }
@@ -217,12 +220,12 @@
 .afe-editor-form { display: grid; grid-template-columns: minmax(130px, 0.5fr) minmax(190px, 1fr) minmax(190px, 1fr) minmax(170px, 0.9fr); gap: 11px; }
 .afe-field { display: grid; gap: 6px; color: #c3dfe7; font-size: 11px; }
 .afe-field-wide { grid-column: span 2; }
-#afe-panel .afe-field input, #afe-panel .afe-field select, #afe-panel .afe-field textarea { width: 100%; border: 1px solid rgba(145, 216, 230, 0.42) !important; border-radius: 8px; outline: none; color: #f2fbff !important; background: #071827 !important; -webkit-text-fill-color: #f2fbff !important; color-scheme: dark; transition-property: border-color, box-shadow, background; transition-duration: 180ms; }
-#afe-panel .afe-field input, #afe-panel .afe-field select { min-height: 38px; padding: 0 10px; }
-#afe-panel .afe-field textarea { min-height: 74px; padding: 9px 10px; resize: vertical; line-height: 1.5; }
-#afe-panel .afe-field input::placeholder, #afe-panel .afe-field textarea::placeholder { color: #8fb3c0 !important; -webkit-text-fill-color: #8fb3c0 !important; opacity: 1; }
-#afe-panel .afe-field select option { color: #f2fbff; background: #071827; }
-#afe-panel .afe-field input:focus, #afe-panel .afe-field select:focus, #afe-panel .afe-field textarea:focus { border-color: rgba(72, 244, 220, 0.9) !important; background: #0a2233 !important; box-shadow: 0 0 0 3px rgba(72, 244, 220, 0.14); }
+.afe-editor-modal .afe-field input, .afe-editor-modal .afe-field select, .afe-editor-modal .afe-field textarea { width: 100%; border: 1px solid rgba(145, 216, 230, 0.42) !important; border-radius: 8px; outline: none; color: #f2fbff !important; background: #071827 !important; -webkit-text-fill-color: #f2fbff !important; color-scheme: dark; transition-property: border-color, box-shadow, background; transition-duration: 180ms; }
+.afe-editor-modal .afe-field input, .afe-editor-modal .afe-field select { min-height: 38px; padding: 0 10px; }
+.afe-editor-modal .afe-field textarea { min-height: 74px; padding: 9px 10px; resize: vertical; line-height: 1.5; }
+.afe-editor-modal .afe-field input::placeholder, .afe-editor-modal .afe-field textarea::placeholder { color: #8fb3c0 !important; -webkit-text-fill-color: #8fb3c0 !important; opacity: 1; }
+.afe-editor-modal .afe-field select option { color: #f2fbff; background: #071827; }
+.afe-editor-modal .afe-field input:focus, .afe-editor-modal .afe-field select:focus, .afe-editor-modal .afe-field textarea:focus { border-color: rgba(72, 244, 220, 0.9) !important; background: #0a2233 !important; box-shadow: 0 0 0 3px rgba(72, 244, 220, 0.14); }
 .afe-editor-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 8px; padding-top: 2px; }
 .afe-editor-cancel, .afe-editor-save { min-height: 36px; padding: 0 14px; border-radius: 8px; font-size: 11px; transition-property: color, border-color, background, transform; transition-duration: 180ms; }
 .afe-editor-cancel { border: 1px solid var(--afe-line); color: #bdd9e1; background: rgba(145, 216, 230, 0.06); }

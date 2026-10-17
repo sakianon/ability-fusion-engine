@@ -241,7 +241,7 @@ function makeCustomId() {
 }
 
 function setEditorField(id, value) {
-  const field = panelRoot?.querySelector(`#${id}`);
+  const field = document.getElementById(id);
   if (field) field.value = value ?? "";
 }
 
@@ -250,13 +250,13 @@ function openAbilityEditor(abilityId = "", trigger = null) {
   editingAbilityId = abilityId;
   editorTrigger = trigger ?? document.activeElement;
   const ability = abilityId ? getAbility(abilityId) : null;
-  const editorModal = panelRoot.querySelector("#afe-editor-modal");
-  const editor = panelRoot.querySelector("#afe-editor");
+  const editorModal = document.getElementById("afe-editor-modal");
+  const editor = document.getElementById("afe-editor");
   if (!editorModal || !editor) return;
   const scrollTop = panelRoot.scrollTop;
   editorModal.hidden = false;
-  panelRoot.querySelector("#afe-editor-title").textContent = ability ? "编辑外挂条目" : "新建外挂条目";
-  panelRoot.querySelector("#afe-editor-mode").textContent = ability
+  document.getElementById("afe-editor-title").textContent = ability ? "编辑外挂条目" : "新建外挂条目";
+  document.getElementById("afe-editor-mode").textContent = ability
     ? (baseAbilities.some((item) => item.id === ability.id) ? "修改内置条目" : "修改自定义条目")
     : "用户资料库 / 新条目";
   setEditorField("afe-editor-category", ability?.category ?? "ability");
@@ -265,7 +265,7 @@ function openAbilityEditor(abilityId = "", trigger = null) {
   setEditorField("afe-editor-tags", ability?.tags?.join(", ") ?? "自定义");
   setEditorField("afe-editor-description", ability?.description ?? "描述这条外挂能做什么，以及它的边界。");
   setEditorField("afe-editor-prompt", ability?.prompt ?? "外挂能力：请在这里写入会注入给模型的完整设定，并明确限制条件。");
-  panelRoot.querySelector("#afe-editor-name")?.focus({ preventScroll: true });
+  document.getElementById("afe-editor-name")?.focus({ preventScroll: true });
   panelRoot.scrollTop = scrollTop;
 }
 
@@ -273,20 +273,20 @@ function closeAbilityEditor({ restoreFocus = true } = {}) {
   const trigger = editorTrigger;
   editingAbilityId = "";
   editorTrigger = null;
-  const editorModal = panelRoot?.querySelector("#afe-editor-modal");
+  const editorModal = document.getElementById("afe-editor-modal");
   if (editorModal) editorModal.hidden = true;
   if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
 }
 
 function renderAbilityDetails(ability) {
   if (!panelRoot || !ability) return;
-  const category = panelRoot.querySelector("#afe-detail-category");
-  const source = panelRoot.querySelector("#afe-detail-source");
-  const work = panelRoot.querySelector("#afe-detail-work");
-  const tags = panelRoot.querySelector("#afe-detail-tags");
-  const description = panelRoot.querySelector("#afe-detail-description");
-  const prompt = panelRoot.querySelector("#afe-detail-prompt");
-  const action = panelRoot.querySelector("#afe-detail-action");
+  const category = document.getElementById("afe-detail-category");
+  const source = document.getElementById("afe-detail-source");
+  const work = document.getElementById("afe-detail-work");
+  const tags = document.getElementById("afe-detail-tags");
+  const description = document.getElementById("afe-detail-description");
+  const prompt = document.getElementById("afe-detail-prompt");
+  const action = document.getElementById("afe-detail-action");
   if (category) {
     category.textContent = CATEGORY_LABELS[ability.category];
     category.className = `afe-card-category afe-category-${ability.category}`;
@@ -305,8 +305,8 @@ function renderAbilityDetails(ability) {
 
 function openAbilityDetails(abilityId, trigger = null) {
   const ability = getAbility(abilityId);
-  const modal = panelRoot?.querySelector("#afe-detail-modal");
-  const title = panelRoot?.querySelector("#afe-detail-title");
+  const modal = document.getElementById("afe-detail-modal");
+  const title = document.getElementById("afe-detail-title");
   if (!ability || !modal || !title) return;
   const scrollTop = panelRoot.scrollTop;
   detailAbilityId = abilityId;
@@ -314,7 +314,7 @@ function openAbilityDetails(abilityId, trigger = null) {
   title.textContent = ability.name;
   renderAbilityDetails(ability);
   modal.hidden = false;
-  panelRoot.querySelector("#afe-detail-close")?.focus({ preventScroll: true });
+  document.getElementById("afe-detail-close")?.focus({ preventScroll: true });
   panelRoot.scrollTop = scrollTop;
 }
 
@@ -322,7 +322,7 @@ function closeAbilityDetails({ restoreFocus = true } = {}) {
   const trigger = detailTrigger;
   detailAbilityId = "";
   detailTrigger = null;
-  const modal = panelRoot?.querySelector("#afe-detail-modal");
+  const modal = document.getElementById("afe-detail-modal");
   if (modal) modal.hidden = true;
   if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
 }
@@ -334,24 +334,24 @@ function applyAbilityTemplate() {
   setEditorField("afe-editor-tags", "标签一, 标签二");
   setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
   setEditorField("afe-editor-prompt", "外挂能力：新外挂名称。用户可以在明确条件下使用这项能力；请保持能力边界、代价和已知信息一致，不要把它写成无条件万能能力。");
-  panelRoot?.querySelector("#afe-editor-name")?.focus();
+  document.getElementById("afe-editor-name")?.focus();
   setStatus("已载入外挂条目模板，可以直接修改后保存。");
 }
 
 function readAbilityEditor() {
-  const category = panelRoot?.querySelector("#afe-editor-category")?.value ?? "ability";
-  const name = panelRoot?.querySelector("#afe-editor-name")?.value.trim() ?? "";
-  const work = panelRoot?.querySelector("#afe-editor-work")?.value.trim() ?? "";
-  const tags = (panelRoot?.querySelector("#afe-editor-tags")?.value ?? "")
+  const category = document.getElementById("afe-editor-category")?.value ?? "ability";
+  const name = document.getElementById("afe-editor-name")?.value.trim() ?? "";
+  const work = document.getElementById("afe-editor-work")?.value.trim() ?? "";
+  const tags = (document.getElementById("afe-editor-tags")?.value ?? "")
     .split(/[,，、]/)
     .map((tag) => tag.trim())
     .filter(Boolean)
     .slice(0, 6);
-  const description = panelRoot?.querySelector("#afe-editor-description")?.value.trim() ?? "";
-  const prompt = panelRoot?.querySelector("#afe-editor-prompt")?.value.trim() ?? "";
+  const description = document.getElementById("afe-editor-description")?.value.trim() ?? "";
+  const prompt = document.getElementById("afe-editor-prompt")?.value.trim() ?? "";
   if (!name || !prompt) {
     setStatus("至少填写外挂名称和注入设定。");
-    panelRoot?.querySelector(!name ? "#afe-editor-name" : "#afe-editor-prompt")?.focus();
+    document.getElementById(!name ? "afe-editor-name" : "afe-editor-prompt")?.focus();
     return null;
   }
   return {
@@ -626,12 +626,12 @@ function renderPanel() {
     });
   }
   subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", (event) => openAbilityEditor("", event.currentTarget));
-  subscribeDom(panelRoot.querySelector("#afe-editor-form"), "submit", (event) => {
+  subscribeDom(document.getElementById("afe-editor-form"), "submit", (event) => {
     event.preventDefault();
     saveAbilityFromEditor();
   });
-  subscribeDom(panelRoot.querySelector("#afe-editor-template"), "click", applyAbilityTemplate);
-  subscribeDom(panelRoot.querySelector("#afe-editor-cancel"), "click", closeAbilityEditor);
+  subscribeDom(document.getElementById("afe-editor-template"), "click", applyAbilityTemplate);
+  subscribeDom(document.getElementById("afe-editor-cancel"), "click", closeAbilityEditor);
   subscribeDom(panelRoot.querySelector("#afe-page-prev"), "click", () => {
     currentPage = Math.max(1, currentPage - 1);
     renderPanel();
@@ -659,20 +659,20 @@ function renderPanel() {
 
   const closeButton = panelRoot.querySelector("#afe-close");
   if (closeButton) subscribeDom(closeButton, "click", closePanel);
-  const detailClose = panelRoot.querySelector("#afe-detail-close");
+  const detailClose = document.getElementById("afe-detail-close");
   if (detailClose) subscribeDom(detailClose, "click", closeAbilityDetails);
-  const detailAction = panelRoot.querySelector("#afe-detail-action");
+  const detailAction = document.getElementById("afe-detail-action");
   if (detailAction) subscribeDom(detailAction, "click", () => {
     if (!detailAbilityId) return;
     const abilityId = detailAbilityId;
     setSelected(abilityId, !isSelected(abilityId));
     openAbilityDetails(abilityId);
   });
-  const detailModal = panelRoot.querySelector("#afe-detail-modal");
+  const detailModal = document.getElementById("afe-detail-modal");
   if (detailModal) subscribeDom(detailModal, "click", (event) => {
     if (event.target === event.currentTarget) closeAbilityDetails();
   });
-  const editorModal = panelRoot.querySelector("#afe-editor-modal");
+  const editorModal = document.getElementById("afe-editor-modal");
   if (editorModal) subscribeDom(editorModal, "click", (event) => {
     if (event.target === event.currentTarget) closeAbilityEditor();
   });
@@ -730,7 +730,7 @@ async function openPanel() {
   documentKeyHandler ??= (event) => {
     if (event.key !== "Escape") return;
     if (detailAbilityId) closeAbilityDetails();
-    else if (!panelRoot?.querySelector("#afe-editor-modal")?.hidden) closeAbilityEditor();
+    else if (!document.getElementById("afe-editor-modal")?.hidden) closeAbilityEditor();
     else closePanel();
   };
   document.addEventListener("keydown", documentKeyHandler);
@@ -781,6 +781,10 @@ async function mountPanel() {
       if (event.target === panelShell) closePanel();
     });
     document.body.append(panelShell);
+    const editorModal = panelRoot.querySelector("#afe-editor-modal");
+    const detailModal = panelRoot.querySelector("#afe-detail-modal");
+    if (editorModal) document.body.append(editorModal);
+    if (detailModal) document.body.append(detailModal);
     renderPanel();
     setPanelError(dataLoadError);
   } catch (error) {
@@ -797,6 +801,8 @@ function removePanel() {
   menuEntry = null;
   menuEntryClickHandler = null;
   menuEntryKeyHandler = null;
+  document.getElementById("afe-editor-modal")?.remove();
+  document.getElementById("afe-detail-modal")?.remove();
   panelShell?.remove();
   panelShell = null;
   panelRoot = null;
