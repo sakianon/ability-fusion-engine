@@ -162,6 +162,8 @@
 .afe-category:hover .afe-category-glyph { color: var(--afe-cyan); transform: rotate(12deg); }
 .afe-category.is-active { border-color: rgba(72, 244, 220, 0.42); color: var(--afe-cyan-strong); background: rgba(72, 244, 220, 0.1); box-shadow: 0 0 18px rgba(72, 244, 220, 0.08); }
 .afe-category.is-active .afe-category-glyph { color: var(--afe-cyan); text-shadow: 0 0 10px var(--afe-cyan); }
+.afe-source-link { display: inline-flex; align-items: center; min-height: 20px; padding: 0 6px; border: 1px solid rgba(72, 244, 220, 0.28); border-radius: 5px; color: var(--afe-cyan-strong); background: rgba(72, 244, 220, 0.06); font-size: 10px; text-decoration: none; }
+.afe-source-link:hover { border-color: rgba(72, 244, 220, 0.68); background: rgba(72, 244, 220, 0.14); }
 
 .afe-work-categories { display: flex; align-items: center; gap: 10px; min-height: 43px; margin: 0 32px 17px; padding: 7px 10px; overflow: auto hidden; border: 1px solid rgba(145, 216, 230, 0.2); border-radius: 9px; background: rgba(5, 18, 30, 0.66); }
 .afe-work-categories-label { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 6px; padding-right: 10px; border-right: 1px solid var(--afe-line); color: #d1e8ee; font-size: 10px; font-weight: 700; letter-spacing: 0.09em; }

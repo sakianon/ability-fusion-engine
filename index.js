@@ -20,17 +20,7 @@ const CATEGORY_LABELS = Object.freeze({
   system: "系统",
 });
 
-const FALLBACK_ABILITIES = [
-  {
-    id: "fallback-starter",
-    category: "ability",
-    name: "示例外挂",
-    work: "本地降级数据",
-    tags: ["示例"],
-    description: "资料文件读取失败时仍可用来测试选择流程。",
-    prompt: "外挂能力：示例外挂。请把它视为用户设定的一部分，并保持前后一致。",
-  },
-];
+const FALLBACK_ABILITIES = [];
 
 let baseAbilities = [];
 let abilities = [];
@@ -154,9 +144,15 @@ function normalizeAbilities(value) {
       tags: Array.isArray(item.tags) ? item.tags.filter((tag) => typeof tag === "string").slice(0, 6) : [],
       description: typeof item.description === "string" ? item.description : "暂无说明。",
       prompt: item.prompt,
-      source: item.source && typeof item.source.label === "string"
-        ? { status: item.source.status ?? "unverified", label: item.source.label }
-        : { status: "unverified", label: "来源未标注" },
+      source: item.source && typeof item.source === "object"
+        ? {
+          status: typeof item.source.status === "string" ? item.source.status : "unverified",
+          label: typeof item.source.label === "string" ? item.source.label : "来源未标注",
+          url: typeof item.source.url === "string" && /^https?:\/\//i.test(item.source.url)
+            ? item.source.url
+            : null,
+        }
+        : { status: "unverified", label: "来源未标注", url: null },
     }));
 }
 
@@ -193,7 +189,7 @@ async function loadAbilities() {
   } catch (error) {
     baseAbilities = FALLBACK_ABILITIES;
     rebuildAbilities();
-    dataLoadError = `资料文件暂时读不到，已切换到本地示例。${error instanceof Error ? `（${error.message}）` : ""}`;
+    dataLoadError = `资料文件暂时读不到，内置资料库暂时不可用。${error instanceof Error ? `（${error.message}）` : ""}`;
   }
 }
 
@@ -377,6 +373,16 @@ function createAbilityCard(ability) {
   source.className = "afe-tag";
   source.textContent = ability.source.label;
   top.append(source);
+  if (ability.source.url) {
+    const sourceLink = document.createElement("a");
+    sourceLink.className = "afe-source-link";
+    sourceLink.href = ability.source.url;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noreferrer noopener";
+    sourceLink.textContent = "来源";
+    sourceLink.title = ability.source.url;
+    top.append(sourceLink);
+  }
   for (const tag of ability.tags) top.append(createTag(tag));
 
   const title = document.createElement("h4");
@@ -611,7 +617,7 @@ function mountMenuEntry() {
   icon.className = "fa-solid fa-wand-sparkles extensionsMenuExtensionButton";
   icon.setAttribute("aria-hidden", "true");
   const label = document.createElement("span");
-  label.textContent = "外挂能力聚合引擎";
+  label.textContent = "全能外挂引擎";
   menuEntry.append(icon, label);
 
   menuEntryClickHandler = () => openPanel();
@@ -704,7 +710,7 @@ function removePanel() {
 function buildInjectionPrompt(selected) {
   const lines = selected.map((ability) => `- ${CATEGORY_LABELS[ability.category]}：${ability.name}（${ability.work}）\n  ${ability.prompt}`);
   return [
-    "【外挂能力聚合引擎】",
+    "【全能外挂引擎】",
     "以下内容是用户手动选择的外挂设定，请作为本次生成上下文的补充背景，保持与既有设定一致；不要替用户发言，不要擅自扩大能力，不要把本段说明当作剧情对白。",
     ...lines,
   ].join("\n");
@@ -733,7 +739,7 @@ async function interceptGeneration(chat, contextSize, abort, type) {
   const message = {
     is_user: false,
     is_system: true,
-    name: "外挂能力聚合引擎",
+    name: "全能外挂引擎",
     send_date: Date.now(),
     mes: buildInjectionPrompt(selected),
     extra: { abilityFusionEngine: true, isSmallSys: true },

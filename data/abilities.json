@@ -1,82 +1,312 @@
 [
   {
-    "id": "sample-luminous-body",
-    "category": "ability",
-    "name": "不灭琉璃体",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["防御", "体质"],
-    "description": "身体获得稳定的恢复力与抗性，但不会替角色自动做出行动。",
-    "prompt": "外挂能力：不灭琉璃体。用户拥有稳定的身体恢复力和较强抗性；请把它当作用户设定的一部分，在冲突场景中保持前后一致，不要凭空增加无限复活。"
-  },
-  {
-    "id": "sample-mirror-step",
-    "category": "skill",
-    "name": "镜界步",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["移动", "空间"],
-    "description": "短距离借助镜面或反光面转移，使用条件和距离需要符合场景。",
-    "prompt": "外挂技能：镜界步。用户可以借助可见的镜面或强反光面进行短距离位移；每次使用都要遵守距离、视线和环境条件，不能无成本穿越任意障碍。"
-  },
-  {
-    "id": "sample-void-manual",
-    "category": "cultivation",
-    "name": "太虚引气诀",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["修炼", "能量"],
-    "description": "一种强调感知、蓄积和控制的基础功法。",
-    "prompt": "外挂功法：太虚引气诀。用户能够通过呼吸和专注感知并缓慢蓄积环境能量；修炼需要时间，效果受环境和状态影响，不要直接跳过成长过程。"
-  },
-  {
-    "id": "sample-quest-core",
+    "id": "solo-leveling-system",
     "category": "system",
-    "name": "万界任务核心",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["任务", "辅助"],
-    "description": "提供目标、提醒和有限反馈，不替用户决定剧情。",
-    "prompt": "外挂系统：万界任务核心。系统可以在需要时给出清晰的任务目标、进度提醒和有限奖励说明；系统不能替用户发言、不能强制改写角色意志，也不能凭空完成任务。"
+    "name": "玩家系统",
+    "work": "我独自升级",
+    "source": { "status": "reference", "label": "作品资料整理", "url": "https://solo-leveling.fandom.com/wiki/System" },
+    "tags": ["等级", "任务", "成长"],
+    "description": "把战斗和任务转化为可追踪的成长面板，并提供属性、技能和奖励。",
+    "prompt": "外挂系统：玩家系统。用户可以看到自己的等级、属性、任务和技能成长；系统只反馈已经发生或合理获得的结果，升级需要对应经历、资源和代价，不能凭空生成任务奖励。"
   },
   {
-    "id": "sample-sword-intent",
-    "category": "ability",
-    "name": "万象剑意",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["战斗", "感知"],
-    "description": "将观察到的攻势抽象成可理解的节奏，帮助使用者应对战斗。",
-    "prompt": "外挂能力：万象剑意。用户能从对手的动作中捕捉攻势节奏并改进应对，但仍会受到速度、体力、信息不足和伤势限制。"
-  },
-  {
-    "id": "sample-alchemy-foundation",
-    "category": "cultivation",
-    "name": "九转炼元篇",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["炼体", "成长"],
-    "description": "通过阶段性锻炼提升身体对能量的承载力。",
-    "prompt": "外挂功法：九转炼元篇。用户可以通过阶段性锻炼提升能量承载力；每一阶段都需要代价、训练或材料，不要把功法写成即时无敌。"
-  },
-  {
-    "id": "sample-memory-palace",
+    "id": "solo-leveling-shadow-extraction",
     "category": "skill",
-    "name": "星图记忆宫",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["记忆", "学习"],
-    "description": "用空间化结构整理已接触的信息，不能读取未知事实。",
-    "prompt": "外挂技能：星图记忆宫。用户能更可靠地整理和回忆已经观察、阅读或亲身经历的信息；它不能读取未知内容，也不能保证记忆绝对正确。"
+    "name": "影子提取",
+    "work": "我独自升级",
+    "source": { "status": "reference", "label": "作品资料整理", "url": "https://solo-leveling.fandom.com/wiki/Shadow_Extraction" },
+    "tags": ["召唤", "亡灵", "成长"],
+    "description": "从被击败的强敌影子中提取可成长的影兵。",
+    "prompt": "外挂技能：影子提取。用户可以尝试从已被击败且符合条件的目标影子中提取影兵；成功率、消耗、忠诚度和目标强度必须符合当前设定，不能把任何敌人无条件转化。"
   },
   {
-    "id": "sample-fate-ledger",
+    "id": "rezero-return-by-death",
+    "category": "ability",
+    "name": "死亡回归",
+    "work": "Re:从零开始的异世界生活",
+    "source": { "status": "reference", "label": "作品资料整理", "url": "https://rezero.fandom.com/wiki/Return_by_Death" },
+    "tags": ["回溯", "死亡", "时间"],
+    "description": "死亡后回到未知的存档点，保留记忆但不能自由选择回溯位置。",
+    "prompt": "外挂能力：死亡回归。用户死亡后会回到某个未知且由世界决定的存档点，并保留自己的记忆；回溯不能随意选择，死亡带来真实风险和心理代价，不能用它直接读取未来答案。"
+  },
+  {
+    "id": "one-piece-gum-gum-fruit",
+    "category": "ability",
+    "name": "橡胶果实",
+    "work": "海贼王",
+    "source": { "status": "reference", "label": "恶魔果实资料整理", "url": "https://onepiece.fandom.com/wiki/Gomu_Gomu_no_Mi" },
+    "tags": ["橡胶", "身体强化", "恶魔果实"],
+    "description": "身体获得橡胶特性，抗钝击但仍受海水、海楼石和战斗条件限制。",
+    "prompt": "外挂能力：橡胶果实。用户身体具备橡胶般的伸缩、弹性和抗钝击特性；力量、速度、耐力和招式仍受训练与体力限制，并保留恶魔果实能力者在海水、海楼石等条件下的弱点。"
+  },
+  {
+    "id": "naruto-sharingan",
+    "category": "ability",
+    "name": "写轮眼",
+    "work": "火影忍者",
+    "source": { "status": "reference", "label": "忍术资料整理", "url": "https://naruto.fandom.com/wiki/Sharingan" },
+    "tags": ["瞳术", "洞察", "复制"],
+    "description": "增强动态观察和查克拉感知，可在条件满足时洞察或复制部分招式。",
+    "prompt": "外挂能力：写轮眼。用户拥有强化动态视觉、查克拉感知和洞察能力，并可在理解基础、身体条件和查克拉足够时复制部分招式；它不能自动掌握血继限界、未知原理或超出身体承受范围的能力。"
+  },
+  {
+    "id": "naruto-shadow-clone",
+    "category": "skill",
+    "name": "影分身之术",
+    "work": "火影忍者",
+    "source": { "status": "reference", "label": "忍术资料整理", "url": "https://naruto.fandom.com/wiki/Shadow_Clone_Technique" },
+    "tags": ["分身", "侦察", "查克拉"],
+    "description": "制造具备实体行动能力的分身，但会分摊查克拉并在解除后回馈经历。",
+    "prompt": "外挂技能：影分身之术。用户可以按查克拉和控制力制造有限数量的实体分身；分身的强度、持续时间和数量受状态限制，分身解除后的经验回馈可能造成负担，不能用分身无限叠加战力。"
+  },
+  {
+    "id": "mha-one-for-all",
+    "category": "ability",
+    "name": "One For All",
+    "work": "我的英雄学院",
+    "source": { "status": "reference", "label": "个性资料整理", "url": "https://myheroacademia.fandom.com/wiki/One_For_All" },
+    "tags": ["力量积累", "传承", "爆发"],
+    "description": "积累并传承力量，同时可能保留前代持有者的能力痕迹。",
+    "prompt": "外挂能力：One For All。用户拥有可积累、传承和爆发的力量，但输出必须受身体承受力、控制力和训练程度限制；过载会造成伤害，前代能力的使用也需要逐步理解和适应。"
+  },
+  {
+    "id": "jujutsu-six-eyes",
+    "category": "ability",
+    "name": "六眼",
+    "work": "咒术回战",
+    "source": { "status": "reference", "label": "术式资料整理", "url": "https://jujutsu-kaisen.fandom.com/wiki/Six_Eyes" },
+    "tags": ["感知", "咒力", "洞察"],
+    "description": "极大提升对咒力和术式的识别、分析与控制精度。",
+    "prompt": "外挂能力：六眼。用户能以极高精度观察、分析和控制能量与术式细节，但它不是全知能力；未知信息仍需观察，复杂分析会受到注意力、距离、干扰和身体负荷限制。"
+  },
+  {
+    "id": "jujutsu-limitless",
+    "category": "skill",
+    "name": "无下限术式",
+    "work": "咒术回战",
+    "source": { "status": "reference", "label": "术式资料整理", "url": "https://jujutsu-kaisen.fandom.com/wiki/Limitless" },
+    "tags": ["空间", "防御", "术式"],
+    "description": "以空间概念控制接近、排斥和吸引，精细使用需要极高控制力。",
+    "prompt": "外挂技能：无下限术式。用户可以在理解和能量足够时对接近、吸引与排斥进行空间层面的控制；效果依赖精度、范围、维持时间和精神负荷，不能默认开启绝对防御或无限输出。"
+  },
+  {
+    "id": "hunter-nen",
+    "category": "skill",
+    "name": "念能力",
+    "work": "全职猎人",
+    "source": { "status": "reference", "label": "能力体系整理", "url": "https://hunterxhunter.fandom.com/wiki/Nen" },
+    "tags": ["能量", "誓约", "系别"],
+    "description": "通过训练、系别和制约形成个人化的生命能量能力。",
+    "prompt": "外挂技能：念能力。用户可以感知、运用并训练生命能量，能力类型受天赋、系别、训练和自设制约影响；越强的效果应对应越明确的条件、风险或代价，不能绕过誓约直接获得全能能力。"
+  },
+  {
+    "id": "jojo-the-world",
+    "category": "ability",
+    "name": "世界",
+    "work": "JOJO的奇妙冒险",
+    "source": { "status": "reference", "label": "替身资料整理", "url": "https://jojowiki.com/The_World" },
+    "tags": ["替身", "时间停止", "近战"],
+    "description": "以高强度近战替身为核心，并在条件满足时短暂停止时间。",
+    "prompt": "外挂能力：世界。用户拥有高强度近战替身，并可在训练和状态允许时短暂停止时间；时间停止的持续、范围、冷却和使用次数必须有限，用户不能在停止期间无成本完成所有行动。"
+  },
+  {
+    "id": "jojo-ger",
+    "category": "ability",
+    "name": "黄金体验镇魂曲",
+    "work": "JOJO的奇妙冒险",
+    "source": { "status": "reference", "label": "替身资料整理", "url": "https://jojowiki.com/Gold_Experience_Requiem" },
+    "tags": ["因果", "归零", "替身"],
+    "description": "将针对自身的行动或结果归零，但具体表现取决于作品规则和场景。",
+    "prompt": "外挂能力：黄金体验镇魂曲。用户的替身可以在满足规则时使针对自身的行动或结果归于无效；该能力不应被写成随意改写世界，触发对象、范围、认知和剧情规则需要明确。"
+  },
+  {
+    "id": "bleach-bankai",
+    "category": "skill",
+    "name": "卍解",
+    "work": "死神",
+    "source": { "status": "reference", "label": "斩魄刀资料整理", "url": "https://bleach.fandom.com/wiki/Bankai" },
+    "tags": ["斩魄刀", "解放", "战斗"],
+    "description": "斩魄刀的高阶解放形态，强化或改变能力并带来巨大消耗。",
+    "prompt": "外挂技能：卍解。用户可以在已完成斩魄刀修行和契合的前提下释放高阶形态；形态效果、持续时间、消耗、损伤和解除条件要与斩魄刀本身一致，不能把所有卍解视为同一种能力。"
+  },
+  {
+    "id": "overlord-tier-magic",
     "category": "system",
-    "name": "因果账簿",
-    "work": "示例·原创能力库",
-    "source": { "status": "example", "label": "原创演示·非原作设定", "url": null },
-    "tags": ["因果", "记录"],
-    "description": "记录承诺和代价，提醒因果关系，不直接改写命运。",
-    "prompt": "外挂系统：因果账簿。系统可以记录角色做出的承诺、交换和代价，并在相关情节出现时提醒一致性；它不能直接决定结果，也不能替故事强行制造因果。"
+    "name": "阶位魔法体系",
+    "work": "OVERLORD",
+    "source": { "status": "reference", "label": "魔法体系整理", "url": "https://overlordmaruyama.fandom.com/wiki/Tier_Magic" },
+    "tags": ["魔法", "阶位", "资源"],
+    "description": "按阶位、职业和资源组织法术，越高阶越需要相应条件。",
+    "prompt": "外挂系统：阶位魔法体系。用户可以按职业、等级、学习条件和资源使用对应阶位的魔法；法术有施法时间、消耗、冷却、抗性和环境限制，不要把魔法等级直接等同于必胜。"
+  },
+  {
+    "id": "douluo-xuan-tian-gong",
+    "category": "cultivation",
+    "name": "玄天功",
+    "work": "斗罗大陆",
+    "source": { "status": "reference", "label": "功法资料整理", "url": "https://douluo-dalu.fandom.com/wiki/Xuan_Tian_Gong" },
+    "tags": ["内功", "魂力", "修炼"],
+    "description": "以特殊运转路线积蓄和控制魂力，强调长期修炼和经脉承受。",
+    "prompt": "外挂功法：玄天功。用户可以通过特定呼吸、运转和修炼方法积蓄并控制能量；修炼效果需要时间、经脉承受力和资源支撑，不能跳过境界或直接获得完整魂技。"
+  },
+  {
+    "id": "douluo-purple-demon-eyes",
+    "category": "skill",
+    "name": "紫极魔瞳",
+    "work": "斗罗大陆",
+    "source": { "status": "reference", "label": "功法资料整理", "url": "https://douluo-dalu.fandom.com/wiki/Purple_Demon_Eyes" },
+    "tags": ["瞳术", "精神", "感知"],
+    "description": "通过特定修炼强化视力、精神力和观察能力。",
+    "prompt": "外挂技能：紫极魔瞳。用户能通过持续修炼强化视觉、精神感知和细节观察；效果受修为、精神力和环境影响，不能自动看穿所有伪装、幻术或未知机制。"
+  },
+  {
+    "id": "battle-through-heavens-flame-mantra",
+    "category": "cultivation",
+    "name": "焚诀",
+    "work": "斗破苍穹",
+    "source": { "status": "reference", "label": "功法资料整理", "url": "https://battle-through-the-heavens.fandom.com/wiki/Flame_Mantra" },
+    "tags": ["功法", "异火", "进化"],
+    "description": "可通过吞噬和融合异火逐步进化，但风险极高。",
+    "prompt": "外挂功法：焚诀。用户可以在满足体质、控制力和材料条件时尝试吸收并融合特殊火焰以推动功法进化；每次进化都伴随失控、反噬、失败和资源风险，不能无条件吞噬任何火焰。"
+  },
+  {
+    "id": "mortal-journey-palm-heaven-vial",
+    "category": "system",
+    "name": "掌天瓶",
+    "work": "凡人修仙传",
+    "source": { "status": "reference", "label": "法宝资料整理", "url": "https://a-record-of-a-mortals-journey-to-immortality.fandom.com/wiki/Heavenly_Vial" },
+    "tags": ["法宝", "灵液", "资源"],
+    "description": "在特定环境和时间条件下凝聚灵液，帮助催熟或转化资源。",
+    "prompt": "外挂系统：掌天瓶。用户拥有一件能在月光、时间和灵气等条件满足时凝聚特殊灵液的法宝；产出速度、容量、用途和催化对象必须有限，不能凭空制造高阶宝物或跳过修炼。"
+  },
+  {
+    "id": "lord-of-mysteries-seer",
+    "category": "cultivation",
+    "name": "占卜家途径",
+    "work": "诡秘之主",
+    "source": { "status": "reference", "label": "序列体系整理", "url": "https://lordofthemysteries.fandom.com/wiki/Seer_Pathway" },
+    "tags": ["序列", "占卜", "神秘学"],
+    "description": "通过仪式、灵性和序列晋升获得占卜、灵视与神秘学能力。",
+    "prompt": "外挂体系：占卜家途径。用户可以通过仪式、灵性和序列晋升获得灵视、占卜和神秘学能力；占卜结果受问题、媒介、干扰和序列限制，不能把模糊预兆写成确定的全知答案。"
+  },
+  {
+    "id": "the-kings-avatar-thousand-machine-umbrella",
+    "category": "skill",
+    "name": "千机伞",
+    "work": "全职高手",
+    "source": { "status": "reference", "label": "作品资料整理", "url": "https://baike.baidu.com/item/%E5%8D%83%E6%9C%BA%E4%BC%9E" },
+    "tags": ["武器", "变形", "职业"],
+    "description": "可在多种武器形态间切换，要求使用者掌握对应职业和操作节奏。",
+    "prompt": "外挂装备：千机伞。用户拥有可在多种武器形态间切换的复杂装备；每种形态都有结构、操作、冷却和熟练度要求，切换不能无视动作时间，也不能替代用户对各职业技能的学习。"
+  },
+  {
+    "id": "swallowed-star-virtual-universe",
+    "category": "system",
+    "name": "虚拟宇宙",
+    "work": "吞噬星空",
+    "source": { "status": "reference", "label": "世界观资料整理", "url": "https://swallowed-star.fandom.com/wiki/Virtual_Universe" },
+    "tags": ["虚拟世界", "训练", "网络"],
+    "description": "连接高度拟真的虚拟空间，用于交流、训练、交易与任务。",
+    "prompt": "外挂系统：虚拟宇宙。用户可以进入一个高度拟真的虚拟空间进行交流、训练、交易和任务；虚拟成果不能自动替代现实资源，连接、权限、时间和伤害反馈必须符合当前世界规则。"
+  },
+  {
+    "id": "horror-house-black-phone",
+    "category": "system",
+    "name": "黑色手机",
+    "work": "我有一座恐怖屋",
+    "source": { "status": "reference", "label": "作品资料整理", "url": "https://baike.baidu.com/item/%E6%88%91%E6%9C%89%E4%B8%80%E5%BA%A7%E6%81%90%E6%80%96%E5%B1%8B" },
+    "tags": ["任务", "灵异", "探索"],
+    "description": "发布带有风险的探索任务，并把灵异体验与现实经营连接起来。",
+    "prompt": "外挂系统：黑色手机。系统可以发布与恐怖场景、探索和经营相关的任务，并给出有限线索或奖励；任务会带来真实风险，线索不能直接替代调查，系统不能为了推进剧情强迫用户行动。"
+  },
+  {
+    "id": "the-gamer-system",
+    "category": "system",
+    "name": "Gamer系统",
+    "work": "The Gamer",
+    "source": { "status": "reference", "label": "能力体系整理", "url": "https://the-gamer.fandom.com/wiki/The_Gamer" },
+    "tags": ["属性", "技能", "游戏化"],
+    "description": "把现实行动游戏化，显示属性、任务、技能和成长。",
+    "prompt": "外挂系统：Gamer系统。用户可以看到属性、技能、任务和成长记录，并通过实际行动获得经验；系统显示不等于自动完成，伤势、资源、技能熟练度和现实因果仍然有效。"
+  },
+  {
+    "id": "jujutsu-ten-shadows",
+    "category": "skill",
+    "name": "十种影法术",
+    "work": "咒术回战",
+    "source": { "status": "reference", "label": "术式资料整理", "url": "https://jujutsu-kaisen.fandom.com/wiki/Ten_Shadows_Technique" },
+    "tags": ["召唤", "影子", "式神"],
+    "description": "通过影子召唤和操控式神，每种式神都有独立规则。",
+    "prompt": "外挂技能：十种影法术。用户可以通过影子召唤有限式神；式神需要按规则解锁、驯服和维持，受影子空间、能量、伤势和召唤顺序限制，不能无条件同时召唤所有式神。"
+  },
+  {
+    "id": "hxh-godspeed",
+    "category": "skill",
+    "name": "神速",
+    "work": "全职猎人",
+    "source": { "status": "reference", "label": "念能力资料整理", "url": "https://hunterxhunter.fandom.com/wiki/Godspeed" },
+    "tags": ["速度", "反应", "电"],
+    "description": "以电力和念能力强化自动反应与高速移动，但消耗巨大。",
+    "prompt": "外挂技能：神速。用户可以用储存的电力和念能力强化反应、移动与自动防御；电量、念量、身体负荷和维持时间有限，系统不会让用户在高速状态下无视地形、信息延迟或攻击范围。"
+  },
+  {
+    "id": "naruto-rinnegan",
+    "category": "ability",
+    "name": "轮回眼",
+    "work": "火影忍者",
+    "source": { "status": "reference", "label": "瞳术资料整理", "url": "https://naruto.fandom.com/wiki/Rinnegan" },
+    "tags": ["瞳术", "查克拉", "六道"],
+    "description": "掌握多种高阶查克拉能力，但需要相应血统、力量和控制力。",
+    "prompt": "外挂能力：轮回眼。用户可以在满足血统、能量和控制条件时使用多种高阶瞳术；不同能力有独立消耗、范围、冷却和反噬，不能把轮回眼写成自动掌握所有忍术。"
+  },
+  {
+    "id": "one-piece-haki",
+    "category": "skill",
+    "name": "霸气",
+    "work": "海贼王",
+    "source": { "status": "reference", "label": "能力体系整理", "url": "https://onepiece.fandom.com/wiki/Haki" },
+    "tags": ["意志", "感知", "武装"],
+    "description": "以意志和训练强化感知、攻击与防御，存在不同类型和熟练度。",
+    "prompt": "外挂技能：霸气。用户可以通过意志、训练和战斗经验发展见闻色、武装色或霸王色倾向；效果受专注、消耗、熟练度和对手抗性限制，不能默认拥有全部高级应用。"
+  },
+  {
+    "id": "bleach-zanpakuto",
+    "category": "ability",
+    "name": "斩魄刀",
+    "work": "死神",
+    "source": { "status": "reference", "label": "斩魄刀资料整理", "url": "https://bleach.fandom.com/wiki/Zanpakut%C5%8D" },
+    "tags": ["灵魂", "武器", "解放"],
+    "description": "与灵魂和人格相连的专属武器，能力取决于相互理解。",
+    "prompt": "外挂能力：斩魄刀。用户拥有一把与自身灵魂和人格相连的专属武器；始解、卍解和特殊能力需要通过理解、训练与契合逐步获得，武器能力不能脱离其主题随意扩张。"
+  },
+  {
+    "id": "lord-of-mysteries-faceless",
+    "category": "skill",
+    "name": "无面人",
+    "work": "诡秘之主",
+    "source": { "status": "reference", "label": "序列能力整理", "url": "https://lordofthemysteries.fandom.com/wiki/Faceless" },
+    "tags": ["变形", "伪装", "身份"],
+    "description": "通过观察和扮演改变外貌与身份表达，但不能凭空获得对方全部能力。",
+    "prompt": "外挂技能：无面人。用户可以在观察、理解和准备充分时改变外貌、声音与行为表现；伪装不等于读取记忆或获得目标全部能力，细节破绽、精神负担和识破风险必须保留。"
+  },
+  {
+    "id": "one-piece-op-op-fruit",
+    "category": "ability",
+    "name": "手术果实",
+    "work": "海贼王",
+    "source": { "status": "reference", "label": "恶魔果实资料整理", "url": "https://onepiece.fandom.com/wiki/Ope_Ope_no_Mi" },
+    "tags": ["空间", "手术", "恶魔果实"],
+    "description": "在指定空间内进行切割、置换和手术式操作，消耗极大。",
+    "prompt": "外挂能力：手术果实。用户可以在建立并维持指定空间后进行切割、置换和手术式操作；范围、体力、精度、目标抗性和持续消耗必须明确，不能把空间内的一切操作写成无条件成功。"
+  },
+  {
+    "id": "mha-new-order",
+    "category": "ability",
+    "name": "新秩序",
+    "work": "我的英雄学院",
+    "source": { "status": "reference", "label": "个性资料整理", "url": "https://myheroacademia.fandom.com/wiki/New_Order" },
+    "tags": ["规则", "限制", "个性"],
+    "description": "通过明确声明为对象施加有限规则，但有数量和认知条件。",
+    "prompt": "外挂能力：新秩序。用户可以对已识别的对象声明有限规则，但规则数量、对象认知、措辞精度和目标反抗都会影响结果；不能凭一句话改写一切，也不能绕过未知信息和能力上限。"
   }
 ]
