@@ -58,10 +58,13 @@
       <form id="afe-editor-form" class="afe-editor-form">
         <label class="afe-field afe-field-category">类型<select id="afe-editor-category"><option value="ability">能力</option><option value="cultivation">功法</option><option value="skill">技能</option><option value="system">系统</option></select></label>
         <label class="afe-field">名称<input id="afe-editor-name" type="text" maxlength="80" placeholder="例如：镜界步" required></label>
-        <label class="afe-field">作品 / 来源<input id="afe-editor-work" type="text" maxlength="120" placeholder="例如：用户自定义作品"></label>
+        <label class="afe-field">作品<input id="afe-editor-work" type="text" maxlength="120" placeholder="例如：用户自定义作品"></label>
         <label class="afe-field">标签<input id="afe-editor-tags" type="text" maxlength="180" placeholder="用逗号分隔，最多 6 个"></label>
-        <label class="afe-field afe-field-wide">简介<textarea id="afe-editor-description" rows="2" maxlength="280" placeholder="面板中看到的短说明"></textarea></label>
-        <label class="afe-field afe-field-wide">注入设定<textarea id="afe-editor-prompt" rows="5" maxlength="2400" placeholder="真正注入给模型的完整设定与限制条件" required></textarea></label>
+        <label class="afe-field afe-field-wide">简介<textarea id="afe-editor-description" rows="2" maxlength="280" placeholder="一句话说明这条外挂是什么"></textarea></label>
+        <label class="afe-field afe-field-wide">核心效果<textarea id="afe-editor-effects" rows="3" maxlength="1200" placeholder="每行填写一项核心效果"></textarea></label>
+        <label class="afe-field">使用条件<textarea id="afe-editor-requirements" rows="3" maxlength="800" placeholder="每行一项；没有可留空"></textarea></label>
+        <label class="afe-field">限制与代价<textarea id="afe-editor-limits" rows="3" maxlength="1200" placeholder="每行一项限制、消耗、冷却或风险"></textarea></label>
+        <label class="afe-field afe-field-wide">完整注入设定<textarea id="afe-editor-prompt" rows="5" maxlength="2400" placeholder="真正注入给模型的完整设定" required></textarea></label>
         <div class="afe-editor-actions">
           <button id="afe-editor-cancel" class="afe-editor-cancel" type="button">取消</button>
           <button class="afe-editor-save" type="submit">保存条目</button>
@@ -76,22 +79,35 @@
         <div>
           <span class="afe-section-kicker"><span class="afe-kicker-pulse is-amber"></span>DETAIL / 完整信息</span>
           <h3 id="afe-detail-title">外挂条目</h3>
-          <p id="afe-detail-work">未标注作品</p>
         </div>
         <button id="afe-detail-close" class="afe-close" type="button" aria-label="关闭条目详情"><span aria-hidden="true">×</span></button>
       </header>
       <div class="afe-detail-meta">
         <span id="afe-detail-category" class="afe-card-category">能力</span>
-        <span id="afe-detail-source" class="afe-tag">资料整理</span>
+        <span id="afe-detail-work" class="afe-tag">作品</span>
         <div id="afe-detail-tags" class="afe-detail-tags"></div>
       </div>
       <div class="afe-detail-body">
         <section class="afe-detail-section">
-          <span class="afe-detail-label">DESCRIPTION / 简介</span>
+          <span class="afe-detail-label">简介</span>
           <p id="afe-detail-description"></p>
         </section>
         <section class="afe-detail-section">
-          <span class="afe-detail-label">INJECTION / 注入设定</span>
+          <span class="afe-detail-label">核心效果</span>
+          <ul id="afe-detail-effects" class="afe-detail-list"></ul>
+        </section>
+        <section class="afe-detail-section afe-detail-grid-section">
+          <div class="afe-detail-section">
+            <span class="afe-detail-label">使用条件</span>
+            <ul id="afe-detail-requirements" class="afe-detail-list"></ul>
+          </div>
+          <div class="afe-detail-section">
+            <span class="afe-detail-label">限制与代价</span>
+            <ul id="afe-detail-limits" class="afe-detail-list"></ul>
+          </div>
+        </section>
+        <section class="afe-detail-section">
+          <span class="afe-detail-label">完整注入设定</span>
           <pre id="afe-detail-prompt"></pre>
         </section>
       </div>

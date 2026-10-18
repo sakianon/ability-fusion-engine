@@ -189,8 +189,14 @@
 .afe-detail-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .afe-detail-body { display: grid; gap: 15px; padding: 18px 22px; }
 .afe-detail-section { display: grid; gap: 7px; }
+.afe-detail-grid-section { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .afe-detail-label { color: var(--afe-cyan); font-size: 9px; letter-spacing: 0.08em; }
 .afe-detail-section p, .afe-detail-section pre { margin: 0; color: #d7edf2; font-size: 12px; line-height: 1.7; text-wrap: pretty; }
+.afe-detail-list { display: grid; gap: 6px; margin: 0; padding: 0; color: #d7edf2; font-size: 12px; line-height: 1.6; list-style: none; }
+.afe-detail-list li { position: relative; padding-left: 13px; }
+.afe-detail-list li::before { position: absolute; top: 0.68em; left: 1px; width: 5px; height: 5px; border-radius: 50%; background: var(--afe-cyan); content: ""; }
+.afe-detail-list li.is-unstructured { color: var(--afe-dim); }
+.afe-detail-list li.is-unstructured::before { background: var(--afe-dim); }
 .afe-detail-section pre { max-height: 270px; overflow: auto; padding: 12px 13px; border: 1px solid rgba(145, 216, 230, 0.18); border-radius: 9px; color: #c5fff5; background: rgba(2, 11, 20, 0.64); font: inherit; white-space: pre-wrap; }
 .afe-detail-actions { display: flex; justify-content: flex-end; padding: 0 22px 22px; }
 
@@ -330,6 +336,7 @@
   .afe-editor-modal .afe-editor { margin-right: 0; margin-left: 0; }
   .afe-work-categories { margin-right: 22px; margin-left: 22px; }
   .afe-detail-modal { padding: 22px; }
+  .afe-detail-grid-section { grid-template-columns: 1fr; }
   .afe-editor-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .afe-field-wide { grid-column: span 2; }
   .afe-workspace { grid-template-columns: minmax(0, 1fr); }

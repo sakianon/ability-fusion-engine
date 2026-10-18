@@ -147,6 +147,9 @@ function normalizeAbilities(value) {
       work: typeof item.work === "string" ? item.work : "未标注作品",
       tags: Array.isArray(item.tags) ? item.tags.filter((tag) => typeof tag === "string").slice(0, 6) : [],
       description: typeof item.description === "string" ? item.description : "暂无说明。",
+      effects: normalizeDetailItems(item.effects),
+      requirements: normalizeDetailItems(item.requirements),
+      limits: normalizeDetailItems(item.limits),
       prompt: item.prompt,
       source: item.source && typeof item.source === "object"
         ? {
@@ -155,6 +158,12 @@ function normalizeAbilities(value) {
         }
         : { status: "unverified", label: "来源未标注" },
     }));
+}
+
+function normalizeDetailItems(value) {
+  if (Array.isArray(value)) return value.filter((item) => typeof item === "string" && item.trim()).map((item) => item.trim());
+  if (typeof value === "string") return value.split(/\r?\n/u).map((item) => item.trim()).filter(Boolean);
+  return [];
 }
 
 function rebuildAbilities() {
@@ -270,6 +279,9 @@ function openAbilityEditor(abilityId = "", trigger = null) {
   setEditorField("afe-editor-work", ability?.work ?? "用户自定义");
   setEditorField("afe-editor-tags", ability?.tags?.join(", ") ?? "自定义");
   setEditorField("afe-editor-description", ability?.description ?? "描述这条外挂能做什么，以及它的边界。");
+  setEditorField("afe-editor-effects", ability?.effects?.join("\n") ?? "");
+  setEditorField("afe-editor-requirements", ability?.requirements?.join("\n") ?? "");
+  setEditorField("afe-editor-limits", ability?.limits?.join("\n") ?? "");
   setEditorField("afe-editor-prompt", ability?.prompt ?? "外挂能力：请在这里写入会注入给模型的完整设定，并明确限制条件。");
   document.getElementById("afe-editor-name")?.focus({ preventScroll: true });
   panelRoot.scrollTop = scrollTop;
@@ -287,26 +299,41 @@ function closeAbilityEditor({ restoreFocus = true } = {}) {
 function renderAbilityDetails(ability) {
   if (!panelRoot || !ability) return;
   const category = document.getElementById("afe-detail-category");
-  const source = document.getElementById("afe-detail-source");
   const work = document.getElementById("afe-detail-work");
   const tags = document.getElementById("afe-detail-tags");
   const description = document.getElementById("afe-detail-description");
+  const effects = document.getElementById("afe-detail-effects");
+  const requirements = document.getElementById("afe-detail-requirements");
+  const limits = document.getElementById("afe-detail-limits");
   const prompt = document.getElementById("afe-detail-prompt");
   const action = document.getElementById("afe-detail-action");
   if (category) {
     category.textContent = CATEGORY_LABELS[ability.category];
     category.className = `afe-card-category afe-category-${ability.category}`;
   }
-  if (source) source.textContent = ability.source.label;
-  if (work) work.textContent = ability.work;
+  if (work) work.textContent = `作品：${ability.work}`;
   if (tags) tags.replaceChildren(...ability.tags.map(createTag));
   if (description) description.textContent = ability.description;
+  renderDetailItems(effects, ability.effects);
+  renderDetailItems(requirements, ability.requirements);
+  renderDetailItems(limits, ability.limits);
   if (prompt) prompt.textContent = ability.prompt;
   if (action) {
     const selected = isSelected(ability.id);
     action.textContent = selected ? "取消外挂" : "加入外挂";
     action.setAttribute("aria-pressed", String(selected));
   }
+}
+
+function renderDetailItems(target, items) {
+  if (!target) return;
+  const entries = items.length ? items : ["尚未单独整理；请参考完整注入设定。"];
+  target.replaceChildren(...entries.map((item) => {
+    const entry = document.createElement("li");
+    entry.textContent = item;
+    if (!items.length) entry.className = "is-unstructured";
+    return entry;
+  }));
 }
 
 function openAbilityDetails(abilityId, trigger = null) {
@@ -339,6 +366,9 @@ function applyAbilityTemplate() {
   setEditorField("afe-editor-work", "用户自定义作品");
   setEditorField("afe-editor-tags", "标签一, 标签二");
   setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
+  setEditorField("afe-editor-effects", "核心效果一\n核心效果二");
+  setEditorField("afe-editor-requirements", "需要满足的条件");
+  setEditorField("afe-editor-limits", "能力范围、不能做到的事、消耗、冷却或风险");
   setEditorField("afe-editor-prompt", "外挂能力：新外挂名称。用户可以在明确条件下使用这项能力；请保持能力边界、代价和已知信息一致，不要把它写成无条件万能能力。");
   document.getElementById("afe-editor-name")?.focus();
   setStatus("已载入外挂条目模板，可以直接修改后保存。");
@@ -354,6 +384,9 @@ function readAbilityEditor() {
     .filter(Boolean)
     .slice(0, 6);
   const description = document.getElementById("afe-editor-description")?.value.trim() ?? "";
+  const effects = normalizeDetailItems(document.getElementById("afe-editor-effects")?.value ?? "");
+  const requirements = normalizeDetailItems(document.getElementById("afe-editor-requirements")?.value ?? "");
+  const limits = normalizeDetailItems(document.getElementById("afe-editor-limits")?.value ?? "");
   const prompt = document.getElementById("afe-editor-prompt")?.value.trim() ?? "";
   if (!name || !prompt) {
     setStatus("至少填写外挂名称和注入设定。");
@@ -367,6 +400,9 @@ function readAbilityEditor() {
     work: work || "用户自定义",
     tags,
     description: description || "暂无说明。",
+    effects,
+    requirements,
+    limits,
     prompt,
     source: { status: "custom", label: editingAbilityId ? "用户修改" : "用户自定义" },
   };
