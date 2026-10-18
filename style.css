@@ -198,6 +198,20 @@
 .afe-detail-list li.is-unstructured { color: var(--afe-dim); }
 .afe-detail-list li.is-unstructured::before { background: var(--afe-dim); }
 .afe-detail-section pre { max-height: 270px; overflow: auto; padding: 12px 13px; border: 1px solid rgba(145, 216, 230, 0.18); border-radius: 9px; color: #c5fff5; background: rgba(2, 11, 20, 0.64); font: inherit; white-space: pre-wrap; }
+.afe-stage-list, .afe-stage-editor-list { display: grid; gap: 9px; }
+.afe-stage-card, .afe-stage-editor-card { min-width: 0; margin: 0; padding: 11px 12px; border: 1px solid rgba(145, 216, 230, 0.2); border-radius: 9px; background: rgba(2, 11, 20, 0.35); }
+.afe-stage-card h4 { margin: 0 0 7px; color: var(--afe-amber); font-size: 12px; }
+.afe-stage-card p { margin: 4px 0 0; color: #d7edf2; font-size: 11px; line-height: 1.6; }
+.afe-stage-card p strong { color: var(--afe-cyan-strong); }
+.afe-stage-editor { gap: 8px; }
+.afe-editor-help { margin: 0; color: #a9c8d3; font-size: 10px; line-height: 1.5; }
+.afe-stage-editor-card { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.afe-stage-editor-card legend { padding: 0 5px; color: var(--afe-amber); font-size: 10px; }
+.afe-stage-editor-field { display: grid; gap: 5px; color: #c3dfe7; font-size: 10px; }
+.afe-stage-editor-field:nth-of-type(2), .afe-stage-editor-field:nth-of-type(3) { grid-column: 1 / -1; }
+.afe-stage-editor-field input, .afe-stage-editor-field textarea { width: 100%; min-height: 36px; padding: 8px; border: 1px solid rgba(145, 216, 230, 0.3); border-radius: 7px; color: #f2fbff; background: #071827; font: inherit; }
+.afe-stage-editor-field textarea { min-height: 55px; resize: vertical; }
+.afe-stage-remove { justify-self: end; padding: 5px 8px; border: 1px solid rgba(255, 143, 154, 0.38); border-radius: 6px; color: #ffb7be; background: rgba(255, 143, 154, 0.07); font-size: 10px; }
 .afe-detail-actions { display: flex; justify-content: flex-end; padding: 0 22px 22px; }
 
 .afe-workspace { display: grid; grid-template-columns: minmax(0, 1.58fr) minmax(290px, 0.82fr); gap: 14px; padding: 0 32px 24px; }
@@ -369,6 +383,8 @@
   .afe-editor-form { grid-template-columns: 1fr; }
   .afe-field-wide { grid-column: auto; }
   .afe-editor-actions { grid-column: auto; }
+  .afe-stage-editor-card { grid-template-columns: 1fr; }
+  .afe-stage-editor-field:nth-of-type(2), .afe-stage-editor-field:nth-of-type(3) { grid-column: auto; }
   .afe-categories { gap: 4px; padding: 0 16px 17px; }
   .afe-category-line { right: 16px; left: 16px; }
   .afe-category { padding: 0 8px; font-size: 11px; }

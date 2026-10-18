@@ -64,7 +64,12 @@
         <label class="afe-field afe-field-wide">核心效果<textarea id="afe-editor-effects" rows="3" maxlength="1200" placeholder="每行填写一项核心效果"></textarea></label>
         <label class="afe-field">使用条件<textarea id="afe-editor-requirements" rows="3" maxlength="800" placeholder="每行一项；没有可留空"></textarea></label>
         <label class="afe-field">限制与代价<textarea id="afe-editor-limits" rows="3" maxlength="1200" placeholder="每行一项限制、消耗、冷却或风险"></textarea></label>
-        <label class="afe-field afe-field-wide">完整注入设定<textarea id="afe-editor-prompt" rows="5" maxlength="2400" placeholder="真正注入给模型的完整设定" required></textarea></label>
+        <section class="afe-field afe-field-wide afe-stage-editor">
+          <span>阶段变化（可选）</span>
+          <p class="afe-editor-help">只有能力会逐步解锁或改变时才添加阶段。每阶段写清变化条件、效果、条件、限制与代价；不变的条目留空即可。</p>
+          <div id="afe-editor-stages" class="afe-stage-editor-list"></div>
+          <button id="afe-editor-add-stage" class="afe-editor-template" type="button">＋ 添加阶段</button>
+        </section>
         <div class="afe-editor-actions">
           <button id="afe-editor-cancel" class="afe-editor-cancel" type="button">取消</button>
           <button class="afe-editor-save" type="submit">保存条目</button>
@@ -107,8 +112,8 @@
           </div>
         </section>
         <section class="afe-detail-section">
-          <span class="afe-detail-label">完整注入设定</span>
-          <pre id="afe-detail-prompt"></pre>
+          <span class="afe-detail-label">阶段变化</span>
+          <div id="afe-detail-stages" class="afe-stage-list"></div>
         </section>
       </div>
       <div class="afe-detail-actions">

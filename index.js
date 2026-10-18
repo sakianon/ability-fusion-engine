@@ -52,11 +52,17 @@ function getSettings() {
   const context = getContext();
   context.extensionSettings ??= {};
   const current = context.extensionSettings[MODULE_ID] ?? {};
+  let removedLegacyPrompts = false;
   const selectedIds = Array.isArray(current.selectedIds)
     ? [...new Set(current.selectedIds.filter((id) => typeof id === "string"))]
     : [];
   const customAbilities = Array.isArray(current.customAbilities)
-    ? normalizeAbilities(current.customAbilities).map((ability) => ({
+    ? normalizeAbilities(current.customAbilities.map((item) => {
+      if (!item || typeof item !== "object" || !Object.hasOwn(item, "prompt")) return item;
+      removedLegacyPrompts = true;
+      const { prompt: _prompt, ...clean } = item;
+      return clean;
+    })).map((ability) => ({
       ...ability,
       source: { status: "custom", label: "用户自定义" },
     }))
@@ -65,7 +71,12 @@ function getSettings() {
     ? [...new Set(current.deletedIds.filter((id) => typeof id === "string"))]
     : [];
   const abilityOverrides = current.abilityOverrides && typeof current.abilityOverrides === "object"
-    ? current.abilityOverrides
+    ? Object.fromEntries(Object.entries(current.abilityOverrides).map(([id, override]) => {
+      if (!override || typeof override !== "object" || !Object.hasOwn(override, "prompt")) return [id, override];
+      removedLegacyPrompts = true;
+      const { prompt: _prompt, ...clean } = override;
+      return [id, clean];
+    }))
     : {};
   context.extensionSettings[MODULE_ID] = {
     ...DEFAULT_SETTINGS,
@@ -75,6 +86,7 @@ function getSettings() {
     abilityOverrides,
     deletedIds,
   };
+  if (removedLegacyPrompts) context.saveSettingsDebounced?.();
   return context.extensionSettings[MODULE_ID];
 }
 
@@ -139,7 +151,7 @@ function bindHostEvents() {
 
 function normalizeAbilities(value) {
   if (!Array.isArray(value)) return [];
-  return value.filter((item) => item && typeof item.id === "string" && typeof item.name === "string" && typeof item.prompt === "string")
+  return value.filter((item) => item && typeof item.id === "string" && typeof item.name === "string")
     .map((item) => ({
       id: item.id,
       category: Object.hasOwn(CATEGORY_LABELS, item.category) ? item.category : "ability",
@@ -150,7 +162,7 @@ function normalizeAbilities(value) {
       effects: normalizeDetailItems(item.effects),
       requirements: normalizeDetailItems(item.requirements),
       limits: normalizeDetailItems(item.limits),
-      prompt: item.prompt,
+      stages: normalizeStages(item.stages),
       source: item.source && typeof item.source === "object"
         ? {
           status: typeof item.source.status === "string" ? item.source.status : "unverified",
@@ -158,6 +170,20 @@ function normalizeAbilities(value) {
         }
         : { status: "unverified", label: "来源未标注" },
     }));
+}
+
+function normalizeStages(value) {
+  if (!Array.isArray(value)) return [];
+  return value.filter((stage) => stage && typeof stage === "object")
+    .map((stage) => ({
+      name: typeof stage.name === "string" ? stage.name.trim() : "",
+      transition: typeof stage.transition === "string" ? stage.transition.trim() : "",
+      effects: normalizeDetailItems(stage.effects),
+      requirements: normalizeDetailItems(stage.requirements),
+      limits: normalizeDetailItems(stage.limits),
+      costs: normalizeDetailItems(stage.costs),
+    }))
+    .filter((stage) => stage.name || stage.transition || stage.effects.length || stage.requirements.length || stage.limits.length || stage.costs.length);
 }
 
 function normalizeDetailItems(value) {
@@ -282,7 +308,7 @@ function openAbilityEditor(abilityId = "", trigger = null) {
   setEditorField("afe-editor-effects", ability?.effects?.join("\n") ?? "");
   setEditorField("afe-editor-requirements", ability?.requirements?.join("\n") ?? "");
   setEditorField("afe-editor-limits", ability?.limits?.join("\n") ?? "");
-  setEditorField("afe-editor-prompt", ability?.prompt ?? "外挂能力：请在这里写入会注入给模型的完整设定，并明确限制条件。");
+  renderStageEditor(ability?.stages ?? []);
   document.getElementById("afe-editor-name")?.focus({ preventScroll: true });
   panelRoot.scrollTop = scrollTop;
 }
@@ -305,7 +331,7 @@ function renderAbilityDetails(ability) {
   const effects = document.getElementById("afe-detail-effects");
   const requirements = document.getElementById("afe-detail-requirements");
   const limits = document.getElementById("afe-detail-limits");
-  const prompt = document.getElementById("afe-detail-prompt");
+  const stages = document.getElementById("afe-detail-stages");
   const action = document.getElementById("afe-detail-action");
   if (category) {
     category.textContent = CATEGORY_LABELS[ability.category];
@@ -317,7 +343,7 @@ function renderAbilityDetails(ability) {
   renderDetailItems(effects, ability.effects);
   renderDetailItems(requirements, ability.requirements);
   renderDetailItems(limits, ability.limits);
-  if (prompt) prompt.textContent = ability.prompt;
+  renderAbilityStages(stages, ability.stages);
   if (action) {
     const selected = isSelected(ability.id);
     action.textContent = selected ? "取消外挂" : "加入外挂";
@@ -325,9 +351,80 @@ function renderAbilityDetails(ability) {
   }
 }
 
+function renderAbilityStages(target, stages) {
+  if (!target) return;
+  if (!stages.length) {
+    target.textContent = "无预设阶段变化；能力按当前条件持续生效。";
+    return;
+  }
+  target.replaceChildren(...stages.map((stage, index) => {
+    const card = document.createElement("article");
+    card.className = "afe-stage-card";
+    const heading = document.createElement("h4");
+    heading.textContent = `${index + 1}. ${stage.name || `阶段 ${index + 1}`}`;
+    card.append(heading);
+    appendStageDetail(card, "阶段变化条件", stage.transition);
+    appendStageDetail(card, "本阶段效果", stage.effects);
+    appendStageDetail(card, "使用条件", stage.requirements);
+    appendStageDetail(card, "限制", stage.limits);
+    appendStageDetail(card, "代价", stage.costs);
+    return card;
+  }));
+}
+
+function appendStageDetail(parent, label, value) {
+  const values = Array.isArray(value) ? value : (value ? [value] : []);
+  if (!values.length) return;
+  const row = document.createElement("p");
+  const strong = document.createElement("strong");
+  strong.textContent = `${label}：`;
+  row.append(strong, document.createTextNode(values.join("；")));
+  parent.append(row);
+}
+
+function renderStageEditor(stages = []) {
+  const container = document.getElementById("afe-editor-stages");
+  if (!container) return;
+  container.replaceChildren(...stages.map((stage) => createStageEditorRow(stage)));
+}
+
+function createStageEditorRow(stage = {}) {
+  const card = document.createElement("fieldset");
+  card.className = "afe-stage-editor-card";
+  const legend = document.createElement("legend");
+  legend.textContent = "阶段";
+  card.append(legend);
+  const fields = [
+    ["阶段名称", "name", "例如：初阶、熟练、觉醒"],
+    ["阶段变化条件", "transition", "达到什么明确条件后进入本阶段；不要自动跳级"],
+    ["本阶段效果", "effects", "每行一项，写清相对上一阶段增加或变化什么"],
+    ["使用条件", "requirements", "每行一项"],
+    ["限制", "limits", "每行一项"],
+    ["代价", "costs", "每行一项；没有额外代价可留空"],
+  ];
+  for (const [labelText, key, placeholder] of fields) {
+    const label = document.createElement("label");
+    label.className = "afe-stage-editor-field";
+    label.append(document.createTextNode(labelText));
+    const field = key === "name" || key === "transition" ? document.createElement("input") : document.createElement("textarea");
+    field.dataset.stageField = key;
+    field.placeholder = placeholder;
+    field.value = Array.isArray(stage[key]) ? stage[key].join("\n") : (stage[key] ?? "");
+    label.append(field);
+    card.append(label);
+  }
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.className = "afe-stage-remove";
+  remove.textContent = "移除此阶段";
+  remove.addEventListener("click", () => card.remove());
+  card.append(remove);
+  return card;
+}
+
 function renderDetailItems(target, items) {
   if (!target) return;
-  const entries = items.length ? items : ["尚未单独整理；请参考完整注入设定。"];
+  const entries = items.length ? items : ["尚未单独整理。"];
   target.replaceChildren(...entries.map((item) => {
     const entry = document.createElement("li");
     entry.textContent = item;
@@ -369,7 +466,7 @@ function applyAbilityTemplate() {
   setEditorField("afe-editor-effects", "核心效果一\n核心效果二");
   setEditorField("afe-editor-requirements", "需要满足的条件");
   setEditorField("afe-editor-limits", "能力范围、不能做到的事、消耗、冷却或风险");
-  setEditorField("afe-editor-prompt", "外挂能力：新外挂名称。用户可以在明确条件下使用这项能力；请保持能力边界、代价和已知信息一致，不要把它写成无条件万能能力。");
+  renderStageEditor([]);
   document.getElementById("afe-editor-name")?.focus();
   setStatus("已载入外挂条目模板，可以直接修改后保存。");
 }
@@ -387,10 +484,21 @@ function readAbilityEditor() {
   const effects = normalizeDetailItems(document.getElementById("afe-editor-effects")?.value ?? "");
   const requirements = normalizeDetailItems(document.getElementById("afe-editor-requirements")?.value ?? "");
   const limits = normalizeDetailItems(document.getElementById("afe-editor-limits")?.value ?? "");
-  const prompt = document.getElementById("afe-editor-prompt")?.value.trim() ?? "";
-  if (!name || !prompt) {
-    setStatus("至少填写外挂名称和注入设定。");
-    document.getElementById(!name ? "afe-editor-name" : "afe-editor-prompt")?.focus();
+  const stages = [...(document.getElementById("afe-editor-stages")?.querySelectorAll(".afe-stage-editor-card") ?? [])]
+    .map((card) => {
+      const value = (key) => card.querySelector(`[data-stage-field="${key}"]`)?.value.trim() ?? "";
+      return {
+        name: value("name"),
+        transition: value("transition"),
+        effects: normalizeDetailItems(value("effects")),
+        requirements: normalizeDetailItems(value("requirements")),
+        limits: normalizeDetailItems(value("limits")),
+        costs: normalizeDetailItems(value("costs")),
+      };
+    }).filter((stage) => stage.name || stage.transition || stage.effects.length || stage.requirements.length || stage.limits.length || stage.costs.length);
+  if (!name) {
+    setStatus("请填写外挂名称。");
+    document.getElementById("afe-editor-name")?.focus();
     return null;
   }
   return {
@@ -403,7 +511,7 @@ function readAbilityEditor() {
     effects,
     requirements,
     limits,
-    prompt,
+    stages,
     source: { status: "custom", label: editingAbilityId ? "用户修改" : "用户自定义" },
   };
 }
@@ -546,7 +654,7 @@ function filterAbilities() {
   const work = panelRoot.querySelector("#afe-work-filter").value;
   const selectedOnly = panelRoot.querySelector("#afe-selected-filter").getAttribute("aria-pressed") === "true";
   return abilities.filter((ability) => {
-    const searchable = [ability.name, ability.work, ability.description, ability.prompt, ...ability.tags].join(" ").toLowerCase();
+    const searchable = [ability.name, ability.work, ability.description, ...ability.effects, ...ability.requirements, ...ability.limits, ...ability.stages.flatMap((stage) => [stage.name, stage.transition, ...stage.effects, ...stage.requirements, ...stage.limits, ...stage.costs]), ...ability.tags].join(" ").toLowerCase();
     return (category === "all" || ability.category === category)
       && (!work || ability.work === work)
       && (!selectedOnly || isSelected(ability.id))
@@ -647,7 +755,7 @@ function renderLoadout(animate = false) {
   empty.hidden = selected.length > 0;
   panelRoot.querySelector("#afe-loadout-count").textContent = String(selected.length);
   panelRoot.querySelector("#afe-selected-filter-count").textContent = String(selected.length);
-  panelRoot.querySelector("#afe-token-estimate").textContent = `${selected.reduce((total, ability) => total + ability.prompt.length, 0)} 字`;
+  panelRoot.querySelector("#afe-token-estimate").textContent = `${selected.reduce((total, ability) => total + buildInjectionPrompt([ability]).length, 0)} 字`;
 }
 
 function renderMasterSwitch() {
@@ -690,6 +798,9 @@ function renderPanel({ animate = false } = {}) {
     saveAbilityFromEditor();
   });
   subscribeDom(document.getElementById("afe-editor-template"), "click", applyAbilityTemplate);
+  subscribeDom(document.getElementById("afe-editor-add-stage"), "click", () => {
+    document.getElementById("afe-editor-stages")?.append(createStageEditorRow());
+  });
   subscribeDom(document.getElementById("afe-editor-cancel"), "click", closeAbilityEditor);
   subscribeDom(panelRoot.querySelector("#afe-page-prev"), "click", () => {
     currentPage = Math.max(1, currentPage - 1);
@@ -872,12 +983,37 @@ function removePanel() {
 }
 
 function buildInjectionPrompt(selected) {
-  const lines = selected.map((ability) => `- ${CATEGORY_LABELS[ability.category]}：${ability.name}（${ability.work}）\n  ${ability.prompt}`);
+  const lines = selected.map((ability) => {
+    const sections = [
+      `【${CATEGORY_LABELS[ability.category]}】${ability.name}（${ability.work}）`,
+      `简介：${ability.description}`,
+      formatInjectionList("标签", ability.tags),
+      formatInjectionList("核心效果", ability.effects),
+      formatInjectionList("使用条件", ability.requirements),
+      formatInjectionList("限制", ability.limits),
+    ];
+    if (ability.stages.length) {
+      sections.push("阶段变化：", ...ability.stages.map((stage, index) => [
+        `阶段 ${index + 1}：${stage.name || `阶段 ${index + 1}`}`,
+        `变化条件：${stage.transition || "未注明；不得自行推定已解锁"}`,
+        formatInjectionList("效果", stage.effects),
+        formatInjectionList("使用条件", stage.requirements),
+        formatInjectionList("限制", stage.limits),
+        formatInjectionList("代价", stage.costs),
+      ].filter(Boolean).join("\n")));
+    }
+    if (ability.source?.label) sections.push(`资料来源标注：${ability.source.label}`);
+    return sections.filter(Boolean).join("\n");
+  });
   return [
     "【全能外挂引擎】",
-    "以下内容是用户手动选择的外挂设定，请作为本次生成上下文的补充背景，保持与既有设定一致；不要替用户发言，不要擅自扩大能力，不要把本段说明当作剧情对白。",
+    "以下是用户手动选择的外挂完整资料，仅作为本次生成的补充设定。只按已明确的阶段、效果、条件、限制与代价描写；阶段变化必须由条目写明的条件触发，不得自动升级、补造能力、抵消代价或把未知内容当成事实。资料没有说明之处保持未知，并遵守聊天中更具体的设定；不要替用户发言，也不要把本段说明当作剧情对白。",
     ...lines,
   ].join("\n");
+}
+
+function formatInjectionList(label, items) {
+  return items.length ? `${label}：\n${items.map((item) => `- ${item}`).join("\n")}` : "";
 }
 
 function cleanupInjectedMessages() {
