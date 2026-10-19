@@ -54,18 +54,23 @@ function getSettings() {
   context.extensionSettings ??= {};
   const current = context.extensionSettings[MODULE_ID] ?? {};
   let removedLegacyPrompts = false;
+  let removedLegacySources = false;
   const selectedIds = Array.isArray(current.selectedIds)
     ? [...new Set(current.selectedIds.filter((id) => typeof id === "string"))]
     : [];
   const customAbilities = Array.isArray(current.customAbilities)
     ? normalizeAbilities(current.customAbilities.map((item) => {
-      if (!item || typeof item !== "object" || !Object.hasOwn(item, "prompt")) return item;
+      if (!item || typeof item !== "object") return item;
+      let clean = item;
+      if (Object.hasOwn(clean, "source")) {
+        removedLegacySources = true;
+        const { source: _source, ...withoutSource } = clean;
+        clean = withoutSource;
+      }
+      if (!Object.hasOwn(clean, "prompt")) return clean;
       removedLegacyPrompts = true;
-      const { prompt: _prompt, ...clean } = item;
-      return clean;
-    })).map((ability) => ({
-      ...ability,
-      source: { status: "custom", label: "用户自定义" },
+      const { prompt: _prompt, ...withoutPrompt } = clean;
+      return withoutPrompt;
     }))
     : [];
   const deletedIds = Array.isArray(current.deletedIds)
@@ -73,10 +78,17 @@ function getSettings() {
     : [];
   const abilityOverrides = current.abilityOverrides && typeof current.abilityOverrides === "object"
     ? Object.fromEntries(Object.entries(current.abilityOverrides).map(([id, override]) => {
-      if (!override || typeof override !== "object" || !Object.hasOwn(override, "prompt")) return [id, override];
+      if (!override || typeof override !== "object") return [id, override];
+      let clean = override;
+      if (Object.hasOwn(clean, "source")) {
+        removedLegacySources = true;
+        const { source: _source, ...withoutSource } = clean;
+        clean = withoutSource;
+      }
+      if (!Object.hasOwn(clean, "prompt")) return [id, clean];
       removedLegacyPrompts = true;
-      const { prompt: _prompt, ...clean } = override;
-      return [id, clean];
+      const { prompt: _prompt, ...withoutPrompt } = clean;
+      return [id, withoutPrompt];
     }))
     : {};
   context.extensionSettings[MODULE_ID] = {
@@ -87,7 +99,7 @@ function getSettings() {
     abilityOverrides,
     deletedIds,
   };
-  if (removedLegacyPrompts) context.saveSettingsDebounced?.();
+  if (removedLegacyPrompts || removedLegacySources) context.saveSettingsDebounced?.();
   return context.extensionSettings[MODULE_ID];
 }
 
@@ -164,12 +176,6 @@ function normalizeAbilities(value) {
       requirements: normalizeDetailItems(item.requirements),
       limits: normalizeDetailItems(item.limits),
       stages: normalizeStages(item.stages),
-      source: item.source && typeof item.source === "object"
-        ? {
-          status: typeof item.source.status === "string" ? item.source.status : "unverified",
-          label: typeof item.source.label === "string" ? item.source.label : "来源未标注",
-        }
-        : { status: "unverified", label: "来源未标注" },
     }));
 }
 
@@ -203,14 +209,9 @@ function rebuildAbilities() {
       const override = overrides[ability.id];
       if (!override || typeof override !== "object") return ability;
       const edited = normalizeAbilities([{ ...ability, ...override, id: ability.id }])[0];
-      return edited
-        ? { ...edited, source: { status: "custom", label: "用户修改" } }
-        : ability;
+      return edited ?? ability;
     });
-  const customAbilities = normalizeAbilities(settings.customAbilities).map((ability) => ({
-    ...ability,
-    source: { status: "custom", label: "用户自定义" },
-  }));
+  const customAbilities = normalizeAbilities(settings.customAbilities);
   abilities = [...builtInAbilities, ...customAbilities];
 }
 
@@ -513,7 +514,6 @@ function readAbilityEditor() {
     requirements,
     limits,
     stages,
-    source: { status: "custom", label: editingAbilityId ? "用户修改" : "用户自定义" },
   };
 }
 
@@ -609,10 +609,6 @@ function createAbilityCard(ability) {
   category.className = `afe-card-category afe-category-${ability.category}`;
   category.textContent = CATEGORY_LABELS[ability.category];
   top.append(category);
-  const source = document.createElement("span");
-  source.className = "afe-tag";
-  source.textContent = ability.source.label;
-  top.append(source);
   for (const tag of ability.tags) top.append(createTag(tag));
 
   const title = document.createElement("h4");
@@ -759,9 +755,9 @@ function renderLoadout(animate = false) {
     const copy = document.createElement("div");
     const name = document.createElement("strong");
     name.textContent = ability.name;
-    const source = document.createElement("small");
-    source.textContent = `${CATEGORY_LABELS[ability.category]} · ${ability.work}`;
-    copy.append(name, source);
+    const meta = document.createElement("small");
+    meta.textContent = `${CATEGORY_LABELS[ability.category]} · ${ability.work}`;
+    copy.append(name, meta);
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "afe-remove-button";
@@ -1022,7 +1018,6 @@ function buildInjectionPrompt(selected) {
         formatInjectionList("代价", stage.costs),
       ].filter(Boolean).join("\n")));
     }
-    if (ability.source?.label) sections.push(`资料来源标注：${ability.source.label}`);
     return sections.filter(Boolean).join("\n");
   });
   return [

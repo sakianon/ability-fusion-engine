@@ -21,7 +21,7 @@
 - `data/abilities.json` 可继续扩充的本地数据格式；
 - 结构化外挂详情与可选阶段变化；
 - `ABILITY-DETAIL-GUIDE.md` 提供字段填写说明和可复制的详情撰写提示词；
-- 内置小说、动漫能力资料，条目带来源标签。
+- 内置小说、动漫能力资料。
 
 ## 安装位置
 
@@ -49,7 +49,6 @@
   "category": "ability",
   "name": "名称",
   "work": "作品名",
-  "source": { "status": "verified | reference | unverified | custom", "label": "来源说明" },
   "tags": ["标签"],
   "description": "面板中的短说明",
   "effects": ["具体效果"],
@@ -61,7 +60,7 @@
 
 `category` 只能使用 `ability`、`cultivation`、`skill`、`system`、`item`（道具）。
 
-面板内置模板见 `data/ability-template.json`。`id` 只在直接维护 JSON 文件时需要稳定填写；面板新建条目会自动生成用户条目 ID。生成前会从外挂名称、作品、简介、效果、条件、限制、阶段和来源标注自动整理完整资料，不再使用 `prompt` 字段。
+面板内置模板见 `data/ability-template.json`。`id` 只在直接维护 JSON 文件时需要稳定填写；面板新建条目会自动生成用户条目 ID。生成前会从外挂名称、作品、简介、效果、条件、限制和阶段自动整理完整资料，不再使用 `prompt` 字段。
 
 用户编辑不会直接修改 `data/abilities.json`：
 
@@ -78,7 +77,7 @@
 - 扩展列表菜单项依赖酒馆页面的 `#extensionsMenu` / `.extensionsMenu` 容器（宿主 DOM，非稳定公共 API）；
 - 当前按 SillyTavern 的生成拦截器约定，在最新用户消息之前加入附加系统消息；尚未确认目标实例的实际消息顺序和清理时机；
 - 这不是精确的内部“用户设定描述后”栏位控制，具体排序需要真实宿主确认；
-- 当前内置资料是第一批整理结果，不代表覆盖所有作品、改编版本或所有能力条目；来源链接用于回查，不把搜索摘要当成原作全文。
+- 当前内置资料是持续整理结果，不代表覆盖所有作品、改编版本或所有能力条目。
 
 ## 安全边界
 
