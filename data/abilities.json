@@ -22,7 +22,8 @@
     "limits": [
       "任务结果和奖励由系统判定，使用者不能自行修改。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "solo-leveling-shadow-extraction",
@@ -44,7 +45,8 @@
       "目标必须已经死亡并留下可供提取的影子。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "rezero-return-by-death",
@@ -66,7 +68,8 @@
       "使用者须在死亡后继续作为能力主体存在，才能经历回归后的时间线。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "one-piece-gum-gum-fruit",
@@ -94,10 +97,13 @@
     ],
     "limits": [
       "海水和海楼石会使能力者失去行动力。",
-      "切割、穿刺和高温攻击仍能伤害橡胶身体。",
-      "齿轮形态会消耗体力；五档·尼卡结束后会出现明显衰弱。"
+      "切割、穿刺和高温攻击仍能伤害橡胶身体。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "齿轮形态会消耗体力。",
+      "五档·尼卡结束后会出现明显衰弱。"
+    ]
   },
   {
     "id": "naruto-sharingan",
@@ -167,7 +173,8 @@
         "limits": [],
         "costs": []
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "naruto-shadow-clone",
@@ -189,11 +196,13 @@
       "多重影分身之术需要把本体查克拉分给大量分身。"
     ],
     "limits": [
-      "分身承受攻击后会解除，不能代替本体承受伤害。",
+      "分身承受攻击后会解除，不能代替本体承受伤害。"
+    ],
+    "stages": [],
+    "costs": [
       "分身越多，本体和每个分身可用的查克拉越少。",
       "大量分身的记忆同时回传会使本体承受信息冲击。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "mha-one-for-all",
@@ -252,7 +261,8 @@
         ],
         "costs": []
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "hunter-nen",
@@ -280,9 +290,12 @@
       "念能力需要通过训练掌握缠、绝、练和发。"
     ],
     "limits": [
-      "誓约与制约越严格，换取的念能力强化越大，违约时也会承受对应代价。"
+      "誓约与制约越严格，换取的念能力强化越大。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "违约时会承受束缚对应的代价。"
+    ]
   },
   {
     "id": "jojo-the-world",
@@ -304,10 +317,11 @@
     "requirements": [
       "时间停止需要主动发动。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "时间停止结束后，使用者必须等待能力恢复才能再次停止时间。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "jojo-ger",
@@ -327,7 +341,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "overlord-tier-magic",
@@ -350,10 +365,12 @@
     ],
     "limits": [
       "阶位描述法术层级，不代表施法者自动掌握该阶所有法术。",
-      "可用法术、施法次数和消耗受施法者的职业构成与能力限制。",
       "某些特殊法术拥有独立发动条件或限制；不以单一法力消耗模型概括全部魔法。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "可用法术、施法次数和消耗受施法者的职业构成与能力限制。"
+    ]
   },
   {
     "id": "douluo-xuan-tian-gong",
@@ -374,7 +391,8 @@
       "须掌握玄天功的运转方法，并有时间和状态进行持续修炼。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "douluo-purple-demon-eyes",
@@ -449,7 +467,8 @@
         "limits": [],
         "costs": []
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "battle-through-heavens-flame-mantra",
@@ -470,9 +489,7 @@
       "需要先找到可供吞噬的火焰，并以自身力量压制、引导和炼化它。",
       "使用者的经脉、灵魂和斗气必须能承受火焰反噬，炼化过程需要集中与恢复时间。"
     ],
-    "limits": [
-      "火焰越强或属性越不相容，失控、反噬和身体损毁的风险越高。"
-    ],
+    "limits": [],
     "stages": [
       {
         "name": "基础炼化",
@@ -502,6 +519,9 @@
           "每次融合都会消耗大量斗气和恢复时间。"
         ]
       }
+    ],
+    "costs": [
+      "火焰越强或属性越不相容，失控、反噬和身体损毁的风险越高。"
     ]
   },
   {
@@ -526,7 +546,8 @@
     "limits": [
       "它不能凭空创造稀有材料，也不能保证任何材料都能承受催熟或转化。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "lord-of-mysteries-seer",
@@ -545,11 +566,10 @@
     ],
     "requirements": [
       "需要非凡配方、仪式材料、灵性状态和可供解读的目标或问题。",
-      "晋升必须按途径规则准备并消化魔药，不能只靠重复使用能力完成。"
+      "晋升必须按途径规则准备并消化魔药，不能只靠重复使用能力完成。",
+      "魔药扮演要求会随阶段提高。"
     ],
-    "limits": [
-      "灵性消耗、失控风险和魔药扮演要求会随阶段提高。"
-    ],
+    "limits": [],
     "stages": [
       {
         "name": "占卜家阶段",
@@ -594,6 +614,9 @@
           "长时间维持多重身份会增加精神负担。"
         ]
       }
+    ],
+    "costs": [
+      "灵性消耗和失控风险会随阶段提高。"
     ]
   },
   {
@@ -618,7 +641,8 @@
     "limits": [
       "武器不会自动授予对应职业的全部技能、经验或战术理解。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "swallowed-star-virtual-universe",
@@ -643,7 +667,8 @@
       "虚拟胜负和训练成果不会自动等同于现实身体、法则或资源上的提升。",
       "虚拟身份受到平台规则约束，无法凭空绕过现实世界的安全或能力边界。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "horror-house-black-phone",
@@ -665,7 +690,8 @@
       "任务要求主动探索、调查或完成指定行为，不能只靠阅读提示完成。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "the-gamer-system",
@@ -689,7 +715,8 @@
     "limits": [
       "任务奖励、技能解锁和属性成长受系统规则限制，不能自行编辑或无限叠加。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "hxh-godspeed",
@@ -741,7 +768,8 @@
           "比自动反应更快消耗电力和身体耐力。"
         ]
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "naruto-rinnegan",
@@ -763,8 +791,7 @@
       "觉醒或移植轮回眼，并适应轮回眼的瞳力。"
     ],
     "limits": [
-      "轮回眼的不同分支不能因为拥有同一双眼睛而自动熟练。",
-      "轮回眼的瞳力和查克拉不足时，六道分支与外道能力无法持续使用。"
+      "轮回眼的不同分支不能因为拥有同一双眼睛而自动熟练。"
     ],
     "stages": [
       {
@@ -795,6 +822,9 @@
           "高强度组合会造成持续查克拉消耗与身体负担。"
         ]
       }
+    ],
+    "costs": [
+      "轮回眼的瞳力和查克拉不足时，六道分支与外道能力无法持续使用。"
     ]
   },
   {
@@ -823,10 +853,12 @@
     ],
     "limits": [
       "见闻色霸气·未来视会被更快的行动、伪装和感知干扰突破。",
-      "霸王色霸气对意志强大的目标不能直接造成昏厥。",
-      "霸气持续使用会消耗体力和精神。"
+      "霸王色霸气对意志强大的目标不能直接造成昏厥。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "霸气持续使用会消耗体力和精神。"
+    ]
   },
   {
     "id": "bleach-zanpakuto",
@@ -895,7 +927,8 @@
           "解放会消耗灵压，并增加身体负担。"
         ]
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "one-piece-op-op-fruit",
@@ -927,7 +960,8 @@
     "limits": [
       "海水和海楼石会使恶魔果实能力失效。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "mha-new-order",
@@ -951,7 +985,8 @@
       "同时只能维持两条规则。",
       "目标名称、身份或性质判断错误时，规则无法正确锁定目标。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-byakugan",
@@ -974,7 +1009,8 @@
     "limits": [
       "白眼的视野存在死角；遮蔽物会阻断视线。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-amaterasu",
@@ -993,10 +1029,11 @@
     "requirements": [
       "需要万花筒写轮眼锁定目标或位置。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "反复使用天照会损伤眼睛并消耗查克拉。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-tsukuyomi",
@@ -1018,7 +1055,8 @@
     "limits": [
       "月读造成的主观体验不会直接改变现实中的物理事件。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-kamui",
@@ -1039,9 +1077,12 @@
       "神威·左眼需要视线锁定；神威·右眼需要接触目标或自身发动。"
     ],
     "limits": [
-      "神威·左眼和神威·右眼的作用方式不能互换；连续转移会加重眼睛和查克拉负担。"
+      "神威·左眼和神威·右眼的作用方式不能互换。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "连续转移会加重眼睛和查克拉负担。"
+    ]
   },
   {
     "id": "naruto-kotoamatsukami",
@@ -1060,10 +1101,11 @@
     "requirements": [
       "需要锁定目标并以对应万花筒瞳术发动。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "别天神发动后需要十年以上才能再次使用；千手柱间细胞可以缩短恢复时间。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-susanoo",
@@ -1083,9 +1125,7 @@
     "requirements": [
       "需要同时觉醒双眼万花筒写轮眼。"
     ],
-    "limits": [
-      "完整形态会持续消耗查克拉，并对使用者身体造成负担。"
-    ],
+    "limits": [],
     "stages": [
       {
         "name": "不完全形态",
@@ -1115,6 +1155,9 @@
           "高强度维持会造成严重查克拉消耗与身体反噬。"
         ]
       }
+    ],
+    "costs": [
+      "完整形态会持续消耗查克拉，并对使用者身体造成负担。"
     ]
   },
   {
@@ -1135,7 +1178,8 @@
       "需要写轮眼、查克拉与预先或即时发动的禁术准备。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-izanami",
@@ -1154,10 +1198,11 @@
     "requirements": [
       "需要写轮眼和对目标行动、感知片段的布置与记录。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "发动代价是失去一只眼睛。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-limbo",
@@ -1179,7 +1224,8 @@
     "limits": [
       "普通感知无法识别轮墓影子；六道之力或对应瞳术可以侦测、触及或抵抗。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-amenotejikara",
@@ -1199,7 +1245,8 @@
       "需要对应轮回眼、清晰锁定对象并在能力范围内完成交换。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-infinite-tsukuyomi",
@@ -1221,7 +1268,8 @@
     "limits": [
       "普通写轮眼不能单独发动无限月读。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-truth-seeking-balls",
@@ -1241,7 +1289,8 @@
       "需要六道级查克拉、阴阳遁和足够控制力。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-tailed-beast-transformation",
@@ -1265,7 +1314,7 @@
       "稳定使用需要控制尾兽查克拉，或与尾兽建立合作关系。"
     ],
     "limits": [
-      "完全尾兽化会使目标体型巨大，并增加封印和身体负担。"
+      "完全尾兽化会使目标体型巨大。"
     ],
     "stages": [
       {
@@ -1313,6 +1362,9 @@
           "持续维持会消耗九尾查克拉。"
         ]
       }
+    ],
+    "costs": [
+      "完全尾兽化会增加封印和身体负担。"
     ]
   },
   {
@@ -1333,12 +1385,10 @@
     ],
     "requirements": [
       "需要吸收自然能量，并保持自然能量、身体能量和精神能量的平衡。",
-      "六道仙人模式需要六道仙人级力量来源或相当的尾兽与自然能量条件。"
-    ],
-    "limits": [
-      "自然能量失衡会导致失控或身体变化。",
+      "六道仙人模式需要六道仙人级力量来源或相当的尾兽与自然能量条件。",
       "战斗中维持和补充自然能量需要专注或辅助条件。"
     ],
+    "limits": [],
     "stages": [
       {
         "name": "仙人模式",
@@ -1369,6 +1419,9 @@
         "limits": [],
         "costs": []
       }
+    ],
+    "costs": [
+      "自然能量失衡会导致失控或身体变化。"
     ]
   },
   {
@@ -1421,7 +1474,8 @@
           "以生命力和身体完整性为代价，存在死亡风险。"
         ]
       }
-    ]
+    ],
+    "costs": []
   },
   {
     "id": "naruto-flying-thunder-god",
@@ -1445,7 +1499,8 @@
     "limits": [
       "没有飞雷神术式的地点不能直接作为转移目标。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-rasengan",
@@ -1464,13 +1519,14 @@
     ],
     "requirements": [
       "需要完成查克拉形态变化训练，并稳定维持旋转查克拉。",
-      "风遁·螺旋手里剑还需要掌握风遁性质变化和更高的形态控制。"
+      "风遁·螺旋手里剑还需要掌握风遁性质变化和更高的形态控制。",
+      "基础螺旋丸主要依赖接触命中。"
     ],
-    "limits": [
-      "基础螺旋丸主要依赖接触命中。",
+    "limits": [],
+    "stages": [],
+    "costs": [
       "风遁·螺旋手里剑在早期近距离使用会伤害施术者，成型和投射也会增加查克拉消耗。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-edo-tensei",
@@ -1490,7 +1546,8 @@
       "需要死者遗传物质或灵魂线索、活人祭品、召唤媒介和完整禁术仪式。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-wood-release",
@@ -1512,10 +1569,11 @@
     "requirements": [
       "需要同时运用水遁和土遁查克拉性质，或拥有木遁血继限界。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "木遁生成的森林和木造物会消耗大量查克拉。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-dust-release",
@@ -1533,12 +1591,12 @@
       "尘遁·限界剥离之术：扩大原界剥离之术的作用范围。"
     ],
     "requirements": [
-      "需要同时运用火遁、风遁和土遁查克拉性质。"
-    ],
-    "limits": [
+      "需要同时运用火遁、风遁和土遁查克拉性质。",
       "尘遁需要完成结界构筑并持续维持形状。"
     ],
-    "stages": []
+    "limits": [],
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-ice-release",
@@ -1560,7 +1618,8 @@
     "limits": [
       "冰镜被破坏后，魔镜冰晶的移动和攻击路径会被切断。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-magnet-release",
@@ -1578,12 +1637,12 @@
       "磁遁·螺旋丸：把磁遁查克拉附着在螺旋丸上，削弱目标的行动。"
     ],
     "requirements": [
-      "需要运用风遁和土遁查克拉性质，或拥有磁遁血继限界。"
-    ],
-    "limits": [
+      "需要运用风遁和土遁查克拉性质，或拥有磁遁血继限界。",
       "磁遁必须有可被磁力操纵的砂铁、砂金或金属介质。"
     ],
-    "stages": []
+    "limits": [],
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-adamantine-sealing-chains",
@@ -1603,7 +1662,8 @@
       "需要特殊体质或对应封印术传承、足够查克拉和对目标的锁定。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-summoning-technique",
@@ -1626,7 +1686,8 @@
     "limits": [
       "没有契约不能召唤对应对象；通灵对象可以拒绝不符合条件的召唤。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-samehada",
@@ -1646,7 +1707,8 @@
       "需要鲛肌认可或至少容忍使用者，并通过接触或切割接触目标查克拉。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-totsuka-blade",
@@ -1666,7 +1728,8 @@
       "需要对应的须佐能乎和稳定的十拳剑形态，并成功命中目标。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-yata-mirror",
@@ -1686,7 +1749,8 @@
       "需要对应的须佐能乎和使用者持续提供瞳力与查克拉。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-benihisago",
@@ -1708,7 +1772,8 @@
     "limits": [
       "封印条件明确且可被规避；不了解目标言灵、无法使其开口或缺少配套忍具时效果会下降。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-shichiseiken",
@@ -1730,7 +1795,8 @@
     "limits": [
       "本身不是独立的万能封印；记录失败、目标抵抗或缺少红葫芦时不能直接完成封印。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-kokindo",
@@ -1750,7 +1816,8 @@
       "需要成功接触并束缚目标，与七星剑、红葫芦配套。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-bashosen",
@@ -1769,10 +1836,11 @@
     "requirements": [
       "需要挥动芭蕉扇选择查克拉性质。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "芭蕉扇每次发动都会直接抽取使用者查克拉。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-kohaku-no-johei",
@@ -1792,7 +1860,8 @@
       "需要锁定目标、发出有效呼唤并让目标作出回应，同时保持瓶体和术式完整。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-six-paths-technique",
@@ -1810,7 +1879,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-deva-path",
@@ -1833,10 +1903,11 @@
     "requirements": [
       "地爆天星需要形成黑色引力核心并持续维持引力。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "神罗天征发动后有五秒间隔。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-asura-path",
@@ -1856,7 +1927,8 @@
       "需要六道之力或对应外道改造，并维持身体结构与武器输出。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-human-path",
@@ -1876,7 +1948,8 @@
       "需要直接接触目标并维持六道查克拉控制。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-animal-path",
@@ -1896,7 +1969,8 @@
       "需要六道查克拉、通灵媒介和能维持多目标控制的精神力。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-preta-path",
@@ -1916,7 +1990,8 @@
       "需要建立有效接触或吸收范围，并维持六道查克拉控制。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-naraka-path",
@@ -1936,7 +2011,8 @@
       "需要六道查克拉、目标控制和阎王显现所需的查克拉输出。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-rinne-rebirth",
@@ -1956,7 +2032,8 @@
       "需要轮回眼、外道之力和足够生命/查克拉代价，还需要特定媒介或施术条件。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-gedo-statue",
@@ -1976,7 +2053,8 @@
       "需要轮回眼或相当的外道力量，并支付维持召唤和控制所需的查克拉。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-boil-release",
@@ -1996,7 +2074,8 @@
       "需要沸遁血继限界、查克拉性质控制和对蒸汽压力的调节。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-lava-release",
@@ -2016,7 +2095,8 @@
       "需要熔遁血继限界和足够查克拉。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-scorch-release",
@@ -2036,7 +2116,8 @@
       "需要灼遁血继限界、目标锁定和稳定的性质变化控制。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-explosion-release",
@@ -2056,7 +2137,8 @@
       "需要爆遁能力、爆炸介质或有效接触，并控制引爆时机。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-storm-release",
@@ -2076,7 +2158,8 @@
       "需要岚遁血继限界、雷水性质平衡和精确的形态控制。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-lightning-armor",
@@ -2096,7 +2179,8 @@
       "需要高水平雷遁控制、强韧身体和持续维持查克拉外衣。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-chidori",
@@ -2117,12 +2201,12 @@
       "千鸟刀：把雷遁查克拉附着在刀身上延长斩击。"
     ],
     "requirements": [
-      "千鸟需要雷遁查克拉、突进路线和准确命中。"
-    ],
-    "limits": [
+      "千鸟需要雷遁查克拉、突进路线和准确命中。",
       "千鸟的直线突进会限制转向；高速发动需要视觉辅助避免撞击障碍。"
     ],
-    "stages": []
+    "limits": [],
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-kirin",
@@ -2142,7 +2226,8 @@
       "需要先制造或利用足够雷云，并准确感知和引导落雷方向。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-darkness-technique",
@@ -2162,7 +2247,8 @@
       "需要命中目标的精神感知并维持幻术控制。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-reaper-death-seal",
@@ -2181,10 +2267,11 @@
     "requirements": [
       "需要完成结印并让死神接触目标。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "尸鬼封尽会以施术者的生命为代价。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-nine-dragon-sealing",
@@ -2204,7 +2291,8 @@
       "需要外道魔像、多个施术者、目标尾兽查克拉和长时间稳定仪式。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-four-symbols-sealing",
@@ -2224,7 +2312,8 @@
       "需要预先准备封印式、合适容器或承载者，以及足够查克拉完成锁定。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-shadow-imitation",
@@ -2248,7 +2337,8 @@
     "limits": [
       "目标脱离影子连接后，模仿和束缚会停止。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-multi-size-technique",
@@ -2268,7 +2358,8 @@
       "需要秋道一族秘传、足够体能和查克拉，并能控制增幅后的重心与移动。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-mind-body-switch",
@@ -2288,7 +2379,8 @@
       "需要准确投射命中目标并维持精神连接，要求目标处于可锁定状态。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-parasitic-insects",
@@ -2308,7 +2400,8 @@
       "需要油女一族的共生体质、虫群培养和持续供给查克拉。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-puppet-technique",
@@ -2332,7 +2425,8 @@
     "limits": [
       "查克拉线被切断后，对应傀儡会失去操控。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-byakugo-seal",
@@ -2353,10 +2447,11 @@
     "requirements": [
       "需要在阴封印中长期积累查克拉。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "阴封印中的查克拉耗尽后，百豪之术和创造再生都会停止。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "naruto-earth-grudge-fear",
@@ -2380,7 +2475,8 @@
     "limits": [
       "核心心脏被破坏后，地怨虞会失去对应的生命和查克拉来源。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "naruto-beheading-carving-knife",
@@ -2400,7 +2496,8 @@
       "需要使用者能够承受大刀重量，并在战斗中让刀身接触含铁血液或材料。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-six-eyes",
@@ -2420,7 +2517,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-limitless",
@@ -2446,7 +2544,8 @@
     "limits": [
       "必中术式、领域展延和适应无下限的攻击能够绕过无下限防御。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-ten-shadows",
@@ -2471,7 +2570,8 @@
     "limits": [
       "式神被破坏后不能再次以原本形态召唤；魔虚罗在完成调伏前不会服从召唤者。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-cursed-energy",
@@ -2491,7 +2591,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-reverse-cursed-technique",
@@ -2513,7 +2614,8 @@
       "需要同时运转两股咒力，使其产生正面能量。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-black-flash",
@@ -2535,7 +2637,8 @@
     "limits": [
       "黑闪不能被使用者随意连续发动。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-domain-expansion",
@@ -2559,7 +2662,8 @@
     "limits": [
       "领域被打破或被更强的领域覆盖后，必中规则会停止。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-simple-domain",
@@ -2579,7 +2683,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-domain-amplification",
@@ -2601,7 +2706,8 @@
     "limits": [
       "领域展延运行时不能同时使用自身的生得术式。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-falling-blossom-emotion",
@@ -2619,7 +2725,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-barrier-technique",
@@ -2643,7 +2750,8 @@
     "limits": [
       "结界规则被破坏后，隐藏、封锁和隔离效果会消失。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-heavenly-restriction",
@@ -2666,7 +2774,8 @@
     "limits": [
       "失去的能力不会通过普通修炼恢复。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-cursed-speech",
@@ -2687,9 +2796,12 @@
       "目标必须听见咒言内容。"
     ],
     "limits": [
-      "目标越强，咒言反噬越重；目标也能用咒力抵抗命令。"
+      "目标能用咒力抵抗咒言命令。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": [
+      "目标越强，咒言反噬越重。"
+    ]
   },
   {
     "id": "jujutsu-blood-manipulation",
@@ -2713,7 +2825,8 @@
     "limits": [
       "失血会直接削弱使用者的身体。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-cursed-spirit-manipulation",
@@ -2737,7 +2850,8 @@
     "limits": [
       "被破坏的咒灵不能再次作为独立咒灵召唤。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-idle-transfiguration",
@@ -2762,7 +2876,8 @@
     "limits": [
       "目标以咒力保护灵魂时，无为转变会受到抵抗。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-ratio-technique",
@@ -2786,7 +2901,8 @@
     "limits": [
       "未命中弱点区域时不会触发术式暴击。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-projection-sorcery",
@@ -2810,7 +2926,8 @@
     "limits": [
       "动作偏离预设轨迹会使术式失效；被锁定目标也能通过看穿轨迹来应对。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-construction",
@@ -2829,10 +2946,11 @@
     "requirements": [
       "需要理解要构筑的物质和形状。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "构筑物质会消耗大量咒力并损伤身体。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "jujutsu-copy",
@@ -2853,10 +2971,9 @@
     "requirements": [
       "需要由里香储存复制术式；使用复制术式需要里香显现。"
     ],
-    "limits": [
-      "里香未显现时不能自由使用储存的术式。"
-    ],
-    "stages": []
+    "limits": [],
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-sky-manipulation",
@@ -2878,7 +2995,8 @@
       "需要接触或锁定作为术式对象的天空表面。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-star-rage",
@@ -2897,10 +3015,11 @@
       "以虚拟质量制造压倒性的近身破坏力。"
     ],
     "requirements": [],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "虚拟质量会增加身体和凰轮承受的负担。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "jujutsu-boogie-woogie",
@@ -2922,7 +3041,8 @@
       "目标必须带有可被术式识别的咒力。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-comedian",
@@ -2945,7 +3065,8 @@
     "limits": [
       "使用者失去自信或不再认为情景有趣时，术式无法稳定发挥。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-shrine",
@@ -2964,11 +3085,14 @@
       "以神火释放高热火焰箭，焚烧目标和区域。",
       "领域展开·伏魔御厨子在开放式领域内持续释放斩击，并把神火扩展为领域攻击。"
     ],
-    "requirements": [],
-    "limits": [
-      "神火需要先完成斩击和火焰的术式操作；领域被破坏后，伏魔御厨子的持续斩击会停止。"
+    "requirements": [
+      "神火需要先完成斩击和火焰的术式操作。"
     ],
-    "stages": []
+    "limits": [
+      "领域被破坏后，伏魔御厨子的持续斩击会停止。"
+    ],
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-technique-extinguishment",
@@ -2990,7 +3114,8 @@
       "需要让光柱覆盖目标的术式。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-antigravity-system",
@@ -3009,7 +3134,8 @@
     ],
     "requirements": [],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-deadly-sentencing",
@@ -3033,7 +3159,8 @@
     "limits": [
       "审判结果受目标行为、证据和审判程序限制，使用者不能直接指定判决。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-idle-death-gamble",
@@ -3057,7 +3184,8 @@
     "limits": [
       "四分十一秒的大奖状态结束后，持续产生咒力和自动治疗都会停止。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-binding-vow",
@@ -3078,10 +3206,11 @@
     "requirements": [
       "束缚必须明确限制内容和交换条件。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "解除或违反束缚会失去交换所得的强化，并承受束缚反噬。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "jujutsu-prison-realm",
@@ -3105,7 +3234,8 @@
     "limits": [
       "狱门疆不能同时封印超过其规则允许的目标；封印完成需要满足指定条件。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-inverted-spear-of-heaven",
@@ -3127,7 +3257,8 @@
     "limits": [
       "无法解除没有被刀身接触到的术式。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-playful-cloud",
@@ -3147,7 +3278,8 @@
     "limits": [
       "游云本身不提供术式，使用者的肉体力量决定攻击威力。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-split-soul-katana",
@@ -3167,7 +3299,8 @@
       "使用者必须以刀身命中目标。"
     ],
     "limits": [],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-black-rope",
@@ -3189,7 +3322,8 @@
     "limits": [
       "黑绳的效果依赖接触，无法隔空消除术式。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-chain-of-a-thousand-miles",
@@ -3211,7 +3345,8 @@
     "limits": [
       "末端暴露后，锁链无法继续保持无限延伸。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-dragon-bone",
@@ -3231,10 +3366,11 @@
     "requirements": [
       "需要先让龙骨承受冲击或输入咒力。"
     ],
-    "limits": [
+    "limits": [],
+    "stages": [],
+    "costs": [
       "储存的力量释放后需要重新积蓄。"
-    ],
-    "stages": []
+    ]
   },
   {
     "id": "jujutsu-kamutoke",
@@ -3254,7 +3390,8 @@
     "limits": [
       "雷电攻击仍受目标位置、遮挡和使用者瞄准限制。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   },
   {
     "id": "jujutsu-executioners-sword",
@@ -3276,6 +3413,7 @@
     "limits": [
       "处刑人之剑不能对未被死刑判决锁定的目标发挥同样效果。"
     ],
-    "stages": []
+    "stages": [],
+    "costs": []
   }
 ]

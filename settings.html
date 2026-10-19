@@ -62,11 +62,12 @@
         <label class="afe-field">标签<input id="afe-editor-tags" type="text" maxlength="180" placeholder="用逗号分隔，最多 6 个"></label>
         <label class="afe-field afe-field-wide">简介<textarea id="afe-editor-description" rows="2" maxlength="280" placeholder="一句话说明这条外挂是什么"></textarea></label>
         <label class="afe-field afe-field-wide">核心效果<textarea id="afe-editor-effects" rows="3" maxlength="1200" placeholder="每行填写一项核心效果"></textarea></label>
-        <label class="afe-field">使用条件<textarea id="afe-editor-requirements" rows="3" maxlength="800" placeholder="每行一项；没有可留空"></textarea></label>
-        <label class="afe-field">限制与代价<textarea id="afe-editor-limits" rows="3" maxlength="1200" placeholder="每行一项限制、消耗、冷却或风险"></textarea></label>
+        <label class="afe-field">发动与适用条件<textarea id="afe-editor-requirements" rows="3" maxlength="800" placeholder="每行一项；写发动、维持或适用时必须满足的条件"></textarea></label>
+        <label class="afe-field">限制<textarea id="afe-editor-limits" rows="3" maxlength="1000" placeholder="每行一项明确边界、失效条件或反制方式"></textarea></label>
+        <label class="afe-field">代价<textarea id="afe-editor-costs" rows="3" maxlength="800" placeholder="每行一项消耗、冷却、风险或副作用；没有可留空"></textarea></label>
         <section class="afe-field afe-field-wide afe-stage-editor">
           <span>阶段变化（可选）</span>
-          <p class="afe-editor-help">只有能力会逐步解锁或改变时才添加阶段。每阶段写清变化条件、效果、条件、限制与代价；不变的条目留空即可。</p>
+          <p class="afe-editor-help">只有能力会逐步解锁或改变时才添加阶段。每阶段写清进入条件、效果、发动与适用条件、限制与代价；没有对应内容可留空。</p>
           <div id="afe-editor-stages" class="afe-stage-editor-list"></div>
           <button id="afe-editor-add-stage" class="afe-editor-template" type="button">＋ 添加阶段</button>
         </section>
@@ -103,12 +104,16 @@
         </section>
         <section class="afe-detail-section afe-detail-grid-section">
           <div class="afe-detail-section">
-            <span class="afe-detail-label">使用条件</span>
+            <span class="afe-detail-label">发动与适用条件</span>
             <ul id="afe-detail-requirements" class="afe-detail-list"></ul>
           </div>
           <div class="afe-detail-section">
-            <span class="afe-detail-label">限制与代价</span>
+            <span class="afe-detail-label">限制</span>
             <ul id="afe-detail-limits" class="afe-detail-list"></ul>
+          </div>
+          <div class="afe-detail-section">
+            <span class="afe-detail-label">代价</span>
+            <ul id="afe-detail-costs" class="afe-detail-list"></ul>
           </div>
         </section>
         <section class="afe-detail-section">

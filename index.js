@@ -175,6 +175,7 @@ function normalizeAbilities(value) {
       effects: normalizeDetailItems(item.effects),
       requirements: normalizeDetailItems(item.requirements),
       limits: normalizeDetailItems(item.limits),
+      costs: normalizeDetailItems(item.costs),
       stages: normalizeStages(item.stages),
     }));
 }
@@ -310,6 +311,7 @@ function openAbilityEditor(abilityId = "", trigger = null) {
   setEditorField("afe-editor-effects", ability?.effects?.join("\n") ?? "");
   setEditorField("afe-editor-requirements", ability?.requirements?.join("\n") ?? "");
   setEditorField("afe-editor-limits", ability?.limits?.join("\n") ?? "");
+  setEditorField("afe-editor-costs", ability?.costs?.join("\n") ?? "");
   renderStageEditor(ability?.stages ?? []);
   document.getElementById("afe-editor-name")?.focus({ preventScroll: true });
   panelRoot.scrollTop = scrollTop;
@@ -333,6 +335,7 @@ function renderAbilityDetails(ability) {
   const effects = document.getElementById("afe-detail-effects");
   const requirements = document.getElementById("afe-detail-requirements");
   const limits = document.getElementById("afe-detail-limits");
+  const costs = document.getElementById("afe-detail-costs");
   const stages = document.getElementById("afe-detail-stages");
   const action = document.getElementById("afe-detail-action");
   if (category) {
@@ -345,6 +348,7 @@ function renderAbilityDetails(ability) {
   renderDetailItems(effects, ability.effects);
   renderDetailItems(requirements, ability.requirements);
   renderDetailItems(limits, ability.limits);
+  renderDetailItems(costs, ability.costs);
   renderAbilityStages(stages, ability.stages);
   if (action) {
     const selected = isSelected(ability.id);
@@ -367,7 +371,7 @@ function renderAbilityStages(target, stages) {
     card.append(heading);
     appendStageDetail(card, "阶段变化条件", stage.transition);
     appendStageDetail(card, "本阶段效果", stage.effects);
-    appendStageDetail(card, "使用条件", stage.requirements);
+    appendStageDetail(card, "发动与适用条件", stage.requirements);
     appendStageDetail(card, "限制", stage.limits);
     appendStageDetail(card, "代价", stage.costs);
     return card;
@@ -400,7 +404,7 @@ function createStageEditorRow(stage = {}) {
     ["阶段名称", "name", "例如：初阶、熟练、觉醒"],
     ["阶段变化条件", "transition", "达到什么明确条件后进入本阶段；不要自动跳级"],
     ["本阶段效果", "effects", "每行一项，写清相对上一阶段增加或变化什么"],
-    ["使用条件", "requirements", "每行一项"],
+    ["发动与适用条件", "requirements", "每行一项；写发动、维持或适用时必须满足的条件"],
     ["限制", "limits", "每行一项"],
     ["代价", "costs", "每行一项；没有额外代价可留空"],
   ];
@@ -466,8 +470,9 @@ function applyAbilityTemplate() {
   setEditorField("afe-editor-tags", "标签一, 标签二");
   setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
   setEditorField("afe-editor-effects", "核心效果一\n核心效果二");
-  setEditorField("afe-editor-requirements", "需要满足的条件");
-  setEditorField("afe-editor-limits", "能力范围、不能做到的事、消耗、冷却或风险");
+  setEditorField("afe-editor-requirements", "发动或适用时必须满足的条件");
+  setEditorField("afe-editor-limits", "明确的能力边界、失效条件或反制方式");
+  setEditorField("afe-editor-costs", "明确的消耗、冷却、风险或副作用");
   renderStageEditor([]);
   document.getElementById("afe-editor-name")?.focus();
   setStatus("已载入外挂条目模板，可以直接修改后保存。");
@@ -486,6 +491,7 @@ function readAbilityEditor() {
   const effects = normalizeDetailItems(document.getElementById("afe-editor-effects")?.value ?? "");
   const requirements = normalizeDetailItems(document.getElementById("afe-editor-requirements")?.value ?? "");
   const limits = normalizeDetailItems(document.getElementById("afe-editor-limits")?.value ?? "");
+  const costs = normalizeDetailItems(document.getElementById("afe-editor-costs")?.value ?? "");
   const stages = [...(document.getElementById("afe-editor-stages")?.querySelectorAll(".afe-stage-editor-card") ?? [])]
     .map((card) => {
       const value = (key) => card.querySelector(`[data-stage-field="${key}"]`)?.value.trim() ?? "";
@@ -513,6 +519,7 @@ function readAbilityEditor() {
     effects,
     requirements,
     limits,
+    costs,
     stages,
   };
 }
@@ -669,7 +676,7 @@ function filterAbilities() {
   const work = panelRoot.querySelector("#afe-work-filter").value;
   const selectedOnly = panelRoot.querySelector("#afe-selected-filter").getAttribute("aria-pressed") === "true";
   return abilities.filter((ability) => {
-    const searchable = [ability.name, ability.work, ability.description, ...ability.effects, ...ability.requirements, ...ability.limits, ...ability.stages.flatMap((stage) => [stage.name, stage.transition, ...stage.effects, ...stage.requirements, ...stage.limits, ...stage.costs]), ...ability.tags].join(" ").toLowerCase();
+    const searchable = [ability.name, ability.work, ability.description, ...ability.effects, ...ability.requirements, ...ability.limits, ...ability.costs, ...ability.stages.flatMap((stage) => [stage.name, stage.transition, ...stage.effects, ...stage.requirements, ...stage.limits, ...stage.costs]), ...ability.tags].join(" ").toLowerCase();
     return (category === "all" || ability.category === category)
       && (!work || ability.work === work)
       && (!selectedOnly || isSelected(ability.id))
@@ -1005,15 +1012,16 @@ function buildInjectionPrompt(selected) {
       `简介：${ability.description}`,
       formatInjectionList("标签", ability.tags),
       formatInjectionList("核心效果", ability.effects),
-      formatInjectionList("使用条件", ability.requirements),
+      formatInjectionList("发动与适用条件", ability.requirements),
       formatInjectionList("限制", ability.limits),
+      formatInjectionList("代价", ability.costs),
     ];
     if (ability.stages.length) {
       sections.push("阶段变化：", ...ability.stages.map((stage, index) => [
         `阶段 ${index + 1}：${stage.name || `阶段 ${index + 1}`}`,
         `变化条件：${stage.transition || "未注明；不得自行推定已解锁"}`,
         formatInjectionList("效果", stage.effects),
-        formatInjectionList("使用条件", stage.requirements),
+        formatInjectionList("发动与适用条件", stage.requirements),
         formatInjectionList("限制", stage.limits),
         formatInjectionList("代价", stage.costs),
       ].filter(Boolean).join("\n")));
@@ -1022,7 +1030,7 @@ function buildInjectionPrompt(selected) {
   });
   return [
     "【全能外挂引擎】",
-    "以下是用户手动选择的外挂完整资料，仅作为本次生成的补充设定。只按已明确的阶段、效果、条件、限制与代价描写；阶段变化必须由条目写明的条件触发，不得自动升级、补造能力、抵消代价或把未知内容当成事实。资料没有说明之处保持未知，并遵守聊天中更具体的设定；不要替用户发言，也不要把本段说明当作剧情对白。",
+    "以下是用户手动选择的外挂完整资料，仅作为本次生成的补充设定。只按已明确的阶段、效果、发动与适用条件、限制和代价描写；阶段变化必须由条目写明的条件触发，不得自动升级、补造能力、抵消代价或把未知内容当成事实。资料没有说明之处保持未知，并遵守聊天中更具体的设定；不要替用户发言，也不要把本段说明当作剧情对白。",
     ...lines,
   ].join("\n");
 }
