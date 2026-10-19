@@ -1,5 +1,5 @@
 [
-  {
+{
     "id": "solo-leveling-system",
     "category": "system",
     "name": "玩家系统",
@@ -25,7 +25,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "solo-leveling-shadow-extraction",
     "category": "skill",
     "name": "影子提取",
@@ -48,7 +48,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "rezero-return-by-death",
     "category": "ability",
     "name": "死亡回归",
@@ -71,7 +71,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-gum-gum-fruit",
     "category": "ability",
     "name": "橡胶果实",
@@ -105,7 +105,7 @@
       "五档·尼卡结束后会出现明显衰弱。"
     ]
   },
-  {
+{
     "id": "naruto-sharingan",
     "category": "ability",
     "name": "写轮眼",
@@ -176,7 +176,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "naruto-shadow-clone",
     "category": "skill",
     "name": "影分身之术",
@@ -204,7 +204,7 @@
       "大量分身的记忆同时回传会使本体承受信息冲击。"
     ]
   },
-  {
+{
     "id": "mha-one-for-all",
     "category": "ability",
     "name": "One For All",
@@ -264,7 +264,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "hunter-nen",
     "category": "skill",
     "name": "念能力",
@@ -297,7 +297,7 @@
       "违约时会承受束缚对应的代价。"
     ]
   },
-  {
+{
     "id": "jojo-the-world",
     "category": "ability",
     "name": "世界",
@@ -323,7 +323,7 @@
       "时间停止结束后，使用者必须等待能力恢复才能再次停止时间。"
     ]
   },
-  {
+{
     "id": "jojo-ger",
     "category": "ability",
     "name": "黄金体验镇魂曲",
@@ -344,7 +344,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "overlord-tier-magic",
     "category": "system",
     "name": "阶位魔法体系",
@@ -372,7 +372,7 @@
       "可用法术、施法次数和消耗受施法者的职业构成与能力限制。"
     ]
   },
-  {
+{
     "id": "douluo-xuan-tian-gong",
     "category": "cultivation",
     "name": "玄天功",
@@ -394,7 +394,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "douluo-purple-demon-eyes",
     "category": "skill",
     "name": "紫极魔瞳",
@@ -470,7 +470,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "battle-through-heavens-flame-mantra",
     "category": "cultivation",
     "name": "焚诀",
@@ -524,7 +524,7 @@
       "火焰越强或属性越不相容，失控、反噬和身体损毁的风险越高。"
     ]
   },
-  {
+{
     "id": "mortal-journey-palm-heaven-vial",
     "category": "item",
     "name": "掌天瓶",
@@ -549,7 +549,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "lord-of-mysteries-seer",
     "category": "cultivation",
     "name": "占卜家途径",
@@ -619,7 +619,7 @@
       "灵性消耗和失控风险会随阶段提高。"
     ]
   },
-  {
+{
     "id": "the-kings-avatar-thousand-machine-umbrella",
     "category": "item",
     "name": "千机伞",
@@ -644,7 +644,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "swallowed-star-virtual-universe",
     "category": "system",
     "name": "虚拟宇宙",
@@ -670,7 +670,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "horror-house-black-phone",
     "category": "system",
     "name": "黑色手机",
@@ -693,7 +693,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "the-gamer-system",
     "category": "system",
     "name": "Gamer系统",
@@ -718,7 +718,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "hxh-godspeed",
     "category": "skill",
     "name": "神速",
@@ -771,7 +771,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "naruto-rinnegan",
     "category": "ability",
     "name": "轮回眼",
@@ -827,7 +827,7 @@
       "轮回眼的瞳力和查克拉不足时，六道分支与外道能力无法持续使用。"
     ]
   },
-  {
+{
     "id": "one-piece-haki",
     "category": "skill",
     "name": "霸气",
@@ -860,7 +860,7 @@
       "霸气持续使用会消耗体力和精神。"
     ]
   },
-  {
+{
     "id": "bleach-zanpakuto",
     "category": "item",
     "name": "斩魄刀",
@@ -930,7 +930,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "one-piece-op-op-fruit",
     "category": "ability",
     "name": "手术果实",
@@ -963,7 +963,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "mha-new-order",
     "category": "ability",
     "name": "新秩序",
@@ -988,7 +988,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-byakugan",
     "category": "ability",
     "name": "白眼",
@@ -1012,7 +1012,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-amaterasu",
     "category": "skill",
     "name": "天照",
@@ -1035,7 +1035,7 @@
       "反复使用天照会损伤眼睛并消耗查克拉。"
     ]
   },
-  {
+{
     "id": "naruto-tsukuyomi",
     "category": "skill",
     "name": "月读",
@@ -1058,7 +1058,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-kamui",
     "category": "skill",
     "name": "神威",
@@ -1084,7 +1084,7 @@
       "连续转移会加重眼睛和查克拉负担。"
     ]
   },
-  {
+{
     "id": "naruto-kotoamatsukami",
     "category": "skill",
     "name": "别天神",
@@ -1107,7 +1107,7 @@
       "别天神发动后需要十年以上才能再次使用；千手柱间细胞可以缩短恢复时间。"
     ]
   },
-  {
+{
     "id": "naruto-susanoo",
     "category": "ability",
     "name": "须佐能乎",
@@ -1160,7 +1160,7 @@
       "完整形态会持续消耗查克拉，并对使用者身体造成负担。"
     ]
   },
-  {
+{
     "id": "naruto-izanagi",
     "category": "skill",
     "name": "伊邪那岐",
@@ -1181,7 +1181,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-izanami",
     "category": "skill",
     "name": "伊邪那美",
@@ -1204,7 +1204,7 @@
       "发动代价是失去一只眼睛。"
     ]
   },
-  {
+{
     "id": "naruto-limbo",
     "category": "skill",
     "name": "轮墓·边狱",
@@ -1227,7 +1227,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-amenotejikara",
     "category": "skill",
     "name": "天手力",
@@ -1248,7 +1248,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-infinite-tsukuyomi",
     "category": "skill",
     "name": "无限月读",
@@ -1271,7 +1271,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-truth-seeking-balls",
     "category": "item",
     "name": "求道玉",
@@ -1292,7 +1292,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-tailed-beast-transformation",
     "category": "ability",
     "name": "尾兽化",
@@ -1367,7 +1367,7 @@
       "完全尾兽化会增加封印和身体负担。"
     ]
   },
-  {
+{
     "id": "naruto-sage-mode",
     "category": "ability",
     "name": "仙人模式",
@@ -1424,7 +1424,7 @@
       "自然能量失衡会导致失控或身体变化。"
     ]
   },
-  {
+{
     "id": "naruto-eight-gates",
     "category": "skill",
     "name": "八门遁甲",
@@ -1477,7 +1477,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "naruto-flying-thunder-god",
     "category": "skill",
     "name": "飞雷神之术",
@@ -1502,7 +1502,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-rasengan",
     "category": "skill",
     "name": "螺旋丸",
@@ -1528,7 +1528,7 @@
       "风遁·螺旋手里剑在早期近距离使用会伤害施术者，成型和投射也会增加查克拉消耗。"
     ]
   },
-  {
+{
     "id": "naruto-edo-tensei",
     "category": "skill",
     "name": "秽土转生",
@@ -1549,7 +1549,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-wood-release",
     "category": "ability",
     "name": "木遁",
@@ -1575,7 +1575,7 @@
       "木遁生成的森林和木造物会消耗大量查克拉。"
     ]
   },
-  {
+{
     "id": "naruto-dust-release",
     "category": "ability",
     "name": "尘遁",
@@ -1598,7 +1598,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-ice-release",
     "category": "ability",
     "name": "冰遁",
@@ -1621,7 +1621,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-magnet-release",
     "category": "ability",
     "name": "磁遁",
@@ -1644,7 +1644,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-adamantine-sealing-chains",
     "category": "skill",
     "name": "金刚封锁",
@@ -1665,7 +1665,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-summoning-technique",
     "category": "system",
     "name": "通灵之术",
@@ -1689,7 +1689,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-samehada",
     "category": "item",
     "name": "鲛肌",
@@ -1710,7 +1710,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-totsuka-blade",
     "category": "item",
     "name": "十拳剑",
@@ -1731,7 +1731,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-yata-mirror",
     "category": "item",
     "name": "八咫镜",
@@ -1752,7 +1752,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-benihisago",
     "category": "item",
     "name": "红葫芦",
@@ -1775,7 +1775,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-shichiseiken",
     "category": "item",
     "name": "七星剑",
@@ -1798,7 +1798,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-kokindo",
     "category": "item",
     "name": "幌金绳",
@@ -1819,7 +1819,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-bashosen",
     "category": "item",
     "name": "芭蕉扇",
@@ -1842,7 +1842,7 @@
       "芭蕉扇每次发动都会直接抽取使用者查克拉。"
     ]
   },
-  {
+{
     "id": "naruto-kohaku-no-johei",
     "category": "item",
     "name": "琥珀净瓶",
@@ -1863,7 +1863,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-six-paths-technique",
     "category": "system",
     "name": "六道之术",
@@ -1882,7 +1882,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-deva-path",
     "category": "skill",
     "name": "天道·引力术式",
@@ -1909,7 +1909,7 @@
       "神罗天征发动后有五秒间隔。"
     ]
   },
-  {
+{
     "id": "naruto-asura-path",
     "category": "ability",
     "name": "修罗道",
@@ -1930,7 +1930,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-human-path",
     "category": "skill",
     "name": "人间道",
@@ -1951,7 +1951,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-animal-path",
     "category": "skill",
     "name": "畜生道",
@@ -1972,7 +1972,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-preta-path",
     "category": "skill",
     "name": "饿鬼道",
@@ -1993,7 +1993,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-naraka-path",
     "category": "skill",
     "name": "地狱道",
@@ -2014,7 +2014,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-rinne-rebirth",
     "category": "skill",
     "name": "轮回天生之术",
@@ -2035,7 +2035,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-gedo-statue",
     "category": "item",
     "name": "外道魔像",
@@ -2056,7 +2056,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-boil-release",
     "category": "ability",
     "name": "沸遁",
@@ -2077,7 +2077,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-lava-release",
     "category": "ability",
     "name": "熔遁",
@@ -2098,7 +2098,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-scorch-release",
     "category": "ability",
     "name": "灼遁",
@@ -2119,7 +2119,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-explosion-release",
     "category": "ability",
     "name": "爆遁",
@@ -2140,7 +2140,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-storm-release",
     "category": "ability",
     "name": "岚遁",
@@ -2161,7 +2161,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-lightning-armor",
     "category": "skill",
     "name": "雷遁查克拉模式",
@@ -2182,7 +2182,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-chidori",
     "category": "skill",
     "name": "千鸟",
@@ -2208,7 +2208,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-kirin",
     "category": "skill",
     "name": "麒麟",
@@ -2229,7 +2229,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-darkness-technique",
     "category": "skill",
     "name": "黑暗行之术",
@@ -2250,7 +2250,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-reaper-death-seal",
     "category": "skill",
     "name": "尸鬼封尽",
@@ -2273,7 +2273,7 @@
       "尸鬼封尽会以施术者的生命为代价。"
     ]
   },
-  {
+{
     "id": "naruto-nine-dragon-sealing",
     "category": "skill",
     "name": "幻龙九封尽",
@@ -2294,7 +2294,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-four-symbols-sealing",
     "category": "skill",
     "name": "四象封印",
@@ -2315,7 +2315,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-shadow-imitation",
     "category": "skill",
     "name": "影子模仿术",
@@ -2340,7 +2340,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-multi-size-technique",
     "category": "skill",
     "name": "倍化术",
@@ -2361,7 +2361,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-mind-body-switch",
     "category": "skill",
     "name": "心转身之术",
@@ -2382,7 +2382,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-parasitic-insects",
     "category": "system",
     "name": "寄坏虫之术",
@@ -2403,7 +2403,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-puppet-technique",
     "category": "system",
     "name": "傀儡术",
@@ -2428,7 +2428,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-byakugo-seal",
     "category": "ability",
     "name": "百豪之术",
@@ -2453,7 +2453,7 @@
       "阴封印中的查克拉耗尽后，百豪之术和创造再生都会停止。"
     ]
   },
-  {
+{
     "id": "naruto-earth-grudge-fear",
     "category": "ability",
     "name": "地怨虞",
@@ -2478,7 +2478,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "naruto-beheading-carving-knife",
     "category": "item",
     "name": "斩首大刀",
@@ -2499,7 +2499,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-six-eyes",
     "category": "ability",
     "name": "六眼",
@@ -2520,7 +2520,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-limitless",
     "category": "skill",
     "name": "无下限术式",
@@ -2547,7 +2547,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-ten-shadows",
     "category": "skill",
     "name": "十种影法术",
@@ -2573,7 +2573,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-cursed-energy",
     "category": "ability",
     "name": "咒力",
@@ -2594,7 +2594,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-reverse-cursed-technique",
     "category": "skill",
     "name": "反转术式",
@@ -2617,7 +2617,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-black-flash",
     "category": "skill",
     "name": "黑闪",
@@ -2640,7 +2640,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-domain-expansion",
     "category": "skill",
     "name": "领域展开",
@@ -2665,7 +2665,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-simple-domain",
     "category": "skill",
     "name": "简易领域",
@@ -2686,7 +2686,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-domain-amplification",
     "category": "skill",
     "name": "领域展延",
@@ -2709,7 +2709,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-falling-blossom-emotion",
     "category": "skill",
     "name": "落花之情",
@@ -2728,7 +2728,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-barrier-technique",
     "category": "skill",
     "name": "结界术",
@@ -2753,7 +2753,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-heavenly-restriction",
     "category": "ability",
     "name": "天与咒缚",
@@ -2777,7 +2777,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-cursed-speech",
     "category": "skill",
     "name": "咒言",
@@ -2803,7 +2803,7 @@
       "目标越强，咒言反噬越重。"
     ]
   },
-  {
+{
     "id": "jujutsu-blood-manipulation",
     "category": "skill",
     "name": "赤血操术",
@@ -2828,7 +2828,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-cursed-spirit-manipulation",
     "category": "skill",
     "name": "咒灵操术",
@@ -2853,7 +2853,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-idle-transfiguration",
     "category": "skill",
     "name": "无为转变",
@@ -2879,7 +2879,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-ratio-technique",
     "category": "skill",
     "name": "十劃咒法",
@@ -2904,7 +2904,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-projection-sorcery",
     "category": "skill",
     "name": "投射咒法",
@@ -2929,7 +2929,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-construction",
     "category": "skill",
     "name": "构筑术式",
@@ -2952,7 +2952,7 @@
       "构筑物质会消耗大量咒力并损伤身体。"
     ]
   },
-  {
+{
     "id": "jujutsu-copy",
     "category": "skill",
     "name": "复制术式",
@@ -2975,7 +2975,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-sky-manipulation",
     "category": "skill",
     "name": "天空操术",
@@ -2998,7 +2998,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-star-rage",
     "category": "skill",
     "name": "星之怒",
@@ -3021,7 +3021,7 @@
       "虚拟质量会增加身体和凰轮承受的负担。"
     ]
   },
-  {
+{
     "id": "jujutsu-boogie-woogie",
     "category": "skill",
     "name": "不义游戏",
@@ -3044,7 +3044,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-comedian",
     "category": "ability",
     "name": "超人",
@@ -3068,7 +3068,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-shrine",
     "category": "skill",
     "name": "御厨子",
@@ -3094,7 +3094,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-technique-extinguishment",
     "category": "skill",
     "name": "术式熄灭",
@@ -3117,7 +3117,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-antigravity-system",
     "category": "skill",
     "name": "反重力机构",
@@ -3137,7 +3137,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-deadly-sentencing",
     "category": "skill",
     "name": "诛伏赐死",
@@ -3162,7 +3162,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-idle-death-gamble",
     "category": "skill",
     "name": "坐杀博徒",
@@ -3187,7 +3187,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-binding-vow",
     "category": "system",
     "name": "束缚",
@@ -3212,7 +3212,7 @@
       "解除或违反束缚会失去交换所得的强化，并承受束缚反噬。"
     ]
   },
-  {
+{
     "id": "jujutsu-prison-realm",
     "category": "item",
     "name": "狱门疆",
@@ -3237,7 +3237,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-inverted-spear-of-heaven",
     "category": "item",
     "name": "天逆鉾",
@@ -3260,7 +3260,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-playful-cloud",
     "category": "item",
     "name": "游云",
@@ -3281,7 +3281,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-split-soul-katana",
     "category": "item",
     "name": "释魂刀",
@@ -3302,7 +3302,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-black-rope",
     "category": "item",
     "name": "黑绳",
@@ -3325,7 +3325,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-chain-of-a-thousand-miles",
     "category": "item",
     "name": "万里锁",
@@ -3348,7 +3348,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-dragon-bone",
     "category": "item",
     "name": "龙骨",
@@ -3372,7 +3372,7 @@
       "储存的力量释放后需要重新积蓄。"
     ]
   },
-  {
+{
     "id": "jujutsu-kamutoke",
     "category": "item",
     "name": "神武解",
@@ -3393,7 +3393,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jujutsu-executioners-sword",
     "category": "item",
     "name": "处刑人之剑",
@@ -3416,7 +3416,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-stone-mask",
     "category": "item",
     "name": "石鬼面",
@@ -3429,7 +3429,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-ripple",
     "category": "ability",
     "name": "波纹（仙道）",
@@ -3442,7 +3442,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-vampire-physiology",
     "category": "ability",
     "name": "吸血鬼体质",
@@ -3455,7 +3455,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-space-ripper-stingy-eyes",
     "category": "skill",
     "name": "空裂眼刺惊",
@@ -3468,7 +3468,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-red-stone-of-aja",
     "category": "item",
     "name": "艾哲红石",
@@ -3481,7 +3481,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-stand-arrow",
     "category": "item",
     "name": "替身之箭",
@@ -3494,7 +3494,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-spin",
     "category": "ability",
     "name": "回转（Spin）",
@@ -3507,7 +3507,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-steel-ball",
     "category": "item",
     "name": "铁球",
@@ -3520,7 +3520,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-star-platinum",
     "category": "ability",
     "name": "白金之星",
@@ -3533,7 +3533,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-magicians-red",
     "category": "ability",
     "name": "红色魔术师",
@@ -3546,7 +3546,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-hermit-purple",
     "category": "ability",
     "name": "隐者之紫",
@@ -3559,7 +3559,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-silver-chariot",
     "category": "ability",
     "name": "银色战车",
@@ -3572,7 +3572,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-hierophant-green",
     "category": "ability",
     "name": "绿色法皇",
@@ -3585,7 +3585,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-the-fool",
     "category": "ability",
     "name": "愚者",
@@ -3598,7 +3598,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-emperor",
     "category": "ability",
     "name": "皇帝",
@@ -3611,7 +3611,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-anubis",
     "category": "ability",
     "name": "阿努比斯神",
@@ -3624,7 +3624,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-crazy-diamond",
     "category": "ability",
     "name": "疯狂钻石",
@@ -3637,7 +3637,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-the-hand",
     "category": "ability",
     "name": "轰炸空间（The Hand）",
@@ -3650,7 +3650,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-echoes",
     "category": "ability",
     "name": "回音（Echoes）",
@@ -3667,7 +3667,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "jojo-heavens-door",
     "category": "ability",
     "name": "天堂之门",
@@ -3680,7 +3680,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-killer-queen",
     "category": "ability",
     "name": "杀手皇后",
@@ -3704,7 +3704,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-harvest",
     "category": "ability",
     "name": "收成（Harvest）",
@@ -3717,7 +3717,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-pearl-jam",
     "category": "ability",
     "name": "珍珠果酱",
@@ -3730,7 +3730,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-king-crimson",
     "category": "ability",
     "name": "绯红之王",
@@ -3743,7 +3743,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-sticky-fingers",
     "category": "ability",
     "name": "钢链手指",
@@ -3756,7 +3756,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-sex-pistols",
     "category": "ability",
     "name": "性感手枪",
@@ -3769,7 +3769,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-aerosmith",
     "category": "ability",
     "name": "航空史密斯",
@@ -3782,7 +3782,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-purple-haze",
     "category": "ability",
     "name": "紫烟",
@@ -3795,7 +3795,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-stone-free",
     "category": "ability",
     "name": "石之自由",
@@ -3808,7 +3808,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-whitesnake",
     "category": "ability",
     "name": "白蛇",
@@ -3848,7 +3848,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "jojo-weather-report",
     "category": "ability",
     "name": "天气预报",
@@ -3861,7 +3861,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-tusk",
     "category": "ability",
     "name": "牙（Tusk）",
@@ -3879,7 +3879,7 @@
     ],
     "costs": []
   },
-  {
+{
     "id": "jojo-d4c",
     "category": "ability",
     "name": "骇人恶兽（D4C）",
@@ -3892,7 +3892,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-soft-wet",
     "category": "ability",
     "name": "软又湿（Soft & Wet）",
@@ -3913,7 +3913,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "jojo-paisley-park",
     "category": "ability",
     "name": "佩斯利公园",
@@ -3926,7 +3926,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-bara-bara-fruit",
     "category": "ability",
     "name": "四分五裂果实",
@@ -3943,7 +3943,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-hana-hana-fruit",
     "category": "ability",
     "name": "花花果实",
@@ -3956,7 +3956,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ito-ito-fruit",
     "category": "ability",
     "name": "线线果实",
@@ -3969,7 +3969,7 @@
     "stages": [],
     "costs": ["持续操纵大量丝线会消耗体力和精神。"]
   },
-  {
+{
     "id": "one-piece-gura-gura-fruit",
     "category": "ability",
     "name": "震震果实",
@@ -3982,7 +3982,7 @@
     "stages": [],
     "costs": ["连续制造大规模震动会快速消耗体力。"]
   },
-  {
+{
     "id": "one-piece-nikyu-nikyu-fruit",
     "category": "ability",
     "name": "肉球果实",
@@ -3995,7 +3995,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-yomi-yomi-fruit",
     "category": "ability",
     "name": "黄泉果实",
@@ -4008,7 +4008,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-kage-kage-fruit",
     "category": "ability",
     "name": "影影果实",
@@ -4021,7 +4021,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-mero-mero-fruit",
     "category": "ability",
     "name": "甜甜果实",
@@ -4034,7 +4034,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-hobi-hobi-fruit",
     "category": "ability",
     "name": "童趣果实",
@@ -4047,7 +4047,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-doku-doku-fruit",
     "category": "ability",
     "name": "毒毒果实",
@@ -4060,7 +4060,7 @@
     "stages": [],
     "costs": ["大量生成毒液会消耗体力，并可能引起自身脱水或虚弱。"]
   },
-  {
+{
     "id": "one-piece-mera-mera-fruit",
     "category": "ability",
     "name": "烧烧果实",
@@ -4073,7 +4073,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-goro-goro-fruit",
     "category": "ability",
     "name": "响雷果实",
@@ -4086,7 +4086,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-hie-hie-fruit",
     "category": "ability",
     "name": "冰冻果实",
@@ -4099,7 +4099,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-magu-magu-fruit",
     "category": "ability",
     "name": "岩浆果实",
@@ -4112,7 +4112,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-pika-pika-fruit",
     "category": "ability",
     "name": "闪闪果实",
@@ -4125,7 +4125,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-yami-yami-fruit",
     "category": "ability",
     "name": "暗暗果实",
@@ -4138,7 +4138,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-tori-tori-phoenix",
     "category": "ability",
     "name": "鸟鸟果实·幻兽种·不死鸟形态",
@@ -4151,7 +4151,7 @@
     "stages": [],
     "costs": ["连续治疗多人会快速消耗体力。"]
   },
-  {
+{
     "id": "one-piece-uo-uo-seiryu",
     "category": "ability",
     "name": "鱼鱼果实·幻兽种·青龙形态",
@@ -4164,7 +4164,7 @@
     "stages": [],
     "costs": ["长时间维持龙形和大范围元素攻击会快速消耗体力。"]
   },
-  {
+{
     "id": "one-piece-hito-hito-daibutsu",
     "category": "ability",
     "name": "人人果实·幻兽种·大佛形态",
@@ -4177,7 +4177,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-rokushiki",
     "category": "skill",
     "name": "六式",
@@ -4190,7 +4190,7 @@
     "stages": [],
     "costs": ["连续使用高速移动和强化体术会快速消耗体力。"]
   },
-  {
+{
     "id": "one-piece-rokuogan",
     "category": "skill",
     "name": "六王枪",
@@ -4203,7 +4203,7 @@
     "stages": [],
     "costs": ["每次发动都会对使用者的身体造成明显负担。"]
   },
-  {
+{
     "id": "one-piece-fishman-karate",
     "category": "skill",
     "name": "鱼人空手道",
@@ -4216,7 +4216,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-electro",
     "category": "skill",
     "name": "电气",
@@ -4229,7 +4229,7 @@
     "stages": [],
     "costs": ["持续释放电流会消耗体力并降低续航。"]
   },
-  {
+{
     "id": "one-piece-black-leg",
     "category": "skill",
     "name": "黑脚流",
@@ -4242,7 +4242,7 @@
     "stages": [],
     "costs": ["持续高速踢击会快速消耗腿部力量。"]
   },
-  {
+{
     "id": "one-piece-three-sword-style",
     "category": "skill",
     "name": "三刀流",
@@ -4255,7 +4255,7 @@
     "stages": [],
     "costs": ["连续高强度斩击会消耗体力并磨损武器。"]
   },
-  {
+{
     "id": "one-piece-foxfire-style",
     "category": "skill",
     "name": "狐火流",
@@ -4268,7 +4268,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-clima-tact",
     "category": "item",
     "name": "天候棒",
@@ -4281,7 +4281,7 @@
     "stages": [],
     "costs": ["气候球和装置会消耗，连续释放强力天气效果会缩短续航。"]
   },
-  {
+{
     "id": "one-piece-raid-suit",
     "category": "item",
     "name": "战斗服",
@@ -4294,7 +4294,7 @@
     "stages": [],
     "costs": ["推进、隐身和武器系统会消耗能源并增加维护负担。"]
   },
-  {
+{
     "id": "one-piece-seastone",
     "category": "item",
     "name": "海楼石",
@@ -4307,7 +4307,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-dials",
     "category": "item",
     "name": "贝",
@@ -4320,7 +4320,7 @@
     "stages": [],
     "costs": ["贝会消耗储存的现象，反复使用需要补充或重新收集。"]
   },
-  {
+{
     "id": "one-piece-vivre-card",
     "category": "item",
     "name": "生命卡",
@@ -4333,7 +4333,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-log-pose",
     "category": "item",
     "name": "记录指针",
@@ -4346,7 +4346,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-den-den-mushi",
     "category": "item",
     "name": "电话虫",
@@ -4359,7 +4359,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-pluton",
     "category": "system",
     "name": "古代兵器·冥王",
@@ -4372,7 +4372,7 @@
     "stages": [],
     "costs": ["制造、维护和使用需要巨量资源，并会引发全球势力追捕。"]
   },
-  {
+{
     "id": "one-piece-poseidon",
     "category": "ability",
     "name": "古代兵器·海王",
@@ -4385,7 +4385,7 @@
     "stages": [],
     "costs": ["长时间召集和指挥海王类会给能力者带来巨大精神与体力负担。"]
   },
-  {
+{
     "id": "one-piece-lunarian-lineage",
     "category": "ability",
     "name": "露娜利亚族天赋",
@@ -4398,7 +4398,7 @@
     "stages": [],
     "costs": ["持续维持火焰和高速飞行会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-fishman-lineage",
     "category": "ability",
     "name": "鱼人族天赋",
@@ -4411,7 +4411,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-mink-lineage",
     "category": "ability",
     "name": "毛皮族天赋",
@@ -4424,7 +4424,7 @@
     "stages": [],
     "costs": ["月狮形态会快速消耗体力，结束后可能出现明显虚弱。"]
   },
-  {
+{
     "id": "one-piece-giant-lineage",
     "category": "ability",
     "name": "巨人族天赋",
@@ -4437,7 +4437,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-mochi-mochi-fruit",
     "category": "ability",
     "name": "糯糯果实",
@@ -4450,7 +4450,7 @@
     "stages": [],
     "costs": ["持续维持大范围糯米结构会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-bari-bari-fruit",
     "category": "ability",
     "name": "屏障果实",
@@ -4463,7 +4463,7 @@
     "stages": [],
     "costs": ["连续维持多个屏障会消耗体力和集中力。"]
   },
-  {
+{
     "id": "one-piece-jiki-jiki-fruit",
     "category": "ability",
     "name": "磁磁果实",
@@ -4476,7 +4476,7 @@
     "stages": [],
     "costs": ["持续维持巨大金属构造会快速消耗体力。"]
   },
-  {
+{
     "id": "one-piece-toki-toki-fruit",
     "category": "ability",
     "name": "时间果实",
@@ -4489,7 +4489,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-kibi-kibi-fruit",
     "category": "ability",
     "name": "黍团果实",
@@ -4502,7 +4502,7 @@
     "stages": [],
     "costs": ["连续制造大量黍团会消耗能力者体力。"]
   },
-  {
+{
     "id": "one-piece-okuchi-no-makami",
     "category": "ability",
     "name": "犬犬果实·幻兽种·大口真神形态",
@@ -4515,7 +4515,7 @@
     "stages": [],
     "costs": ["长时间维持幻兽形态和冰雪攻击会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-yamata-no-orochi",
     "category": "ability",
     "name": "蛇蛇果实·幻兽种·八岐大蛇形态",
@@ -4528,7 +4528,7 @@
     "stages": [],
     "costs": ["同时控制多个头部会增加精神和体力负担。"]
   },
-  {
+{
     "id": "one-piece-smile-artificial-fruit",
     "category": "system",
     "name": "SMILE人造动物系",
@@ -4541,7 +4541,7 @@
     "stages": [],
     "costs": ["制作需要SAD、实验设施和大量原料，失败会造成不可逆损失。"]
   },
-  {
+{
     "id": "one-piece-hasshoken",
     "category": "skill",
     "name": "八冲拳",
@@ -4554,7 +4554,7 @@
     "stages": [],
     "costs": ["连续发动高强度冲击会损伤身体并消耗体力。"]
   },
-  {
+{
     "id": "one-piece-seimei-kikan",
     "category": "skill",
     "name": "生命归还",
@@ -4567,7 +4567,7 @@
     "stages": [],
     "costs": ["持续精细控制身体会消耗大量精神和体力。"]
   },
-  {
+{
     "id": "one-piece-sulong",
     "category": "ability",
     "name": "月狮形态",
@@ -4580,7 +4580,7 @@
     "stages": [],
     "costs": ["月狮形态会快速消耗体力，结束后常出现明显虚弱。"]
   },
-  {
+{
     "id": "one-piece-enma",
     "category": "item",
     "name": "阎魔",
@@ -4593,7 +4593,7 @@
     "stages": [],
     "costs": ["每次高强度使用都会消耗大量武装色霸气。"]
   },
-  {
+{
     "id": "one-piece-wado-ichimonji",
     "category": "item",
     "name": "和道一文字",
@@ -4606,7 +4606,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-shusui",
     "category": "item",
     "name": "秋水",
@@ -4619,7 +4619,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-murakumogiri",
     "category": "item",
     "name": "丛云切",
@@ -4632,7 +4632,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-pacifista",
     "category": "system",
     "name": "和平主义者",
@@ -4645,7 +4645,7 @@
     "stages": [],
     "costs": ["制造和维护成本极高，需要先进实验室和稳定能源。"]
   },
-  {
+{
     "id": "one-piece-seraphim",
     "category": "system",
     "name": "炽天使",
@@ -4658,7 +4658,7 @@
     "stages": [],
     "costs": ["制造、培养、维护和复制能力都需要极高科技与资源。"]
   },
-  {
+{
     "id": "one-piece-suna-suna-fruit",
     "category": "ability",
     "name": "沙沙果实",
@@ -4671,7 +4671,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-moku-moku-fruit",
     "category": "ability",
     "name": "烟烟果实",
@@ -4684,7 +4684,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-gasu-gasu-fruit",
     "category": "ability",
     "name": "瓦斯果实",
@@ -4697,7 +4697,7 @@
     "stages": [],
     "costs": ["大范围维持高浓度气体会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-mori-mori-fruit",
     "category": "ability",
     "name": "森森果实",
@@ -4710,7 +4710,7 @@
     "stages": [],
     "costs": ["维持大范围森林会持续消耗体力。"]
   },
-  {
+{
     "id": "one-piece-doru-doru-fruit",
     "category": "ability",
     "name": "蜡蜡果实",
@@ -4723,7 +4723,7 @@
     "stages": [],
     "costs": ["大量生成和塑形蜡会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-doa-doa-fruit",
     "category": "ability",
     "name": "门门果实",
@@ -4736,7 +4736,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-noro-noro-fruit",
     "category": "ability",
     "name": "迟缓果实",
@@ -4749,7 +4749,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-horo-horo-fruit",
     "category": "ability",
     "name": "荷尔蒙果实",
@@ -4762,7 +4762,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-mane-mane-fruit",
     "category": "ability",
     "name": "模仿果实",
@@ -4775,7 +4775,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-bomu-bomu-fruit",
     "category": "ability",
     "name": "炸弹果实",
@@ -4788,7 +4788,7 @@
     "stages": [],
     "costs": ["连续大规模爆炸会消耗体力。"]
   },
-  {
+{
     "id": "one-piece-supa-supa-fruit",
     "category": "ability",
     "name": "快斩果实",
@@ -4801,7 +4801,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-baku-baku-fruit",
     "category": "ability",
     "name": "吞吞果实",
@@ -4814,7 +4814,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-awa-awa-fruit",
     "category": "ability",
     "name": "泡泡果实",
@@ -4827,7 +4827,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-kira-kira-fruit",
     "category": "ability",
     "name": "闪钻果实",
@@ -4840,7 +4840,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-zou-zou-mammoth",
     "category": "ability",
     "name": "象象果实·猛犸象形态",
@@ -4853,7 +4853,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-neko-neko-leopard",
     "category": "ability",
     "name": "猫猫果实·豹形态",
@@ -4866,7 +4866,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ryu-ryu-pteranodon",
     "category": "ability",
     "name": "龙龙果实·古代种·无齿翼龙形态",
@@ -4879,7 +4879,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ryu-ryu-brachiosaurus",
     "category": "ability",
     "name": "龙龙果实·古代种·腕龙形态",
@@ -4892,7 +4892,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ryu-ryu-triceratops",
     "category": "ability",
     "name": "龙龙果实·古代种·三角龙形态",
@@ -4905,7 +4905,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-tori-tori-falcon",
     "category": "ability",
     "name": "鸟鸟果实·隼形态",
@@ -4918,7 +4918,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-fishman-jujutsu",
     "category": "skill",
     "name": "鱼人柔术",
@@ -4931,7 +4931,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ryusoken",
     "category": "skill",
     "name": "龙爪拳",
@@ -4944,7 +4944,7 @@
     "stages": [],
     "costs": ["高强度使用会损伤手指、手腕和拳骨。"]
   },
-  {
+{
     "id": "one-piece-diable-jambe",
     "category": "skill",
     "name": "恶魔风脚",
@@ -4957,7 +4957,7 @@
     "stages": [],
     "costs": ["连续维持高温会消耗体力并增加腿部负担。"]
   },
-  {
+{
     "id": "one-piece-observation-killing",
     "category": "skill",
     "name": "见闻色杀手",
@@ -4970,7 +4970,7 @@
     "stages": [],
     "costs": ["持续隐藏气息和干扰感知会消耗精神。"]
   },
-  {
+{
     "id": "one-piece-yoru",
     "category": "item",
     "name": "夜",
@@ -4983,7 +4983,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-gryphon",
     "category": "item",
     "name": "格里芬",
@@ -4996,7 +4996,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-nidai-kitetsu",
     "category": "item",
     "name": "二代鬼彻",
@@ -5009,7 +5009,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-sandai-kitetsu",
     "category": "item",
     "name": "三代鬼彻",
@@ -5022,7 +5022,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-ame-no-habakiri",
     "category": "item",
     "name": "天羽羽斩",
@@ -5035,7 +5035,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-kikoku",
     "category": "item",
     "name": "鬼哭",
@@ -5048,7 +5048,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-hassaikai",
     "category": "item",
     "name": "八斋戒",
@@ -5061,7 +5061,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-eternal-pose",
     "category": "item",
     "name": "永久指针",
@@ -5074,7 +5074,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-coating",
     "category": "item",
     "name": "船舶镀膜",
@@ -5087,7 +5087,7 @@
     "stages": [],
     "costs": ["镀膜需要专业工匠、时间和维护成本。"]
   },
-  {
+{
     "id": "one-piece-pop-green",
     "category": "item",
     "name": "Pop Green",
@@ -5100,7 +5100,7 @@
     "stages": [],
     "costs": ["每次使用都会消耗对应种子，补充需要特殊培育环境。"]
   },
-  {
+{
     "id": "one-piece-kuro-kabuto",
     "category": "item",
     "name": "黑兜",
@@ -5113,7 +5113,7 @@
     "stages": [],
     "costs": ["特殊弹药、机关维护和补充需要持续资源。"]
   },
-  {
+{
     "id": "one-piece-kx-launcher",
     "category": "item",
     "name": "KX发射器",
@@ -5126,7 +5126,7 @@
     "stages": [],
     "costs": ["病毒弹药制作、储存和运输具有极高风险。"]
   },
-  {
+{
     "id": "one-piece-wapometal",
     "category": "item",
     "name": "瓦波合金",
@@ -5139,7 +5139,7 @@
     "stages": [],
     "costs": ["采集、加工和维护成本很高。"]
   },
-  {
+{
     "id": "one-piece-three-eye-tribe",
     "category": "ability",
     "name": "三眼族天赋",
@@ -5152,7 +5152,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-tontatta-lineage",
     "category": "ability",
     "name": "小人族天赋",
@@ -5165,7 +5165,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-kuja-lineage",
     "category": "ability",
     "name": "九蛇族天赋",
@@ -5178,7 +5178,7 @@
     "stages": [],
     "costs": []
   },
-  {
+{
     "id": "one-piece-sky-island-lineage",
     "category": "ability",
     "name": "空岛翼族天赋",
@@ -5190,5 +5190,353 @@
     "limits": ["翅膀受伤会影响滑翔和空中控制。", "高空环境、气流和云层会改变实际机动能力。"],
     "stages": [],
     "costs": []
+  },
+{
+  "id": "bleach-shinigami-system",
+  "category": "system",
+  "name": "死神基础体系",
+  "work": "死神",
+  "tags": [
+    "死神",
+    "灵压",
+    "斩术",
+    "白打",
+    "瞬步",
+    "鬼道"
+  ],
+  "description": "以灵压为核心，整合斩术、白打、瞬步、鬼道和瞬哄的死神基础战斗体系。",
+  "effects": [
+    "灵压：强化力量、速度、防御和斩击，并感知附近灵体与能量变化。",
+    "斩术：使用斩魄刀进行斩击、格挡、拔刀和飞翔斩击。",
+    "白打：以拳、脚、肘、膝和投技进行徒手近战。",
+    "瞬步：以灵压爆发高速接近、闪避、追击和撤退。",
+    "鬼道：通过咏唱和术式释放攻击、束缚、防御、侦察与治疗。",
+    "破道：释放雷、火、光束和爆炸等攻击术式。",
+    "缚道：制造光带、结界和封印，拘束目标或保护施术者。",
+    "回道：以灵压止血、修复组织并稳定灵体伤势。",
+    "瞬哄：把鬼道集中在身体周围，强化白打、移动和近战输出。"
+  ],
+  "requirements": [
+    "鬼道高阶术式需要相应术式知识与灵压控制。",
+    "瞬哄需要同时掌握白打、鬼道和瞬步。"
+  ],
+  "limits": [
+    "高等级鬼道需要更高灵压和更精确的术式控制。",
+    "近战、瞬步和瞬哄会受到体力、伤势与灵压储量限制。"
+  ],
+  "stages": [],
+  "costs": [
+    "持续维持高灵压、瞬步、瞬哄或高等级鬼道会消耗精神与体力。"
+  ]
+},
+{
+  "id": "bleach-hollow-arrancar-system",
+  "category": "system",
+  "name": "虚与破面体系",
+  "work": "死神",
+  "tags": [
+    "虚",
+    "破面",
+    "虚闪",
+    "归刃",
+    "灵压"
+  ],
+  "description": "整合虚与破面的灵压、移动、防御、侦察、空间通道和解放形态。",
+  "effects": [
+    "虚闪：蓄力发射高密度灵压光束。",
+    "虚弹：快速连续发射灵压弹，用于压制和打断。",
+    "响转：以高速移动形成残影并接近或撤离。",
+    "钢皮：以虚的灵压强化皮肤和身体，抵挡斩击与冲击。",
+    "探查回路：感知灵压波动，判断目标数量、方向和大致强度。",
+    "黑腔：撕开连接现世、尸魂界和虚圈的空间通道。",
+    "破面化：虚移除面具并获得类死神形态、斩魄刀和更高自我意识。",
+    "归刃：解放斩魄刀，恢复或强化原本虚形态并释放专属能力。",
+    "二段归刃：在归刃之上再次解放，进入更高阶段的虚形态。"
+  ],
+  "requirements": [
+    "虚闪、虚弹、响转和钢皮需要虚或破面的灵魂结构。",
+    "归刃需要破面、斩魄刀和对应解放口令。",
+    "二段归刃需要更高的破面资质、斩魄刀同步和归刃掌握。"
+  ],
+  "limits": [
+    "灵压感知、结界和范围攻击可以限制响转与黑腔路线。",
+    "解放形态会改变体型、战术和弱点。",
+    "高强度形态和空间通道会快速消耗灵压。"
+  ],
+  "stages": [],
+  "costs": [
+    "持续释放虚闪、维持归刃或开启黑腔会消耗大量灵压。"
+  ]
+},
+{
+  "id": "bleach-quincy-system",
+  "category": "system",
+  "name": "灭却师体系",
+  "work": "死神",
+  "tags": [
+    "灭却师",
+    "灵子",
+    "血装",
+    "完圣体",
+    "圣文字"
+  ],
+  "description": "以灵子操控为核心，整合灵子武器、飞廉脚、血装、完圣体与灭却师高阶技术。",
+  "effects": [
+    "灵子操控：吸收、压缩和重排环境灵子，制造武器、平台、防御和束缚结构。",
+    "灵子弓与神圣灭矢：生成灵子弓箭并发射高穿透力灵子箭。",
+    "飞廉脚：在灵子平台上高速滑行、追击和改变方向。",
+    "静血装：让灵子沿血管流动并强化身体防御。",
+    "动血装：强化拳、箭和灵子武器的攻击输出。",
+    "完圣体：吸收大量灵子并获得飞行、强化灵压与灵子武器。",
+    "乱装天傀：用灵子丝线强行操纵受伤或无法行动的身体。",
+    "影之领域：利用阴影建立隐藏通道、藏身空间和部署区域。"
+  ],
+  "requirements": [
+    "灵子武器、飞廉脚和血装需要灭却师灵子操控。",
+    "完圣体需要高水平灵子控制、灵压和形态掌握。"
+  ],
+  "limits": [
+    "灵子稀薄、封锁或被他人控制的环境会削弱体系能力。",
+    "静血装与动血装不能同时发挥最大效果。",
+    "复杂构造和高阶形态会增加精神与身体负担。"
+  ],
+  "stages": [],
+  "costs": [
+    "持续吸收灵子、维持血装或完圣体会消耗灵子、精神和体力。"
+  ]
+  },
+  {
+    "id": "bleach-gigai",
+    "category": "item",
+    "name": "义骸",
+    "work": "死神",
+    "tags": ["死神", "人工肉身", "现世"],
+    "description": "供死神灵魂暂时容纳和活动的人工肉身，用于在人类世界行动。",
+    "effects": ["让灵魂以人类外形在现世生活和战斗。", "隐藏部分灵压与灵体特征。", "可作为恢复、潜伏和长期驻留的容器。"],
+    "requirements": ["需要合适尺寸、稳定性和维护条件。"],
+    "limits": ["义骸受损会限制行动并暴露异常。", "普通义骸不能完全替代死神灵体的战斗性能。"],
+    "stages": [],
+    "costs": ["义骸需要维护、伪装和定期修复。"]
+  },
+  {
+    "id": "bleach-denreishinki",
+    "category": "item",
+    "name": "传令神机",
+    "work": "死神",
+    "tags": ["通讯", "侦察", "死神"],
+    "description": "死神使用的灵体通讯与任务设备，用于联络、传令和记录灵压情报。",
+    "effects": ["进行远距离灵体通讯和任务传达。", "记录、识别和定位灵压反应。", "配合尸魂界系统进行身份和任务管理。"],
+    "requirements": ["需要死神系统、通讯权限和可用的灵子环境。"],
+    "limits": ["会受到结界、距离、灵压干扰和设备损坏影响。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "bleach-gikongan",
+    "category": "item",
+    "name": "义魂丸",
+    "work": "死神",
+    "tags": ["魂魄", "人工灵魂", "消耗品"],
+    "description": "将灵魂从肉体中分离，或向空置身体和义骸注入人工灵魂的特殊药丸。",
+    "effects": ["将目标灵魂从肉身中分离。", "向空置身体或义骸注入人工灵魂。", "可用于战斗、潜入和紧急撤离。"],
+    "requirements": ["需要适合的肉身、义骸或人工灵魂容器。"],
+    "limits": ["使用不当会导致灵魂排斥、身体失控或记忆混乱。", "效果持续时间和稳定性有限。"],
+    "stages": [],
+    "costs": ["每颗义魂丸只能使用有限次数。"]
+  },
+  {
+    "id": "bleach-substitute-shinigami-badge",
+    "category": "item",
+    "name": "代理死神证",
+    "work": "死神",
+    "tags": ["身份", "通讯", "灵魂"],
+    "description": "代理死神用来变身、联络和证明身份的特殊徽章。",
+    "effects": ["协助灵魂离体并进入死神战斗状态。", "发出灵压信号和任务通讯。", "作为代理死神的身份凭证。"],
+    "requirements": ["需要得到死神组织认可或具备对应授权。"],
+    "limits": ["权限、功能和追踪方式受尸魂界控制。", "徽章损坏或被封锁会影响变身与通讯。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "bleach-hollowfication",
+    "category": "ability",
+    "name": "虚化",
+    "work": "死神",
+    "tags": ["虚", "面具", "强化", "灵压"],
+    "description": "在死神或其他灵魂体上引出虚的力量，以面具和虚化状态强化身体与灵压。",
+    "effects": ["生成虚面具并强化力量、速度、防御和灵压。", "提高灵压输出、感知和再生能力。", "可在短时间内使用虚系技能。"],
+    "requirements": ["需要稳定控制虚化冲动和自身灵魂结构。"],
+    "limits": ["失控会导致意识被虚侵蚀。", "面具持续时间和强化程度受精神、体力和灵压限制。"],
+    "stages": [],
+    "costs": ["维持虚化会快速消耗灵压和精神。"]
+  },
+  {
+    "id": "bleach-quincy-spirit-bow",
+    "category": "item",
+    "name": "灵子弓与灵子箭",
+    "work": "死神",
+    "tags": ["灭却师", "弓箭", "灵子武器"],
+    "description": "灭却师以灵子构成的远程武器，可快速生成并发射灵子箭。",
+    "effects": ["生成灵子弓和不同形态的灵子箭。", "以箭矢穿透虚的身体和灵压防御。", "可根据使用者技术改变箭速、数量和轨迹。"],
+    "requirements": ["需要灭却师血统或等效灵子操控能力。"],
+    "limits": ["箭矢数量、威力和射程受灵子量与使用者控制力限制。", "近战遭遇和灵子封锁会降低发挥。"],
+    "stages": [],
+    "costs": ["连续制造和发射大量箭矢会消耗灵子与精神。"]
+  },
+  {
+    "id": "bleach-quincy-cross",
+    "category": "item",
+    "name": "灭却师十字",
+    "work": "死神",
+    "tags": ["灭却师", "灵子武器", "身份"],
+    "description": "灭却师用于凝聚灵子武器、确认身份和承载力量的十字形媒介。",
+    "effects": ["辅助形成灵子弓和其他灵子武器。", "作为灭却师力量和组织身份的象征。", "可在特定仪式和能力中作为媒介。"],
+    "requirements": ["需要灭却师血统、灵子控制和对应使用方法。"],
+    "limits": ["十字本身不等于完整灭却师能力。", "损坏、封印或失去灵子连接会降低功能。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "bleach-schrift",
+    "category": "ability",
+    "name": "圣文字",
+    "work": "死神",
+    "tags": ["灭却师", "专属能力", "规则"],
+    "description": "以字母授予灭却师独特概念能力的高阶体系，每个字母对应不同规则或战斗特性。",
+    "effects": ["根据字母获得专属攻击、防御、操纵或概念能力。", "能力可以与血装、完圣体和灵子武器叠加。", "不同使用者的圣文字表现和限制各不相同。"],
+    "requirements": ["需要被授予或觉醒特定圣文字。"],
+    "limits": ["圣文字不是通用技能，具体效果取决于字母和使用者。", "能力通常有明确规则、代价和反制方式。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "bleach-auswahlen",
+    "category": "system",
+    "name": "圣别",
+    "work": "死神",
+    "tags": ["灭却师", "灵魂", "选择", "系统"],
+    "description": "以特殊权能从灭却师中抽取力量和生命，并重新分配给被选中的个体。",
+    "effects": ["夺取特定灭却师的力量、灵子和生命。", "将抽取的力量转移给其他灭却师。", "改变组织内的战力分布和形态状态。"],
+    "requirements": ["需要极高权限、血统连接和发动条件。"],
+    "limits": ["目标选择和力量转移受体系规则限制。", "发动会引发严重的灵魂和战力后果。"],
+    "stages": [],
+    "costs": ["每次发动会消耗大量灵魂力量并改变目标状态。"]
+  },
+  {
+    "id": "bleach-fullbring",
+    "category": "ability",
+    "name": "完现术",
+    "work": "死神",
+    "tags": ["人类", "物质灵魂", "操纵", "高速"],
+    "description": "操纵物体中寄宿的灵魂，使物品强化、变形、移动并释放专属能力。",
+    "effects": ["感知并操纵物品的灵魂。", "改变物体形状、性能和运动方式。", "诱导光：借助地面和物体的反作用力高速滑行、加速、转向和跳跃。", "围绕个人重要物品形成独特战斗能力。"],
+    "requirements": ["需要完现术资质、灵魂感知和与核心物品的联系。", "诱导光需要可操纵的地面或物体表面。"],
+    "limits": ["能力高度依赖核心物品和使用者的精神状态。", "物品损坏、夺取或灵魂联系中断会削弱能力。", "缺少可操纵表面时高速机动性下降。"],
+    "stages": [],
+    "costs": ["持续改造物体和高速移动会消耗精神与体力。"]
+  },
+  {
+    "id": "bleach-book-of-the-end",
+    "category": "ability",
+    "name": "书之终结",
+    "work": "死神",
+    "tags": ["完现术", "记忆", "过去", "操纵"],
+    "description": "将刀刃插入目标或物体后读取并改写其过去，在记忆中插入使用者与目标的经历。",
+    "effects": ["读取目标或物体的过去信息。", "把虚构经历植入目标的记忆。", "改变目标对关系、使用方式和事件经过的认知。"],
+    "requirements": ["需要接触目标并成功发动完现术。"],
+    "limits": ["主要改变记忆与过去认知，不等于无限改写现实。", "强大精神、特殊灵魂结构或能力规则可以抵抗。"],
+    "stages": [],
+    "costs": ["连续改写多个目标会消耗精神。"]
+  },
+  {
+    "id": "bleach-dollhouse",
+    "category": "ability",
+    "name": "玩偶屋",
+    "work": "死神",
+    "tags": ["完现术", "空间", "缩小", "操纵"],
+    "description": "将目标拉入玩偶屋般的异空间，使其中人员和物体受到使用者规则控制。",
+    "effects": ["把目标或物品转移到玩偶屋空间。", "改变空间内物体的尺寸、位置和行动规则。", "利用玩偶、房间和布景进行攻击与隐藏。"],
+    "requirements": ["需要完现术核心物品和稳定的异空间展开。"],
+    "limits": ["空间边界和控制规则受使用者集中力限制。", "强力灵压和空间能力可能破坏或逃离玩偶屋。"],
+    "stages": [],
+    "costs": ["维持异空间会持续消耗精神与灵力。"]
+  },
+  {
+    "id": "bleach-hogyoku",
+    "category": "item",
+    "name": "崩玉",
+    "work": "死神",
+    "tags": ["灵魂", "进化", "融合", "禁忌"],
+    "description": "能够感知并实现灵魂深层愿望、突破死神与虚界限的特殊灵魂核心。",
+    "effects": ["促使使用者突破原有种族和能力界限。", "加速死神、虚和其他灵魂力量的融合。", "根据使用者潜意识推动形态进化与能力觉醒。"],
+    "requirements": ["需要特殊制造、融合和高强度灵魂容器。"],
+    "limits": ["能力结果受使用者潜意识、灵魂强度和容器稳定性影响。", "进化可能造成失控、异化和人格风险。"],
+    "stages": [],
+    "costs": ["长期融合会改变使用者灵魂结构并带来不可逆后果。"]
+  },
+  {
+    "id": "bleach-ryujin-jakka",
+    "category": "ability",
+    "name": "流刃若火",
+    "work": "死神",
+    "tags": ["斩魄刀", "火焰", "卍解"],
+    "description": "释放足以覆盖战场的高温火焰，并在卍解残火太刀阶段压缩火焰破坏力。",
+    "effects": ["始解：以刀刃释放火焰斩击和火柱，将周围空间化为高温火海。", "残火太刀·东：将刀锋接触之物彻底灼灭。", "残火太刀·西：以极高温度包覆身体，接近者会被焚烧。", "残火太刀·南：召集被火焰烧尽的亡骸形成军势。", "残火太刀·北：以一刀释放集中到极致的高温斩击。"],
+    "requirements": ["残火太刀需要掌握流刃若火卍解和极高灵压控制。"],
+    "limits": ["高温会同时威胁敌我和尸魂界环境。", "卍解持续时间与使用者身体承受力有限。"],
+    "stages": [],
+    "costs": ["维持残火太刀会快速消耗灵压并损伤周围环境。"]
+  },
+  {
+    "id": "bleach-senbonzakura-kageyoshi",
+    "category": "ability",
+    "name": "千本樱景严",
+    "work": "死神",
+    "tags": ["卍解", "刀刃", "范围攻击"],
+    "description": "将千本樱化为数量庞大的细小刀刃，形成可从各方向操纵的刃海。",
+    "effects": ["生成数以千计的微型刀刃。", "从空中、地面和四周发动多方向斩击。", "可集中刀刃形成防御、巨刃和高密度攻击。"],
+    "requirements": ["需要掌握千本樱始解与卍解，并具备精密多目标控制。"],
+    "limits": ["刀刃数量越多，越依赖集中力和范围判断。", "强力范围防御、速度和特殊能力可以规避部分刀海。"],
+    "stages": [],
+    "costs": ["维持大范围刀海会持续消耗灵压。"]
+  },
+  {
+    "id": "bleach-hyorinmaru",
+    "category": "ability",
+    "name": "冰轮丸",
+    "work": "死神",
+    "tags": ["斩魄刀", "冰雪", "卍解", "天气"],
+    "description": "操纵水与冰雪的斩魄刀，并在大红莲冰轮丸阶段冻结战场和改变天气。",
+    "effects": ["始解：生成冰刃、冰龙、冰柱和冰墙，冻结目标、地面和水体。", "大红莲冰轮丸：以冰翼、冰龙、冰花和极端低温冻结战场并改变天气。"],
+    "requirements": ["大红莲冰轮丸需要掌握冰轮丸始解、卍解与天气操控。"],
+    "limits": ["高温、持续消耗和冰体破坏会削弱控制。", "大范围冻结会误伤环境与同伴。"],
+    "stages": [],
+    "costs": ["维持卍解和大范围冻结会快速消耗灵压。"]
+  },
+  {
+    "id": "bleach-kyoka-suigetsu",
+    "category": "ability",
+    "name": "镜花水月",
+    "work": "死神",
+    "tags": ["斩魄刀", "完全催眠", "感知"],
+    "description": "通过让目标看见始解释放，完全操纵其感知并制造持续性的战场错觉。",
+    "effects": ["制造外貌、位置、攻击和环境的全面错觉。", "让多个目标同时接受相同或不同的感知误导。", "以长期潜伏的催眠效果改变战场判断。"],
+    "requirements": ["目标需要在特定条件下见过始解释放。"],
+    "limits": ["完全催眠不等于直接控制目标身体。", "特殊感知、记忆异常和未满足观看条件的目标可能抵抗。"],
+    "stages": [],
+    "costs": ["维持多目标复杂幻觉会消耗精神和灵压。"]
+  },
+  {
+    "id": "bleach-tensa-zangetsu",
+    "category": "ability",
+    "name": "天锁斩月",
+    "work": "死神",
+    "tags": ["卍解", "高速", "月牙天冲"],
+    "description": "将斩月的力量压缩到黑色刀身和身体中，以高速移动、强化斩术和月牙天冲作战。",
+    "effects": ["大幅提高速度、力量、反应和灵压密度。", "月牙天冲：以斩击释放月牙形能量刃。", "将卍解力量集中在小型刀身，适合高速近战。"],
+    "requirements": ["需要掌握斩月始解、卍解和内在灵魂力量。"],
+    "limits": ["高强度卍解会对身体和灵压造成巨大负担。", "连续发动月牙天冲会降低灵压储量和身体耐力。"],
+    "stages": [],
+    "costs": ["维持卍解和连续月牙天冲会快速消耗灵压。"]
   }
 ]
