@@ -11,6 +11,14 @@ const DEFAULT_SETTINGS = Object.freeze({
   deletedIds: [],
 });
 
+const LEGACY_ABILITY_ID_ALIASES = Object.freeze({
+  "jojo-sheer-heart-attack": "jojo-killer-queen",
+  "jojo-bites-the-dust": "jojo-killer-queen",
+  "jojo-go-beyond": "jojo-soft-wet",
+  "jojo-c-moon": "jojo-whitesnake",
+  "jojo-made-in-heaven": "jojo-whitesnake",
+});
+
 const PAGE_SIZE = 6;
 
 const CATEGORY_LABELS = Object.freeze({
@@ -55,8 +63,15 @@ function getSettings() {
   const current = context.extensionSettings[MODULE_ID] ?? {};
   let removedLegacyPrompts = false;
   let removedLegacySources = false;
+  let migratedLegacySelection = false;
   const selectedIds = Array.isArray(current.selectedIds)
-    ? [...new Set(current.selectedIds.filter((id) => typeof id === "string"))]
+    ? [...new Set(current.selectedIds
+      .filter((id) => typeof id === "string")
+      .map((id) => {
+        const replacement = LEGACY_ABILITY_ID_ALIASES[id];
+        if (replacement) migratedLegacySelection = true;
+        return replacement ?? id;
+      }))]
     : [];
   const customAbilities = Array.isArray(current.customAbilities)
     ? normalizeAbilities(current.customAbilities.map((item) => {
@@ -99,7 +114,7 @@ function getSettings() {
     abilityOverrides,
     deletedIds,
   };
-  if (removedLegacyPrompts || removedLegacySources) context.saveSettingsDebounced?.();
+  if (removedLegacyPrompts || removedLegacySources || migratedLegacySelection) context.saveSettingsDebounced?.();
   return context.extensionSettings[MODULE_ID];
 }
 
