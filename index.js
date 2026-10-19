@@ -18,6 +18,7 @@ const CATEGORY_LABELS = Object.freeze({
   cultivation: "功法",
   skill: "技能",
   system: "系统",
+  item: "道具",
 });
 
 const FALLBACK_ABILITIES = [];
@@ -667,7 +668,7 @@ function renderCategoryCounts() {
   const visibleAbilities = selectedWork
     ? abilities.filter((ability) => ability.work === selectedWork)
     : abilities;
-  const counts = { all: visibleAbilities.length, ability: 0, cultivation: 0, skill: 0, system: 0 };
+  const counts = { all: visibleAbilities.length, ability: 0, cultivation: 0, skill: 0, system: 0, item: 0 };
   for (const ability of visibleAbilities) counts[ability.category] += 1;
   for (const [key, count] of Object.entries(counts)) {
     const target = panelRoot.querySelector(`[data-count="${key}"]`);

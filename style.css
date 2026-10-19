@@ -269,6 +269,7 @@
 .afe-category-cultivation { color: var(--afe-amber); background: rgba(255, 201, 111, 0.13); }
 .afe-category-skill { color: var(--afe-lilac); background: rgba(172, 140, 255, 0.14); }
 .afe-category-system { color: var(--afe-pink); background: rgba(255, 116, 200, 0.13); }
+.afe-category-item { color: #88b8ff; background: rgba(104, 157, 255, 0.14); }
 .afe-tag { color: var(--afe-muted); background: rgba(145, 201, 220, 0.08); }
 .afe-card h4 { position: relative; z-index: 1; margin: 15px 0 6px; color: #f5fcff; font-size: 16px; letter-spacing: -0.03em; line-height: 1.2; text-wrap: balance; }
 .afe-card-description { display: -webkit-box; position: relative; z-index: 1; margin: 0; overflow: hidden; color: #c9e1e8; font-size: 12px; line-height: 1.58; text-wrap: pretty; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }

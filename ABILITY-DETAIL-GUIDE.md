@@ -31,7 +31,7 @@
 
 按以下结构输出 JSON：
 {
-  "category": "ability | cultivation | skill | system",
+  "category": "ability | cultivation | skill | system | item",
   "name": "名称",
   "work": "作品或自定义来源",
   "source": { "status": "verified | reference | unverified | custom", "label": "证据来源与版本" },

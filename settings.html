@@ -32,7 +32,7 @@
     <label class="afe-search-wrap">
       <span class="afe-visually-hidden">搜索外挂名称、作品或说明</span>
       <span class="afe-search-mark" aria-hidden="true">⌕</span>
-      <input id="afe-search" type="search" placeholder="搜索能力、功法、技能或作品…" autocomplete="off">
+      <input id="afe-search" type="search" placeholder="搜索能力、功法、技能、系统、道具或作品…" autocomplete="off">
       <span class="afe-search-hint" aria-hidden="true">FIND</span>
     </label>
     <label class="afe-work-wrap">
@@ -56,7 +56,7 @@
         <button id="afe-editor-template" class="afe-editor-template" type="button">载入设定模板</button>
       </div>
       <form id="afe-editor-form" class="afe-editor-form">
-        <label class="afe-field afe-field-category">类型<select id="afe-editor-category"><option value="ability">能力</option><option value="cultivation">功法</option><option value="skill">技能</option><option value="system">系统</option></select></label>
+        <label class="afe-field afe-field-category">类型<select id="afe-editor-category"><option value="ability">能力</option><option value="cultivation">功法</option><option value="skill">技能</option><option value="system">系统</option><option value="item">道具</option></select></label>
         <label class="afe-field">名称<input id="afe-editor-name" type="text" maxlength="80" placeholder="例如：镜界步" required></label>
         <label class="afe-field">作品<input id="afe-editor-work" type="text" maxlength="120" placeholder="例如：用户自定义作品"></label>
         <label class="afe-field">标签<input id="afe-editor-tags" type="text" maxlength="180" placeholder="用逗号分隔，最多 6 个"></label>
@@ -129,6 +129,7 @@
     <button type="button" class="afe-category" data-category="cultivation" aria-pressed="false"><span class="afe-category-glyph">◇</span>功法 <span data-count="cultivation">0</span></button>
     <button type="button" class="afe-category" data-category="skill" aria-pressed="false"><span class="afe-category-glyph">⌁</span>技能 <span data-count="skill">0</span></button>
     <button type="button" class="afe-category" data-category="system" aria-pressed="false"><span class="afe-category-glyph">▣</span>系统 <span data-count="system">0</span></button>
+    <button type="button" class="afe-category" data-category="item" aria-pressed="false"><span class="afe-category-glyph">⬡</span>道具 <span data-count="item">0</span></button>
   </nav>
 
   <nav class="afe-work-categories" aria-label="按作品筛选">
