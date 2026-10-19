@@ -537,6 +537,24 @@ function saveAbilityFromEditor() {
   setStatus(isBuiltIn ? "外挂条目已修改并保存。" : "外挂条目已新增并保存。" );
 }
 
+function restoreBuiltInAbilities() {
+  const settings = getSettings();
+  const overrideCount = Object.keys(settings.abilityOverrides ?? {}).length;
+  const deletedCount = settings.deletedIds.length;
+  if (!overrideCount && !deletedCount) {
+    setStatus("内置外挂已经是初始状态；自建外挂未受影响。");
+    return;
+  }
+  if (!globalThis.confirm?.("确定恢复所有内置外挂到初始状态吗？这会清除内置外挂的修改和删除记录，但不会删除或修改自建外挂。")) return;
+  settings.abilityOverrides = {};
+  settings.deletedIds = [];
+  saveSettings();
+  rebuildAbilities();
+  currentPage = 1;
+  renderPanel();
+  setStatus(`已恢复 ${overrideCount + deletedCount} 项内置记录；自建外挂未受影响。`);
+}
+
 function deleteAbility(id) {
   const ability = getAbility(id);
   if (!ability) return;
@@ -794,6 +812,7 @@ function renderPanel({ animate = false } = {}) {
     });
   }
   subscribeDom(panelRoot.querySelector("#afe-open-editor"), "click", (event) => openAbilityEditor("", event.currentTarget));
+  subscribeDom(panelRoot.querySelector("#afe-restore-built-ins"), "click", restoreBuiltInAbilities);
   subscribeDom(document.getElementById("afe-editor-form"), "submit", (event) => {
     event.preventDefault();
     saveAbilityFromEditor();
