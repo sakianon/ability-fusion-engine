@@ -7139,18 +7139,95 @@
     "costs": ["神杀级仪式会消耗大量魔力并对使用者造成严重反作用。"]
   },
   {
-    "id": "rezero-magic-system",
+    "id": "rezero-fire-magic",
     "category": "system",
-    "name": "六系魔法体系",
+    "name": "火系魔法",
     "work": "Re:从零开始的异世界生活",
-    "tags": ["魔法", "六属性", "玛那"],
-    "description": "让玛那通过体内的门形成魔法，分为火、水、风、土、阴、阳六种属性。",
+    "tags": ["魔法", "火属性", "温度", "火焰", "冰"],
+    "description": "通过玛那控制温度，形成火焰或冰，不局限于制造火焰。",
     "effects": [
-      "火系作用于温度，可产生火焰或冰；水系作用于生命力并可用于治疗。",
-      "风系作用于生物体外的大气；土系作用于生物体内。",
-      "阴系术式包括『Shamak』；阳系术式包括『Jiwald』。"
+      "提高温度并形成火焰，灼烧目标。",
+      "降低温度并形成冰，用于冻结目标或塑造冰制物体。"
     ],
-    "requirements": ["构想要施展的术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "requirements": ["构想要施展的火系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
+    "stages": [],
+    "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
+  },
+  {
+    "id": "rezero-water-magic",
+    "category": "system",
+    "name": "水系魔法",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["魔法", "水属性", "生命力", "治疗"],
+    "description": "以玛那作用于生命力，治疗受伤的身体。",
+    "effects": [
+      "以水系术式作用于目标的生命力，治疗身体伤势。"
+    ],
+    "requirements": ["构想要施展的水系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
+    "stages": [],
+    "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
+  },
+  {
+    "id": "rezero-wind-magic",
+    "category": "system",
+    "name": "风系魔法",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["魔法", "风属性", "大气", "风刃"],
+    "description": "操纵体外的大气，形成气流或风刃。",
+    "effects": [
+      "操纵周围大气，形成推动或冲击目标的气流。",
+      "将风形成切割目标的风刃。"
+    ],
+    "requirements": ["构想要施展的风系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
+    "stages": [],
+    "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
+  },
+  {
+    "id": "rezero-earth-magic",
+    "category": "system",
+    "name": "土系魔法",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["魔法", "土属性", "土石", "地形"],
+    "description": "以玛那操纵土石，改变地形或形成土石构造。",
+    "effects": [
+      "使地面隆起或改变土石形状，形成土墙等构造。",
+      "以土石构造阻挡攻击或攻击目标。"
+    ],
+    "requirements": ["构想要施展的土系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
+    "stages": [],
+    "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
+  },
+  {
+    "id": "rezero-yin-magic",
+    "category": "system",
+    "name": "阴系魔法",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["魔法", "阴属性", "感知干涉", "Shamak"],
+    "description": "以阴属性术式干涉感知，包含使目标与外界感知隔断的『Shamak』。",
+    "effects": [
+      "『Shamak』形成黑雾，隔断受影响目标对外界的感知。"
+    ],
+    "requirements": ["构想要施展的阴系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
+    "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
+    "stages": [],
+    "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
+  },
+  {
+    "id": "rezero-yang-magic",
+    "category": "system",
+    "name": "阳系魔法",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["魔法", "阳属性", "身体强化", "Jiwald"],
+    "description": "以阳属性术式强化身体，或以『Jiwald』释放热射线。",
+    "effects": [
+      "以阳系术式强化身体能力。",
+      "『Jiwald』发出具有热量的射线，贯穿或灼烧目标。"
+    ],
+    "requirements": ["构想要施展的阳系术式并引导玛那发动；可通过咏唱构成术式，熟练后也可省略咏唱。"],
     "limits": ["可用玛那量影响可持续施展的魔法；门受损会妨碍施术。"],
     "stages": [],
     "costs": ["施术会消耗可用玛那；过度使用魔法可能损伤门。"]
@@ -7456,5 +7533,279 @@
     "limits": ["龙剑不认可目标时无法出鞘。"],
     "stages": [],
     "costs": []
+  },
+  {
+    "id": "rezero-carmilla-lust-authority",
+    "category": "ability",
+    "name": "色欲权能（无貌新娘）",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["权能", "色欲", "无貌新娘", "认知干涉"],
+    "description": "使他人将使用者看作自己渴望见到的对象，并因沉浸其中而忘记呼吸。",
+    "effects": [
+      "干涉他人对使用者的认知，使其看见自己渴望相见之人的形象。",
+      "使受影响者沉浸于眼前对象，忘记呼吸。"
+    ],
+    "requirements": ["他人感知到使用者时，权能作用于对方的认知。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-daphne-gluttony-authority",
+    "category": "ability",
+    "name": "暴食权能（魔兽创造型）",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["权能", "暴食", "魔兽创造", "饥饿"],
+    "description": "创造具有独立形态的魔兽，并以目光使目标陷入饥饿。",
+    "effects": [
+      "创造拥有各自身体形态与能力的魔兽。",
+      "以目光对目标施加饥饿，使其产生难以抑制的进食欲望。"
+    ],
+    "requirements": ["主动创造魔兽；以目光注视目标发动饥饿干涉。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-wind-indication",
+    "category": "ability",
+    "name": "风见的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "风", "感知", "辨谎"],
+    "description": "读取风的变化，感知交谈对象的情绪并辨别谎言。",
+    "effects": [
+      "感知周围风的流动与变化。",
+      "通过风反映出的变化感知交谈对象的情绪，辨别其话语是否为谎言。"
+    ],
+    "requirements": ["感受风的流动；交谈时借助风的变化判断对方的话语。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-wind-evasion",
+    "category": "ability",
+    "name": "避风的加护（风除的加护）",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "避风", "风除", "移动"],
+    "description": "在移动时排除迎面风压的影响，使行进不受风压阻碍。",
+    "effects": ["行进时使迎面而来的风避开使用者，免受风压影响。"],
+    "requirements": ["使用者移动时被动生效。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-soul-language",
+    "category": "ability",
+    "name": "言灵的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "交流", "动物", "昆虫"],
+    "description": "理解动物、昆虫等非人类生物的声音，并与它们交流。",
+    "effects": [
+      "理解非人类生物所表达的意思。",
+      "向动物、昆虫等对象传达自己的意思，与其进行交流。"
+    ],
+    "requirements": ["聆听并回应非人类生物的声音。"],
+    "limits": [],
+    "stages": [],
+    "costs": ["大量生物的声音同时涌入时，会形成噪音与精神负担。"]
+  },
+  {
+    "id": "rezero-divine-protection-earth-spirits",
+    "category": "ability",
+    "name": "地灵的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "大地", "恢复", "体力"],
+    "description": "脚接触大地时获得大地的补给，恢复体力与伤势。",
+    "effects": ["从大地获得力量，恢复消耗的体力并治疗身体伤势。"],
+    "requirements": ["脚接触地面时被动生效。"],
+    "limits": ["离开地面时，无法继续获得大地的补给。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-gathering-spirits",
+    "category": "ability",
+    "name": "诱精的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "精灵", "亲和", "吸引"],
+    "description": "吸引精灵，使精灵容易亲近使用者。",
+    "effects": ["使精灵对使用者产生亲近倾向，并吸引精灵接近。"],
+    "requirements": ["以使用者为中心被动吸引精灵。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-magic-manipulation",
+    "category": "ability",
+    "name": "魔操的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "魔兽", "操纵", "指挥"],
+    "description": "操纵魔兽，使其按照使用者的指示行动。",
+    "effects": ["使魔兽接受使用者的支配，按指示移动、攻击或停止行动。"],
+    "requirements": ["向魔兽施加控制并发出行动指示。"],
+    "limits": ["无法像操纵普通魔兽那样自由操纵白鲸、大兔、黑蛇这三大魔兽。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-death-god",
+    "category": "ability",
+    "name": "死神的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "伤口", "治疗妨碍", "持续伤害"],
+    "description": "使使用者造成的伤口难以愈合，妨碍自然恢复和治疗魔法。",
+    "effects": ["使攻击留下的伤口持续难以愈合，阻碍伤口的自然恢复与魔法治疗。"],
+    "requirements": ["使用者攻击并造成伤口时，被动施加效果。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-trisection",
+    "category": "ability",
+    "name": "三分的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "伤害分担", "三人", "负担分担"],
+    "description": "在三名同样具有此加护的对象之间分担伤害与身体负担。",
+    "effects": ["在三名加护持有者之间分担身体负担与受到的伤害。"],
+    "requirements": ["受到伤害时，在具有此加护的三人之间分担负担。"],
+    "limits": ["分担作用于具有此加护的三人，不能向任意对象转嫁伤害。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-protection-sun",
+    "category": "ability",
+    "name": "太阳的加护",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["加护", "太阳", "日轮", "身体强化"],
+    "description": "在白天强化使用者的身体能力。",
+    "effects": ["白天获得身体能力强化。"],
+    "requirements": ["处于白天时被动生效。"],
+    "limits": ["这项白天强化在夜间不生效。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-oni-physiology",
+    "category": "ability",
+    "name": "鬼族体质",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["体质", "鬼族", "鬼角", "玛那", "鬼化"],
+    "description": "通过鬼角吸收周围玛那，进入强化身体的鬼化状态。",
+    "effects": [
+      "鬼角吸收周围玛那，为身体提供力量。",
+      "鬼化时强化身体力量与战斗能力。"
+    ],
+    "requirements": ["显现鬼角并吸收周围玛那，发动鬼化强化。"],
+    "limits": ["鬼角受损或被折断会妨碍玛那吸收，并削弱强化能力。"],
+    "stages": [],
+    "costs": ["鬼化会增强战斗冲动，并存在失控风险。"]
+  },
+  {
+    "id": "rezero-tiger-beastification",
+    "category": "ability",
+    "name": "虎兽化",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["兽化", "虎兽人", "变身", "身体强化"],
+    "description": "变为巨大的猛虎，以兽化后的身体、利爪和獠牙战斗。",
+    "effects": [
+      "在人形与巨大虎形之间转换。",
+      "完全虎化后增大身体与力量，使用利爪和獠牙攻击。"
+    ],
+    "requirements": ["主动发动兽化，使身体转变为虎形。"],
+    "limits": ["完全兽化时会受到兽性影响，理性与判断能力下降。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-book-of-wisdom",
+    "category": "item",
+    "name": "睿智之书",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["书籍", "世界记忆", "知识", "未来记述"],
+    "description": "呈现世界记忆与未来相关知识；不完全复制品显示与持有者相关的未来记述。",
+    "effects": [
+      "完整书体连接世界记忆，呈现过去与现状的知识，并推演未来。",
+      "不完全复制品以持有者为中心显示未来相关记述，为行动提供指引。"
+    ],
+    "requirements": ["阅读书中显现的知识或未来记述。"],
+    "limits": ["不完全复制品不具备完整书体的全部知识。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-gospel",
+    "category": "item",
+    "name": "福音书",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["书籍", "指引", "预言", "文字显现"],
+    "description": "显现面向持有者的文字，为其之后的行动提供指引。",
+    "effects": ["书页显现与持有者后续行动有关的记述，指示其应采取的行动。"],
+    "requirements": ["翻阅并解读书页显现的文字。"],
+    "limits": ["书中文字只能由对应持有者解读。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-book-of-the-dead",
+    "category": "item",
+    "name": "死者之书",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["书籍", "记忆", "死者", "人生体验"],
+    "description": "使阅读者以对应死者的视角，体验其生前的人生与记忆。",
+    "effects": ["阅读后进入书中死者的记忆，以其视角经历生前的人生。"],
+    "requirements": ["翻开死者之书并阅读其中的文字。"],
+    "limits": ["每本书对应一名死者，记录的是该死者的人生。"],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-yang-sword-vollachia",
+    "category": "item",
+    "name": "阳剑·佛拉基亚",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["武器", "阳剑", "火焰", "选择焚烧"],
+    "description": "具有火焰的特殊剑，可斩击目标并选择火焰焚烧的对象。",
+    "effects": [
+      "召出阳剑，以剑刃与火焰攻击目标。",
+      "以使用者的意志选择火焰要焚烧的对象。"
+    ],
+    "requirements": ["召出阳剑并挥剑斩击；以意志指定火焰焚烧的对象。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-dragon-history-stone",
+    "category": "item",
+    "name": "龙历石",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["石碑", "预言", "灾难警示", "指引"],
+    "description": "在石面显现与王国未来有关的预言，警示灾难并提供应对指示。",
+    "effects": ["在石面显示未来灾难与应对行动的记述，为王国提供预警和指引。"],
+    "requirements": ["阅读石面显现的预言与指示。"],
+    "limits": [],
+    "stages": [],
+    "costs": []
+  },
+  {
+    "id": "rezero-divine-dragon-blood",
+    "category": "item",
+    "name": "神龙之血",
+    "work": "Re:从零开始的异世界生活",
+    "tags": ["龙之血", "治愈", "恢复", "土地再生"],
+    "description": "具有治愈伤势与恢复土地生命力作用的龙血材料。",
+    "effects": [
+      "用于治疗身体伤势。",
+      "使荒废的土地恢复生命力。"
+    ],
+    "requirements": ["将血液用于伤处，或施用于需要恢复的土地。"],
+    "limits": [],
+    "stages": [],
+    "costs": ["作为材料使用会消耗血液。"]
   }
 ]
