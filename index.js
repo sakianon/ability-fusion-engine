@@ -386,7 +386,7 @@ function renderAbilityStages(target, stages) {
     card.append(heading);
     appendStageDetail(card, "阶段变化条件", stage.transition);
     appendStageDetail(card, "本阶段效果", stage.effects);
-    appendStageDetail(card, "发动与适用条件", stage.requirements);
+    appendStageDetail(card, "发动方式", stage.requirements);
     appendStageDetail(card, "限制", stage.limits);
     appendStageDetail(card, "代价", stage.costs);
     return card;
@@ -419,7 +419,7 @@ function createStageEditorRow(stage = {}) {
     ["阶段名称", "name", "例如：初阶、熟练、觉醒"],
     ["阶段变化条件", "transition", "达到什么明确条件后进入本阶段；不要自动跳级"],
     ["本阶段效果", "effects", "每行一项，写清相对上一阶段增加或变化什么"],
-    ["发动与适用条件", "requirements", "每行一项；写发动、维持或适用时必须满足的条件"],
+    ["发动方式", "requirements", "持有外挂后如何主动发动；被动能力写实际触发条件"],
     ["限制", "limits", "每行一项"],
     ["代价", "costs", "每行一项；没有额外代价可留空"],
   ];
@@ -485,7 +485,7 @@ function applyAbilityTemplate() {
   setEditorField("afe-editor-tags", "标签一, 标签二");
   setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
   setEditorField("afe-editor-effects", "核心效果一\n核心效果二");
-  setEditorField("afe-editor-requirements", "发动或适用时必须满足的条件");
+  setEditorField("afe-editor-requirements", "持有外挂后如何主动发动；被动能力写实际触发条件");
   setEditorField("afe-editor-limits", "明确的能力边界、失效条件或反制方式");
   setEditorField("afe-editor-costs", "明确的消耗、冷却、风险或副作用");
   renderStageEditor([]);
@@ -1027,7 +1027,7 @@ function buildInjectionPrompt(selected) {
       `简介：${ability.description}`,
       formatInjectionList("标签", ability.tags),
       formatInjectionList("核心效果", ability.effects),
-      formatInjectionList("发动与适用条件", ability.requirements),
+      formatInjectionList("发动方式", ability.requirements),
       formatInjectionList("限制", ability.limits),
       formatInjectionList("代价", ability.costs),
     ];
@@ -1036,7 +1036,7 @@ function buildInjectionPrompt(selected) {
         `阶段 ${index + 1}：${stage.name || `阶段 ${index + 1}`}`,
         `变化条件：${stage.transition || "未注明；不得自行推定已解锁"}`,
         formatInjectionList("效果", stage.effects),
-        formatInjectionList("发动与适用条件", stage.requirements),
+        formatInjectionList("发动方式", stage.requirements),
         formatInjectionList("限制", stage.limits),
         formatInjectionList("代价", stage.costs),
       ].filter(Boolean).join("\n")));
@@ -1045,7 +1045,7 @@ function buildInjectionPrompt(selected) {
   });
   return [
     "【全能外挂引擎】",
-    "以下是用户手动选择的外挂完整资料，仅作为本次生成的补充设定。只按已明确的阶段、效果、发动与适用条件、限制和代价描写；阶段变化必须由条目写明的条件触发，不得自动升级、补造能力、抵消代价或把未知内容当成事实。资料没有说明之处保持未知，并遵守聊天中更具体的设定；不要替用户发言，也不要把本段说明当作剧情对白。",
+    "以下是用户手动选择的外挂完整资料，仅作为本次生成的补充设定。条目默认已经属于使用者；只按已明确的阶段、效果、发动方式、限制和代价描写。不得把原作持有者、获得资格、授予过程或人物剧情写成该外挂对当前使用者的限制。主动能力按条目写明的操作发动；被动能力按条目写明的触发条件生效。阶段变化必须由条目写明的条件触发，不得自动升级、补造能力、抵消代价或把未知内容当成事实。资料没有说明之处保持未知，并遵守聊天中更具体的设定；不要替用户发言，也不要把本段说明当作剧情对白。",
     ...lines,
   ].join("\n");
 }
