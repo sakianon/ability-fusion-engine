@@ -1,0 +1,184 @@
+[
+  {
+    "id": "precure-heartful-communicator",
+    "category": "item",
+    "name": "心之通讯器",
+    "work": "光之美少女 Max Heart",
+    "tags": [
+      "变身",
+      "通讯器",
+      "感知"
+    ],
+    "description": "由心之宝石驱动的变身通讯器。",
+    "effects": [
+      "发动变身成为光之美少女。",
+      "显示通讯并可与同伴联络。",
+      "支持发动光之美少女组合必杀技。"
+    ],
+    "requirements": [
+      "按下宝石并呼喊变身口令。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-marble-brooch",
+    "category": "item",
+    "name": "心形胸针",
+    "work": "光之美少女 Max Heart",
+    "tags": [
+      "胸针",
+      "合体攻击",
+      "光束"
+    ],
+    "description": "汇集两名光之美少女力量并发动组合光束的胸针。",
+    "effects": [
+      "聚集黑白两名战士的能量。",
+      "发动光之美少女旋涡射线，形成螺旋光束击中目标。"
+    ],
+    "requirements": [
+      "两名战士合力举起胸针并呼喊招式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-cure-moque",
+    "category": "item",
+    "name": "变身手机 Cure Mo",
+    "work": "Yes! 光之美少女5",
+    "tags": [
+      "变身",
+      "手机",
+      "通讯"
+    ],
+    "description": "用于变身并联络同伴的手机型道具。",
+    "effects": [
+      "发动变身成为光之美少女。",
+      "作为通讯器联络团队成员。",
+      "变身后支持发动个人及团队必杀技。"
+    ],
+    "requirements": [
+      "输入变身操作并呼喊变身咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-dream-torch",
+    "category": "item",
+    "name": "梦之火炬",
+    "work": "Yes! 光之美少女5 GoGo!",
+    "tags": [
+      "火炬",
+      "光",
+      "净化"
+    ],
+    "description": "汇聚伙伴力量并发动团队终结技的火炬。",
+    "effects": [
+      "聚集团队成员的力量并点燃火炬。",
+      "释放强光能量净化或击败邪恶目标。"
+    ],
+    "requirements": [
+      "团队成员共同注入力量并发动必杀技。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-heartcatch-mirage",
+    "category": "item",
+    "name": "心之捕捉幻镜",
+    "work": "HeartCatch 光之美少女！",
+    "tags": [
+      "镜子",
+      "净化",
+      "团队攻击"
+    ],
+    "description": "承载心之种子力量、支持团队净化攻击的镜子。",
+    "effects": [
+      "聚集团队成员的心之种子力量。",
+      "发动光之美少女花朵喷泉，释放花形能量攻击。",
+      "净化受邪恶力量侵染的目标。"
+    ],
+    "requirements": [
+      "团队成员共同操作镜子并喊出招式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-smile-pact",
+    "category": "item",
+    "name": "微笑变身盒",
+    "work": "Smile 光之美少女！",
+    "tags": [
+      "变身",
+      "化妆盒",
+      "能量攻击"
+    ],
+    "description": "通过彩色宝石发动变身和个人必杀技的化妆盒。",
+    "effects": [
+      "通过选择宝石使持有者变身为对应光之美少女。",
+      "变身后可发动各自个人必杀技。",
+      "支持团队合击招式。"
+    ],
+    "requirements": [
+      "选择宝石并按下盒面按钮发动变身或攻击。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-princess-perfume",
+    "category": "item",
+    "name": "公主香水",
+    "work": "Go! Princess 光之美少女",
+    "tags": [
+      "变身",
+      "香水瓶",
+      "钥匙"
+    ],
+    "description": "使用公主香水与礼服钥匙发动变身。",
+    "effects": [
+      "插入礼服钥匙后发动对应公主形态变身。",
+      "更换钥匙可切换不同礼服形态。",
+      "支持发动礼服形态对应的必杀技。"
+    ],
+    "requirements": [
+      "插入礼服钥匙并旋转香水瓶。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "precure-mirai-crystal",
+    "category": "item",
+    "name": "未来水晶",
+    "work": "HUGtto! 光之美少女",
+    "tags": [
+      "水晶",
+      "变身",
+      "未来力量"
+    ],
+    "description": "承载未来力量、用于变身和发动攻击的水晶道具。",
+    "effects": [
+      "插入变身器后发动光之美少女变身。",
+      "与变身器配合施展个人及团队攻击。",
+      "不同水晶对应不同形态或强化能力。"
+    ],
+    "requirements": [
+      "将水晶插入对应装置并呼喊变身或攻击口令。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

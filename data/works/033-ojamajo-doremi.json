@@ -1,0 +1,186 @@
+[
+  {
+    "id": "od-mienai-tap",
+    "category": "item",
+    "name": "见习生变身节拍器",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "变身",
+      "节拍器",
+      "魔法"
+    ],
+    "description": "见习魔女用于变身并施展基础魔法的节拍器。",
+    "effects": [
+      "发动变身，使使用者穿上见习魔女服。",
+      "配合咒语发动见习魔法。",
+      "按节奏敲击可辅助施展魔法。"
+    ],
+    "requirements": [
+      "持有节拍器并念诵对应咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-pelopelopolon",
+    "category": "item",
+    "name": "波隆",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "魔法杖",
+      "音调",
+      "魔法"
+    ],
+    "description": "见习魔女使用的笛形魔法杖，可通过音调施法。",
+    "effects": [
+      "以不同音调对应并发动魔法效果。",
+      "配合魔法球施展日常魔法。",
+      "可用于侦测和处理魔法相关事件。"
+    ],
+    "requirements": [
+      "吹奏指定音调并消耗魔法球。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-rhythm-tap",
+    "category": "item",
+    "name": "节奏节拍器",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "变身",
+      "节奏",
+      "魔法"
+    ],
+    "description": "升级后的节拍器，用于变身并辅助施展更高阶魔法。",
+    "effects": [
+      "发动升级形态变身。",
+      "配合节奏演奏发动魔法。",
+      "支持魔女考试中使用的魔法术式。"
+    ],
+    "requirements": [
+      "操作节拍器并念诵对应咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-cour-polon",
+    "category": "item",
+    "name": "库尔波隆",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "魔法杖",
+      "合奏",
+      "变身"
+    ],
+    "description": "由多支波隆合成的高级魔法杖，可发动组合魔法。",
+    "effects": [
+      "以杖身宝石与音调施展高级魔法。",
+      "配合小花节拍器发动花朵相关魔法。",
+      "可进行多人合奏式施法。"
+    ],
+    "requirements": [
+      "吹奏对应音调并配合魔法球。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-parara-tap",
+    "category": "item",
+    "name": "帕拉拉节拍器",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "变身",
+      "节拍器",
+      "魔法"
+    ],
+    "description": "为飞翔小魔女形态配套的变身与魔法道具。",
+    "effects": [
+      "发动飞翔小魔女变身。",
+      "配合咒语施展该形态的魔法。",
+      "辅助在空中移动与飞行。"
+    ],
+    "requirements": [
+      "操作节拍器并念诵变身或施法咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-hana-compact",
+    "category": "item",
+    "name": "小花纯洁紧凑盒",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "变身",
+      "花朵",
+      "魔法"
+    ],
+    "description": "小花使用的紧凑盒，可发动变身及花朵魔法。",
+    "effects": [
+      "发动小花的魔女形态变身。",
+      "施展与花朵、植物相关的魔法。",
+      "配合魔法球发动魔法效果。"
+    ],
+    "requirements": [
+      "打开紧凑盒并念诵对应咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-witch-uniform",
+    "category": "item",
+    "name": "见习魔女服",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "变身服",
+      "魔法",
+      "飞行"
+    ],
+    "description": "由变身魔法生成的见习魔女服装及配套帽子。",
+    "effects": [
+      "作为见习魔女变身形态的服装。",
+      "配套魔法道具施法。",
+      "配套飞行扫帚进行飞行。"
+    ],
+    "requirements": [
+      "通过见习魔女道具变身获得。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "od-magic-balls",
+    "category": "item",
+    "name": "魔法球",
+    "work": "小魔女DoReMi",
+    "tags": [
+      "魔法媒介",
+      "消耗品",
+      "施法"
+    ],
+    "description": "用于发动魔女咒语的魔力球形媒介。",
+    "effects": [
+      "作为咒语施法的魔力媒介。",
+      "不同级别的魔法球支持相应等级的魔法。",
+      "施法时消耗对应魔法球。"
+    ],
+    "requirements": [
+      "施法时投入魔法球并念诵咒语。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

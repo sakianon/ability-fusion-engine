@@ -1,0 +1,161 @@
+[
+  {
+    "id": "tmm-strawberry-bell",
+    "category": "item",
+    "name": "草莓铃",
+    "work": "东京猫猫",
+    "tags": [
+      "变身",
+      "铃铛",
+      "净化"
+    ],
+    "description": "承载草莓猫猫力量的变身与攻击道具。",
+    "effects": [
+      "作为变身媒介使持有者成为草莓猫猫。",
+      "释放粉色能量并发动草莓钟声净化攻击。"
+    ],
+    "requirements": [
+      "挥动草莓铃并呼喊草莓钟声。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-strawberry-check",
+    "category": "item",
+    "name": "草莓检查棒",
+    "work": "东京猫猫",
+    "tags": [
+      "变身",
+      "杖",
+      "能量攻击"
+    ],
+    "description": "草莓猫猫的升级型变身武器，可聚集能量施放攻击。",
+    "effects": [
+      "作为变身媒介使持有者进入草莓猫猫形态。",
+      "聚集能量发射粉色能量束，净化奇美拉动物。"
+    ],
+    "requirements": [
+      "举起检查棒并呼喊对应口令。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-mint-arrow",
+    "category": "item",
+    "name": "薄荷箭",
+    "work": "东京猫猫",
+    "tags": [
+      "弓箭",
+      "风",
+      "能量攻击"
+    ],
+    "description": "薄荷猫猫使用的弓形武器，可发射风属性能量箭。",
+    "effects": [
+      "发射风压箭攻击目标。",
+      "风箭可吹飞敌人或打散其攻击。",
+      "发动薄荷回声形成强力风属性冲击。"
+    ],
+    "requirements": [
+      "拉开弓弦瞄准并释放能量箭。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-lettuce-castanet",
+    "category": "item",
+    "name": "生菜响板",
+    "work": "东京猫猫",
+    "tags": [
+      "音波",
+      "水",
+      "净化"
+    ],
+    "description": "生菜猫猫使用的响板武器，可发出水流与音波攻击。",
+    "effects": [
+      "敲击响板发射水流攻击。",
+      "以声波与水流组合成生菜回声冲击。",
+      "攻击可击退敌人并净化奇美拉动物。"
+    ],
+    "requirements": [
+      "敲击或挥动响板发动攻击。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-pudding-ring",
+    "category": "item",
+    "name": "布丁戒指",
+    "work": "东京猫猫",
+    "tags": [
+      "戒指",
+      "束缚",
+      "弹性攻击"
+    ],
+    "description": "布丁猫猫使用的戒指武器，可生成弹性束缚带。",
+    "effects": [
+      "释放黄色能量形成弹性绳带。",
+      "绳带缠住目标并限制行动。",
+      "以弹性带弹开或牵引目标。"
+    ],
+    "requirements": [
+      "挥动戒指释放弹性束缚带。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-pomegranate-whip",
+    "category": "item",
+    "name": "石榴石鞭",
+    "work": "东京猫猫",
+    "tags": [
+      "鞭子",
+      "能量",
+      "束缚"
+    ],
+    "description": "石榴猫猫使用的鞭形武器，可延展攻击并缠绕目标。",
+    "effects": [
+      "挥鞭进行远距离抽击。",
+      "以鞭身缠绕目标并拉近或限制行动。",
+      "释放石榴石螺旋形成能量冲击。"
+    ],
+    "requirements": [
+      "挥动鞭子并呼喊石榴石螺旋。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "tmm-mew-aqua-rod",
+    "category": "item",
+    "name": "美优水晶杖",
+    "work": "东京猫猫",
+    "tags": [
+      "水晶",
+      "水",
+      "净化"
+    ],
+    "description": "聚集美优水晶能量并释放净化光束的法杖。",
+    "effects": [
+      "汇聚美优水晶力量。",
+      "释放光束净化奇美拉动物及其污染。",
+      "将水晶能量聚焦成大范围净化攻击。"
+    ],
+    "requirements": [
+      "举起水晶杖并引导美优水晶能量。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

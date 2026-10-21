@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "ccs-clow-windy",
+    "category": "item",
+    "name": "风牌（The Windy）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "风",
+      "束缚"
+    ],
+    "description": "操纵风形成气流，用于牵引、束缚或吹开目标。",
+    "effects": [
+      "召出并控制风，使气流缠绕目标或推动物体。",
+      "以风流限制其他卡牌的移动。"
+    ],
+    "requirements": [
+      "发动风牌并指定风流作用方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-wood",
+    "category": "item",
+    "name": "树牌（The Wood）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "植物",
+      "束缚"
+    ],
+    "description": "催生并操纵植物，以藤蔓、枝条或根系缠住目标。",
+    "effects": [
+      "使植物快速生长并延伸出藤蔓、枝条或根系。",
+      "以生长的植物缠绕目标或围成障碍。"
+    ],
+    "requirements": [
+      "发动树牌并指定植物生长或缠绕的位置。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-jump",
+    "category": "item",
+    "name": "跳牌（The Jump）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "跳跃",
+      "移动"
+    ],
+    "description": "强化使用者的跳跃能力，使其跃过高处或远距离障碍。",
+    "effects": [
+      "在使用者鞋履处形成翅翼状魔力，让使用者跃至高处或远处。"
+    ],
+    "requirements": [
+      "发动跳牌后以腿部起跳。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-fly",
+    "category": "item",
+    "name": "翔牌（The Fly）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "飞行",
+      "移动"
+    ],
+    "description": "为使用者提供持续飞行能力，可通过魔杖形态或背生羽翼实现。",
+    "effects": [
+      "使封印之杖变化为可飞行形态，或在使用者背后形成翅膀。",
+      "带动使用者在空中飞行。"
+    ],
+    "requirements": [
+      "发动翔牌并操纵飞行方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-watery",
+    "category": "item",
+    "name": "水牌（The Watery）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "水",
+      "操纵"
+    ],
+    "description": "生成并操纵大量水流，可用水势冲击、包围或限制目标。",
+    "effects": [
+      "生成大量水并任意操纵其形态与方向。",
+      "以水流冲击、包围或困住目标。"
+    ],
+    "requirements": [
+      "发动水牌并引导水流作用方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-illusion",
+    "category": "item",
+    "name": "幻牌（The Illusion）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "幻象",
+      "感知"
+    ],
+    "description": "向目标呈现与其记忆或强烈想象相关的人物、场景或事物幻象。",
+    "effects": [
+      "使目标看见由其记忆或强烈想象形成的幻象。",
+      "幻象可呈现为人物、地点或物体。"
+    ],
+    "requirements": [
+      "发动幻牌并使目标受到其幻象影响。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-flower",
+    "category": "item",
+    "name": "花牌（The Flower）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "植物",
+      "创造"
+    ],
+    "description": "召出大量不同种类的花卉与植物装饰。",
+    "effects": [
+      "使多种花卉在指定区域大量出现。",
+      "可依需要召出不同种类的花。"
+    ],
+    "requirements": [
+      "发动花牌并指定花卉出现的区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-sword",
+    "category": "item",
+    "name": "剑牌（The Sword）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "剑术",
+      "武器"
+    ],
+    "description": "将魔杖化为剑，并赋予使用者熟练的剑术能力。",
+    "effects": [
+      "使魔杖变化为细身长剑。",
+      "提升使用者的剑术，使其能以剑进行精准斩击。"
+    ],
+    "requirements": [
+      "发动剑牌并以变化后的剑挥斩。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-thunder",
+    "category": "item",
+    "name": "雷牌（The Thunder）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "雷电",
+      "攻击"
+    ],
+    "description": "召唤雷电并将电击导向目标。",
+    "effects": [
+      "产生雷电并释放电击。",
+      "以雷电攻击指定目标或区域。"
+    ],
+    "requirements": [
+      "发动雷牌并引导雷电目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-shadow",
+    "category": "item",
+    "name": "影牌（The Shadow）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "影子",
+      "束缚"
+    ],
+    "description": "操纵影子，使其延伸、追踪并束缚目标。",
+    "effects": [
+      "操纵自身或他人的影子，使其延伸并束缚目标。",
+      "使影子追踪目标。"
+    ],
+    "requirements": [
+      "发动影牌并指定要操纵的影子。"
+    ],
+    "limits": [
+      "光线会削弱影牌的能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-mirror",
+    "category": "item",
+    "name": "镜牌（The Mirror）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "镜像",
+      "变形"
+    ],
+    "description": "变化为指定人物或物体的外形。",
+    "effects": [
+      "使镜牌呈现指定人物或物体的外貌。"
+    ],
+    "requirements": [
+      "发动镜牌并指定模仿对象。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-shield",
+    "category": "item",
+    "name": "盾牌（The Shield）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "防护",
+      "结界"
+    ],
+    "description": "展开防护屏障，保护目标免受攻击。",
+    "effects": [
+      "形成盾形或穹顶状屏障，阻挡物理与魔法攻击。"
+    ],
+    "requirements": [
+      "发动盾牌并指定需要保护的目标或区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-maze",
+    "category": "item",
+    "name": "迷牌（The Maze）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "空间",
+      "迷宫"
+    ],
+    "description": "在区域内构造立体迷宫，使进入者难以找到出口。",
+    "effects": [
+      "将指定区域变为多层次的迷宫空间。",
+      "改变迷宫通道，使进入者迷失方向。"
+    ],
+    "requirements": [
+      "发动迷牌并使目标进入其构造的区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-erase",
+    "category": "item",
+    "name": "消牌（The Erase）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "消除",
+      "记忆"
+    ],
+    "description": "使人、物体或记忆消失。",
+    "effects": [
+      "令指定的人或物体消失。",
+      "消除指定的记忆。"
+    ],
+    "requirements": [
+      "发动消牌并指定消除对象。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-glow",
+    "category": "item",
+    "name": "灯牌（The Glow）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "照明",
+      "光"
+    ],
+    "description": "释放萤火般的微光，为周围提供柔和照明。",
+    "effects": [
+      "散发多个绿色微光光点，照亮周围物体与环境。"
+    ],
+    "requirements": [
+      "发动灯牌并让光点出现在需要照明的位置。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-light",
+    "category": "item",
+    "name": "光牌（The Light）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "光",
+      "照明"
+    ],
+    "description": "产生强光，与暗牌相对。",
+    "effects": [
+      "产生强烈光线并照亮周围区域。",
+      "光线能够压过黑暗。"
+    ],
+    "requirements": [
+      "发动光牌并指定照明区域。"
+    ],
+    "limits": [],
+    "costs": [
+      "发动需要较多魔力。"
+    ],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-dark",
+    "category": "item",
+    "name": "暗牌（The Dark）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "黑暗",
+      "遮蔽"
+    ],
+    "description": "产生并操纵黑暗，与光牌相对。",
+    "effects": [
+      "使周围区域陷入黑暗。",
+      "暗牌与光牌互为对应。"
+    ],
+    "requirements": [
+      "发动暗牌并指定作用区域。"
+    ],
+    "limits": [],
+    "costs": [
+      "发动需要较多魔力。"
+    ],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-firey",
+    "category": "item",
+    "name": "火牌（The Firey）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "火焰",
+      "元素"
+    ],
+    "description": "力量强大、较难控制的火元素牌。",
+    "effects": [
+      "召出并控制火焰，灼烧其经过路径上的目标。",
+      "火势猛烈，可压过风牌等温和元素牌。"
+    ],
+    "requirements": [
+      "发动火牌并引导火焰的方向。"
+    ],
+    "limits": [
+      "火焰难以控制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-earthy",
+    "category": "item",
+    "name": "地牌（The Earthy）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "土石",
+      "元素"
+    ],
+    "description": "操纵地面与土石，制造地形变化和地面攻击。",
+    "effects": [
+      "震动地面并引发地裂或滑坡。",
+      "使地面隆起形成岩石尖刺或土石障碍。"
+    ],
+    "requirements": [
+      "发动地牌并指定地面作用区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-rain",
+    "category": "item",
+    "name": "雨牌（The Rain）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "降雨",
+      "天气"
+    ],
+    "description": "在指定区域降下持续雨水。",
+    "effects": [
+      "召来降雨并使指定区域被雨水覆盖。"
+    ],
+    "requirements": [
+      "发动雨牌并指定降雨区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-silent",
+    "category": "item",
+    "name": "静牌（The Silent）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "静音",
+      "空间"
+    ],
+    "description": "消除作用区域内的声音，并排斥制造噪声的对象。",
+    "effects": [
+      "使作用区域内的声音消失。",
+      "把打破寂静、发出噪声的对象移出区域。"
+    ],
+    "requirements": [
+      "发动静牌并指定作用区域。"
+    ],
+    "limits": [
+      "制造噪声会触发静牌的空间排斥。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-time",
+    "category": "item",
+    "name": "时牌（The Time）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "时间",
+      "操纵"
+    ],
+    "description": "控制时间流动，可使其停止或减慢。",
+    "effects": [
+      "停止或减慢作用范围内的时间流动。"
+    ],
+    "requirements": [
+      "发动时牌并指定需要影响的时空范围。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-power",
+    "category": "item",
+    "name": "力牌（The Power）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "力量强化",
+      "体能"
+    ],
+    "description": "赋予使用者超常怪力，用于搬动或推动重物。",
+    "effects": [
+      "显著提高使用者的肌肉力量，使其能搬动或推动远超常人体力范围的物体。"
+    ],
+    "requirements": [
+      "发动力牌后以身体对目标施力。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-mist",
+    "category": "item",
+    "name": "雾牌（The Mist）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "雾",
+      "腐蚀"
+    ],
+    "description": "制造遮蔽视线的雾，并腐蚀其触及的物体。",
+    "effects": [
+      "释放浓雾遮挡视线。",
+      "雾接触物体时使其受到腐蚀。"
+    ],
+    "requirements": [
+      "发动雾牌并让雾覆盖目标区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-storm",
+    "category": "item",
+    "name": "岚牌（The Storm）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "风暴",
+      "龙卷"
+    ],
+    "description": "制造强烈风暴与龙卷风，以旋转气流冲击目标。",
+    "effects": [
+      "召起强风并形成大型旋风或龙卷风。",
+      "以旋转气流卷起并冲击目标。"
+    ],
+    "requirements": [
+      "发动岚牌并指定风暴形成的方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-float",
+    "category": "item",
+    "name": "浮牌（The Float）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "漂浮",
+      "移动"
+    ],
+    "description": "使目标脱离地面漂浮，可用于越过障碍或在水面上移动。",
+    "effects": [
+      "以粉色气泡状魔力托起人或物体。",
+      "使目标在空中漂浮并移动。"
+    ],
+    "requirements": [
+      "发动浮牌并指定需要托起的目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-move",
+    "category": "item",
+    "name": "移牌（The Move）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "瞬移",
+      "物体移动"
+    ],
+    "description": "使物体沿指定方向快速移动或弹跳。",
+    "effects": [
+      "使物体沿指定方向快速移动。",
+      "令物体弹跳移动。"
+    ],
+    "requirements": [
+      "发动移牌并指定物体及其目的位置。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-fight",
+    "category": "item",
+    "name": "斗牌（The Fight）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "格斗",
+      "技巧"
+    ],
+    "description": "将熟练的徒手格斗技巧赋予使用者。",
+    "effects": [
+      "提升使用者的徒手格斗能力，使其能运用高水平的拳脚技巧。"
+    ],
+    "requirements": [
+      "发动斗牌后由使用者以徒手方式进行格斗。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-loop",
+    "category": "item",
+    "name": "轮牌（The Loop）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "空间",
+      "循环"
+    ],
+    "description": "连接空间形成循环路径，使进入者不断回到原处。",
+    "effects": [
+      "将区域路径连接成无尽循环。",
+      "使沿路径前进的目标重复经过同一空间。"
+    ],
+    "requirements": [
+      "发动轮牌并使目标进入其构造的循环路径。"
+    ],
+    "limits": [
+      "切断循环路径可破坏空间循环。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-sleep",
+    "category": "item",
+    "name": "眠牌（The Sleep）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "睡眠",
+      "精神"
+    ],
+    "description": "撒出使目标入睡的粉末。",
+    "effects": [
+      "释放睡眠粉末，使接触到粉末的目标入睡。"
+    ],
+    "requirements": [
+      "发动眠牌并使粉尘到达目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-song",
+    "category": "item",
+    "name": "歌牌（The Song）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "声音",
+      "模仿"
+    ],
+    "description": "复制已听过的声音，也能赋予优美歌声或演奏能力。",
+    "effects": [
+      "复制已经听过的声音。",
+      "让目标获得优美歌声或熟练演奏乐器的能力。"
+    ],
+    "requirements": [
+      "发动歌牌并指定需要复制的声音或接受能力的目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-little",
+    "category": "item",
+    "name": "小牌（The Little）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "缩小",
+      "尺寸变化"
+    ],
+    "description": "缩小被触碰的人或物体，使其体型变小。",
+    "effects": [
+      "将接触到的目标缩小。",
+      "缩小效果同时影响目标的身体尺寸与魔力。"
+    ],
+    "requirements": [
+      "发动小牌并使其触碰目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-return",
+    "category": "item",
+    "name": "戻牌（The Return）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "时间",
+      "回到过去"
+    ],
+    "description": "将目标送往过去的时间，使其重历先前的时段。",
+    "effects": [
+      "将使用者或指定目标送往过去。",
+      "允许目标在过去时段重新经历当时事件。"
+    ],
+    "requirements": [
+      "发动戻牌并指定时间回返的目标。"
+    ],
+    "limits": [],
+    "costs": [
+      "使用时消耗大量魔力。"
+    ],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-shot",
+    "category": "item",
+    "name": "击牌（The Shot）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "能量弹",
+      "攻击"
+    ],
+    "description": "连续发射魔力光束攻击其锁定的目标。",
+    "effects": [
+      "向其首先发现的目标发射魔力光束。",
+      "连续射击时后续光束会逐渐提高命中精度。"
+    ],
+    "requirements": [
+      "发动击牌，使其锁定并射击目标。"
+    ],
+    "limits": [
+      "会优先攻击其首先发现的对象，可能误伤旁人。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-sweet",
+    "category": "item",
+    "name": "甘牌（The Sweet）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "变化",
+      "甜味"
+    ],
+    "description": "使食物变得更甜，并将接触的无机物转化为甜食。",
+    "effects": [
+      "增加食物的甜味。",
+      "将接触到的无机物变成糖果或其他甜食。"
+    ],
+    "requirements": [
+      "发动甘牌并指定食物或触碰需要变化的物体。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-dash",
+    "category": "item",
+    "name": "駆牌（The Dash）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "速度",
+      "奔跑"
+    ],
+    "description": "提高使用者奔跑速度，使其能快速通过地面路线。",
+    "effects": [
+      "提升使用者奔跑时的移动速度。"
+    ],
+    "requirements": [
+      "发动駆牌后以奔跑方式移动。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-big",
+    "category": "item",
+    "name": "大牌（The Big）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "巨大化",
+      "尺寸变化"
+    ],
+    "description": "放大生物或物体的体型。",
+    "effects": [
+      "使指定生物或物体变得巨大。"
+    ],
+    "requirements": [
+      "发动大牌并指定放大的目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-create",
+    "category": "item",
+    "name": "创牌（The Create）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "文字具现",
+      "创造"
+    ],
+    "description": "使书本上写出的内容具现为真实存在的事物。",
+    "effects": [
+      "将书本中写下的内容转化为现实中的实体。",
+      "具现结果可包括故事描述的人物或生物。"
+    ],
+    "requirements": [
+      "在书中写下需要具现的内容并发动创牌。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-change",
+    "category": "item",
+    "name": "替牌（The Change）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "灵魂交换",
+      "身体交换"
+    ],
+    "description": "交换两名目标的意识与身体。",
+    "effects": [
+      "使两名目标互换身体与意识。",
+      "交换持续一天；若届时没有解除，交换可能变为永久。"
+    ],
+    "requirements": [
+      "发动替牌并指定交换的两名目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-freeze",
+    "category": "item",
+    "name": "冻牌（The Freeze）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "冰",
+      "冻结"
+    ],
+    "description": "以大量冰冻结触碰到的人或物，并能发射冰片攻击。",
+    "effects": [
+      "以厚重冰层冻结接触到的人或物。",
+      "射出尖锐冰片攻击目标。"
+    ],
+    "requirements": [
+      "发动冻牌并使冰触及需要冻结的目标。"
+    ],
+    "limits": [
+      "冻结需要冰层实际接触目标。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-snow",
+    "category": "item",
+    "name": "雪牌（The Snow）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "降雪",
+      "暴风雪"
+    ],
+    "description": "控制降雪并引发暴风雪，使区域受到强烈风雪影响。",
+    "effects": [
+      "在指定区域降下大量雪。",
+      "制造暴风雪并以风雪覆盖周围环境。"
+    ],
+    "requirements": [
+      "发动雪牌并指定降雪区域。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-voice",
+    "category": "item",
+    "name": "声牌（The Voice）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "声音",
+      "窃取"
+    ],
+    "description": "夺取目标的声音，并可模仿被夺取的声线。",
+    "effects": [
+      "使目标无法发出原本的声音。",
+      "以被夺取的声线进行模仿发声。"
+    ],
+    "requirements": [
+      "发动声牌并指定需要夺取声音的目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-lock",
+    "category": "item",
+    "name": "锭牌（The Lock）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "封锁",
+      "门锁"
+    ],
+    "description": "附着在门锁或入口上并将其锁闭。",
+    "effects": [
+      "附着于钥匙孔或入口，使门、房间或区域无法开启。"
+    ],
+    "requirements": [
+      "发动锭牌并使其附着在需要锁闭的入口。"
+    ],
+    "limits": [
+      "需要作用于门锁、钥匙孔或可封闭的入口。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-cloud",
+    "category": "item",
+    "name": "云牌（The Cloud）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "云",
+      "天气"
+    ],
+    "description": "生成并操纵云层，以云覆盖大片区域。",
+    "effects": [
+      "制造旋转的暗云并在空中移动。",
+      "使云层扩展至覆盖城镇范围。"
+    ],
+    "requirements": [
+      "发动云牌并引导云层移动或聚集。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-dream",
+    "category": "item",
+    "name": "梦牌（The Dream）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "梦境",
+      "预知"
+    ],
+    "description": "令目标进入梦境，并可能使其在梦中看见预示性影像。",
+    "effects": [
+      "使目标做梦并体验由梦牌引发的梦境。",
+      "梦境可呈现有关未来事件的预示性影像。"
+    ],
+    "requirements": [
+      "发动梦牌并使目标进入睡梦状态。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-sand",
+    "category": "item",
+    "name": "砂牌（The Sand）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "砂",
+      "塑形"
+    ],
+    "description": "生成并操纵砂土，将其塑造成需要的形状。",
+    "effects": [
+      "召出并控制大量砂土。",
+      "将砂土塑形成屏障、包围物或攻击形态。"
+    ],
+    "requirements": [
+      "发动砂牌并指定砂土移动或塑形的方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-twin",
+    "category": "item",
+    "name": "双牌（The Twin）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "复制",
+      "双生"
+    ],
+    "description": "复制人或物体，形成两个相同个体。",
+    "effects": [
+      "将指定的人或物体复制成两个相同个体。"
+    ],
+    "requirements": [
+      "发动双牌并指定需要复制的对象。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-wave",
+    "category": "item",
+    "name": "波牌（The Wave）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "水",
+      "波浪"
+    ],
+    "description": "操纵水体形成波峰与波谷，并改变水波方向。",
+    "effects": [
+      "制造并控制水面波浪。",
+      "改变波峰、波谷的形态与推进方向。"
+    ],
+    "requirements": [
+      "发动波牌并指定水体及波浪方向。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-through",
+    "category": "item",
+    "name": "抜牌（The Through）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "穿透",
+      "空间"
+    ],
+    "description": "使使用者穿过固体介质。",
+    "effects": [
+      "让使用者穿过固体物体或墙面。"
+    ],
+    "requirements": [
+      "发动抜牌并朝需要穿越的固体介质移动。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ccs-clow-arrow",
+    "category": "item",
+    "name": "箭牌（The Arrow）",
+    "work": "魔卡少女樱",
+    "tags": [
+      "库洛牌",
+      "弓箭",
+      "精准"
+    ],
+    "description": "赋予使用者卓越的弓箭技巧与精准度。",
+    "effects": [
+      "使使用者成为精准的弓箭手，能够连续射出多支箭矢。"
+    ],
+    "requirements": [
+      "发动箭牌并以弓箭瞄准射击。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

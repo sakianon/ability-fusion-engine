@@ -1,0 +1,359 @@
+[
+  {
+    "id": "sm-moon-stick",
+    "category": "item",
+    "name": "月之杖",
+    "work": "美少女战士",
+    "tags": [
+      "月亮",
+      "权杖",
+      "净化"
+    ],
+    "description": "以月之力量发动治疗与净化术式的权杖。",
+    "effects": [
+      "释放月光能量净化受邪恶力量影响的对象。",
+      "与月光净化术结合，消除妖魔附身并恢复受害者。"
+    ],
+    "requirements": [
+      "举起权杖并呼喊月光净化术式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-cutie-moon-rod",
+    "category": "item",
+    "name": "月光爱心权杖",
+    "work": "美少女战士",
+    "tags": [
+      "月亮",
+      "权杖",
+      "净化"
+    ],
+    "description": "承载月亮公主力量并施放月光净化攻击的权杖。",
+    "effects": [
+      "聚集月光形成净化光束，击退或净化邪恶目标。",
+      "配合月之水晶发动月亮螺旋爱心攻击。"
+    ],
+    "requirements": [
+      "挥动权杖并呼喊对应招式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-spiral-heart-rod",
+    "category": "item",
+    "name": "螺旋爱心月亮权杖",
+    "work": "美少女战士",
+    "tags": [
+      "月亮",
+      "权杖",
+      "光束"
+    ],
+    "description": "将月之水晶力量集中为螺旋光束的权杖。",
+    "effects": [
+      "发射螺旋状月光能量攻击敌人。",
+      "以月亮螺旋爱心攻击净化怪物或摧毁邪恶力量。"
+    ],
+    "requirements": [
+      "举起权杖并呼喊月亮螺旋爱心攻击。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-kaleid-moon-scope",
+    "category": "item",
+    "name": "万花筒月亮望远镜",
+    "work": "美少女战士",
+    "tags": [
+      "月亮",
+      "权杖",
+      "净化"
+    ],
+    "description": "以万花筒状水晶聚集月之力量的攻击权杖。",
+    "effects": [
+      "施放月光能量攻击并净化邪恶目标。",
+      "与圣杯力量配合发动更强的月光净化术。"
+    ],
+    "requirements": [
+      "举起权杖并呼喊对应月光攻击术式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-eternal-tiare",
+    "category": "item",
+    "name": "永恒提亚拉",
+    "work": "美少女战士",
+    "tags": [
+      "永恒水晶",
+      "权杖",
+      "净化"
+    ],
+    "description": "凝聚永恒水晶力量并发动宇宙级净化攻击的权杖。",
+    "effects": [
+      "聚集永恒水晶光辉形成大范围净化攻击。",
+      "发动星光万花筒疗愈之吻，以光辉净化并消除黑暗力量。"
+    ],
+    "requirements": [
+      "举起提亚拉并呼喊星光万花筒疗愈之吻。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-transformation-brooch",
+    "category": "item",
+    "name": "月光变身胸针",
+    "work": "美少女战士",
+    "tags": [
+      "变身",
+      "月亮",
+      "胸针"
+    ],
+    "description": "以月之力量将持有者变身为水手月亮的道具。",
+    "effects": [
+      "发动变身，使持有者获得水手战士形态与战斗服。",
+      "变身后可使用水手月亮的月光攻击能力。"
+    ],
+    "requirements": [
+      "佩戴胸针并呼喊月亮力量变身。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-cosmic-heart-compact",
+    "category": "item",
+    "name": "宇宙之心胸针",
+    "work": "美少女战士",
+    "tags": [
+      "变身",
+      "胸针",
+      "升级形态"
+    ],
+    "description": "承载宇宙之心力量并发动超级水手月亮变身的胸针。",
+    "effects": [
+      "发动变身成为超级水手月亮。",
+      "作为月之力量媒介支持月亮螺旋爱心攻击。"
+    ],
+    "requirements": [
+      "佩戴胸针并呼喊宇宙之心力量变身。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-crisis-moon-compact",
+    "category": "item",
+    "name": "危机月亮胸针",
+    "work": "美少女战士",
+    "tags": [
+      "变身",
+      "月亮",
+      "胸针"
+    ],
+    "description": "借助圣杯力量发动超级水手月亮变身的胸针。",
+    "effects": [
+      "发动超级水手月亮变身。",
+      "作为月之力量媒介支持月亮螺旋爱心攻击。"
+    ],
+    "requirements": [
+      "使用胸针并呼喊危机变身口令。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-space-sword",
+    "category": "item",
+    "name": "宇宙之剑",
+    "work": "美少女战士",
+    "tags": [
+      "外部太阳系",
+      "剑",
+      "能量斩击"
+    ],
+    "description": "由天王星战士使用、可释放宇宙能量斩击的战斗剑。",
+    "effects": [
+      "以剑刃近身斩击。",
+      "挥剑释放宇宙之剑风暴，形成远距离能量斩击。"
+    ],
+    "requirements": [
+      "挥剑并呼喊宇宙之剑风暴。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-deep-aqua-mirror",
+    "category": "item",
+    "name": "深海之镜",
+    "work": "美少女战士",
+    "tags": [
+      "外部太阳系",
+      "镜子",
+      "水"
+    ],
+    "description": "映照并释放深海力量的镜子。",
+    "effects": [
+      "映照并感知隐藏的目标或事物。",
+      "聚集水与深海能量发动深海幻影攻击。"
+    ],
+    "requirements": [
+      "举起镜子并呼喊深海幻影。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-garnet-orb",
+    "category": "item",
+    "name": "时空宝珠",
+    "work": "美少女战士",
+    "tags": [
+      "外部太阳系",
+      "时空",
+      "宝珠"
+    ],
+    "description": "镶嵌于时空权杖上的宝珠，用于调用时空力量。",
+    "effects": [
+      "作为时空力量的媒介。",
+      "配合时空权杖发动时空停止及时空攻击。"
+    ],
+    "requirements": [
+      "通过时空权杖与宝珠调用时空力量。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-silence-glaive",
+    "category": "item",
+    "name": "沉默之镰",
+    "work": "美少女战士",
+    "tags": [
+      "外部太阳系",
+      "镰刀",
+      "毁灭"
+    ],
+    "description": "承载土星战士毁灭力量的巨大镰刀。",
+    "effects": [
+      "以镰刃近身攻击。",
+      "释放毁灭力量发动沉默镰奇袭。",
+      "施展毁灭性终结攻击。"
+    ],
+    "requirements": [
+      "挥动镰刀并呼喊对应招式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-silver-crystal",
+    "category": "item",
+    "name": "幻之银水晶",
+    "work": "美少女战士",
+    "tags": [
+      "银水晶",
+      "月亮",
+      "净化"
+    ],
+    "description": "承载银千年王国力量、可发动净化与复苏奇迹的水晶。",
+    "effects": [
+      "释放强大的月之光辉净化邪恶力量。",
+      "治疗或恢复受到黑暗力量影响的对象。",
+      "在特定仪式中以水晶力量复苏或改变世界状态。"
+    ],
+    "requirements": [
+      "举起或集中精神调用银水晶力量。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-holy-grail",
+    "category": "item",
+    "name": "圣杯",
+    "work": "美少女战士",
+    "tags": [
+      "圣杯",
+      "升级",
+      "月亮"
+    ],
+    "description": "汇聚多名水手战士力量并提升月之战士形态的圣杯。",
+    "effects": [
+      "吸收并汇聚水手战士的能量。",
+      "使水手月亮获得超级水手月亮形态。",
+      "作为更高阶月光净化攻击的力量媒介。"
+    ],
+    "requirements": [
+      "以水手战士的合力注入圣杯并调用其力量。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-golden-crystal",
+    "category": "item",
+    "name": "黄金水晶",
+    "work": "美少女战士",
+    "tags": [
+      "黄金水晶",
+      "地球",
+      "能量"
+    ],
+    "description": "与地球和黄金王国力量相连的水晶。",
+    "effects": [
+      "释放黄金水晶的光辉能量攻击目标。",
+      "作为地球王国与黄金水手力量的媒介。",
+      "与银水晶等力量共鸣以抵抗宇宙级黑暗。"
+    ],
+    "requirements": [
+      "集中精神并调用黄金水晶力量。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "sm-sailor-crystal",
+    "category": "item",
+    "name": "水手水晶",
+    "work": "美少女战士",
+    "tags": [
+      "水手水晶",
+      "星光",
+      "核心"
+    ],
+    "description": "承载水手战士星光与生命力量的核心水晶。",
+    "effects": [
+      "储存并维持水手战士的星光力量。",
+      "作为水手战士变身、攻击和生命存在的力量核心。",
+      "水晶破碎或消失会影响对应水手战士的存在。"
+    ],
+    "requirements": [
+      "通过水手战士自身的星光力量调用。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]
