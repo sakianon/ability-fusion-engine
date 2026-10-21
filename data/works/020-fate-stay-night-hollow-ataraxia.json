@@ -1,0 +1,715 @@
+[
+  {
+    "id": "fate-excalibur",
+    "category": "item",
+    "tags": [
+      "圣剑",
+      "光炮"
+    ],
+    "description": "将魔力压缩为光并从剑尖释放的星造圣剑。",
+    "effects": [
+      "将魔力转化为光之斩击，沿挥剑方向扫灭目标",
+      "真名解放“誓约胜利之剑”发射对城光炮",
+      "黑化形态“誓约胜利之剑·摩根”以黑色魔力释放斩击",
+      "原型圣剑带有十三拘束，解除拘束后开放封存的输出。"
+    ],
+    "requirements": [
+      "握剑聚集魔力，呼唤真名并挥斩。"
+    ],
+    "limits": [
+      "十三拘束型的封印需要通过圆桌议决解除。"
+    ],
+    "costs": [
+      "真名解放消耗大量魔力。"
+    ],
+    "stages": [],
+    "name": "誓约胜利之剑",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-avalon",
+    "category": "item",
+    "tags": [
+      "剑鞘",
+      "隔绝"
+    ],
+    "description": "以妖精乡的隔绝守护身体、修复伤势的圣剑剑鞘。",
+    "effects": [
+      "持续治愈伤口并抑制身体衰老",
+      "真名解放“遥远的理想乡”将自身置于妖精乡的隔绝中，使外界攻击无法抵达。"
+    ],
+    "requirements": [
+      "展开剑鞘并呼唤真名。"
+    ],
+    "limits": [
+      "恢复与真名解放需要圣剑持有者的魔力联系。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "遥远的理想乡",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-invisible-air",
+    "category": "skill",
+    "tags": [
+      "风",
+      "隐形"
+    ],
+    "description": "将风缠绕在武器周围，隐藏轮廓并积蓄风压。",
+    "effects": [
+      "风的折射隐藏武器外观，使敌人难以判断剑身长度",
+      "解开压缩风形成“风王铁槌”，吹飞前方目标",
+      "释放风压可辅助突进。"
+    ],
+    "requirements": [
+      "将风包裹剑身，或解除风的束缚。"
+    ],
+    "limits": [],
+    "costs": [
+      "操纵风消耗魔力。"
+    ],
+    "stages": [],
+    "name": "风王结界",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-caliburn",
+    "category": "item",
+    "tags": [
+      "选定之剑",
+      "光炮"
+    ],
+    "description": "以王权象征转化魔力、释放光之斩击的选定之剑。",
+    "effects": [
+      "剑身将魔力聚为光刃用于近战",
+      "真名解放“必胜黄金之剑”将光之刃向前释放。"
+    ],
+    "requirements": [
+      "握剑注入魔力后解放真名。"
+    ],
+    "limits": [
+      "承受超过剑身耐久的输出会导致剑体破损。"
+    ],
+    "costs": [
+      "解放消耗魔力。"
+    ],
+    "stages": [],
+    "name": "必胜黄金之剑",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-unlimited-blade-works",
+    "category": "ability",
+    "tags": [
+      "固有结界",
+      "投影"
+    ],
+    "description": "将见过的兵器记录到剑之心象世界并加以复制。",
+    "effects": [
+      "解析所见兵器的结构、制造理念与积累的战斗经验",
+      "投影兵器并再现其使用经验",
+      "展开“无限剑制”，将记录的无数剑具现到结界中并连续射出",
+      "可把投影宝具破坏为“幻想崩坏”以释放储存的力量。"
+    ],
+    "requirements": [
+      "观察兵器建立记录，投影时进行构造解析",
+      "咏唱固有结界咒文展开剑之世界。"
+    ],
+    "limits": [
+      "复制品通常比原型低一个等级",
+      "神造兵装不能作为普通投影完整再现",
+      "结界持续受到世界修正。"
+    ],
+    "costs": [
+      "投影与维持固有结界持续消耗魔力。"
+    ],
+    "stages": [],
+    "name": "无限剑制",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-kanshou-bakuya",
+    "category": "item",
+    "tags": [
+      "双剑",
+      "投掷"
+    ],
+    "description": "具有相互吸引性质、可近战或投掷的成对雌雄剑。",
+    "effects": [
+      "双剑相互吸引，改变投掷轨迹并向配对之剑回返",
+      "“鹤翼三连”以先后投掷和近身双斩包围敌人",
+      "“干将·莫邪 Overedge”将剑身延展为强化斩击形态。"
+    ],
+    "requirements": [
+      "成对持剑，或先后投出两柄剑。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "干将·莫邪",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-caladbolg",
+    "category": "item",
+    "tags": [
+      "魔剑",
+      "投影"
+    ],
+    "description": "以虹霓般的巨大斩击破坏地形的魔剑。",
+    "effects": [
+      "原型“虹霓剑”延伸虹光剑刃，斩断地形与目标",
+      "投影改造型“螺旋剑Ⅱ”将剑身扭为螺旋，以箭矢形式射出并扭曲命中空间",
+      "可用幻想崩坏引爆投影剑。"
+    ],
+    "requirements": [
+      "挥动原型解放真名，或把螺旋投影型搭在弓上射出。"
+    ],
+    "limits": [],
+    "costs": [
+      "宝具解放消耗魔力",
+      "幻想崩坏会毁掉该次投影。"
+    ],
+    "stages": [],
+    "name": "螺旋剑〔虹霓剑，含投影改造型〕",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-hrunting",
+    "category": "item",
+    "tags": [
+      "魔剑",
+      "追踪"
+    ],
+    "description": "可改造为追踪箭矢、反复袭击目标的魔剑。",
+    "effects": [
+      "投影箭型“赤原猎犬”追踪目标，沿追击轨迹修正方向",
+      "只要射手继续瞄准，被击开的箭仍能追击。"
+    ],
+    "requirements": [
+      "以弓射出改造剑，并持续瞄准目标。"
+    ],
+    "limits": [
+      "追踪需要射手保持对目标的锁定。"
+    ],
+    "costs": [
+      "投影与射击消耗魔力。"
+    ],
+    "stages": [],
+    "name": "赤原猎犬",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-rho-aias",
+    "category": "skill",
+    "tags": [
+      "投影",
+      "防御"
+    ],
+    "description": "将七片花瓣状盾面叠加在前方的防御术。",
+    "effects": [
+      "展开“炽天覆七重圆环”的七层花瓣",
+      "每层均形成防壁，尤其克制投掷兵器。"
+    ],
+    "requirements": [
+      "向受击方向投影并展开盾面。"
+    ],
+    "limits": [
+      "各层可以被超过承受能力的攻击依次击破。"
+    ],
+    "costs": [
+      "展开消耗魔力，盾面破坏会给施术者带来反冲伤害。"
+    ],
+    "stages": [],
+    "name": "炽天覆七重圆环",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-gae-bolg",
+    "category": "item",
+    "tags": [
+      "魔枪",
+      "因果"
+    ],
+    "description": "以因果逆转刺穿心脏、或释放追踪投枪的诅咒魔枪。",
+    "effects": [
+      "“穿刺死棘之枪”先确立心脏被贯穿的结果，再完成突刺",
+      "“突穿死翔之枪”将魔枪投出，追击目标并造成范围破坏",
+      "伤口带有阻碍愈合的诅咒",
+      "双枪应用“贯穿死翔之枪”以束缚与致命投掷连续攻击。"
+    ],
+    "requirements": [
+      "近距离锁定心脏后解放突刺，或跃起投掷魔枪。"
+    ],
+    "limits": [
+      "因果突刺对没有心脏的目标不能形成同样的必杀",
+      "幸运与回避命运的防护可能使心脏贯穿失败。"
+    ],
+    "costs": [
+      "宝具解放消耗魔力。"
+    ],
+    "stages": [],
+    "name": "穿刺死棘之枪",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-gate-of-babylon",
+    "category": "ability",
+    "tags": [
+      "宝库",
+      "空间门"
+    ],
+    "description": "开启连接收藏库的空间门，存取或射出库中的物品。",
+    "effects": [
+      "通过金色空间门取出收藏品",
+      "在多个方向开启门扉，以宝具原型连续齐射",
+      "收藏库容纳兵器、交通工具与财宝。"
+    ],
+    "requirements": [
+      "打开通向宝库的门扉，指定取用或投射的收藏品。"
+    ],
+    "limits": [
+      "只能取用宝库实际收纳的物品",
+      "取出物品不等于获得其原持有者的独立技能。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "王之财宝",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-ea",
+    "category": "item",
+    "tags": [
+      "对界",
+      "空间断层"
+    ],
+    "description": "以三段旋转剑体掀起空间断层的乖离剑。",
+    "effects": [
+      "旋转剑体压缩并搅动风压",
+      "真名解放“天地乖离开辟之星”以空间断层撕开目标与结界。"
+    ],
+    "requirements": [
+      "使剑体旋转蓄积输出，指向目标解放真名。"
+    ],
+    "limits": [],
+    "costs": [
+      "解放消耗魔力。"
+    ],
+    "stages": [],
+    "name": "乖离剑",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-chains-of-heaven",
+    "category": "item",
+    "tags": [
+      "锁链",
+      "拘束"
+    ],
+    "description": "随目标神性增强拘束力的天之锁。",
+    "effects": [
+      "从多个方向延伸锁链并缠住目标",
+      "目标神性越高，锁链的封锁越强。"
+    ],
+    "requirements": [
+      "将锁链射向或缠绕目标。"
+    ],
+    "limits": [
+      "对不具神性的目标只发挥坚韧锁链的拘束作用。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "天之锁",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-potion-of-youth",
+    "category": "item",
+    "tags": [
+      "灵药",
+      "幼化"
+    ],
+    "description": "服用后使身体回到幼年状态的返老还童药。",
+    "effects": [
+      "使肉体幼化，并使身体与精神倾向随幼年形态改变。"
+    ],
+    "requirements": [
+      "饮用灵药。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "返老还童灵药",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-rule-breaker",
+    "category": "item",
+    "tags": [
+      "短剑",
+      "契约解除"
+    ],
+    "description": "以刺入目标的方式解除魔术与魔术契约的短剑。",
+    "effects": [
+      "刺中术式后使魔术回归尚未成立的状态",
+      "切断御主与从者之间的魔术契约",
+      "解除魔术控制与以魔术建立的附加状态。"
+    ],
+    "requirements": [
+      "用剑刃接触或刺入施有魔术的对象。"
+    ],
+    "limits": [
+      "不能因此取消宝具本身的存在。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "万符必应破戒",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-argos-coin",
+    "category": "item",
+    "tags": [
+      "龙",
+      "召唤媒介"
+    ],
+    "description": "与金羊传说相连、可作为召龙媒介的金羊毛。",
+    "effects": [
+      "保有金羊皮的神秘，可作为召唤科尔基斯之龙的媒介。"
+    ],
+    "requirements": [],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "金羊毛",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-bellerophon",
+    "category": "item",
+    "tags": [
+      "天马",
+      "冲撞"
+    ],
+    "description": "以骑乘缰绳强化幻想种并实施高速突击。",
+    "effects": [
+      "缰绳为骑兽施加防护并提升突击能力",
+      "骑乘天马进行“骑英之缰绳”的冲撞，连同防护一起撞向目标。"
+    ],
+    "requirements": [
+      "将缰绳用于骑兽，骑乘后解放真名。"
+    ],
+    "limits": [],
+    "costs": [
+      "解放与维持幻想种消耗魔力。"
+    ],
+    "stages": [],
+    "name": "骑英之缰绳",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-blood-fort-andromeda",
+    "category": "skill",
+    "tags": [
+      "结界",
+      "吸收"
+    ],
+    "description": "在区域内铺设吸取生命与魔力的鲜血神殿。",
+    "effects": [
+      "结界逐步分解内部生命，抽取血液、生命力与魔力",
+      "被吸取的力量汇入结界使用者。"
+    ],
+    "requirements": [
+      "在区域布置结界基点并发动术式。"
+    ],
+    "limits": [
+      "结界需要预先布置",
+      "破坏结界基点可以阻止展开。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "他者封印·鲜血神殿",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-breaker-gorgon",
+    "category": "item",
+    "tags": [
+      "眼罩",
+      "精神封闭"
+    ],
+    "description": "封住魔眼并能将意识拖入封闭世界的封印具。",
+    "effects": [
+      "佩戴眼罩抑制魔眼外泄",
+      "展开“自己封印·暗黑神殿”封锁目标意识，使其陷入封闭的梦境。"
+    ],
+    "requirements": [
+      "佩戴封印具，或解放其精神封闭效果。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "自己封印·暗黑神殿",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-cybele",
+    "category": "ability",
+    "tags": [
+      "魔眼",
+      "石化"
+    ],
+    "description": "以视线干涉目标，将身体逐渐化为石像。",
+    "effects": [
+      "注视目标引发石化",
+      "即使未完成石化，也能使身体受到石化压力并妨碍行动。"
+    ],
+    "requirements": [
+      "解除眼部封印并看向目标。"
+    ],
+    "limits": [
+      "足够的魔力抗性可以抵抗石化",
+      "封印魔眼的道具会压制效果。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "石化魔眼",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-god-hand",
+    "category": "ability",
+    "tags": [
+      "复活",
+      "抗性"
+    ],
+    "description": "以十二条生命与死亡后的耐性抵抗攻击。",
+    "effects": [
+      "无效化B级及以下的攻击",
+      "保有十二条生命，死亡后消耗生命复活",
+      "经历过致死攻击后，对该攻击获得抗性。"
+    ],
+    "requirements": [
+      "遭受攻击或致死伤害时自动生效。"
+    ],
+    "limits": [
+      "超过防御等级的攻击能造成伤害",
+      "足以反复致死的攻击可一次削去多条生命。"
+    ],
+    "costs": [
+      "复活消耗储存的生命。"
+    ],
+    "stages": [],
+    "name": "十二试炼",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-nine-lives",
+    "category": "skill",
+    "tags": [
+      "武技",
+      "连续攻击"
+    ],
+    "description": "随所持武器变化，将连续攻势集中到目标要害。",
+    "effects": [
+      "以弓、剑、枪等武器再现“射杀百头”的连续打击",
+      "近战形态同时劈砍多个要害，弓术形态连续射杀目标。"
+    ],
+    "requirements": [
+      "以相应武器发动连续杀击。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "射杀百头",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-tsubame-gaeshi",
+    "category": "skill",
+    "tags": [
+      "剑术",
+      "多重斩击"
+    ],
+    "description": "以剑术使三个方向的斩击几乎同时成立。",
+    "effects": [
+      "“燕返”以三道同时存在的剑轨封住目标的逃避方向。"
+    ],
+    "requirements": [
+      "摆好剑势后发动连续性突破极限的斩击。"
+    ],
+    "limits": [
+      "剑身弯曲会使剑轨出现破绽",
+      "完整施展需要可完成剑势的立足空间。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "燕返",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-zabaniya-heart",
+    "category": "ability",
+    "tags": [
+      "诅咒",
+      "心脏"
+    ],
+    "description": "以咒腕捏碎远方目标的心脏映像。",
+    "effects": [
+      "咒腕在掌中生成目标心脏的镜像，捏碎镜像使真实心脏遭到破坏。"
+    ],
+    "requirements": [
+      "用咒腕接触目标胸口后形成心脏镜像并捏碎。"
+    ],
+    "limits": [
+      "需要目标具有可对应的心脏",
+      "咒术抗性可以阻挡干涉。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "妄想心音",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-zarich-tawrich",
+    "category": "item",
+    "tags": [
+      "双剑",
+      "攻守削弱"
+    ],
+    "description": "以分别象征衰弱与腐败的双剑干扰敌人的攻守。",
+    "effects": [
+      "塔维尔阻碍敌人的攻击",
+      "扎里彻阻碍敌人的防御，配合另一柄剑制造可乘之机。"
+    ],
+    "requirements": [
+      "双手分别使用两柄剑攻防。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": [],
+    "name": "复仇者双剑〔扎里彻与塔维尔〕",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-verg-avesta",
+    "category": "ability",
+    "tags": [
+      "伤害返还",
+      "反击"
+    ],
+    "description": "把自己承受的伤势复制返还给指定敌人。",
+    "effects": [
+      "发动“伪写记述万象”，将自身实际承受的伤势写回指定的攻击者。"
+    ],
+    "requirements": [
+      "承受伤害后指定对方发动反击。"
+    ],
+    "limits": [
+      "返还不取消自身已经遭受的伤害",
+      "自身必须活到反击成立。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "伪写记述万象",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-fragarach",
+    "category": "item",
+    "tags": [
+      "反击",
+      "因果"
+    ],
+    "description": "在敌人使出王牌时逆转先后、抢先贯穿其要害。",
+    "effects": [
+      "平时可作为魔弹射击",
+      "“斩剜战神之剑”响应敌人的王牌，逆转攻击发生的先后，使自身一击先行命中。"
+    ],
+    "requirements": [
+      "让对手发动王牌，在其发动瞬间释放武装。"
+    ],
+    "limits": [
+      "因果反击需要敌方先发动王牌",
+      "能在使用者死亡后继续成立的攻击不会因此消失。"
+    ],
+    "costs": [
+      "消耗一次性制造的武装。"
+    ],
+    "stages": [],
+    "name": "斩剜战神之剑",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-jeweled-sword",
+    "category": "item",
+    "tags": [
+      "平行世界",
+      "魔力"
+    ],
+    "description": "借第二魔法原理，从平行世界引入魔力的宝石剑。",
+    "effects": [
+      "观察平行世界并把另一侧的魔力引入剑身",
+      "将引入的魔力释放为剑光。"
+    ],
+    "requirements": [
+      "通过剑身观测平行世界并导入魔力。"
+    ],
+    "limits": [
+      "引入量不等于肉体能无限承受的输出。"
+    ],
+    "costs": [
+      "输出会给使用者的魔术回路与身体造成负担。"
+    ],
+    "stages": [],
+    "name": "宝石剑泽尔里奇",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-dress-of-heaven",
+    "category": "item",
+    "tags": [
+      "灵魂",
+      "第三魔法"
+    ],
+    "description": "以第三魔法原理维系灵魂并参与圣杯控制的礼服。",
+    "effects": [
+      "保护并维持灵魂形态",
+      "作为圣杯控制礼装干涉圣杯仪式。"
+    ],
+    "requirements": [
+      "穿戴礼服并操作灵魂或圣杯仪式。"
+    ],
+    "limits": [
+      "礼服对无相应防护的普通人体接触具有危险性。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "天之衣",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  },
+  {
+    "id": "fate-shroud-of-magdalene",
+    "category": "item",
+    "tags": [
+      "圣骸布",
+      "拘束"
+    ],
+    "description": "以圣骸布对男性目标施加强制束缚。",
+    "effects": [
+      "缠住男性目标后形成难以挣脱的拘束。"
+    ],
+    "requirements": [
+      "将圣骸布缠住目标。"
+    ],
+    "limits": [
+      "主要拘束对象是男性。"
+    ],
+    "costs": [],
+    "stages": [],
+    "name": "马格达拉的圣骸布",
+    "work": "Fate/stay night／Fate/hollow ataraxia"
+  }
+]

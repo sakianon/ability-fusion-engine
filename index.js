@@ -1,7 +1,7 @@
 const MODULE_ID = "ability-fusion-engine";
 const INTERCEPTOR_NAME = "AbilityFusion_interceptGeneration";
 const SETTINGS_URL = new URL("./settings.html", import.meta.url);
-const DATA_URL = new URL("./data/abilities.json", import.meta.url);
+const DATA_MANIFEST_URL = new URL("./data/works-manifest.json", import.meta.url);
 
 const DEFAULT_SETTINGS = Object.freeze({
   enabled: false,
@@ -185,9 +185,17 @@ function rebuildAbilities() {
 
 async function loadAbilities() {
   try {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const loaded = normalizeAbilities(await response.json());
+    const manifestResponse = await fetch(DATA_MANIFEST_URL, { cache: "no-store" });
+    if (!manifestResponse.ok) throw new Error(`manifest HTTP ${manifestResponse.status}`);
+    const manifest = await manifestResponse.json();
+    if (!Array.isArray(manifest) || !manifest.length) throw new Error("empty work manifest");
+    const responses = await Promise.all(manifest.map(async (file) => {
+      if (typeof file !== "string" || !file.trim()) throw new Error("invalid work manifest entry");
+      const response = await fetch(new URL(`./works/${file}`, DATA_MANIFEST_URL), { cache: "no-store" });
+      if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
+      return response.json();
+    }));
+    const loaded = normalizeAbilities(responses.flatMap((items) => Array.isArray(items) ? items : []));
     if (!loaded.length) throw new Error("empty ability data");
     baseAbilities = loaded;
     rebuildAbilities();

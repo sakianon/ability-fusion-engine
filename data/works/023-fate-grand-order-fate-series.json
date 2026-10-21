@@ -1,0 +1,2158 @@
+[
+  {
+    "id": "fate-batch-001",
+    "category": "ability",
+    "name": "对魔力",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "魔术防御"
+    ],
+    "description": "削弱或无效化针对自身的魔术效果；能抵消的术式规模随技能等级而变。",
+    "effects": [
+      "抵消一定等级以下的咏唱魔术。",
+      "高等级对魔力可令大魔术或仪礼咒法也难以造成有效伤害。"
+    ],
+    "requirements": [
+      "魔术效果作用于自身时被动生效。"
+    ],
+    "limits": [
+      "抗性受技能等级与施术规模影响，并非对一切魔术绝对免疫。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-002",
+    "category": "ability",
+    "name": "骑乘",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "驾驭"
+    ],
+    "description": "熟练驾驭坐骑与交通工具的能力，适用对象范围随技能等级变化。",
+    "effects": [
+      "熟练控制常见动物坐骑、车辆、船只和其他交通工具。",
+      "高等级可驾驭通常更难控制的幻想种坐骑；龙种通常不在一般骑乘技能的范围内。"
+    ],
+    "requirements": [
+      "实际操纵坐骑或载具时生效。"
+    ],
+    "limits": [
+      "技能提升操纵能力，不会赋予坐骑或载具本身不存在的性能。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-003",
+    "category": "ability",
+    "name": "独立行动",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "独立存在"
+    ],
+    "description": "在契约者失联或供魔中断后，仍能依靠自身维持现界与行动一段时间的技能。",
+    "effects": [
+      "契约者不在身边或契约中断时，仍可继续现界和行动。",
+      "技能等级决定能够维持现界的时间与独立程度。"
+    ],
+    "requirements": [
+      "外部供魔中断或距离拉开时自动生效。"
+    ],
+    "limits": [
+      "不等于无限产生魔力；发动高耗能能力仍需要相应能量。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-004",
+    "category": "ability",
+    "name": "气息遮断",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "隐匿"
+    ],
+    "description": "隐藏从者气息与存在感，使自身难以被发现的隐匿技能。",
+    "effects": [
+      "隐藏自身存在与位置，使对手难以感知或追踪。",
+      "可利用隐匿状态接近目标并发动突袭。"
+    ],
+    "requirements": [
+      "主动压低自身气息并维持隐匿状态。"
+    ],
+    "limits": [
+      "转入攻击姿态时，气息遮断的等级与隐匿效果会显著下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-005",
+    "category": "ability",
+    "name": "阵地作成",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "工房",
+      "结界"
+    ],
+    "description": "将固定地点改造成有利于施术的魔术工房或神殿，并强化其中的魔术活动。",
+    "effects": [
+      "在指定地点建成魔术工房；高等级可建成规模更大的神殿。",
+      "利用阵地基础强化内部魔术，并为防御、仪式或召唤提供有利场所。"
+    ],
+    "requirements": [
+      "选定地点并持续布置工房结构。"
+    ],
+    "limits": [
+      "效果附着在已建成的固定场所，离开阵地后不能随身保留场地增幅。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-006",
+    "category": "ability",
+    "name": "道具作成",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "魔术工艺",
+      "礼装"
+    ],
+    "description": "制造带有魔力的器具或魔术礼装，制作能力受技能等级与知识限制。",
+    "effects": [
+      "制作带有魔力的道具、护符或魔术礼装。",
+      "较高等级可制作复杂礼装，个别高等级表现甚至能制造拟似不死灵药。"
+    ],
+    "requirements": [
+      "准备材料并依照术式完成制作。"
+    ],
+    "limits": [
+      "不能仅凭此技能复制来源、原理或等级完全未知的道具；成品受知识与材料条件限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-007",
+    "category": "ability",
+    "name": "狂化",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "强化",
+      "理性削弱"
+    ],
+    "description": "以削弱理性和思考能力为代价强化身体参数的状态；强化与理性损失程度随等级而变。",
+    "effects": [
+      "提高筋力、耐久、敏捷等身体参数。",
+      "高等级狂化会严重损害理性、复杂思考或语言能力；低等级仍可能保留交流能力。"
+    ],
+    "requirements": [
+      "主动进入狂化状态或在满足狂化条件时被动触发。"
+    ],
+    "limits": [
+      "理性损失程度取决于狂化等级，不同等级不必然完全丧失语言能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-008",
+    "category": "ability",
+    "name": "神性",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "神灵血统",
+      "抗性"
+    ],
+    "description": "体现神灵血统或神格的神秘属性，使持有者具有神性。",
+    "effects": [
+      "使持有者被视为带有神性的存在，可与神性、反神性及针对神灵的效果发生作用。",
+      "神性等级代表神秘来源与强度，不自动等同于额外掌握一项神术。"
+    ],
+    "requirements": [
+      "神性作为固有属性存在时被动生效。"
+    ],
+    "limits": [
+      "神性本身是属性，不会自动授予特定神灵的全部权能。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-009",
+    "category": "ability",
+    "name": "真名看破",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "身份解析",
+      "宝具识别"
+    ],
+    "description": "通过观察与战斗线索辨认从者真名及其身份资料的裁定者技能。",
+    "effects": [
+      "辨认圣杯战争参与者的真名与身份状态。",
+      "真名确认后可据其传说资料推断相关信息，但不等于直接读取全部技能和弱点。"
+    ],
+    "requirements": [
+      "观察目标并取得足够的战斗或传说线索。"
+    ],
+    "limits": [
+      "技能提供身份辨认，不会自动给出对方所有能力、当前计划或完整弱点。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-010",
+    "category": "ability",
+    "name": "神明裁决",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "裁决",
+      "令咒"
+    ],
+    "description": "裁定者在圣杯战争中使用令咒的职阶技能，可取得针对参战从者的令咒。",
+    "effects": [
+      "在圣杯战争中，每名参战从者对应取得两划令咒。",
+      "以令咒对从者发布强制命令；技能等级影响命令的强度与具体程度。"
+    ],
+    "requirements": [
+      "针对明确存在的从者契约或令咒使用。"
+    ],
+    "limits": [
+      "令咒数量受参与战争的从者人数限定；不是对所有对象无限次控制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-011",
+    "category": "ability",
+    "name": "复仇者",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "怨念",
+      "反击"
+    ],
+    "description": "吸引并承受周围人群投向复仇者的敌意与怨恨的职阶技能。",
+    "effects": [
+      "使使用者容易成为周围敌意、憎恨与怨念的承受对象。",
+      "此技能描述复仇者承载怨念的存在性质；受到的负面感情不会自动按比例提升其力量。"
+    ],
+    "requirements": [
+      "承受伤害、敌意或明确的复仇对象存在时生效。"
+    ],
+    "limits": [
+      "吸引敌意不等于自动控制敌人，也不保证敌意直接转化为攻击增幅。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-012",
+    "category": "ability",
+    "name": "忘却补正",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "职阶技能",
+      "怨恨",
+      "记忆"
+    ],
+    "description": "使复仇者不会遗忘怨恨与复仇相关事物的职阶技能。",
+    "effects": [
+      "让复仇者持续保留怨恨与复仇相关的记忆。",
+      "使复仇意志不会因时间流逝或一般遗忘而消散。"
+    ],
+    "requirements": [
+      "明确的仇恨或复仇对象存在时被动生效。"
+    ],
+    "limits": [
+      "保留记忆不等同于自动追踪目标，也不会得知目标当前的位置或状态。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-013",
+    "category": "ability",
+    "name": "魔力放出",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "魔力强化",
+      "爆发"
+    ],
+    "description": "把魔力集中到身体或武器上，瞬间释放为强化与冲击。",
+    "effects": [
+      "增强挥击、突进、跳跃和防御动作的力量。",
+      "把积蓄的魔力以冲击、光束或属性爆发形式释放。"
+    ],
+    "requirements": [
+      "将魔力集中到身体或武器后主动释放。"
+    ],
+    "limits": [
+      "释放方向和形态受当前承载媒介限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-014",
+    "category": "ability",
+    "name": "直感",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "危机感知",
+      "预测"
+    ],
+    "description": "以近乎本能的判断捕捉战场中最有利的行动路线。",
+    "effects": [
+      "在攻击、闪避和移动选择中迅速找到危险较低的方案。",
+      "对尚未完全显现的杀意、陷阱和攻击方向产生预警。"
+    ],
+    "requirements": [
+      "处于战斗或即时危险环境时被动运作。"
+    ],
+    "limits": [
+      "只能提供行动倾向和危险预感，不能直接读取未来或获得完整情报。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-015",
+    "category": "ability",
+    "name": "千里眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "感知技能",
+      "远视",
+      "侦察"
+    ],
+    "description": "以超远距离视觉观察目标和地形的能力。",
+    "effects": [
+      "扩大可见范围并观察远处目标的外形与行动。",
+      "在视野条件允许时进行远距离侦察和目标定位。"
+    ],
+    "requirements": [
+      "将视线或感知方向指向目标区域。"
+    ],
+    "limits": [
+      "不能自动获得遮蔽物后、异空间内或完全不存在视觉线索的信息。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-016",
+    "category": "ability",
+    "name": "心眼（真）",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "修行",
+      "逆境判断"
+    ],
+    "description": "根据经验、观察和战况推导出可行战术的战斗直觉。",
+    "effects": [
+      "在劣势、受伤或视野受限时保持对攻击节奏的判断。",
+      "从对手动作中推导下一步攻防路线。"
+    ],
+    "requirements": [
+      "观察战斗过程并持续分析对手行动。"
+    ],
+    "limits": [
+      "不能直接提升身体性能，也不能保证推导结果必然正确。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-017",
+    "category": "ability",
+    "name": "心眼（伪）",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "直觉",
+      "闪避"
+    ],
+    "description": "以直觉和危险预感避开致命攻击的能力。",
+    "effects": [
+      "在无法完整观察攻击时，仍能朝较安全的方向闪避。",
+      "帮助使用者抓住短暂的反击窗口。"
+    ],
+    "requirements": [
+      "危险即将命中时被动触发。"
+    ],
+    "limits": [
+      "只能提高躲避机会，不能消除攻击范围或改变攻击本身。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-018",
+    "category": "ability",
+    "name": "战斗续行",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "濒死行动",
+      "耐久"
+    ],
+    "description": "即使遭受致命程度的伤害也能继续行动的能力。",
+    "effects": [
+      "在重伤、失血或身体机能下降时维持战斗。",
+      "允许使用者在濒死状态下完成最后攻击或撤离。"
+    ],
+    "requirements": [
+      "受到足以造成战斗不能的伤害时被动触发。"
+    ],
+    "limits": [
+      "不能恢复已经失去的身体组织，也不能阻止伤势继续恶化。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-019",
+    "category": "ability",
+    "name": "重整旗鼓",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "状态解除",
+      "再起"
+    ],
+    "description": "重新调整战斗节奏并摆脱部分异常状态的技能。",
+    "effects": [
+      "清除自身受到的部分弱化、混乱或战意压制。",
+      "在撤退、换位或短暂脱离交战后恢复行动判断。"
+    ],
+    "requirements": [
+      "主动中断当前动作并重新组织状态。"
+    ],
+    "limits": [
+      "不能治愈实体伤势，也不能清除所有类型的诅咒或契约。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-020",
+    "category": "ability",
+    "name": "避矢的加护",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "远程防御",
+      "箭矢回避"
+    ],
+    "description": "针对箭矢、投射物和远程攻击的回避能力。",
+    "effects": [
+      "预判箭矢和投射物的轨迹并改变移动路线。",
+      "降低被远程武器直接命中的概率。"
+    ],
+    "requirements": [
+      "发现远程攻击方向后主动移动或改变姿态。"
+    ],
+    "limits": [
+      "对无法观察、覆盖大范围或完全改变轨迹的攻击，回避效果会受限。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-021",
+    "category": "ability",
+    "name": "勇猛",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战斗技能",
+      "精神抗性",
+      "近战"
+    ],
+    "description": "以战斗意志压制恐惧、疼痛和精神干扰的技能。",
+    "effects": [
+      "提高近战攻击的稳定性与威力。",
+      "抵抗恐吓、混乱和削弱战意的精神效果。"
+    ],
+    "requirements": [
+      "进入战斗并保持主动攻击意志时生效。"
+    ],
+    "limits": [
+      "不能免疫与战斗无关的精神控制或身体伤害。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-022",
+    "category": "ability",
+    "name": "怪力",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "身体技能",
+      "力量强化",
+      "近战"
+    ],
+    "description": "短时间内大幅提升肌肉与肢体输出的技能。",
+    "effects": [
+      "增强抓握、挥击、投掷和破坏障碍物的力量。",
+      "让普通武器和环境物体也能成为高威力近战媒介。"
+    ],
+    "requirements": [
+      "主动强化身体并在持续时间内进行力量动作。"
+    ],
+    "limits": [
+      "力量提升不等于速度、技巧或防御同步提升。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-023",
+    "category": "ability",
+    "name": "透化",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "隐匿技能",
+      "气息",
+      "存在感"
+    ],
+    "description": "降低自身存在感，使意识和感知更难锁定自身。",
+    "effects": [
+      "让观察者忽略使用者的细微动作和位置变化。",
+      "在不主动攻击时维持接近、监视或撤离所需的隐蔽性。"
+    ],
+    "requirements": [
+      "压低气息并避免主动释放强烈攻击。"
+    ],
+    "limits": [
+      "攻击、受伤或强烈魔力爆发会使隐匿效果明显下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-024",
+    "category": "ability",
+    "name": "黄金律",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "资源技能",
+      "财富",
+      "魔力"
+    ],
+    "description": "提高获得、保存和调度财富或资源的运气与效率。",
+    "effects": [
+      "更容易获得金钱、贵金属、资源或可交换的报酬。",
+      "降低长期维持高消费生活和装备的资源压力。"
+    ],
+    "requirements": [
+      "涉及资源获取、交易或报酬分配时被动生效。"
+    ],
+    "limits": [
+      "不能凭空制造指定物品，也不能直接改变他人已经持有的财物。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-025",
+    "category": "ability",
+    "name": "天性的肉体",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "体质",
+      "身体强化",
+      "抗性"
+    ],
+    "description": "让身体长期保持超越常人的力量、耐久和协调性。",
+    "effects": [
+      "增强肌肉、骨骼、反射和恢复能力。",
+      "降低普通毒素、疲劳和环境压力对身体的影响。"
+    ],
+    "requirements": [
+      "作为身体固有状态持续生效。"
+    ],
+    "limits": [
+      "不能自动修复已经造成的致命损伤。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-026",
+    "category": "ability",
+    "name": "变化",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "变形",
+      "伪装",
+      "身体操纵"
+    ],
+    "description": "改变自身外形、体态或身体构造的能力。",
+    "effects": [
+      "改变面貌、身高、肢体结构或局部器官形态。",
+      "以不同外形适应潜入、战斗或特殊环境。"
+    ],
+    "requirements": [
+      "集中意志并选择要改变的身体部分。"
+    ],
+    "limits": [
+      "改变后的形态仍受本体质量、知识和可承受范围限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-027",
+    "category": "ability",
+    "name": "变身",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "变身",
+      "形态转换",
+      "战斗模式"
+    ],
+    "description": "切换为预先定义的另一种完整身体形态。",
+    "effects": [
+      "改变外形、身体性能和可用的攻击方式。",
+      "在不同形态之间切换以适应战斗或行动需求。"
+    ],
+    "requirements": [
+      "主动选择并切换已掌握的变身形态。"
+    ],
+    "limits": [
+      "变身形态不能无限增加，未掌握的形态不能凭空生成。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-028",
+    "category": "ability",
+    "name": "领导力",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "统率",
+      "士气",
+      "团队强化"
+    ],
+    "description": "以命令和个人威望提高部下协同作战能力的技能。",
+    "effects": [
+      "增强同伴执行命令、维持阵形和共同攻击的稳定性。",
+      "降低队伍在恐惧、混乱或逆境中的溃散概率。"
+    ],
+    "requirements": [
+      "向明确的同伴下达作战指令并保持统率。"
+    ],
+    "limits": [
+      "不能替代同伴的能力，也不能强制没有合作关系的对象服从。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-029",
+    "category": "ability",
+    "name": "军略",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "战术",
+      "军队",
+      "宝具应对"
+    ],
+    "description": "针对大规模战斗和军阵行动进行判断与部署的技能。",
+    "effects": [
+      "提高队伍在阵地战、围攻、撤退和大范围攻击中的组织效率。",
+      "帮助判断敌方大型攻击的时机和应对路线。"
+    ],
+    "requirements": [
+      "取得战场地形、兵力和行动顺序后进行部署。"
+    ],
+    "limits": [
+      "缺少战场情报时只能提供有限的战术判断。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-030",
+    "category": "ability",
+    "name": "战略",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "谋略",
+      "长线作战",
+      "资源调度"
+    ],
+    "description": "从整体目标出发安排长期行动与资源交换的技能。",
+    "effects": [
+      "制定多阶段行动计划并分配人力、物资和情报。",
+      "提高伏击、诱导、撤退和持续作战的成功率。"
+    ],
+    "requirements": [
+      "明确最终目标、可用资源和行动阶段后进行规划。"
+    ],
+    "limits": [
+      "不能直接改变敌方意志或补足不存在的资源。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-031",
+    "category": "ability",
+    "name": "皇帝特权",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "权能",
+      "技能获得",
+      "临时强化"
+    ],
+    "description": "以皇帝身份暂时获得本不属于自身的专业能力。",
+    "effects": [
+      "临时取得武艺、军略、医术、建筑或其他统治者相关技能。",
+      "让临时获得的技能在当前行动中达到可用程度。"
+    ],
+    "requirements": [
+      "以皇帝权威宣告并主动调用需要的技能。"
+    ],
+    "limits": [
+      "只能调用与当前行动和权威定位相容的技能，不能无条件获得任何能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-032",
+    "category": "ability",
+    "name": "反骨之相",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "反权威",
+      "精神抗性",
+      "独立"
+    ],
+    "description": "抵抗统治、命令和权威压制的性格与能力。",
+    "effects": [
+      "降低来自上级、君主或强制命令的控制效果。",
+      "在不服从命令时保持独立判断和行动能力。"
+    ],
+    "requirements": [
+      "遭遇权威命令、支配术或强制服从效果时被动生效。"
+    ],
+    "limits": [
+      "不能解除已经成立的所有契约，也不能防止物理拘束。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-033",
+    "category": "ability",
+    "name": "无辜的怪物",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "诅咒",
+      "异形化",
+      "传闻"
+    ],
+    "description": "让外界的负面传闻和怪物形象反映到身体与能力上的诅咒。",
+    "effects": [
+      "使身体获得与怪物传闻相应的异形特征和攻击方式。",
+      "通过外形变化提高威慑力或获得特定感知、攻击能力。"
+    ],
+    "requirements": [
+      "诅咒状态存在时被动生效，或主动显现异形特征。"
+    ],
+    "limits": [
+      "外形与精神会受到传闻内容影响，不能随意选择完全无关的形态。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-034",
+    "category": "ability",
+    "name": "自我改造",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "身体改造",
+      "强化",
+      "器官"
+    ],
+    "description": "主动改造自身身体结构以获得新的功能。",
+    "effects": [
+      "改变肌肉、器官或骨骼以强化攻击、感知或生存能力。",
+      "把外来组织或机械部件纳入身体并使其发挥作用。"
+    ],
+    "requirements": [
+      "准备改造对象并以魔力或手术完成融合。"
+    ],
+    "limits": [
+      "改造结果受身体承受力和可用材料限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-035",
+    "category": "ability",
+    "name": "习得百般",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "多才多艺",
+      "技能复制",
+      "技术"
+    ],
+    "description": "快速掌握并调用多种领域技术的能力。",
+    "effects": [
+      "在观察或接触过某项技术后复现其基本操作。",
+      "可在战斗、手工、礼仪或工具使用之间迅速切换。"
+    ],
+    "requirements": [
+      "需要先观察、学习或接触目标技术。"
+    ],
+    "limits": [
+      "只能复现已理解的操作，不能自动获得对方的特殊体质或专属宝具。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-036",
+    "category": "ability",
+    "name": "魅惑的美声",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "声音",
+      "精神干涉",
+      "魅惑"
+    ],
+    "description": "以声音和歌唱影响听者情绪与判断的能力。",
+    "effects": [
+      "让听见声音的对象产生好感、注意或短暂迟疑。",
+      "可将声音作为诱导、安抚或扰乱行动的媒介。"
+    ],
+    "requirements": [
+      "让目标实际听见自己的声音或歌声。"
+    ],
+    "limits": [
+      "对精神抗性高、无法听见或主动屏蔽声音的目标效果降低。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-037",
+    "category": "ability",
+    "name": "信息抹消",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "隐匿",
+      "情报",
+      "记忆"
+    ],
+    "description": "抹去他人对自身身份和行动细节的记忆与记录。",
+    "effects": [
+      "让目击者难以回忆使用者的外貌、行动路线和战斗方式。",
+      "降低被追踪、通缉或根据旧情报再次识别的概率。"
+    ],
+    "requirements": [
+      "主动对接触过自身的对象或相关记录施加抹消。"
+    ],
+    "limits": [
+      "不能抹去已经扩散到大量独立记录中的所有信息，也不能删除目标亲眼正在观察的事实。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-038",
+    "category": "ability",
+    "name": "破坏工作",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "潜入",
+      "破坏",
+      "弱化"
+    ],
+    "description": "在不被察觉的情况下破坏目标的装备、阵地或防御准备。",
+    "effects": [
+      "降低敌方武器、结界、补给线和设施的可靠性。",
+      "让后续攻击更容易突破被破坏的部位。"
+    ],
+    "requirements": [
+      "先接近目标并对装备、设施或阵地进行破坏。"
+    ],
+    "limits": [
+      "不能凭空破坏没有接触或观察机会的对象。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-039",
+    "category": "ability",
+    "name": "话术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "语言",
+      "说服",
+      "心理战"
+    ],
+    "description": "以语言组织、诱导和误导影响听者判断的技能。",
+    "effects": [
+      "让目标接受经过包装的解释、承诺或行动建议。",
+      "可在谈判、审讯和欺骗中制造错误判断。"
+    ],
+    "requirements": [
+      "与目标进行实际交流，并让目标理解所说内容。"
+    ],
+    "limits": [
+      "不能直接夺取意志；目标保持警惕或掌握反证时效果会下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-040",
+    "category": "ability",
+    "name": "盗窃",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "偷取",
+      "物品",
+      "强化"
+    ],
+    "description": "从目标身上夺取物品、资源或部分临时强化的技能。",
+    "effects": [
+      "窃取目标携带的物品或战斗中可转移的资源。",
+      "在条件满足时剥离目标的部分增益并转移给自身。"
+    ],
+    "requirements": [
+      "接近目标并完成实际的偷取动作或术式锁定。"
+    ],
+    "limits": [
+      "不能凭空夺取无法接触、无法识别或固定绑定于目标本体的能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-041",
+    "category": "ability",
+    "name": "拷问技术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "审讯",
+      "痛觉控制",
+      "情报"
+    ],
+    "description": "通过疼痛、恐惧和心理施压逼迫目标吐露信息的技能。",
+    "effects": [
+      "提高审讯中施加痛苦和维持控制的效率。",
+      "帮助判断目标的反应、隐瞒和供述变化。"
+    ],
+    "requirements": [
+      "控制目标行动并进行连续审讯。"
+    ],
+    "limits": [
+      "不能保证目标一定说出真实内容，也不能绕过完全免疫精神与疼痛干涉的对象。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-042",
+    "category": "ability",
+    "name": "处刑人",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "退魔",
+      "处刑",
+      "对人外"
+    ],
+    "description": "针对罪人、亡灵和非人存在进行处刑的战斗技能。",
+    "effects": [
+      "提高对恶灵、吸血种、死徒和类似非自然目标的攻击效果。",
+      "让攻击更容易命中目标的核心或致命部位。"
+    ],
+    "requirements": [
+      "将目标判定为需要处刑的非自然或罪犯对象后发动。"
+    ],
+    "limits": [
+      "对普通对象不自动获得同等增幅。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-043",
+    "category": "ability",
+    "name": "自我保存",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "生存",
+      "撤离",
+      "本能"
+    ],
+    "description": "在生命受到威胁时优先保存自身的生存技能。",
+    "effects": [
+      "帮助使用者从致命位置脱离并寻找可生存的行动路线。",
+      "在濒临死亡时维持最低限度的意识和行动。"
+    ],
+    "requirements": [
+      "遭遇足以危及生命的攻击或环境时被动触发。"
+    ],
+    "limits": [
+      "不能把已经死亡的身体复原，也不能替代治疗和防御。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-044",
+    "category": "ability",
+    "name": "气息感知",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "侦测",
+      "气息",
+      "追踪"
+    ],
+    "description": "感知生物、魔力和敌意留下的气息。",
+    "effects": [
+      "发现隐藏、接近或经过附近的目标。",
+      "根据气息残留追踪目标移动方向。"
+    ],
+    "requirements": [
+      "集中感知并搜索目标区域。"
+    ],
+    "limits": [
+      "无法保证识别出完全无气息、隔绝气息或伪造气息的目标。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-045",
+    "category": "ability",
+    "name": "弓矢作成",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "弓术",
+      "武器制作",
+      "远程"
+    ],
+    "description": "以魔力和材料制造适合自身使用的弓与箭矢。",
+    "effects": [
+      "快速制作普通箭矢、特殊箭头和带有术式的射击用箭。",
+      "根据目标属性调整箭矢的形状、重量和效果。"
+    ],
+    "requirements": [
+      "准备材料或以魔力形成可用的弓箭结构。"
+    ],
+    "limits": [
+      "箭矢效果受材料和预先写入的术式限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-046",
+    "category": "ability",
+    "name": "生命吸收",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "生命力",
+      "吸收",
+      "恢复"
+    ],
+    "description": "从接触或击伤的目标处抽取生命力并转化为自身恢复。",
+    "effects": [
+      "削弱目标体力和生命活动。",
+      "把抽取的生命力用于修复自身伤势或维持行动。"
+    ],
+    "requirements": [
+      "通过接触、伤口或明确的生命力连接发动。"
+    ],
+    "limits": [
+      "无法吸收没有生命活动的物体，也不能保证突破目标的生命力防护。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-047",
+    "category": "ability",
+    "name": "吸血",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "血液",
+      "生命力",
+      "吸收"
+    ],
+    "description": "通过摄取血液获得生命力、魔力或目标信息的能力。",
+    "effects": [
+      "从目标血液中恢复自身生命力。",
+      "在吸血后短时间增强体能或获得目标血液携带的部分特征。"
+    ],
+    "requirements": [
+      "使口器、武器或术式接触目标血液。"
+    ],
+    "limits": [
+      "没有血液或具备相应抗性的目标无法按通常方式被吸取。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-048",
+    "category": "ability",
+    "name": "美学",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "艺术",
+      "观察",
+      "鉴别"
+    ],
+    "description": "以对美与形式的高度感知分析物品、技艺和构造。",
+    "effects": [
+      "识别武器、工艺品和艺术表现中的结构与价值。",
+      "帮助发现伪装、粗制结构和不协调之处。"
+    ],
+    "requirements": [
+      "观察目标的外形、工艺或表现细节。"
+    ],
+    "limits": [
+      "不能仅凭审美判断得到目标隐藏的全部魔术机制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-049",
+    "category": "ability",
+    "name": "强化魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "强化",
+      "物体改造"
+    ],
+    "description": "临时提高物体或身体某项性能的魔术。",
+    "effects": [
+      "强化武器的硬度、锋利度或冲击力。",
+      "强化身体的力量、速度或耐久中的一项或数项。"
+    ],
+    "requirements": [
+      "以魔力接触并选定需要强化的对象。"
+    ],
+    "limits": [
+      "强化效果不能脱离对象原有结构无限叠加。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-050",
+    "category": "ability",
+    "name": "投影魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "复制",
+      "武器"
+    ],
+    "description": "以魔力暂时复制物品的外形、结构和部分性能。",
+    "effects": [
+      "投影出武器、工具或其他可使用的物体。",
+      "复制品可以在短时间内承担原物的基本用途。"
+    ],
+    "requirements": [
+      "解析目标结构后，以魔力完成投影。"
+    ],
+    "limits": [
+      "复制品通常不等同于原物，无法自动复制真正的神秘核心、持有资格或完整宝具权能。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-051",
+    "category": "ability",
+    "name": "转移魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "空间移动",
+      "位置交换"
+    ],
+    "description": "以术式改变对象在空间中的位置。",
+    "effects": [
+      "把自身、物品或目标从一个位置移动到另一个位置。",
+      "可在满足条件时交换两个对象的位置。"
+    ],
+    "requirements": [
+      "确定起点与终点，并构筑连接两处的术式。"
+    ],
+    "limits": [
+      "无法无条件跨越所有空间阻隔；终点不明或被封锁时转移可能失败。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-052",
+    "category": "ability",
+    "name": "元素魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "元素",
+      "环境操纵"
+    ],
+    "description": "操纵火、水、风、土等自然元素形成攻击和防护。",
+    "effects": [
+      "把元素聚集、塑形并释放为射击、墙壁、束缚或移动辅助。",
+      "根据环境中可用的元素媒介改变术式表现。"
+    ],
+    "requirements": [
+      "选择元素属性并以魔力构筑对应术式。"
+    ],
+    "limits": [
+      "具体效果受所选元素和周围媒介限制，不能脱离属性任意产生结果。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-053",
+    "category": "ability",
+    "name": "黑魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "诅咒",
+      "阴影"
+    ],
+    "description": "以诅咒、阴影和生命力干涉为核心的魔术。",
+    "effects": [
+      "对目标施加衰弱、疼痛、束缚或不祥影响。",
+      "可用阴影和诅咒媒介设置延迟触发的术式。"
+    ],
+    "requirements": [
+      "准备诅咒媒介、符号或目标联系后发动。"
+    ],
+    "limits": [
+      "效果受目标的魔术抗性、净化能力和媒介完整度影响。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-054",
+    "category": "ability",
+    "name": "神道魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "神道",
+      "祭祀"
+    ],
+    "description": "以神社、祭祀和神灵媒介为基础施展的术式。",
+    "effects": [
+      "通过符咒、祝词和祭具进行净化、结界、召唤或驱邪。",
+      "把祭祀对象的神秘力量导入术式。"
+    ],
+    "requirements": [
+      "准备祭具、符咒或祝词，并按仪式流程发动。"
+    ],
+    "limits": [
+      "效果受祭祀对象、媒介和仪式范围限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-055",
+    "category": "ability",
+    "name": "治疗魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "治疗",
+      "生命修复"
+    ],
+    "description": "以魔力修复身体损伤和异常状态的魔术。",
+    "effects": [
+      "止血、闭合伤口并恢复受损组织。",
+      "缓解部分毒素、发热和魔力紊乱造成的身体症状。"
+    ],
+    "requirements": [
+      "接触伤处或将治疗术式锁定在目标身体上。"
+    ],
+    "limits": [
+      "不能无条件复活已经死亡的对象，也不能恢复完全缺失的灵魂。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-056",
+    "category": "ability",
+    "name": "诅咒魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "诅咒",
+      "持续伤害"
+    ],
+    "description": "以术式把不利效果附着到目标身上的魔术。",
+    "effects": [
+      "施加疼痛、衰弱、行动迟滞或持续伤害。",
+      "可把诅咒绑定到目标、物品或地点上。"
+    ],
+    "requirements": [
+      "准备咒文、媒介或与目标建立魔术联系。"
+    ],
+    "limits": [
+      "目标拥有净化、抗诅咒或切断联系的手段时效果会减弱。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-057",
+    "category": "ability",
+    "name": "幻术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "幻觉",
+      "伪装"
+    ],
+    "description": "改变目标感知，使其看到、听到或判断出不存在的事物。",
+    "effects": [
+      "制造人物、地形、声音和行动的幻象。",
+      "隐藏真实目标、改变距离感或诱导错误行动。"
+    ],
+    "requirements": [
+      "将幻术投射到目标感知范围内。"
+    ],
+    "limits": [
+      "无法直接改变物理结构；目标识破或拥有抗幻术能力时效果下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-058",
+    "category": "ability",
+    "name": "结构解析",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "解析",
+      "构造"
+    ],
+    "description": "读取物体结构、材质和术式组成的魔术能力。",
+    "effects": [
+      "分析武器、结界、机械和礼装的组成。",
+      "为修复、复制、破解或针对弱点的施术提供结构信息。"
+    ],
+    "requirements": [
+      "观察并以魔力扫描目标结构。"
+    ],
+    "limits": [
+      "不能自动获得制造者的记忆，也不能凭解析直接取得完整使用资格。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-059",
+    "category": "ability",
+    "name": "召唤魔术",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "召唤",
+      "使役"
+    ],
+    "description": "以契约、媒介或术式召唤生物、灵体或构造体。",
+    "effects": [
+      "召唤使魔、临时灵体或受术式控制的构造物。",
+      "让被召唤对象执行侦察、搬运、战斗或传讯任务。"
+    ],
+    "requirements": [
+      "准备媒介并建立召唤阵或契约。"
+    ],
+    "limits": [
+      "召唤对象的能力受媒介、契约内容和持续时间限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-060",
+    "category": "ability",
+    "name": "人偶制作",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术",
+      "人偶",
+      "人工生命"
+    ],
+    "description": "制造能行动、储存魔力或执行命令的人偶。",
+    "effects": [
+      "制作具备人形结构的战斗、侦察或施术人偶。",
+      "为人偶植入预设行动、魔术回路和简单感知。"
+    ],
+    "requirements": [
+      "准备人偶材料并在其内部刻写术式。"
+    ],
+    "limits": [
+      "人偶的能力受材料、结构和预设命令限制，不能自动成为完整生命。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-061",
+    "category": "ability",
+    "name": "魔眼杀手",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "抗性",
+      "视觉防御"
+    ],
+    "description": "抵抗、削弱和破解魔眼效果的能力。",
+    "effects": [
+      "降低石化、魅惑、束缚、幻觉和强制类魔眼的影响。",
+      "帮助识别魔眼视线和避开直接注视。"
+    ],
+    "requirements": [
+      "对魔眼效果进行感知或被魔眼锁定时生效。"
+    ],
+    "limits": [
+      "不能自动免疫所有视觉攻击，也不能取消已经造成的物理伤害。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-062",
+    "category": "ability",
+    "name": "魅惑魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "精神干涉",
+      "魅惑"
+    ],
+    "description": "以视线向目标施加吸引、好感或服从倾向。",
+    "effects": [
+      "使目标注意力转向使用者并降低戒备。",
+      "在短时间内诱导目标停留、接近或执行简单行动。"
+    ],
+    "requirements": [
+      "与目标建立直接视线接触。"
+    ],
+    "limits": [
+      "精神抗性、遮挡视线或主动闭眼会降低效果。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-063",
+    "category": "ability",
+    "name": "束缚魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "束缚",
+      "视线"
+    ],
+    "description": "以视线限制目标的动作、姿态或移动方向。",
+    "effects": [
+      "使目标身体僵硬、动作迟缓或难以改变站位。",
+      "可把束缚效果固定在被注视的目标或部位。"
+    ],
+    "requirements": [
+      "直接注视目标并维持魔眼效果。"
+    ],
+    "limits": [
+      "目标挣脱视线、破坏连接或具备魔眼抗性时效果会减弱。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-064",
+    "category": "ability",
+    "name": "强制魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "命令",
+      "精神干涉"
+    ],
+    "description": "以视线向目标施加短句式或单步行动命令。",
+    "effects": [
+      "强迫目标完成简单、明确的动作。",
+      "可在目标短暂迟疑时改变其当前行动方向。"
+    ],
+    "requirements": [
+      "锁定目标视线并发出明确命令。"
+    ],
+    "limits": [
+      "复杂、矛盾或要求目标严重违背本能的命令更容易被抵抗。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-065",
+    "category": "ability",
+    "name": "炎烧魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "火焰",
+      "攻击"
+    ],
+    "description": "以视线在目标或视线落点产生燃烧效果的魔眼。",
+    "effects": [
+      "点燃目标表面或指定位置。",
+      "把视线集中成火焰射线或局部爆燃。"
+    ],
+    "requirements": [
+      "注视目标或指定落点后发动。"
+    ],
+    "limits": [
+      "不能凭空让无法接触或完全隔绝的目标持续燃烧。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-066",
+    "category": "ability",
+    "name": "幻觉魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "幻觉",
+      "认知干涉"
+    ],
+    "description": "以视线改变目标对自身、环境和距离的感知。",
+    "effects": [
+      "让目标看到错误的人影、道路、距离或攻击方向。",
+      "可在短时间内遮蔽真实行动。"
+    ],
+    "requirements": [
+      "与目标建立视线连接。"
+    ],
+    "limits": [
+      "目标闭眼、拥有精神抗性或识破幻觉后效果下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-067",
+    "category": "ability",
+    "name": "契约魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "契约",
+      "束缚"
+    ],
+    "description": "以视线在目标与约束条件之间建立强制联系的魔眼。",
+    "effects": [
+      "把承诺、行为限制或触发条件附着到目标身上。",
+      "在目标违反约定时引发预先设定的惩罚或束缚。"
+    ],
+    "requirements": [
+      "明确双方条件并以视线完成契约连接。"
+    ],
+    "limits": [
+      "契约内容不明确、目标拒绝连接或契约媒介被破坏时效果会下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-068",
+    "category": "ability",
+    "name": "未来视魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "预知",
+      "侦察"
+    ],
+    "description": "观察目标未来可能发生的行动或结果。",
+    "effects": [
+      "提前看到短时间内的动作、攻击路线或事件分支。",
+      "帮助使用者选择可避开危险的行动。"
+    ],
+    "requirements": [
+      "集中注视目标或事件并发动预知。"
+    ],
+    "limits": [
+      "看到的是可能性而非不可改变的结果；未来被外力改变时预知会失准。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-069",
+    "category": "ability",
+    "name": "灾厄魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "厄运",
+      "诅咒"
+    ],
+    "description": "把灾厄和不幸倾向附着到被注视的目标上。",
+    "effects": [
+      "提高目标遭遇失误、事故或行动失败的可能性。",
+      "可把不利结果集中到目标接下来的行动中。"
+    ],
+    "requirements": [
+      "注视目标并指定要施加的灾厄倾向。"
+    ],
+    "limits": [
+      "不能直接决定复杂事件的全部结果，也不能替代具体攻击。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-070",
+    "category": "ability",
+    "name": "回视魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "追溯",
+      "记忆"
+    ],
+    "description": "通过观察地点或物品回放其中残留的过去影像。",
+    "effects": [
+      "读取物品、地点或残留魔力中的过去场景。",
+      "还原曾经发生的动作、声音或短暂情绪痕迹。"
+    ],
+    "requirements": [
+      "注视存在明确残留的地点、物品或媒介。"
+    ],
+    "limits": [
+      "只能读取残留信息，不能得到现场之外的内容，也不能改变过去。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-071",
+    "category": "ability",
+    "name": "直死魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "死之线",
+      "概念破坏"
+    ],
+    "description": "看见对象的死之线与死之点，并沿其发动致死性切断。",
+    "effects": [
+      "识别生物、灵体、结界或物体上的死之线。",
+      "沿死之线切断目标，使其生命、结构或存在状态遭到致命破坏。"
+    ],
+    "requirements": [
+      "看见目标并以武器、手指或视线触及死之线或死之点。"
+    ],
+    "limits": [
+      "无法保证对所有层级、概念和无死之物产生同样效果。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-072",
+    "category": "ability",
+    "name": "吸血魔眼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔眼",
+      "吸血",
+      "生命力"
+    ],
+    "description": "以视线削弱目标生命力并把部分活力引向自身。",
+    "effects": [
+      "远距离抽取目标的血液活动和生命力。",
+      "将抽取的生命力用于恢复自身。"
+    ],
+    "requirements": [
+      "以视线锁定目标并维持魔眼连接。"
+    ],
+    "limits": [
+      "隔绝视线、生命力防护或无血液目标会降低效果。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-085",
+    "category": "ability",
+    "name": "高速神言",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔术技能",
+      "咏唱",
+      "高速施术"
+    ],
+    "description": "以高速语言完成通常需要较长咏唱的魔术。",
+    "effects": [
+      "缩短高等级魔术的准备时间。",
+      "在短时间内连续发动多个有明确术式的魔术。"
+    ],
+    "requirements": [
+      "准确咏唱对应神言或术式文本。"
+    ],
+    "limits": [
+      "不能跳过术式本身需要的媒介、目标和魔力条件。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-086",
+    "category": "ability",
+    "name": "高速思考",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "思考",
+      "计算",
+      "决策"
+    ],
+    "description": "提高思维处理速度和多线程分析能力的技能。",
+    "effects": [
+      "同时处理多个目标、术式、路线和战术信息。",
+      "缩短从观察到决策之间的时间。"
+    ],
+    "requirements": [
+      "进入需要快速分析的环境时被动或主动开启。"
+    ],
+    "limits": [
+      "不能凭空补足未知信息，也不能让错误情报变成正确结论。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-087",
+    "category": "ability",
+    "name": "精神污染",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "精神",
+      "异常",
+      "抗性"
+    ],
+    "description": "以异常精神结构抵抗部分精神干涉，同时使自身思考难以被常规方法解析。",
+    "effects": [
+      "降低魅惑、催眠和常规精神读取的效果。",
+      "让自身思维模式变得难以预测。"
+    ],
+    "requirements": [
+      "异常精神状态作为固有属性存在时生效。"
+    ],
+    "limits": [
+      "精神结构异常会影响正常交流、判断和团队协作。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-088",
+    "category": "ability",
+    "name": "独立导航",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "导航",
+      "宇宙航行",
+      "方向感"
+    ],
+    "description": "在缺少常规地图和地面参照时仍能判断航向与位置的能力。",
+    "effects": [
+      "识别星体、空间坐标和移动方向。",
+      "帮助在空中、海上、异空间或宇宙环境中保持航线。"
+    ],
+    "requirements": [
+      "观察环境中的星体、能量流或空间参照。"
+    ],
+    "limits": [
+      "不能自动打开通往未知地点的通道，也不能替代载具动力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-089",
+    "category": "ability",
+    "name": "领域侵犯",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "领域",
+      "空间",
+      "结界突破"
+    ],
+    "description": "侵入并干涉由他人建立的领域、空间或结界。",
+    "effects": [
+      "寻找领域边界的薄弱点并进入其中。",
+      "在领域内部短时间维持不受完全同化的行动空间。"
+    ],
+    "requirements": [
+      "识别目标领域并触及其边界或入口。"
+    ],
+    "limits": [
+      "无法无条件穿透所有结界；领域等级和规则会影响成功率。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-090",
+    "category": "ability",
+    "name": "兽之权能",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "权能",
+      "野性",
+      "神兽"
+    ],
+    "description": "调用兽类、魔兽或野性生命体系的力量。",
+    "effects": [
+      "强化身体感知、移动、攻击和生存能力。",
+      "操纵或压制低等野兽与部分魔兽的本能反应。"
+    ],
+    "requirements": [
+      "进入野性或兽性战斗状态后发动。"
+    ],
+    "limits": [
+      "不能自动控制所有拥有高等智慧或契约的魔兽。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-091",
+    "category": "ability",
+    "name": "单独显现",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "存在",
+      "现界",
+      "独立召唤"
+    ],
+    "description": "即使没有通常召唤流程，也能让自身作为特殊存在显现的能力。",
+    "effects": [
+      "在没有标准召唤阵或御主的情况下维持实体或灵体显现。",
+      "绕过部分通常的召唤限制进入现界。"
+    ],
+    "requirements": [
+      "满足自身存在条件并主动显现。"
+    ],
+    "limits": [
+      "显现形式和持续时间受自身灵基、媒介和环境限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-092",
+    "category": "ability",
+    "name": "自我回复（魔力）",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "魔力",
+      "恢复",
+      "续航"
+    ],
+    "description": "在战斗和行动中持续恢复少量魔力的能力。",
+    "effects": [
+      "把环境中的魔力或自身生命活动转化为可用魔力。",
+      "延长术式、武器和宝具的可持续时间。"
+    ],
+    "requirements": [
+      "处于可获取魔力的环境中被动生效。"
+    ],
+    "limits": [
+      "恢复速度受环境、伤势和魔力循环状态限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-093",
+    "category": "ability",
+    "name": "恶魔的智慧",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "知识",
+      "谋略",
+      "魔术"
+    ],
+    "description": "以超常知识和恶魔式推理分析术式、战术和人心。",
+    "effects": [
+      "快速理解复杂魔术、契约和战场规则。",
+      "提出诱导、欺骗和利用规则的行动方案。"
+    ],
+    "requirements": [
+      "观察目标并收集足够的规则和行为信息。"
+    ],
+    "limits": [
+      "不能凭空获得没有任何线索的事实，也不能保证对手会按预期行动。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-094",
+    "category": "ability",
+    "name": "无穷的武炼",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "武艺",
+      "战斗经验",
+      "多武器"
+    ],
+    "description": "把长期积累的武艺转化为可随时调用的战斗技术。",
+    "effects": [
+      "熟练使用多种武器和战斗距离。",
+      "在身体状态不佳或视野受限时仍能保持招式精度。"
+    ],
+    "requirements": [
+      "进入战斗并调用对应武艺。"
+    ],
+    "limits": [
+      "不能替代武器本身的性能，也不能自动获得对未知武器的特殊权能。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-095",
+    "category": "ability",
+    "name": "守护骑士",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "防御",
+      "骑士",
+      "护卫"
+    ],
+    "description": "把自身置于攻击路径上，为指定对象承担防御责任的技能。",
+    "effects": [
+      "提高拦截攻击、护送和保护目标时的防御能力。",
+      "让使用者更容易吸引敌方注意并维持防线。"
+    ],
+    "requirements": [
+      "指定需要保护的目标并主动站在其防线附近。"
+    ],
+    "limits": [
+      "保护效果要求使用者实际处于可拦截位置，不能远距离自动挡下攻击。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-096",
+    "category": "ability",
+    "name": "星之开拓者",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "开拓",
+      "突破",
+      "幸运"
+    ],
+    "description": "在没有现成道路和成功范例时开辟新路线的能力。",
+    "effects": [
+      "提高突破未知环境、封锁和不可能局面的成功机会。",
+      "让使用者在探索、航行和首次尝试中更容易找到可行方案。"
+    ],
+    "requirements": [
+      "面对未知障碍并主动尝试新的解决路线。"
+    ],
+    "limits": [
+      "不能把明确失败的行动直接改写成成功，也不能替代具体能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-097",
+    "category": "ability",
+    "name": "女神的神核",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "神性",
+      "女神",
+      "精神抗性"
+    ],
+    "description": "以女神神核维持身体、精神和神性的完整。",
+    "effects": [
+      "提高魅惑、诅咒和精神干涉抗性。",
+      "保持身体机能和神性力量不因普通伤病轻易崩溃。"
+    ],
+    "requirements": [
+      "神核作为固有核心存在时被动生效。"
+    ],
+    "limits": [
+      "神核受损会同时影响身体、精神和神性能力。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-098",
+    "category": "ability",
+    "name": "神之恩惠",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "祝福",
+      "神性",
+      "身体强化"
+    ],
+    "description": "把神灵或神圣存在给予的祝福转化为身体和行动优势。",
+    "effects": [
+      "提高力量、耐久、运气或恢复中的指定方面。",
+      "在祝福对应的环境或行为中获得额外适应性。"
+    ],
+    "requirements": [
+      "接受祝福并在其适用条件下主动或被动使用。"
+    ],
+    "limits": [
+      "祝福效果受对应神性和适用范围限制。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-099",
+    "category": "ability",
+    "name": "神之加护",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "祝福",
+      "神性",
+      "防护"
+    ],
+    "description": "以神灵加护抵抗伤害、诅咒和不利环境。",
+    "effects": [
+      "削弱与加护相冲突的攻击或异常状态。",
+      "在神圣场所、祭祀或与加护对象相关的行动中提高防护。"
+    ],
+    "requirements": [
+      "神之加护作为固有祝福或祭祀结果存在时生效。"
+    ],
+    "limits": [
+      "不能抵抗所有类型的攻击，且对与加护性质相反的力量更容易失效。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-100",
+    "category": "ability",
+    "name": "龙之炉心",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "龙种",
+      "魔力炉心",
+      "能量"
+    ],
+    "description": "以龙种炉心在体内产生并循环高密度魔力。",
+    "effects": [
+      "持续提供大量魔力以驱动身体强化和高等级术式。",
+      "把积累的魔力转化为火焰、冲击或龙属性攻击。"
+    ],
+    "requirements": [
+      "以炉心启动并让魔力循环。"
+    ],
+    "limits": [
+      "炉心受损会导致魔力循环崩溃和身体机能下降。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-101",
+    "category": "ability",
+    "name": "龙之魔女",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "龙种",
+      "支配",
+      "强化"
+    ],
+    "description": "对龙种、龙属性力量和龙之眷属施加支配与强化的能力。",
+    "effects": [
+      "增强自身或盟友的龙属性攻击。",
+      "向低阶龙种和龙属性从者下达支配性命令。"
+    ],
+    "requirements": [
+      "锁定龙种、龙属性对象或与龙有关的力量后发动。"
+    ],
+    "limits": [
+      "对没有龙属性的对象不能自动产生支配效果。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "fate-batch-103",
+    "category": "ability",
+    "name": "龙之逆鳞",
+    "work": "Fate/Grand Order／Fate全系列",
+    "tags": [
+      "龙种",
+      "暴怒",
+      "反击"
+    ],
+    "description": "触发龙种本能的逆鳞后获得短时间强化的状态。",
+    "effects": [
+      "在受到挑衅或重伤后提高力量、速度和攻击意志。",
+      "让攻击带有更强的龙属性压迫感。"
+    ],
+    "requirements": [
+      "受到明确挑衅、重伤或威胁时触发。"
+    ],
+    "limits": [
+      "情绪失控会降低判断力，并可能使攻击对象扩大。"
+    ],
+    "costs": [],
+    "stages": []
+  }
+]
