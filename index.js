@@ -2,6 +2,7 @@ const MODULE_ID = "ability-fusion-engine";
 const INTERCEPTOR_NAME = "AbilityFusion_interceptGeneration";
 const SETTINGS_URL = new URL("./settings.html", import.meta.url);
 const DATA_MANIFEST_URL = new URL("./data/works-manifest.json", import.meta.url);
+const ABILITY_TEMPLATE_URL = new URL("./data/ability-template.json", import.meta.url);
 
 const DEFAULT_SETTINGS = Object.freeze({
   enabled: false,
@@ -438,17 +439,28 @@ function closeAbilityDetails({ restoreFocus = true } = {}) {
   if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
 }
 
-function applyAbilityTemplate() {
-  setEditorField("afe-editor-category", "ability");
-  setEditorField("afe-editor-name", "新外挂名称");
-  setEditorField("afe-editor-work", "用户自定义作品");
-  setEditorField("afe-editor-tags", "标签一, 标签二");
-  setEditorField("afe-editor-description", "用一句话说明这条外挂的作用、触发条件和不能做什么。");
-  setEditorField("afe-editor-effects", "核心效果一\n核心效果二");
-  setEditorField("afe-editor-requirements", "持有外挂后如何主动发动；被动能力写实际触发条件");
-  setEditorField("afe-editor-limits", "明确的能力边界、失效条件或反制方式");
-  setEditorField("afe-editor-costs", "明确的消耗、冷却、风险或副作用");
-  renderStageEditor([]);
+async function applyAbilityTemplate() {
+  let tpl = null;
+  try {
+    const resp = await fetch(ABILITY_TEMPLATE_URL, { cache: "no-store" });
+    tpl = await resp.json();
+  } catch (err) {
+    console.warn("[ability-fusion-engine] 模板加载失败，使用空编辑器。", err);
+  }
+  if (tpl) {
+    setEditorField("afe-editor-category", tpl.category ?? "ability");
+    setEditorField("afe-editor-name", tpl.name ?? "");
+    setEditorField("afe-editor-work", tpl.work ?? "");
+    setEditorField("afe-editor-tags", Array.isArray(tpl.tags) ? tpl.tags.join(", ") : "");
+    setEditorField("afe-editor-description", tpl.description ?? "");
+    setEditorField("afe-editor-effects", Array.isArray(tpl.effects) ? tpl.effects.join("\n") : "");
+    setEditorField("afe-editor-requirements", Array.isArray(tpl.requirements) ? tpl.requirements.join("\n") : "");
+    setEditorField("afe-editor-limits", Array.isArray(tpl.limits) ? tpl.limits.join("\n") : "");
+    setEditorField("afe-editor-costs", Array.isArray(tpl.costs) ? tpl.costs.join("\n") : "");
+    renderStageEditor(Array.isArray(tpl.stages) ? tpl.stages : []);
+  } else {
+    renderStageEditor([]);
+  }
   document.getElementById("afe-editor-name")?.focus();
   setStatus("已载入外挂条目模板，可以直接修改后保存。");
 }

@@ -3,7 +3,7 @@
     "id": "cn-system-deep-blue",
     "category": "system",
     "name": "深蓝修改器",
-    "work": "极道天魔",
+    "work": "中国网文",
     "tags": [
       "修改器",
       "武学加点",
@@ -19,6 +19,7 @@
     "requirements": [
       "打开深蓝修改器，选定已掌握的武学，选择加深、修改或推演目标后确认执行。"
     ],
+	"limits": [],
     "costs": [],
     "stages": []
   },
@@ -26,7 +27,7 @@
     "id": "cn-system-anti-routine",
     "category": "system",
     "name": "反套路系统",
-    "work": "最强反套路系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -49,7 +50,7 @@
     "id": "cn-system-god-choice",
     "category": "system",
     "name": "神级选择系统",
-    "work": "神级选择系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -72,7 +73,7 @@
     "id": "cn-system-strongest-upgrade",
     "category": "system",
     "name": "最强升级系统",
-    "work": "最强升级系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -95,7 +96,7 @@
     "id": "cn-system-spendthrift",
     "category": "system",
     "name": "败家系统",
-    "work": "败家系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -118,7 +119,7 @@
     "id": "cn-system-catch-police-signin",
     "category": "system",
     "name": "捕快签到系统",
-    "work": "签到从捕快开始",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -141,7 +142,7 @@
     "id": "cn-system-taobao-world",
     "category": "system",
     "name": "万界淘宝系统",
-    "work": "万界淘宝店",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -164,7 +165,7 @@
     "id": "cn-system-fishing-heavens",
     "category": "system",
     "name": "垂钓诸天系统",
-    "work": "垂钓诸天",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -187,7 +188,7 @@
     "id": "cn-system-luck-plunder",
     "category": "system",
     "name": "气运掠夺系统",
-    "work": "诸天最强大佬",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -210,7 +211,7 @@
     "id": "cn-system-pet-evolution",
     "category": "system",
     "name": "神宠进化系统",
-    "work": "神宠进化",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -233,7 +234,7 @@
     "id": "cn-system-super-gene",
     "category": "system",
     "name": "超级基因系统",
-    "work": "超级神基因",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -256,7 +257,7 @@
     "id": "cn-system-martial-attribute",
     "category": "system",
     "name": "武道属性系统",
-    "work": "武道大帝",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -279,7 +280,7 @@
     "id": "cn-system-invincible-upgrade",
     "category": "system",
     "name": "无敌升级系统",
-    "work": "无敌升级王",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -302,7 +303,7 @@
     "id": "cn-system-creation",
     "category": "system",
     "name": "造化系统",
-    "work": "造化之王",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -325,7 +326,7 @@
     "id": "cn-system-summon-worlds",
     "category": "system",
     "name": "召唤万界系统",
-    "work": "召唤万岁",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -348,7 +349,7 @@
     "id": "cn-system-lord-undead",
     "category": "system",
     "name": "亡灵领主系统",
-    "work": "全民领主：我的亡灵有亿点强",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -371,7 +372,7 @@
     "id": "cn-system-apocalypse-signin",
     "category": "system",
     "name": "末日签到系统",
-    "work": "末世：开局一座地下城",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -394,7 +395,7 @@
     "id": "cn-system-apocalypse-market",
     "category": "system",
     "name": "末世商城系统",
-    "work": "末世超级系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -417,7 +418,7 @@
     "id": "cn-system-entertainment",
     "category": "system",
     "name": "文娱系统",
-    "work": "文娱帝国",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -440,7 +441,7 @@
     "id": "cn-system-chef",
     "category": "system",
     "name": "厨神系统",
-    "work": "美食供应商",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -463,7 +464,7 @@
     "id": "cn-system-tycoon-signin",
     "category": "system",
     "name": "神豪签到系统",
-    "work": "神豪从签到开始",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -486,7 +487,7 @@
     "id": "cn-system-life-simulator",
     "category": "system",
     "name": "人生模拟器系统",
-    "work": "人生模拟器：我可以无限模拟",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -509,7 +510,7 @@
     "id": "cn-system-simulated-cultivation",
     "category": "system",
     "name": "模拟修仙系统",
-    "work": "模拟修仙：从长春功开始",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -532,7 +533,7 @@
     "id": "cn-system-player-template",
     "category": "system",
     "name": "玩家模板系统",
-    "work": "超神机械师",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -555,7 +556,7 @@
     "id": "cn-system-glory-game",
     "category": "system",
     "name": "荣耀游戏系统",
-    "work": "全职高手",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -578,7 +579,7 @@
     "id": "cn-system-main-god-space",
     "category": "system",
     "name": "主神空间系统",
-    "work": "无限恐怖",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -601,7 +602,7 @@
     "id": "cn-system-paradise-reincarnation",
     "category": "system",
     "name": "轮回乐园系统",
-    "work": "轮回乐园",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -624,7 +625,7 @@
     "id": "cn-system-plane-trade",
     "category": "system",
     "name": "位面交易系统",
-    "work": "位面交易之超级商人",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -647,7 +648,7 @@
     "id": "cn-system-world-exchange",
     "category": "system",
     "name": "万界兑换系统",
-    "work": "万界兑换系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -670,7 +671,7 @@
     "id": "cn-system-heavens-lottery",
     "category": "system",
     "name": "诸天抽奖系统",
-    "work": "诸天万界抽奖系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -693,7 +694,7 @@
     "id": "cn-system-archean-signin",
     "category": "system",
     "name": "荒古圣体签到系统",
-    "work": "开局签到荒古圣体",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -716,7 +717,7 @@
     "id": "cn-system-teaching-refund",
     "category": "system",
     "name": "授徒返还系统",
-    "work": "授徒返还：开局收魔族女帝",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -739,7 +740,7 @@
     "id": "cn-system-apprentice-reward",
     "category": "system",
     "name": "收徒奖励系统",
-    "work": "玄幻：授徒万倍返还",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -762,7 +763,7 @@
     "id": "cn-system-affection",
     "category": "system",
     "name": "好感度系统",
-    "work": "反派：女主偷听我心声",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -785,7 +786,7 @@
     "id": "cn-system-inner-voice",
     "category": "system",
     "name": "心声任务系统",
-    "work": "反派：女主偷听我心声",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -808,7 +809,7 @@
     "id": "cn-system-chat-group",
     "category": "system",
     "name": "诸天聊天群系统",
-    "work": "诸天万界聊天群",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -831,7 +832,7 @@
     "id": "cn-system-heavens-projection",
     "category": "system",
     "name": "诸天投影系统",
-    "work": "诸天投影",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -854,7 +855,7 @@
     "id": "cn-system-world-gate",
     "category": "system",
     "name": "万界门系统",
-    "work": "万界门",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -877,7 +878,7 @@
     "id": "cn-system-adventure-house",
     "category": "system",
     "name": "恐怖屋任务系统",
-    "work": "我有一座冒险屋",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -900,7 +901,7 @@
     "id": "cn-system-attribute-panel",
     "category": "system",
     "name": "属性修行面板",
-    "work": "我的属性修行人生",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -923,7 +924,7 @@
     "id": "cn-system-merit",
     "category": "system",
     "name": "功德系统",
-    "work": "功德系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -946,7 +947,7 @@
     "id": "cn-system-faith",
     "category": "system",
     "name": "信仰系统",
-    "work": "信仰诸天",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -969,7 +970,7 @@
     "id": "cn-system-villain-value",
     "category": "system",
     "name": "反派值系统",
-    "work": "反派：我的弟子全是大帝之资",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -992,7 +993,7 @@
     "id": "cn-system-emotion",
     "category": "system",
     "name": "情绪收集系统",
-    "work": "情绪收集：我在综武世界当大佬",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -1015,7 +1016,7 @@
     "id": "cn-system-wish-power",
     "category": "system",
     "name": "愿力系统",
-    "work": "愿力成神",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -1038,7 +1039,7 @@
     "id": "cn-system-reputation",
     "category": "system",
     "name": "声望系统",
-    "work": "声望系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -1061,7 +1062,7 @@
     "id": "cn-system-treasure-chest",
     "category": "system",
     "name": "宝箱系统",
-    "work": "宝箱系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -1084,7 +1085,7 @@
     "id": "cn-system-destiny",
     "category": "system",
     "name": "天命系统",
-    "work": "天命系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",
@@ -1107,7 +1108,7 @@
     "id": "cn-system-black-tech",
     "category": "system",
     "name": "黑科技系统",
-    "work": "学霸的黑科技系统",
+    "work": "中国网文",
     "tags": [
       "系统",
       "数据面板",

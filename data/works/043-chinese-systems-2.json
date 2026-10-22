@@ -3,7 +3,7 @@
     "id": "cn-gf-immortal-life",
     "category": "ability",
     "name": "长生不老",
-    "work": "我在修仙界长生不死",
+    "work": "中国网文",
     "tags": ["长生不老", "时间积累", "积年修为"],
     "description": "单指主角拥有长生不老的能力，寿命近乎无限，在漫长岁月中通过反复学习、积累资源与见识自然变强。",
     "effects": [
@@ -23,7 +23,7 @@
     "id": "cn-gf-signin",
     "category": "system",
     "name": "每日签到系统",
-    "work": "中国网文签到流",
+    "work": "中国网文",
     "tags": ["签到", "每日奖励", "升级流"],
     "description": "每天（或每月、每年）进行一次签到，签到即发放金钱、物品、修为、功法等奖励，签到越久奖励越好。",
     "effects": [
@@ -43,7 +43,7 @@
     "id": "cn-gf-place-signin",
     "category": "system",
     "name": "地点签到系统",
-    "work": "中国网文签到流",
+    "work": "中国网文",
     "tags": ["地点签到", "地域特性", "解锁奖励"],
     "description": "到指定地点完成签到，奖励与该地点的特性绑定：武当山得太极拳、银行得金钱、足球场得足球精通。",
     "effects": [
@@ -63,7 +63,7 @@
     "id": "cn-gf-consume-refund",
     "category": "system",
     "name": "消费返现系统",
-    "work": "都市神豪文",
+    "work": "中国网文",
     "tags": ["神豪", "返现", "好感度"],
     "description": "给颜值较高的女性花钱，按花费金额获得不同倍数的返现；对方好感度越高倍数越大。",
     "effects": [
@@ -83,7 +83,7 @@
     "id": "cn-gf-reverse-refund",
     "category": "system",
     "name": "反消费返现系统",
-    "work": "都市神豪文",
+    "work": "中国网文",
     "tags": ["返现", "女性消费", "被动收入"],
     "description": "颜值较高的女性为宿主花钱时，宿主按消费金额获得返现，女性越主动、花得越多，返现越可观。",
     "effects": [
@@ -103,7 +103,7 @@
     "id": "cn-gf-god-wealth",
     "category": "system",
     "name": "神豪系统",
-    "work": "都市神豪文",
+    "work": "中国网文",
     "tags": ["神豪", "钞能力", "疯狂消费"],
     "description": "系统持续供应资金与高价值物品，宿主以夸张消费制造震撼效果，消费与资产规模反过来解锁更多资源。",
     "effects": [
@@ -123,7 +123,7 @@
     "id": "cn-gf-hundred-refund",
     "category": "system",
     "name": "百倍返还系统",
-    "work": "中国网文返还流",
+    "work": "中国网文",
     "tags": ["返还", "投资", "十倍百倍"],
     "description": "对投入的金钱、功力、装备、丹药等按倍数返还，返还倍数常见百倍千倍，收徒、传功、布施同样生效。",
     "effects": [
@@ -143,7 +143,7 @@
     "id": "cn-gf-villain-heart",
     "category": "system",
     "name": "恶毒身份好感度系统",
-    "work": "穿书攻略文",
+    "work": "中国网文",
     "tags": ["穿书", "好感度", "身份反转"],
     "description": "宿主穿成原身是恶毒角色的身份，通过攻略原剧情人物积累好感度，好感度越高解锁的奖励越好。",
     "effects": [
@@ -163,7 +163,7 @@
     "id": "cn-gf-kill-evolve",
     "category": "system",
     "name": "杀戮进化系统",
-    "work": "网文升级流",
+    "work": "中国网文",
     "tags": ["杀戮", "进化点", "兑换"],
     "description": "击杀目标获得进化点，用于自身升级、技能兑换与属性强化，击杀对象越强点数越多。",
     "effects": [
@@ -183,7 +183,7 @@
     "id": "cn-gf-pet-evolve-path",
     "category": "system",
     "name": "御兽进化路线系统",
-    "work": "不科学御兽",
+    "work": "中国网文",
     "tags": ["御兽", "进化路线", "材料收集"],
     "description": "宿主能看见御兽的完整进化路线图，明确每段进化需要的材料与条件，按路线培养宠兽。",
     "effects": [
@@ -203,7 +203,7 @@
     "id": "cn-gf-pet-contract",
     "category": "system",
     "name": "特殊契约对象系统",
-    "work": "网文御兽流",
+    "work": "中国网文",
     "tags": ["契约", "御兽", "万物可签"],
     "description": "契约对象不限于妖兽，也可以契约女神、强者、器物甚至概念存在，契约对象越特殊宿主获得的能力越强。",
     "effects": [
@@ -223,7 +223,7 @@
     "id": "cn-gf-master-disciple",
     "category": "system",
     "name": "师徒同修反馈系统",
-    "work": "网文收徒流",
+    "work": "中国网文",
     "tags": ["收徒", "师徒同修", "反馈"],
     "description": "收取徒弟后，徒弟修为提升、突破境界或获得机缘，宿主同步获得反馈与奖励。",
     "effects": [
@@ -243,7 +243,7 @@
     "id": "cn-gf-temple-build",
     "category": "system",
     "name": "道观建筑收徒系统",
-    "work": "全民道观流",
+    "work": "中国网文",
     "tags": ["道观", "建筑经营", "员工成长"],
     "description": "宿主拥有一座道观（或其他建筑），通过收徒、雇佣打工仔、扩建建筑提升整体实力，成员变强宿主获奖励。",
     "effects": [
@@ -263,7 +263,7 @@
     "id": "cn-gf-bg-edit",
     "category": "system",
     "name": "背景修改系统",
-    "work": "背景编辑流",
+    "work": "中国网文",
     "tags": ["背景修改", "愧疚补偿", "前世"],
     "description": "修改自身上一世或当前背景设定，让原本亏欠宿主的人产生愧疚并主动补偿，享受来自原故事的善意。",
     "effects": [
@@ -283,7 +283,7 @@
     "id": "cn-gf-word-trait",
     "category": "system",
     "name": "词条系统",
-    "work": "中国网文词条流",
+    "work": "中国网文",
     "tags": ["词条", "装备词条", "永久属性"],
     "description": "获得一个个词语词条，词条生效即拥有该词语代表的能力，可临时装备也能永久固化。",
     "effects": [
@@ -303,7 +303,7 @@
     "id": "cn-gf-daily-intel",
     "category": "system",
     "name": "每日情报系统",
-    "work": "网文情报流",
+    "work": "中国网文",
     "tags": ["情报", "预知", "截胡"],
     "description": "每天固定获得一条有价值的情报，提前知道事件、机缘或危机，从而抢先布局。",
     "effects": [
@@ -323,7 +323,7 @@
     "id": "cn-gf-cognition-gap",
     "category": "system",
     "name": "认知错位系统",
-    "work": "网文系统流",
+    "work": "中国网文",
     "tags": ["认知差", "误会流", "任务反差"],
     "description": "系统把宿主所处的和平世界误判为高危位面，将日常场所识别为仙宗魔门、把按摩馆当合欢宗、把动物园当御兽宗。",
     "effects": [
@@ -343,7 +343,7 @@
     "id": "cn-gf-self-evolve",
     "category": "system",
     "name": "死物活化系统",
-    "work": "网文系统流",
+    "work": "中国网文",
     "tags": ["活化", "自我进化", "养成外挂"],
     "description": "宿主拥有的功法、武器等死物被激活出自我意识，会自己修炼、进化，甚至嫌弃宿主不努力。",
     "effects": [
@@ -363,7 +363,7 @@
     "id": "cn-gf-time-back",
     "category": "system",
     "name": "时间回档系统",
-    "work": "夜的命名术",
+    "work": "中国网文",
     "tags": ["时间回档", "读档", "重来"],
     "description": "时间可暂停、回档或从特定节点重来，宿主保留记忆与部分资源，反复试错获得最优结果。",
     "effects": [
@@ -383,7 +383,7 @@
     "id": "cn-gf-e-girlfriend",
     "category": "system",
     "name": "电子女友养成系统",
-    "work": "网文养成流",
+    "work": "中国网文",
     "tags": ["电子女友", "养成", "平行世界"],
     "description": "宿主游戏机中的电子女友或养成角色其实是平行世界的真实人物，养成她即同步获得现实反馈与奖励。",
     "effects": [
@@ -403,7 +403,7 @@
     "id": "cn-gf-treasure-basin",
     "category": "item",
     "name": "聚宝仙盆",
-    "work": "传统仙侠宝物",
+    "work": "中国网文",
     "tags": ["聚宝盆", "宝物复制", "生财"],
     "description": "传说级聚宝类法宝，放入宝物或财货后可吐生更多同源宝物，是源源不断的资源源。",
     "effects": [
@@ -423,7 +423,7 @@
     "id": "cn-gf-kill-tower",
     "category": "item",
     "name": "杀戮塔",
-    "work": "传统试炼宝物",
+    "work": "中国网文",
     "tags": ["试炼塔", "闯关奖励", "传承"],
     "description": "上古大能留下的试炼宝塔，逐层挑战获得功法、丹药与传承，层数越高奖励越惊人。",
     "effects": [
@@ -443,7 +443,7 @@
     "id": "cn-gf-green-bottle",
     "category": "item",
     "name": "掌天瓶（小绿瓶）",
-    "work": "凡人修仙传",
+    "work": "中国网文",
     "tags": ["掌天瓶", "灵液", "催熟灵药"],
     "description": "绿色小瓶，夜间凝聚灵液，灵液可催熟灵药、修复灵植、培育灵草，是发家的传家之宝。",
     "effects": [
@@ -463,7 +463,7 @@
     "id": "cn-gf-synthesize",
     "category": "system",
     "name": "合成系统",
-    "work": "网文系统流",
+    "work": "中国网文",
     "tags": ["合成", "品质提升", "材料组合"],
     "description": "相同宝物可合成提升品质，不同宝物可合成融合出新增属性的新物品。",
     "effects": [
@@ -483,7 +483,7 @@
     "id": "cn-gf-idle-grow",
     "category": "system",
     "name": "躺平挂机变强系统",
-    "work": "网文躺平流",
+    "work": "中国网文",
     "tags": ["躺平", "挂机", "不动变强"],
     "description": "呼吸、晒太阳、睡觉、吃饭就能持续变强，挂机时间自动转化为修为与属性。",
     "effects": [
@@ -503,7 +503,7 @@
     "id": "cn-gf-bond-sync",
     "category": "system",
     "name": "绑定寄托变强系统",
-    "work": "网文寄托流",
+    "work": "中国网文",
     "tags": ["绑定", "寄托", "他人变强我变强"],
     "description": "绑定老婆、徒弟、宠物、挚友等对象，对方变强时宿主同步获得修为、属性或财富反馈。",
     "effects": [
@@ -523,7 +523,7 @@
     "id": "cn-gf-career-daily",
     "category": "system",
     "name": "每日职业体验系统",
-    "work": "网文职业流",
+    "work": "中国网文",
     "tags": ["职业体验", "技能精通", "身份"],
     "description": "每天获得一个新职业身份，体验结束后保留该职业的特长技能，职业越多技能越全能。",
     "effects": [
@@ -543,7 +543,7 @@
     "id": "cn-gf-dream-cultivate",
     "category": "system",
     "name": "梦境修炼系统",
-    "work": "网文梦境流",
+    "work": "中国网文",
     "tags": ["梦境", "梦中修炼", "预知"],
     "description": "睡觉即进入可修炼的真实梦境，梦中学武练功、模拟战斗，也可在梦中预知未来事件。",
     "effects": [
@@ -563,7 +563,7 @@
     "id": "cn-gf-two-world",
     "category": "system",
     "name": "两界穿梭系统",
-    "work": "网文两界流",
+    "work": "中国网文",
     "tags": ["双世界", "物资差", "跨界获利"],
     "description": "宿主可在两个世界之间自由往返，利用两界物资、知识与技术差异巨大获利。",
     "effects": [
@@ -583,7 +583,7 @@
     "id": "cn-gf-generals-summon",
     "category": "system",
     "name": "三国名将召唤系统",
-    "work": "三国召唤流",
+    "work": "中国网文",
     "tags": ["名将召唤", "历史人物", "争霸"],
     "description": "系统可召唤三国或其他历史时空的名将与谋士，并依据宿主当前世界赋予其适配形态。",
     "effects": [
@@ -603,7 +603,7 @@
     "id": "cn-gf-luck-halo",
     "category": "ability",
     "name": "鸿运齐天气运光环",
-    "work": "网文气运流",
+    "work": "中国网文",
     "tags": ["气运", "主角光环", "逢凶化吉"],
     "description": "宿主自带大气运，行事顺遂、机缘不断、逢凶化吉，运气本身成为战斗力。",
     "effects": [
@@ -623,7 +623,7 @@
     "id": "cn-gf-journal",
     "category": "system",
     "name": "日记曝光系统",
-    "work": "网文日记流",
+    "work": "中国网文",
     "tags": ["日记", "预知", "反差"],
     "description": "宿主的日记会被故事世界主角看见，内容如实预演未来或写破主角心思，靠信息差与反差取得优势。",
     "effects": [
@@ -643,7 +643,7 @@
     "id": "cn-gf-recycle-shop",
     "category": "system",
     "name": "废品回收商店系统",
-    "work": "网文商店流",
+    "work": "中国网文",
     "tags": ["回收", "商店", "以物换物"],
     "description": "宿主可回收废品、二手货甚至敌人的残骸，按价值折算成积分，在系统商店换购物资与能力。",
     "effects": [
@@ -663,7 +663,7 @@
     "id": "cn-gf-video-expose",
     "category": "system",
     "name": "万界视频曝光系统",
-    "work": "诸天曝光流",
+    "work": "中国网文",
     "tags": ["曝光", "天幕", "奖励"],
     "description": "宿主对万界播放自己或指定对象的视频画面，播放产生反响后宿主获得奖励，曝光量决定奖励大小。",
     "effects": [
@@ -683,7 +683,7 @@
     "id": "cn-gf-pandian",
     "category": "system",
     "name": "盘点系统",
-    "work": "盘点文",
+    "work": "中国网文",
     "tags": ["盘点", "排名", "万界"],
     "description": "针对某个主题（意难平、超燃场面、武将、皇帝、天才）在万界中做榜单盘点，被盘点者与宿主都获得奖励。",
     "effects": [
@@ -703,7 +703,7 @@
     "id": "cn-gf-report-nation",
     "category": "system",
     "name": "上报国家系统",
-    "work": "国家合作流",
+    "work": "中国网文",
     "tags": ["上交国家", "国运", "平行世界"],
     "description": "开局将系统或能力上报给国家，换取国家级支持；也可连接平行世界，把异界资源传回现实提升国力。",
     "effects": [
@@ -723,7 +723,7 @@
     "id": "cn-gf-multi-son",
     "category": "system",
     "name": "多子多福系统",
-    "work": "多子多福流",
+    "work": "中国网文",
     "tags": ["娶妻", "生子", "家族反馈"],
     "description": "娶妻生子获得奖励，子女越强、妻子越出色宿主获得的反馈越强，家族规模本身就是实力。",
     "effects": [
@@ -743,7 +743,7 @@
     "id": "cn-gf-death-respawn",
     "category": "system",
     "name": "死亡复活变强系统",
-    "work": "网文死亡流",
+    "work": "中国网文",
     "tags": ["死亡复活", "越死越强", "读档"],
     "description": "宿主死亡后复活并变得更强，每次死亡保留生前能力，死亡变成一种成长方式。",
     "effects": [
@@ -763,7 +763,7 @@
     "id": "cn-gf-waste-pill",
     "category": "item",
     "name": "废丹强化炉",
-    "work": "七猫废丹流",
+    "work": "中国网文",
     "tags": ["废丹", "强化", "丹炉"],
     "description": "一口丹炉或鼎、葫芦类宝物，能把别人不要的废丹投入其中强化成完满丹药，废物变宝。",
     "effects": [
@@ -783,7 +783,7 @@
     "id": "cn-gf-wenhao",
     "category": "system",
     "name": "文豪抄书降维系统",
-    "work": "穿越文豪流",
+    "work": "中国网文",
     "tags": ["文豪", "歌曲", "文化降维"],
     "description": "穿越到文化贫瘠的世界，以诗词歌赋、小说剧本、流行歌曲实现文化降维打击，名声与财富随之而来。",
     "effects": [
@@ -803,7 +803,7 @@
     "id": "cn-gf-nanny",
     "category": "system",
     "name": "奶爸育儿系统",
-    "work": "奶爸文",
+    "work": "中国网文",
     "tags": ["奶爸", "育儿", "技能传授"],
     "description": "宿主抚养女儿（或子女），教授钢琴、厨艺、外语、武术等能力时，育儿过程与孩子进步都结算奖励。",
     "effects": [
@@ -823,7 +823,7 @@
     "id": "cn-gf-superdad-show",
     "category": "system",
     "name": "综艺亲子曝光系统",
-    "work": "奶爸综艺流",
+    "work": "中国网文",
     "tags": ["亲子综艺", "曝光", "全能父亲"],
     "description": "妻子把奶爸日常曝光到综艺与全网，丈夫十项全能的画面震撼世界，顺手用技能解决妻子难题。",
     "effects": [
@@ -843,7 +843,7 @@
     "id": "cn-gf-diligence-crit",
     "category": "system",
     "name": "勤奋暴击系统",
-    "work": "努力类升级流",
+    "work": "中国网文",
     "tags": ["努力", "暴击", "熟练度"],
     "description": "努力修炼、学习、训练时会触发暴击，单次成果翻倍甚至多倍，用比别人少的现实时间获得超额进度。",
     "effects": [
@@ -863,7 +863,7 @@
     "id": "cn-gf-beauty-codex",
     "category": "system",
     "name": "美女图鉴收集系统",
-    "work": "图鉴收集流",
+    "work": "中国网文",
     "tags": ["图鉴", "收集", "点亮奖励"],
     "description": "图鉴列出各类角色（明星、贵族、女神等），宿主通过与对方建立关系或达成条件点亮图标获得奖励。",
     "effects": [
@@ -883,7 +883,7 @@
     "id": "cn-gf-rent-collect",
     "category": "system",
     "name": "万界收租收账系统",
-    "work": "万界收租流",
+    "work": "中国网文",
     "tags": ["收租", "讨债", "万界大佬"],
     "description": "万界大佬、强者甚至神魔都欠宿主房租或欠账，宿主挨家收租讨账，对方欠得越大背景越硬。",
     "effects": [
@@ -903,7 +903,7 @@
     "id": "cn-gf-golden-eye",
     "category": "ability",
     "name": "黄金瞳·透视鉴宝",
-    "work": "黄金瞳",
+    "work": "中国网文",
     "tags": ["黄金瞳", "透视", "鉴宝"],
     "description": "眼睛可透视物质、看见灵气与能量流动，并自动鉴别古董、玉石、药材的真假与价值。",
     "effects": [
@@ -923,7 +923,7 @@
     "id": "cn-gf-fusion",
     "category": "system",
     "name": "能力融合系统",
-    "work": "网文融合流",
+    "work": "中国网文",
     "tags": ["融合", "天赋", "取其精华"],
     "description": "宿主可融合功法、天赋、超能力甚至物品特性，相同体系取长补短，异体系融合出新能力。",
     "effects": [
@@ -943,7 +943,7 @@
     "id": "cn-gf-acting",
     "category": "system",
     "name": "角色扮演系统",
-    "work": "网文扮演流",
+    "work": "中国网文",
     "tags": ["扮演", "人设", "能力完整度"],
     "description": "宿主扮演某个人物角色，扮演得越像、越贴合人设，获得该角色的能力就越完整。",
     "effects": [
@@ -963,7 +963,7 @@
     "id": "cn-gf-snipe",
     "category": "system",
     "name": "截胡系统",
-    "work": "网文截胡流",
+    "work": "中国网文",
     "tags": ["截胡", "抢机缘", "同人"],
     "description": "抢先截取原主角的功法、物品、机缘甚至姻缘，把故事里的好处全收入自己口袋。",
     "effects": [
@@ -983,7 +983,7 @@
     "id": "cn-gf-propaganda",
     "category": "system",
     "name": "设定普及系统",
-    "work": "网文安利流",
+    "work": "中国网文",
     "tags": ["安利", "普及", "世界观搬运"],
     "description": "宿主向当前世界普及另一个世界观（动漫、小说、历史设定），越多世界接受安利，获得的设定实体化奖励越多。",
     "effects": [
@@ -1003,7 +1003,7 @@
     "id": "cn-gf-nurture",
     "category": "system",
     "name": "养成系统",
-    "work": "网文养成流",
+    "work": "中国网文",
     "tags": ["养成", "成长反馈", "日常"],
     "description": "养育女儿、动物、宠物或徒弟，通过相关行为与任务使其成长，养成的每一步都结算奖励。",
     "effects": [
@@ -1023,7 +1023,7 @@
     "id": "cn-gf-game-create",
     "category": "system",
     "name": "原创游戏制作系统",
-    "work": "都市直播游戏流",
+    "work": "中国网文",
     "tags": ["游戏制作", "全民游玩", "玩家反应"],
     "description": "宿主能以小说、动漫为蓝本制作原创游戏，游戏发布到都市或同人世界引发全民游玩，玩家反应带来收益。",
     "effects": [
@@ -1043,7 +1043,7 @@
     "id": "cn-gf-shock-value",
     "category": "system",
     "name": "震惊值系统",
-    "work": "打脸震惊流",
+    "work": "中国网文",
     "tags": ["震惊值", "装逼", "打脸"],
     "description": "宿主装逼、打脸、出风头时收获震惊值与情绪反馈，围观者的震惊程度决定奖励数量。",
     "effects": [
@@ -1063,7 +1063,7 @@
     "id": "cn-gf-short-video",
     "category": "system",
     "name": "双界短视频系统",
-    "work": "短视频震惊流",
+    "work": "中国网文",
     "tags": ["短视频", "信息差", "互学"],
     "description": "宿主向两个世界互相推送短视频内容，双方看到对方世界的日常与实力产生学习与震惊，宿主获得奖励。",
     "effects": [
@@ -1083,7 +1083,7 @@
     "id": "cn-gf-compare-expose",
     "category": "system",
     "name": "双界对比曝光系统",
-    "work": "对比曝光流",
+    "work": "中国网文",
     "tags": ["对比", "曝光", "迪化"],
     "description": "同时展示主角到来前与主角到来后的同人世界变化，制造强烈对比，配合围观者的迪化脑补引发震撼。",
     "effects": [
@@ -1103,7 +1103,7 @@
     "id": "cn-gf-comprehension",
     "category": "ability",
     "name": "悟性逆天",
-    "work": "网文悟性流",
+    "work": "中国网文",
     "tags": ["悟性", "举一反三", "自创"],
     "description": "学什么都快，看什么都悟，见招拆招并自创变式，把别人一生苦修压缩成几眼。",
     "effects": [
@@ -1123,7 +1123,7 @@
     "id": "cn-gf-scholar",
     "category": "system",
     "name": "学霸学习系统",
-    "work": "都市学霸流",
+    "work": "中国网文",
     "tags": ["学霸", "学习", "考试奖励"],
     "description": "刷题、听课、考试即获学习点，学习点兑换知识、技能与天赋，成绩越好奖励越夸张。",
     "effects": [
@@ -1143,7 +1143,7 @@
     "id": "cn-gf-brain-hole",
     "category": "system",
     "name": "脑洞具现系统",
-    "work": "脑洞成真流",
+    "work": "中国网文",
     "tags": ["脑洞", "具现", "幻想成真"],
     "description": "宿主脑补的设定、想法、设计能直接具现成实体，脑洞越大、细节越足，具现物越强。",
     "effects": [
@@ -1163,7 +1163,7 @@
     "id": "cn-gf-card",
     "category": "system",
     "name": "卡牌系统",
-    "work": "网文卡牌流",
+    "work": "中国网文",
     "tags": ["卡牌", "收集", "装备"],
     "description": "人物、技能、物品以卡牌形式获得，装备卡牌即获得卡牌能力，收集与组卡构成核心玩法。",
     "effects": [
@@ -1183,7 +1183,7 @@
     "id": "cn-gf-pawnshop",
     "category": "system",
     "name": "鉴宝当铺系统",
-    "work": "都市鉴宝流",
+    "work": "中国网文",
     "tags": ["鉴宝", "当铺", "捡漏"],
     "description": "宿主经营当铺并自带鉴宝能力，收下贱卖的古玩、旧物经修复转手高价售出，捡漏暴富。",
     "effects": [
@@ -1203,7 +1203,7 @@
     "id": "cn-gf-live-stream",
     "category": "system",
     "name": "都市直播系统",
-    "work": "都市直播流",
+    "work": "中国网文",
     "tags": ["直播", "粉丝", "打赏"],
     "description": "直播内容（才艺、探险、美食、整活）获得人气与打赏，热度和粉丝数兑换成现实收益与能力。",
     "effects": [
@@ -1223,7 +1223,7 @@
     "id": "cn-gf-hide-power",
     "category": "system",
     "name": "隐藏修为系统",
-    "work": "扮猪吃虎流",
+    "work": "中国网文",
     "tags": ["隐藏修为", "扮猪吃虎", "压制"],
     "description": "宿主可把真实修为伪装成普通甚至弱小，关键时刻解除压制惊艳全场，隐藏本身也赚奖励。",
     "effects": [
@@ -1243,7 +1243,7 @@
     "id": "cn-gf-spirit-field",
     "category": "item",
     "name": "随身灵田空间",
-    "work": "种田空间流",
+    "work": "中国网文",
     "tags": ["随身空间", "灵田", "时间加速"],
     "description": "宿主随身拥有一座可进入的灵田空间，内有加速时间的灵田、灵泉和灵植，种田产出源源不绝。",
     "effects": [
@@ -1263,7 +1263,7 @@
     "id": "cn-gf-sect-master",
     "category": "system",
     "name": "宗门掌门建设系统",
-    "work": "宗门建设流",
+    "work": "中国网文",
     "tags": ["宗门", "掌门", "经营"],
     "description": "宿主执掌宗门，通过招弟子、扩建山门、经营产业把宗门做强，宗门气运与成员实力反馈给掌门。",
     "effects": [
@@ -1283,7 +1283,7 @@
     "id": "cn-gf-nation-build",
     "category": "system",
     "name": "国家文明建设系统",
-    "work": "国运基建流",
+    "work": "中国网文",
     "tags": ["国家建设", "科技树", "民心"],
     "description": "宿主辅佐或统领一国，通过基建、科技、民生与军事升级让国家整体变强，国运同步反哺宿主。",
     "effects": [
@@ -1303,7 +1303,7 @@
     "id": "cn-gf-imperial-exam",
     "category": "system",
     "name": "科举官场系统",
-    "work": "古代官场流",
+    "work": "中国网文",
     "tags": ["科举", "官场", "政绩"],
     "description": "宿主在古代世界考科举、做官，治下民生治理等政绩与官位晋升结算成奖励，官越大奖励越强。",
     "effects": [
@@ -1323,7 +1323,7 @@
     "id": "cn-gf-swallow-evolve",
     "category": "system",
     "name": "吞噬进化系统",
-    "work": "吞噬进化流",
+    "work": "中国网文",
     "tags": ["吞噬", "进化", "融合万物"],
     "description": "宿主可吞噬功法、血脉、灵魂、物品乃至能量，将其精华转化为自身进化资粮。",
     "effects": [
@@ -1343,7 +1343,7 @@
     "id": "cn-gf-red-packet",
     "category": "system",
     "name": "红包福利系统",
-    "work": "网文红包流",
+    "work": "中国网文",
     "tags": ["红包", "福利", "随机奖励"],
     "description": "系统、群聊或任务接口定时掉落红包，抢红包随机开出金钱、丹药、功法甚至稀有卡牌。",
     "effects": [
@@ -1363,7 +1363,7 @@
     "id": "cn-gf-achievement",
     "category": "system",
     "name": "成就系统",
-    "work": "网文成就流",
+    "work": "中国网文",
     "tags": ["成就", "里程碑", "奖励"],
     "description": "达成特定成就（首杀、越级、名场面、里程碑）即点亮成就并领取一次性奖励与永久加成。",
     "effects": [
@@ -1383,7 +1383,7 @@
     "id": "cn-gf-title",
     "category": "system",
     "name": "称号系统",
-    "work": "网文称号流",
+    "work": "中国网文",
     "tags": ["称号", "头衔", "被动"],
     "description": "宿主获得各种称号（首富、剑尊、好人卡），称号自带被动效果与威压，切换称号即切换加成。",
     "effects": [
@@ -1403,7 +1403,7 @@
     "id": "cn-gf-miracle-doctor",
     "category": "system",
     "name": "神医系统",
-    "work": "都市神医流",
+    "work": "中国网文",
     "tags": ["神医", "医术", "医武双绝"],
     "description": "宿主身怀绝顶医术，可妙手回春、从阎王手里夺命，医毒双修让财富与尊重主动上门。",
     "effects": [
@@ -1423,7 +1423,7 @@
     "id": "cn-gf-library",
     "category": "system",
     "name": "万能图书馆系统",
-    "work": "网文知识流",
+    "work": "中国网文",
     "tags": ["知识库", "图书馆", "检索"],
     "description": "宿主脑内有一座万能图书馆或百科全书，任何知识可检索获得，从绝世功法到生活常识应有尽有。",
     "effects": [
@@ -1443,7 +1443,7 @@
     "id": "cn-gf-skill-copy",
     "category": "system",
     "name": "技能复制系统",
-    "work": "网文复制流",
+    "work": "中国网文",
     "tags": ["复制", "偷师", "集百家"],
     "description": "接触或目击他人施展的能力即可复制，复制后归宿主所有并可持续升级，集百家之长。",
     "effects": [
@@ -1463,7 +1463,7 @@
     "id": "cn-gf-bloodline",
     "category": "system",
     "name": "血脉觉醒进化系统",
-    "work": "血脉进化流",
+    "work": "中国网文",
     "tags": ["血脉", "觉醒", "进化"],
     "description": "宿主体内沉睡的血脉觉醒后可不断进化，血脉层次决定天赋上限与专属神通。",
     "effects": [
@@ -1483,7 +1483,7 @@
     "id": "cn-gf-old-man-ring",
     "category": "item",
     "name": "随身老爷爷",
-    "work": "传统老爷爷流",
+    "work": "中国网文",
     "tags": ["老爷爷", "护道者", "传承"],
     "description": "戒指、玉佩等器物中寄宿一位强者残魂（老爷爷），指点修行、护道救人并转移衣钵。",
     "effects": [
@@ -1503,7 +1503,7 @@
     "id": "cn-gf-game-pod",
     "category": "system",
     "name": "虚拟异界游戏仓系统",
-    "work": "虚拟游戏流",
+    "work": "中国网文",
     "tags": ["全息游戏", "异界冒险", "现实同步"],
     "description": "宿主可进入全息游戏或异界世界冒险，游戏中的等级、技能与财富与现实同步，玩着玩着就变强。",
     "effects": [
@@ -1523,7 +1523,7 @@
     "id": "cn-gf-scapegoat",
     "category": "system",
     "name": "背锅系统",
-    "work": "背锅流",
+    "work": "中国网文",
     "tags": ["背锅", "替人担责", "补偿"],
     "description": "宿主替他人背锅、顶罪、挡灾可获得奖励，锅越大补偿越丰厚，背锅本身成了赚钱技能。",
     "effects": [
@@ -1543,7 +1543,7 @@
     "id": "cn-gf-data-eye",
     "category": "system",
     "name": "数据之眼鉴定系统",
-    "work": "数据面板流",
+    "work": "中国网文",
     "tags": ["数据之眼", "鉴定", "数值化"],
     "description": "宿主双眼可把万物数值化，看到生命、装备、功法的完整属性与成长潜力，像游戏一样决策。",
     "effects": [
@@ -1563,7 +1563,7 @@
     "id": "cn-gf-system-seller",
     "category": "system",
     "name": "系统商人系统",
-    "work": "卖系统流",
+    "work": "中国网文",
     "tags": ["系统商人", "批发", "幕后"],
     "description": "宿主自己就是系统批发商，能制造或转卖各种系统给他人，客户变强后宿主坐收提成。",
     "effects": [
@@ -1583,7 +1583,7 @@
     "id": "cn-gf-plant-all",
     "category": "system",
     "name": "万物种植系统",
-    "work": "种地流",
+    "work": "中国网文",
     "tags": ["种植", "种什么得什么", "收获"],
     "description": "宿主把一切都能种下去：灵药、功法、法宝、缘分，浇水施肥等待收获，收获远超投入。",
     "effects": [
@@ -1603,7 +1603,7 @@
     "id": "cn-gf-reborn",
     "category": "ability",
     "name": "重生者",
-    "work": "重生流",
+    "work": "中国网文",
     "tags": ["重生", "预知未来", "抢机缘"],
     "description": "宿主死亡后带记忆重生回年少时或关键节点前，用先知优势提前布局，抢占上辈子错过的一切。",
     "effects": [
@@ -1623,7 +1623,7 @@
     "id": "cn-gf-rank-board",
     "category": "system",
     "name": "排行榜系统",
-    "work": "网文榜单流",
+    "work": "中国网文",
     "tags": ["排行榜", "上榜奖励", "竞争"],
     "description": "区域、国家乃至诸天万界都有实时排行榜，上榜即发奖励，排名越高奖励越惊人。",
     "effects": [
@@ -1643,7 +1643,7 @@
     "id": "cn-gf-delivery",
     "category": "system",
     "name": "万界快递外卖系统",
-    "work": "万界杂役流",
+    "work": "中国网文",
     "tags": ["快递", "外卖", "跑腿"],
     "description": "宿主干着送快递送外卖的活，但客户遍及诸天万界，把外卖送到仙帝洞府、把快递塞进魔界，跑腿也致富。",
     "effects": [
@@ -1663,7 +1663,7 @@
     "id": "cn-gf-mecha",
     "category": "system",
     "name": "机甲武装系统",
-    "work": "机甲流",
+    "work": "中国网文",
     "tags": ["机甲", "载具", "武装"],
     "description": "宿主获得机甲或武装载具设计、制造与驾驶体系，机甲实力与宿主同步成长，人机合一战力飙升。",
     "effects": [
@@ -1683,7 +1683,7 @@
     "id": "cn-gf-gu-raising",
     "category": "system",
     "name": "养蛊进化系统",
-    "work": "蛊虫流",
+    "work": "中国网文",
     "tags": ["养蛊", "蛊虫", "操控"],
     "description": "宿主可养蛊、炼蛊、控蛊，蛊虫吞噬毒虫灵物进化成蛊王，宿主自身也以蛊法强化。",
     "effects": [
@@ -1703,7 +1703,7 @@
     "id": "cn-gf-puppet",
     "category": "system",
     "name": "傀儡机关系统",
-    "work": "傀儡流",
+    "work": "中国网文",
     "tags": ["傀儡", "机关", "造物"],
     "description": "宿主精通傀儡术与机关术，能用金属、灵石与符文造出替身、战争傀儡与机关陷阱，一人成军。",
     "effects": [
@@ -1723,7 +1723,7 @@
     "id": "cn-gf-secret-realm-map",
     "category": "system",
     "name": "秘境地图系统",
-    "work": "秘境探索流",
+    "work": "中国网文",
     "tags": ["秘境", "地图", "寻宝"],
     "description": "宿主可获得秘境、遗迹与洞天的实时地图和开启凭证，精准定位宝物与传承，探索所得尽入囊中。",
     "effects": [
@@ -1743,7 +1743,7 @@
     "id": "cn-gf-godsmith",
     "category": "system",
     "name": "神匠锻造系统",
-    "work": "锻造流",
+    "work": "中国网文",
     "tags": ["锻造", "强化", "附魔"],
     "description": "宿主以神匠身份锻造、强化、附魔武器装备，亲手打造的神兵自带特效，锻造水平就是实力。",
     "effects": [
@@ -1763,7 +1763,7 @@
     "id": "cn-gf-divination",
     "category": "system",
     "name": "天机神算系统",
-    "work": "神算流",
+    "work": "中国网文",
     "tags": ["推演", "算命", "天机"],
     "description": "宿主通晓天机算术，可推演他人命数、预测大事走向，泄露天机反噬可用功德与资源抵消。",
     "effects": [
@@ -1783,7 +1783,7 @@
     "id": "cn-gf-yinyang-eye",
     "category": "ability",
     "name": "阴阳眼",
-    "work": "灵异流",
+    "work": "中国网文",
     "tags": ["阴阳眼", "见鬼", "灵异"],
     "description": "宿主的眼睛能看见鬼魂、阴气与灵体，天生自带灵异感知，可通灵、驱鬼并洞察阴阳。",
     "effects": [
@@ -1803,7 +1803,7 @@
     "id": "cn-gf-exorcist",
     "category": "system",
     "name": "驱鬼降妖系统",
-    "work": "灵异道术流",
+    "work": "中国网文",
     "tags": ["驱鬼", "道术", "降妖"],
     "description": "宿主掌握符箓、法诀与降妖手段，接取灵异委托驱鬼降妖，收服后进化为己用或兑换成修为。",
     "effects": [
@@ -1823,7 +1823,7 @@
     "id": "cn-gf-hell-judge",
     "category": "system",
     "name": "地府判官系统",
-    "work": "地府流",
+    "work": "中国网文",
     "tags": ["地府", "判官", "功过"],
     "description": "宿主获得地府判官职司，可查生死簿、断人功过、掌轮回事，世间的作恶与行善都被记录结算。",
     "effects": [
@@ -1843,7 +1843,7 @@
     "id": "cn-gf-system-host",
     "category": "system",
     "name": "系统批发宿主养成系统",
-    "work": "宿主养成流",
+    "work": "中国网文",
     "tags": ["发系统", "宿主养成", "幕后大佬"],
     "description": "宿主不只是拥有系统，而是给成千上万的幸运儿发放系统，做幕后大佬收割他们成长的红利。",
     "effects": [
@@ -1863,7 +1863,7 @@
     "id": "cn-gf-bounty",
     "category": "system",
     "name": "赏金任务系统",
-    "work": "任务流",
+    "work": "中国网文",
     "tags": ["任务", "赏金", "委托"],
     "description": "宿主可接到来自系统、发布板或路人的海量任务，按难度结算赏金，什么都能干就什么都能赚。",
     "effects": [
@@ -1883,7 +1883,7 @@
     "id": "cn-gf-blueprint",
     "category": "system",
     "name": "图纸制造系统",
-    "work": "图纸流",
+    "work": "中国网文",
     "tags": ["图纸", "制造", "科技树"],
     "description": "宿主拥有从石器到飞船的全套制造图纸，集齐材料即可量产武器、载具与设备，图纸就是财富。",
     "effects": [
@@ -1903,7 +1903,7 @@
     "id": "cn-gf-time-accelerate",
     "category": "system",
     "name": "时间加速修炼场",
-    "work": "时间流速流",
+    "work": "中国网文",
     "tags": ["时间加速", "修炼场", "闭关"],
     "description": "宿主拥有时间流速可调的空间或道具，外界一天里面可修炼多年，用秘法速成修为。",
     "effects": [
@@ -1923,7 +1923,7 @@
     "id": "cn-gf-sacrifice",
     "category": "system",
     "name": "献祭交换系统",
-    "work": "等价交换流",
+    "work": "中国网文",
     "tags": ["献祭", "等价交换", "力量"],
     "description": "宿主可通过献祭物品、寿命、记忆或情感向未知存在换取力量，献祭什么就能换到什么。",
     "effects": [
@@ -1943,7 +1943,7 @@
     "id": "cn-gf-anydoor",
     "category": "item",
     "name": "任意门空间穿梭",
-    "work": "空间流",
+    "work": "中国网文",
     "tags": ["任意门", "瞬移", "空间"],
     "description": "宿主拥有能开在任何地方的空间门，想去哪里开门就去哪里，逃跑、赶路、偷袭皆宜。",
     "effects": [
@@ -1963,7 +1963,7 @@
     "id": "cn-gf-skill-tree",
     "category": "system",
     "name": "技能树系统",
-    "work": "技能树流",
+    "work": "中国网文",
     "tags": ["技能树", "解锁节点", "被动加成"],
     "description": "宿主的能力以技能树形式呈现，消耗资源点亮节点解锁新技能与被动，路线规划决定战斗风格。",
     "effects": [
@@ -1983,7 +1983,7 @@
     "id": "cn-gf-dungeon",
     "category": "system",
     "name": "副本试炼系统",
-    "work": "副本流",
+    "work": "中国网文",
     "tags": ["副本", "试炼", "奖励结算"],
     "description": "现实或异界中出现可反复进入的副本与试炼，通关获得装备、经验与稀有材料，越级挑战有额外奖励。",
     "effects": [
