@@ -1,0 +1,486 @@
+[
+  {
+    "id": "mahouiku-hear-troubled-hearts",
+    "category": "ability",
+    "name": "读取困难者心声",
+    "work": "魔法少女育成计画",
+    "tags": ["读心", "感知", "精神"],
+    "description": "能够听见附近处于困境或烦恼状态之人的内心声音的感知能力。",
+    "effects": [
+      "听见附近困难者正在思考的内容和求助心声。",
+      "心声会像实际声音一样进入使用者听觉，使使用者能够发现隐藏的求助和情绪。"
+    ],
+    "requirements": ["附近存在处于困难或烦恼中的人时，能力会自动捕捉其心声。"],
+    "limits": ["能力针对困难者的心声，不是对所有人的无条件读心。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-true-hit-shuriken",
+    "category": "skill",
+    "name": "必中手里剑",
+    "work": "魔法少女育成计画",
+    "tags": ["投掷", "必中", "远程攻击"],
+    "description": "锁定目标后投出的手里剑和其他投掷物必定命中目标的投掷能力。",
+    "effects": [
+      "锁定目标并投出手里剑后，投掷物必定命中目标。",
+      "即使投掷方向与目标相反，投掷物也会改变飞行路线并绕弧线命中。",
+      "效果可以作用于被当作投掷武器使用的其他物体。"
+    ],
+    "requirements": ["先锁定目标，再投出手里剑或其他投掷物。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-mechanical-enhancement",
+    "category": "ability",
+    "name": "机械改造强化",
+    "work": "魔法少女育成计画",
+    "tags": ["机械", "改造", "强化"],
+    "description": "通过魔法改造机械结构并提升其性能的机械强化能力。",
+    "effects": [
+      "改造机械的结构、动力和功能，使其获得更高性能。",
+      "可以强化机械的速度、力量、耐久和特殊用途。"
+    ],
+    "requirements": ["接触或操作目标机械并对其施加改造魔法。"],
+    "limits": ["能力作用对象是机械，不能把普通生物直接改造成机械。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-crystal-ball-display",
+    "category": "item",
+    "name": "心象映像水晶球",
+    "work": "魔法少女育成计画",
+    "tags": ["水晶球", "映像", "侦测"],
+    "description": "能够在水晶球中显示使用者指定对象或心中所想对象影像的魔法道具。",
+    "effects": [
+      "将使用者心中指定的对象映现在水晶球表面。",
+      "可以显示偏好对象、想寻找的人或其他明确想象目标的影像。"
+    ],
+    "requirements": ["持有水晶球并集中想象需要显示的对象。"],
+    "limits": ["只能显示使用者能够明确想象或指定的对象，不能凭空提供未知目标的全部信息。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-rapid-swallow-wheelchair",
+    "category": "item",
+    "name": "超高速魔法轮椅",
+    "work": "魔法少女育成计画",
+    "tags": ["轮椅", "高速移动", "魔法道具"],
+    "description": "能够以超高速奔驰的魔法轮椅。",
+    "effects": [
+      "以远超普通交通工具的速度在地面移动。",
+      "轮椅可以作为高速追击、撤离和长距离移动工具。"
+    ],
+    "requirements": ["坐上轮椅并操纵其移动方向。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-water-power",
+    "category": "ability",
+    "name": "水之力",
+    "work": "魔法少女育成计画",
+    "tags": ["水", "攻击", "魔法"],
+    "description": "操纵水的力量进行攻击和战斗的水属性能力。",
+    "effects": [
+      "制造水流、水弹和水压攻击敌人。",
+      "可以改变水的形态和方向，用于冲击、束缚或阻挡目标。"
+    ],
+    "requirements": ["操纵周围水分或以魔力形成水属性攻击。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-sword-size-change",
+    "category": "item",
+    "name": "自由变尺寸大剑",
+    "work": "魔法少女育成计画",
+    "tags": ["大剑", "尺寸变化", "武器"],
+    "description": "能够在视野范围内自由改变自身尺寸的魔法大剑。",
+    "effects": [
+      "将大剑变大或变小，以适应不同距离、目标和战斗空间。",
+      "即使大剑不在手中，只要仍在视野内也可以改变其尺寸。"
+    ],
+    "requirements": ["持有或看见大剑，并指定需要改变的尺寸。"],
+    "limits": ["尺寸变化要求大剑仍处于使用者视野范围内。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-rapid-swallow-broom",
+    "category": "item",
+    "name": "Rapid Swallow高速飞行扫帚",
+    "work": "魔法少女育成计画",
+    "tags": ["扫帚", "飞行", "高速"],
+    "description": "能够以超高速在空中自由飞行的魔法扫帚。",
+    "effects": [
+      "在空中高速飞行、悬停、急转和改变高度。",
+      "最高速度足以超过现代战斗机，适合高速追击和跨区域移动。"
+    ],
+    "requirements": ["骑乘扫帚并操纵其飞行方向。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-weapon-power-up",
+    "category": "ability",
+    "name": "武器威力升级",
+    "work": "魔法少女育成计画",
+    "tags": ["武器强化", "威力提升", "魔法"],
+    "description": "提升持有物攻击性能、把普通物体强化为武器的强化能力。",
+    "effects": [
+      "提升手中武器的攻击力、耐久和破坏力。",
+      "只要使用者把汽油、绳索等物体当作武器，也可以对其进行武器化强化。"
+    ],
+    "requirements": ["持有目标并将其明确视作武器后发动强化。"],
+    "limits": ["强化效果需要使用者把目标当作武器使用。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-dream-entry",
+    "category": "ability",
+    "name": "梦境进入",
+    "work": "魔法少女育成计画",
+    "tags": ["梦境", "精神", "潜入"],
+    "description": "进入他人梦境并在连接所有梦境的梦世界中自由活动的精神能力。",
+    "effects": [
+      "进入指定对象的梦境并在梦中自由移动。",
+      "可以在梦境中观察、交流、改变场景或对梦中对象采取行动。",
+      "能够在多个相连梦境之间移动。"
+    ],
+    "requirements": ["在自身意识进入梦境状态后选择目标梦境。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-command-authority",
+    "category": "ability",
+    "name": "绝对命令",
+    "work": "魔法少女育成计画",
+    "tags": ["命令", "精神控制", "支配"],
+    "description": "通过手上的权杖对眼前目标下达强制命令并操纵其行动的支配能力。",
+    "effects": [
+      "夺取目标行动自由，使目标按照命令行动。",
+      "可以命令目标移动、攻击、停止或执行其他明确动作。"
+    ],
+    "requirements": ["让目标位于面前并以权杖指向目标后下达命令。"],
+    "limits": ["发动一次最多可下达四项命令，但必须知道对方名称，距离不能超过五尺范围，权杖指着对方维持姿态直至事项布置完毕，并且被对方理解。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-liquid-infiltration",
+    "category": "ability",
+    "name": "液态潜入",
+    "work": "魔法少女育成计画",
+    "tags": ["穿透", "潜入", "防御"],
+    "description": "让身体像水一样潜入任何物体内部并穿过固体的能力。",
+    "effects": [
+      "进入墙壁、地板、门和其他物体内部。",
+      "在物体内部移动或从另一侧出现，躲避打击和斩击。"
+    ],
+    "requirements": ["接触目标物体并主动进入液态潜入状态。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-nonliving-transformation",
+    "category": "ability",
+    "name": "非生物变身",
+    "work": "魔法少女育成计画",
+    "tags": ["变身", "拟态", "物体"],
+    "description": "把自身变成任意非生物物体的拟态能力。",
+    "effects": [
+      "变身为指定的武器、家具、机械、建筑部件或其他非生物。",
+      "变身后会随目标物体改变大小、重量、材质和性质。"
+    ],
+    "requirements": ["指定一个非生物对象并发动变身。"],
+    "limits": ["不能变身为生物。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-living-transformation",
+    "category": "ability",
+    "name": "生物变身",
+    "work": "魔法少女育成计画",
+    "tags": ["变身", "拟态", "生物"],
+    "description": "把自身变身为任意生物或特定个人外形的拟态能力。",
+    "effects": [
+      "变身为见过的动物、人类或其他生物。",
+      "可以拟态为特定个人的外貌和声音。"
+    ],
+    "requirements": ["指定一个生物或个人外形并发动变身。"],
+    "limits": ["变身不能获得目标的身体能力、特殊能力或固有魔法。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-hole-making",
+    "category": "skill",
+    "name": "快速开洞",
+    "work": "魔法少女育成计画",
+    "tags": ["挖掘", "空间", "破坏"],
+    "description": "在物体或地面上快速挖出巨大洞穴的破坏能力。",
+    "effects": [
+      "用爪子轻轻划过地面或物体即可挖出巨大洞穴。",
+      "可以穿透墙壁、地板和障碍物，制造通道、陷阱或逃生出口。"
+    ],
+    "requirements": ["用爪子接触目标并划出开洞动作。"],
+    "limits": ["对于毫无伤痕、完全未受损的物体无法开洞。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-future-convenience-item",
+    "category": "item",
+    "name": "未来便利道具",
+    "work": "魔法少女育成计画",
+    "tags": ["未来道具", "随机", "辅助"],
+    "description": "每天可以取出一件来自未来、具有实际用途的便利道具的能力。",
+    "effects": [
+      "每天获得一件未来科技或魔法性质的便利道具。",
+      "道具可以用于侦查、通信、移动、修理、战斗或日常辅助。"
+    ],
+    "requirements": ["每天发动一次能力并取出当日道具。"],
+    "limits": ["每天只能使用一件未来便利道具，具体道具由能力决定。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-power-maximization",
+    "category": "ability",
+    "name": "力量最大化",
+    "work": "魔法少女育成计画",
+    "tags": ["强化", "增幅", "辅助"],
+    "description": "把喜爱对象的潜在力量最大限度发挥出来的强化能力。",
+    "effects": [
+      "提升指定对象的力量、速度、防御和魔法输出，使其发挥远超平时的战斗能力。",
+      "强化效果作用于对象本身，可以覆盖身体能力和已经拥有的魔法。"
+    ],
+    "requirements": ["指定自己喜欢或认可的对象并发动强化。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-wall-creation",
+    "category": "ability",
+    "name": "无中生墙",
+    "work": "魔法少女育成计画",
+    "tags": ["墙壁", "防御", "创造"],
+    "description": "在原本没有墙体的地方直接创造墙壁的防御能力。",
+    "effects": [
+      "在指定位置凭空制造墙壁。",
+      "墙壁可以用于阻挡攻击、分隔空间、封锁道路和制造掩体。"
+    ],
+    "requirements": ["指定墙壁出现的位置并发动能力。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-sound-control",
+    "category": "ability",
+    "name": "声音操纵",
+    "work": "魔法少女育成计画",
+    "tags": ["声音", "控制", "攻击"],
+    "description": "自由操控声音的产生、传播、方向和强度的声音能力。",
+    "effects": [
+      "制造、放大、削弱、隐藏或改变声音。",
+      "把声音集中为冲击、噪声或定向攻击，也可以伪造其他声音。",
+      "能够控制声音传播方向并切断区域内的听觉信息。"
+    ],
+    "requirements": ["指定需要操纵的声音来源、目标或区域。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-instant-healing",
+    "category": "ability",
+    "name": "瞬间治愈",
+    "work": "魔法少女育成计画",
+    "tags": ["治愈", "再生", "恢复"],
+    "description": "能够立即治好自身所受任何伤势的强力恢复能力。",
+    "effects": [
+      "瞬间修复割伤、贯穿伤、骨折、烧伤和其他身体损伤。",
+      "即使身体受到严重破坏，也能把伤势恢复到受伤前状态。"
+    ],
+    "requirements": ["能力持续存在，受到伤害后自动进行治愈。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-lower-body-beast-form",
+    "category": "ability",
+    "name": "下半身动物化",
+    "work": "魔法少女育成计画",
+    "tags": ["变身", "动物", "移动"],
+    "description": "只把下半身变成不同动物形态以获得对应移动能力的变身能力。",
+    "effects": [
+      "将双腿和下半身变成马、豹、鸟等动物形态。",
+      "获得对应动物的奔跑、跳跃、游泳或飞行移动方式。"
+    ],
+    "requirements": ["指定动物形态并发动下半身变身。"],
+    "limits": ["只能改变下半身，不能把整个身体完全变成动物。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-animal-friendship",
+    "category": "ability",
+    "name": "动物亲和",
+    "work": "魔法少女育成计画",
+    "tags": ["动物", "沟通", "驯服"],
+    "description": "让使用者能够与任何动物友好相处并建立信任的能力。",
+    "effects": [
+      "消除动物对使用者的敌意，使其愿意接近和交流。",
+      "可以与动物建立伙伴关系并请求其协助侦查、追踪或传递信息。"
+    ],
+    "requirements": ["接近目标动物并主动与其交流。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-doll-control",
+    "category": "ability",
+    "name": "人偶操控",
+    "work": "魔法少女育成计画",
+    "tags": ["人偶", "操控", "远程"],
+    "description": "自由操纵人偶行动并让其执行复杂动作的控制能力。",
+    "effects": [
+      "同时控制一个或多个玩偶、人偶和类似构造物。",
+      "让人偶移动、攻击、守卫、传递物品或执行预设动作。"
+    ],
+    "requirements": ["指定需要操控的人偶并建立控制。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-weight-change",
+    "category": "ability",
+    "name": "物体重量改变",
+    "work": "魔法少女育成计画",
+    "tags": ["重量", "物理", "控制"],
+    "description": "同时改变大量物体重量的物理性质操控能力。",
+    "effects": [
+      "让指定物体变轻、变重或在不同重量状态之间切换。",
+      "可以用减重实现搬运和飞行，用增重压制目标或固定物体。"
+    ],
+    "requirements": ["指定一个或多个物体并发动重量改变。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-magic-suit-invulnerability",
+    "category": "item",
+    "name": "全防御魔法套装",
+    "work": "魔法少女育成计画",
+    "tags": ["魔法套装", "防御", "无伤"],
+    "description": "穿上后能够抵御任何攻击的特殊魔法套装。",
+    "effects": [
+      "穿戴套装后，攻击无法直接伤害使用者。",
+      "套装可以同时保护身体、服装和随身装备。"
+    ],
+    "requirements": ["完整穿上魔法套装。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-seal-in-talisman",
+    "category": "item",
+    "name": "符咒封印",
+    "work": "魔法少女育成计画",
+    "tags": ["封印", "符咒", "收纳"],
+    "description": "把物体封印进符咒并在需要时取出的封印道具。",
+    "effects": [
+      "将物品、材料或目标封印在符咒中。",
+      "撕开或解除符咒后释放其中封存的对象。",
+      "封印状态便于携带、隐藏和保存大型或危险物品。"
+    ],
+    "requirements": ["把符咒贴附或对准目标并发动封印。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-daisy-ray",
+    "category": "skill",
+    "name": "黛西光波",
+    "work": "魔法少女育成计画",
+    "tags": ["光束", "必杀技", "远程攻击"],
+    "description": "发射高威力光束、作为必杀技使用的远程攻击能力。",
+    "effects": [
+      "从使用者身上发射集中型光束。",
+      "光束对命中目标造成强力破坏和灼烧伤害。"
+    ],
+    "requirements": ["集中魔力并向目标释放黛西光波。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-mood-change",
+    "category": "ability",
+    "name": "情绪改变",
+    "work": "魔法少女育成计画",
+    "tags": ["情绪", "精神", "群体影响"],
+    "description": "改变周围人情绪状态的精神影响能力。",
+    "effects": [
+      "让目标产生快乐、悲伤、愤怒、平静或其他指定情绪。",
+      "可以同时影响周围多人的情绪氛围，改变群体行动倾向。"
+    ],
+    "requirements": ["指定目标或周围区域并发动情绪改变。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-talk-to-buildings",
+    "category": "ability",
+    "name": "建筑交流",
+    "work": "魔法少女育成计画",
+    "tags": ["建筑", "感知", "交流"],
+    "description": "能够与周围建筑物交流并获取其所知信息的特殊感知能力。",
+    "effects": [
+      "向建筑物提问并得到建筑本身能够感知或记录的信息。",
+      "可以询问建筑内的动静、进出者、破坏痕迹和发生过的事件。"
+    ],
+    "requirements": ["接近建筑并向其发起交流。"],
+    "limits": ["建筑只能回答自身能够感知或承载的信息。"],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "mahouiku-gem-space-movement",
+    "category": "item",
+    "name": "宝石空间移动",
+    "work": "魔法少女育成计画",
+    "tags": ["宝石", "空间移动", "传送"],
+    "description": "借助宝石在不同地点之间进行空间移动的魔法道具能力。",
+    "effects": [
+      "以宝石作为媒介，在两个地点之间建立空间移动通道。",
+      "使用者可以通过宝石传送到预先确定或能够定位的地点。"
+    ],
+    "requirements": ["持有宝石并指定空间移动的目的地。"],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

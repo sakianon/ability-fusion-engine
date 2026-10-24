@@ -8,6 +8,9 @@
   "007-jojo.json",
   "008-overlord.json",
   "009-douluo-dalu.json",
+  "010-mushoku-tensei.json",
+  "011-mahou-shoujo-ikusei-keikaku.json",
+  "012-campione.json",
   "013-the-kings-avatar.json",
   "014-swallowed-star.json",
   "015-horror-house.json",
@@ -91,5 +94,6 @@
   "094-longzu.json",
   "095-wuxia-classics.json",
   "096-fate-series-expansion.json",
-  "097-type-moon-expansion.json"
+  "097-type-moon-expansion.json",
+  "098-blood-blockade-battlefront.json"
 ]
