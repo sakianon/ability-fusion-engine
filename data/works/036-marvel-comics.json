@@ -3,7 +3,7 @@
     "id": "marvel-spider-sense",
     "category": "ability",
     "name": "蜘蛛感应",
-    "work": "蜘蛛侠（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "预警",
       "感知",
@@ -28,7 +28,7 @@
     "id": "marvel-web-shooters",
     "category": "item",
     "name": "蛛网发射器",
-    "work": "Marvel 宇宙",
+    "work": "漫威",
     "tags": [
       "装备",
       "蛛网",
@@ -53,7 +53,7 @@
     "id": "marvel-iron-man-armor",
     "category": "item",
     "name": "钢铁侠动力装甲",
-    "work": "钢铁侠（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "动力装甲",
       "飞行",
@@ -80,7 +80,7 @@
     "id": "marvel-captain-america-shield",
     "category": "item",
     "name": "振金圆盾",
-    "work": "美国队长（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "振金",
       "盾牌",
@@ -105,7 +105,7 @@
     "id": "marvel-thor-mjolnir",
     "category": "item",
     "name": "妙尔尼尔",
-    "work": "雷神（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "神锤",
       "雷电",
@@ -130,7 +130,7 @@
     "id": "marvel-storm-weather",
     "category": "ability",
     "name": "天气操纵",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "天气",
       "风暴",
@@ -155,7 +155,7 @@
     "id": "marvel-wolverine-healing",
     "category": "ability",
     "name": "再生因子",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "再生",
       "耐久",
@@ -178,7 +178,7 @@
     "id": "marvel-hulk-strength",
     "category": "ability",
     "name": "伽马巨力与耐久",
-    "work": "Hulk（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "巨力",
       "耐久",
@@ -203,7 +203,7 @@
     "id": "marvel-doctor-strange-sorcery",
     "category": "system",
     "name": "秘术体系",
-    "work": "奇异博士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "秘术",
       "咒语",
@@ -228,7 +228,7 @@
     "id": "marvel-cloak-of-levitation",
     "category": "item",
     "name": "悬浮斗篷",
-    "work": "奇异博士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "魔法装备",
       "飞行",
@@ -251,7 +251,7 @@
     "id": "marvel-eye-agamotto",
     "category": "item",
     "name": "阿戈摩托之眼",
-    "work": "奇异博士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "魔法护符",
       "侦测",
@@ -274,7 +274,7 @@
     "id": "marvel-scarlet-witch-chaos",
     "category": "ability",
     "name": "混沌魔法",
-    "work": "绯红女巫（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "概率操纵",
       "能量",
@@ -299,7 +299,7 @@
     "id": "marvel-vision-density",
     "category": "ability",
     "name": "密度操纵",
-    "work": "复仇者联盟（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "相位",
       "密度",
@@ -324,7 +324,7 @@
     "id": "marvel-antman-pym-particles",
     "category": "system",
     "name": "皮姆粒子尺寸操纵",
-    "work": "蚁人（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "尺寸变化",
       "质量操纵",
@@ -349,7 +349,7 @@
     "id": "marvel-wasp-bio-stings",
     "category": "ability",
     "name": "黄蜂生物能量爆发",
-    "work": "黄蜂女（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "能量爆发",
       "飞行",
@@ -374,7 +374,7 @@
     "id": "marvel-black-panther-habit",
     "category": "item",
     "name": "黑豹振金战衣",
-    "work": "黑豹（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "战衣",
       "振金",
@@ -399,7 +399,7 @@
     "id": "marvel-falcon-wings",
     "category": "item",
     "name": "猎鹰飞行翼装",
-    "work": "猎鹰（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "飞行装备",
       "翼装",
@@ -424,7 +424,7 @@
     "id": "marvel-daredevil-senses",
     "category": "ability",
     "name": "超常感官与回声定位",
-    "work": "夜魔侠（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "感官强化",
       "回声定位",
@@ -447,7 +447,7 @@
     "id": "marvel-luke-cage-skin",
     "category": "ability",
     "name": "不破皮肤与增强力量",
-    "work": "卢克·凯奇（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "防弹",
       "耐久",
@@ -470,7 +470,7 @@
     "id": "marvel-ms-marvel-embiggen",
     "category": "ability",
     "name": "延展与巨化",
-    "work": "惊奇女士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "体型变化",
       "延展",
@@ -495,7 +495,7 @@
     "id": "marvel-captain-marvel-energy",
     "category": "ability",
     "name": "光子能量吸收与投射",
-    "work": "惊奇队长（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "能量吸收",
       "飞行",
@@ -520,7 +520,7 @@
     "id": "marvel-thing-rock-body",
     "category": "ability",
     "name": "岩石躯体与巨力",
-    "work": "神奇四侠（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "岩石皮肤",
       "巨力",
@@ -543,7 +543,7 @@
     "id": "marvel-ghost-rider-penance",
     "category": "ability",
     "name": "忏悔之视",
-    "work": "恶灵骑士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "灵魂攻击",
       "惩罚",
@@ -568,7 +568,7 @@
     "id": "marvel-ghost-rider-hellfire-chain",
     "category": "item",
     "name": "地狱火锁链",
-    "work": "恶灵骑士（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "地狱火",
       "锁链",
@@ -591,7 +591,7 @@
     "id": "marvel-venom-symbiote",
     "category": "ability",
     "name": "共生体能力组",
-    "work": "毒液（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "共生体",
       "拟态",
@@ -617,7 +617,7 @@
     "id": "marvel-magneto-magnetism",
     "category": "ability",
     "name": "电磁场操纵",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "磁力",
       "金属操纵",
@@ -642,7 +642,7 @@
     "id": "marvel-professor-x-telepathy",
     "category": "ability",
     "name": "心灵感应",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "读心",
       "心灵通讯",
@@ -667,7 +667,7 @@
     "id": "marvel-jean-grey-telekinesis",
     "category": "ability",
     "name": "念动力",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "念动力",
       "飞行",
@@ -692,7 +692,7 @@
     "id": "marvel-iceman-cryokinesis",
     "category": "ability",
     "name": "冰霜操纵",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "冰霜",
       "低温",
@@ -717,7 +717,7 @@
     "id": "marvel-cyclops-optic-blast",
     "category": "ability",
     "name": "震荡视线",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "能量射线",
       "冲击",
@@ -742,7 +742,7 @@
     "id": "marvel-rogue-power-absorption",
     "category": "ability",
     "name": "接触式能力与记忆吸收",
-    "work": "X战警（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "能力吸收",
       "记忆读取",
@@ -767,7 +767,7 @@
     "id": "marvel-quicksilver-speed",
     "category": "ability",
     "name": "超高速移动与反应",
-    "work": "复仇者联盟（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "超速",
       "反应强化",
@@ -790,7 +790,7 @@
     "id": "marvel-black-widow-training",
     "category": "skill",
     "name": "黑寡妇特工训练",
-    "work": "黑寡妇（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "格斗",
       "潜入",
@@ -813,7 +813,7 @@
     "id": "marvel-shang-chi-martial-arts",
     "category": "skill",
     "name": "截拳与多流派武术",
-    "work": "上气（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "武术",
       "反制",
@@ -836,7 +836,7 @@
     "id": "marvel-black-bolt-voice",
     "category": "ability",
     "name": "破坏性声波",
-    "work": "异人族（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "声波",
       "震荡",
@@ -861,7 +861,7 @@
     "id": "marvel-infinity-gauntlet",
     "category": "item",
     "name": "无限手套与六颗无限宝石",
-    "work": "Marvel 宇宙",
+    "work": "漫威",
     "tags": [
       "宇宙神器",
       "现实改写",
@@ -886,7 +886,7 @@
     "id": "marvel-cosmic-cube",
     "category": "item",
     "name": "宇宙立方",
-    "work": "Marvel 宇宙",
+    "work": "漫威",
     "tags": [
       "现实改写",
       "能量操纵",
@@ -911,7 +911,7 @@
     "id": "marvel-quantum-bands",
     "category": "item",
     "name": "量子手环",
-    "work": "Marvel 宇宙",
+    "work": "漫威",
     "tags": [
       "宇宙能量",
       "能量构造",
@@ -934,7 +934,7 @@
     "id": "marvel-deadpool-healing",
     "category": "ability",
     "name": "不死再生因子",
-    "work": "死侍（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "再生",
       "不死",
@@ -957,7 +957,7 @@
     "id": "marvel-hawkeye-archery",
     "category": "skill",
     "name": "鹰眼极限弓术",
-    "work": "鹰眼（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "弓术",
       "精准射击",
@@ -980,7 +980,7 @@
     "id": "marvel-mister-fantastic-elasticity",
     "category": "ability",
     "name": "弹性身体",
-    "work": "神奇四侠（Marvel Comics）",
+    "work": "漫威",
     "tags": [
       "延展",
       "变形",

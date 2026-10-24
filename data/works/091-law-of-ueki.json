@@ -1,0 +1,159 @@
+[
+  {
+    "id": "ueki-blank-talent",
+    "category": "ability",
+    "name": "空白之才",
+    "work": "植木的法则",
+    "tags": [
+      "空白之才",
+      "创造",
+      "才"
+    ],
+    "description": "可以任意创造“才能”的终极才能。",
+    "effects": [
+      "任意生成新的才能（将A变成B的能力）并赋予使用者。",
+      "可自行组合出适合战况的新能力。"
+    ],
+    "requirements": [
+      "将想要获得的才能定型并创造。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-ueki-talent",
+    "category": "ability",
+    "name": "才能·垃圾变化树（植木耕助）",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "垃圾",
+      "树"
+    ],
+    "description": "把任何垃圾变成任何树木的才能。",
+    "effects": [
+      "将认定的垃圾变为任意种类的树木。",
+      "具有循环性：变出的树木一部分可再当作垃圾使用，比其他单向能力更灵活。",
+      "二级能力为“回归”，把变化对象还原/再变，战力更强。"
+    ],
+    "requirements": [
+      "选定“垃圾”后发动变化才能。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-roberto-talent",
+    "category": "ability",
+    "name": "才能·手巾变铁（罗贝多）",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "手巾",
+      "铁"
+    ],
+    "description": "把手中毛巾变成钢铁的才能。",
+    "effects": [
+      "将手巾（毛巾）变成铁质武器或防具。",
+      "二级能力为超磁力，可操控金属攻击。"
+    ],
+    "requirements": [
+      "持手巾发动变化才能。"
+    ],
+    "limits": [
+      "呼气时铁会变回手巾。"
+    ],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-nero-talent",
+    "category": "ability",
+    "name": "才能·声音变人像画（尼禄）",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "声音",
+      "画"
+    ],
+    "description": "将声音实体化为人物画的能力。",
+    "effects": [
+      "把声音转化为真实的人像画实体。",
+      "用于制造假象、欺骗与扰乱对手。"
+    ],
+    "requirements": [
+      "捕捉对象声音后发动变化才能。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-kapusan-talent",
+    "category": "ability",
+    "name": "才能·声音变冷冻气体（卡普桑）",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "声音",
+      "冷冻"
+    ],
+    "description": "把声音变成冷冻气体的才能。",
+    "effects": [
+      "将声音转化为冷冻气体冻结目标。",
+      "二级能力：被冻住的物体变得像曲奇一样易碎，可一击击碎。"
+    ],
+    "requirements": [
+      "发出声音并以才能将其转化为冷冻气体。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-bead-bomb",
+    "category": "ability",
+    "name": "才能·珠子变炸弹",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "珠子",
+      "炸弹"
+    ],
+    "description": "把珠子变成炸弹的才能。",
+    "effects": [
+      "将手中的珠子变化为可引爆的炸弹。",
+      "可大量携带珠子作为弹药，投掷引爆。"
+    ],
+    "requirements": [
+      "持珠子发动变化才能后投出引爆。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "ueki-glasses-fan",
+    "category": "ability",
+    "name": "才能·对手变眼镜迷",
+    "work": "植木的法则",
+    "tags": [
+      "才能",
+      "变化",
+      "对手"
+    ],
+    "description": "把对手变成眼镜迷的才能。",
+    "effects": [
+      "将目标对手变成沉迷眼镜的角色，使其战斗力大幅下降。",
+      "属于单向变形类才能。"
+    ],
+    "requirements": [
+      "锁定对手后发动变化才能。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]

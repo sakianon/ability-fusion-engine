@@ -3,7 +3,7 @@
     "id": "dc-superman-kryptonian-physiology",
     "category": "ability",
     "name": "氪星生理能力",
-    "work": "超人（DC Comics）",
+    "work": "DC",
     "tags": [
       "超力量",
       "飞行",
@@ -28,7 +28,7 @@
     "id": "dc-batman-detective",
     "category": "skill",
     "name": "世界级侦探与战术训练",
-    "work": "蝙蝠侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "侦查",
       "格斗",
@@ -51,7 +51,7 @@
     "id": "dc-batman-utility-belt",
     "category": "item",
     "name": "蝙蝠腰带",
-    "work": "蝙蝠侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "多功能装备",
       "侦察",
@@ -76,7 +76,7 @@
     "id": "dc-wonder-woman-lasso",
     "category": "item",
     "name": "真言套索",
-    "work": "神奇女侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "魔法绳索",
       "束缚",
@@ -99,7 +99,7 @@
     "id": "dc-wonder-woman-bracelets",
     "category": "item",
     "name": "神力护腕",
-    "work": "神奇女侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "防御",
       "偏转",
@@ -122,7 +122,7 @@
     "id": "dc-wonder-woman-tiara",
     "category": "item",
     "name": "神奇女侠冠冕",
-    "work": "神奇女侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "投掷武器",
       "锐器",
@@ -145,7 +145,7 @@
     "id": "dc-flash-speed-force",
     "category": "ability",
     "name": "神速力",
-    "work": "闪电侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "超速",
       "时间效应",
@@ -170,7 +170,7 @@
     "id": "dc-green-lantern-ring",
     "category": "item",
     "name": "绿灯戒指",
-    "work": "绿灯军团（DC Comics）",
+    "work": "DC",
     "tags": [
       "能量构造",
       "护盾",
@@ -195,7 +195,7 @@
     "id": "dc-yellow-lantern-ring",
     "category": "item",
     "name": "黄灯戒指",
-    "work": "黄灯军团（DC Comics）",
+    "work": "DC",
     "tags": [
       "恐惧能量",
       "能量构造",
@@ -220,7 +220,7 @@
     "id": "dc-aquaman-trident",
     "category": "item",
     "name": "波塞冬三叉戟",
-    "work": "海王（DC Comics）",
+    "work": "DC",
     "tags": [
       "三叉戟",
       "海洋操纵",
@@ -245,7 +245,7 @@
     "id": "dc-aquaman-atlantean-physiology",
     "category": "ability",
     "name": "亚特兰蒂斯生理能力",
-    "work": "海王（DC Comics）",
+    "work": "DC",
     "tags": [
       "水下呼吸",
       "耐压",
@@ -270,7 +270,7 @@
     "id": "dc-cyborg-technopathy",
     "category": "ability",
     "name": "机械接口与网络控制",
-    "work": "钢骨（DC Comics）",
+    "work": "DC",
     "tags": [
       "赛博格",
       "黑客",
@@ -295,7 +295,7 @@
     "id": "dc-martian-manhunter-physiology",
     "category": "ability",
     "name": "火星人生理能力组",
-    "work": "火星猎人（DC Comics）",
+    "work": "DC",
     "tags": [
       "变形",
       "隐形",
@@ -320,7 +320,7 @@
     "id": "dc-martian-manhunter-telepathy",
     "category": "ability",
     "name": "火星心灵感应",
-    "work": "火星猎人（DC Comics）",
+    "work": "DC",
     "tags": [
       "读心",
       "心灵通讯",
@@ -345,7 +345,7 @@
     "id": "dc-zatanna-backward-magic",
     "category": "ability",
     "name": "倒语魔法",
-    "work": "Zatanna（DC Comics）",
+    "work": "DC",
     "tags": [
       "咒语",
       "现实操纵",
@@ -370,7 +370,7 @@
     "id": "dc-shazam-lightning",
     "category": "ability",
     "name": "沙赞魔法闪电",
-    "work": "沙赞（DC Comics）",
+    "work": "DC",
     "tags": [
       "变身",
       "闪电",
@@ -395,7 +395,7 @@
     "id": "dc-green-arrow-archery",
     "category": "skill",
     "name": "顶级弓术与特制箭矢",
-    "work": "绿箭侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "弓术",
       "精准射击",
@@ -418,7 +418,7 @@
     "id": "dc-black-canary-sonic-cry",
     "category": "ability",
     "name": "金丝雀尖叫",
-    "work": "黑金丝雀（DC Comics）",
+    "work": "DC",
     "tags": [
       "声波",
       "震荡",
@@ -443,7 +443,7 @@
     "id": "dc-blue-beetle-scarab",
     "category": "item",
     "name": "圣甲虫外星战甲",
-    "work": "蓝甲虫（DC Comics）",
+    "work": "DC",
     "tags": [
       "外星战甲",
       "武器构造",
@@ -468,7 +468,7 @@
     "id": "dc-constantine-occult",
     "category": "skill",
     "name": "康斯坦丁秘术与驱魔",
-    "work": "康斯坦丁（DC Comics）",
+    "work": "DC",
     "tags": [
       "驱魔",
       "召唤",
@@ -493,7 +493,7 @@
     "id": "dc-doctor-fate-helmet",
     "category": "item",
     "name": "命运头盔",
-    "work": "命运博士（DC Comics）",
+    "work": "DC",
     "tags": [
       "魔法神器",
       "预知",
@@ -520,7 +520,7 @@
     "id": "dc-atom-size-change",
     "category": "ability",
     "name": "原子级尺寸变化",
-    "work": "原子侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "微型化",
       "尺寸变化",
@@ -546,7 +546,7 @@
     "id": "dc-firestorm-matrix",
     "category": "ability",
     "name": "火风暴矩阵",
-    "work": "火风暴（DC Comics）",
+    "work": "DC",
     "tags": [
       "物质转化",
       "核能",
@@ -571,7 +571,7 @@
     "id": "dc-plastic-man-elasticity",
     "category": "ability",
     "name": "超弹性变形",
-    "work": "塑胶人（DC Comics）",
+    "work": "DC",
     "tags": [
       "变形",
       "延展",
@@ -596,7 +596,7 @@
     "id": "dc-raven-empathic-soul-self",
     "category": "ability",
     "name": "灵魂自我与情绪感知",
-    "work": "渡鸦（DC Comics）",
+    "work": "DC",
     "tags": [
       "灵魂投射",
       "情绪感知",
@@ -622,7 +622,7 @@
     "id": "dc-doomsday-adaptation",
     "category": "ability",
     "name": "进化适应与复生",
-    "work": "毁灭日（DC Comics）",
+    "work": "DC",
     "tags": [
       "适应进化",
       "再生",
@@ -645,7 +645,7 @@
     "id": "dc-lobo-regeneration",
     "category": "ability",
     "name": "暴力再生与不死体质",
-    "work": "暴狼（DC Comics）",
+    "work": "DC",
     "tags": [
       "再生",
       "耐久",
@@ -668,7 +668,7 @@
     "id": "dc-mother-box",
     "category": "item",
     "name": "母盒",
-    "work": "新神（DC Comics）",
+    "work": "DC",
     "tags": [
       "外星科技",
       "传送",
@@ -693,7 +693,7 @@
     "id": "dc-father-box",
     "category": "item",
     "name": "父盒",
-    "work": "新神（DC Comics）",
+    "work": "DC",
     "tags": [
       "外星科技",
       "传送",
@@ -718,7 +718,7 @@
     "id": "dc-kryptonite-green",
     "category": "item",
     "name": "绿氪石辐射源",
-    "work": "超人（DC Comics）",
+    "work": "DC",
     "tags": [
       "氪石",
       "辐射",
@@ -743,7 +743,7 @@
     "id": "dc-phantom-zone-projector",
     "category": "item",
     "name": "幻影地带投影器",
-    "work": "超人（DC Comics）",
+    "work": "DC",
     "tags": [
       "异空间",
       "放逐",
@@ -768,7 +768,7 @@
     "id": "dc-lex-power-suit",
     "category": "item",
     "name": "莱克斯动力战甲",
-    "work": "莱克斯·卢瑟（DC Comics）",
+    "work": "DC",
     "tags": [
       "动力装甲",
       "能量炮",
@@ -793,7 +793,7 @@
     "id": "dc-red-tornado-wind",
     "category": "ability",
     "name": "气流操纵",
-    "work": "正义联盟（DC Comics）",
+    "work": "DC",
     "tags": [
       "风力",
       "龙卷",
@@ -818,7 +818,7 @@
     "id": "dc-killer-frost-cryokinesis",
     "category": "ability",
     "name": "吸热与冰霜操纵",
-    "work": "冰霜杀手（DC Comics）",
+    "work": "DC",
     "tags": [
       "低温",
       "冰霜",
@@ -843,7 +843,7 @@
     "id": "dc-starfire-energy",
     "category": "ability",
     "name": "星火能量操纵",
-    "work": "少年泰坦（DC Comics）",
+    "work": "DC",
     "tags": [
       "能量投射",
       "飞行",
@@ -868,7 +868,7 @@
     "id": "dc-beast-boy-animal-shifting",
     "category": "ability",
     "name": "动物变形",
-    "work": "少年泰坦（DC Comics）",
+    "work": "DC",
     "tags": [
       "变形",
       "动物能力",
@@ -893,7 +893,7 @@
     "id": "dc-doctor-midnite-visor",
     "category": "item",
     "name": "午夜博士红外护目镜",
-    "work": "DC 宇宙",
+    "work": "DC",
     "tags": [
       "视觉辅助",
       "热感知",
@@ -918,7 +918,7 @@
     "id": "dc-mister-terrific-t-spheres",
     "category": "item",
     "name": "T球群",
-    "work": "正义协会（DC Comics）",
+    "work": "DC",
     "tags": [
       "无人机",
       "扫描",
@@ -943,7 +943,7 @@
     "id": "dc-omega-beams",
     "category": "ability",
     "name": "欧米伽射线",
-    "work": "达克赛德（DC Comics）",
+    "work": "DC",
     "tags": [
       "追踪光束",
       "能量攻击",
@@ -968,7 +968,7 @@
     "id": "dc-mister-mxyzptlk-reality",
     "category": "ability",
     "name": "第五维现实操纵",
-    "work": "第五维生物（DC Comics）",
+    "work": "DC",
     "tags": [
       "现实改写",
       "空间操纵",
@@ -993,7 +993,7 @@
     "id": "dc-phantom-stranger-mystic",
     "category": "ability",
     "name": "幽灵陌客神秘能力",
-    "work": "幽灵陌客（DC Comics）",
+    "work": "DC",
     "tags": [
       "传送",
       "预知",
@@ -1018,7 +1018,7 @@
     "id": "dc-black-lightning-electrokinesis",
     "category": "ability",
     "name": "电流操纵",
-    "work": "黑闪电（DC Comics）",
+    "work": "DC",
     "tags": [
       "电击",
       "电磁场",
@@ -1043,7 +1043,7 @@
     "id": "dc-parademon-flight",
     "category": "ability",
     "name": "类魔飞行与外星生理",
-    "work": "天启星类魔（DC Comics）",
+    "work": "DC",
     "tags": [
       "飞行",
       "增强力量",
@@ -1068,7 +1068,7 @@
     "id": "dc-mister-miracle-escape",
     "category": "skill",
     "name": "奇迹先生逃脱术",
-    "work": "奇迹先生（DC Comics）",
+    "work": "DC",
     "tags": [
       "逃脱",
       "机关破解",
@@ -1091,7 +1091,7 @@
     "id": "dc-vixen-tantu-totem",
     "category": "item",
     "name": "坦图图腾",
-    "work": "Vixen（DC Comics）",
+    "work": "DC",
     "tags": [
       "图腾",
       "动物能力",
@@ -1116,7 +1116,7 @@
     "id": "dc-gorilla-grodd-telepathy",
     "category": "ability",
     "name": "格鲁德心灵感应",
-    "work": "格鲁德（DC Comics）",
+    "work": "DC",
     "tags": [
       "读心",
       "精神控制",
@@ -1141,7 +1141,7 @@
     "id": "dc-hawkman-nth-metal",
     "category": "item",
     "name": "第九金属装备",
-    "work": "鹰侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "飞行",
       "重力操纵",
@@ -1166,7 +1166,7 @@
     "id": "dc-constantine-sigil-wards",
     "category": "item",
     "name": "驱魔符印与护符",
-    "work": "康斯坦丁（DC Comics）",
+    "work": "DC",
     "tags": [
       "符印",
       "防护",
@@ -1191,7 +1191,7 @@
     "id": "dc-anti-life-equation",
     "category": "system",
     "name": "反生命方程",
-    "work": "达克赛德与反生命方程（DC Comics）",
+    "work": "DC",
     "tags": [
       "精神控制",
       "自由意志抹除",
@@ -1216,7 +1216,7 @@
     "id": "dc-katana-soul-taker",
     "category": "item",
     "name": "夺魂之刃",
-    "work": "武士刀（DC Comics）",
+    "work": "DC",
     "tags": [
       "灵魂封存",
       "武士刀",
@@ -1241,7 +1241,7 @@
     "id": "dc-black-adam-lightning",
     "category": "ability",
     "name": "黑亚当神力与闪电",
-    "work": "黑亚当（DC Comics）",
+    "work": "DC",
     "tags": [
       "魔法闪电",
       "力量",
@@ -1266,7 +1266,7 @@
     "id": "dc-static-electricity",
     "category": "ability",
     "name": "静电电磁操纵",
-    "work": "静电侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "电磁操纵",
       "滑翔",
@@ -1291,7 +1291,7 @@
     "id": "dc-stargirl-cosmic-staff",
     "category": "item",
     "name": "宇宙权杖",
-    "work": "星少女（DC Comics）",
+    "work": "DC",
     "tags": [
       "飞行",
       "能量束",
@@ -1316,7 +1316,7 @@
     "id": "dc-red-tornado-android-body",
     "category": "ability",
     "name": "安卓躯体与传感器",
-    "work": "正义联盟（DC Comics）",
+    "work": "DC",
     "tags": [
       "机械躯体",
       "传感器",
@@ -1339,7 +1339,7 @@
     "id": "dc-gorilla-grodd-strength",
     "category": "ability",
     "name": "格鲁德强化力量与耐久",
-    "work": "格鲁德（DC Comics）",
+    "work": "DC",
     "tags": [
       "超力量",
       "耐久",
@@ -1362,7 +1362,7 @@
     "id": "dc-swamp-thing-green",
     "category": "ability",
     "name": "绿色原力连接与植物化身",
-    "work": "沼泽怪物（DC Comics）",
+    "work": "DC",
     "tags": [
       "植物操纵",
       "再生",
@@ -1387,7 +1387,7 @@
     "id": "dc-cosmic-treadmill",
     "category": "item",
     "name": "宇宙跑步机",
-    "work": "闪电侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "时间旅行",
       "维度定位",
@@ -1412,7 +1412,7 @@
     "id": "dc-invisible-jet",
     "category": "item",
     "name": "隐形喷射机",
-    "work": "神奇女侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "隐形载具",
       "飞行",
@@ -1437,7 +1437,7 @@
     "id": "dc-green-arrow-trick-arrows",
     "category": "item",
     "name": "特制箭矢组合",
-    "work": "绿箭侠（DC Comics）",
+    "work": "DC",
     "tags": [
       "箭矢装备",
       "控制",

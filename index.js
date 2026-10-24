@@ -196,7 +196,7 @@ async function loadAbilities() {
       if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
       return response.json();
     }));
-    const loaded = normalizeAbilities(responses.flatMap((items) => Array.isArray(items) ? items : []));
+    const loaded = normalizeAbilities(responses.flatMap((items) => Array.isArray(items) ? items : [items]));
     if (!loaded.length) throw new Error("empty ability data");
     baseAbilities = loaded;
     rebuildAbilities();

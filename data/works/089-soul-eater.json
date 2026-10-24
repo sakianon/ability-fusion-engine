@@ -1,0 +1,200 @@
+[
+  {
+    "id": "souleater-demon-weapon",
+    "category": "ability",
+    "name": "恶魔武器能力",
+    "work": "噬魂师",
+    "tags": [
+      "武器",
+      "变形",
+      "进化"
+    ],
+    "description": "在人形与武器形态之间自由变身的武器种族能力。",
+    "effects": [
+      "战斗时变形为武器（镰刀、忍者刀等）供搭档使用。",
+      "可通过吞噬灵魂积累成长：集齐99个鬼神之卵灵魂与1个魔女灵魂后进化为死神武器（Death Scythe）。"
+    ],
+    "requirements": [
+      "变形时由工匠握持，进化需主动吞噬对应灵魂。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-meister",
+    "category": "ability",
+    "name": "工匠之力（武器操使）",
+    "work": "噬魂师",
+    "tags": [
+      "工匠",
+      "操使",
+      "波长"
+    ],
+    "description": "与武器配对作战、驾驭武器并同步灵魂波长的能力。",
+    "effects": [
+      "操作武器形态进行战斗。",
+      "控制自身灵魂波长与武器共鸣，发挥武器全部性能。"
+    ],
+    "requirements": [
+      "握持搭档武器，并以波长与其同步。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-soul-resonance",
+    "category": "skill",
+    "name": "灵魂共鸣",
+    "work": "噬魂师",
+    "tags": [
+      "共鸣",
+      "灵魂",
+      "合体技"
+    ],
+    "description": "工匠与武器同步灵魂波长发动的合体技术。",
+    "effects": [
+      "同步后两者力量叠加，使出单人无法完成的强力攻击。",
+      "共鸣精度越高威力越强。"
+    ],
+    "requirements": [
+      "工匠与武器同时调整波长至同频。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-death-scythe",
+    "category": "ability",
+    "name": "死神武器化（Death Scythe）",
+    "work": "噬魂师",
+    "tags": [
+      "死神武器",
+      "进化",
+      "变身"
+    ],
+    "description": "武器吞噬足够灵魂后进化为死神专用武器的形态。",
+    "effects": [
+      "吞噬99个鬼神之卵灵魂与1个魔女灵魂后解锁Death Scythe形态。",
+      "进化后武器威力、性能大幅提升，可被死神直接使用。"
+    ],
+    "requirements": [
+      "以武器形态吞噬指定灵魂后进化。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-witch-power",
+    "category": "ability",
+    "name": "魔女之力",
+    "work": "噬魂师",
+    "tags": [
+      "魔女",
+      "魔法",
+      "灵魂"
+    ],
+    "description": "魔女灵魂赋予的魔法能力，可行使高阶魔法。",
+    "effects": [
+      "可使用高等级魔法（如大魔女的空间魔法）。",
+      "魔女灵魂与常人不同，可作为死神武器的最终进化素材。"
+    ],
+    "requirements": [
+      "以灵魂波长驱动魔法术式。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-anti-demon-wave",
+    "category": "ability",
+    "name": "退魔波长",
+    "work": "噬魂师",
+    "tags": [
+      "波长",
+      "退魔",
+      "克制"
+    ],
+    "description": "对魔女与妖异等目标特攻的灵魂波长。",
+    "effects": [
+      "以退魔波长攻击时对魔女、鬼神系目标造成额外效果。",
+      "可压制目标的灵魂波长。"
+    ],
+    "requirements": [
+      "将攻击灌入退魔波长后命中目标。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-soul-eater-weapon",
+    "category": "item",
+    "name": "武器·SOUL（镰刀）",
+    "work": "噬魂师",
+    "tags": [
+      "武器",
+      "镰刀",
+      "搭档"
+    ],
+    "description": "可变形为镰刀的恶魔武器，供工匠挥动作战。",
+    "effects": [
+      "镰刀形态具备强力斩击，可配合工匠进行灵魂共鸣技。",
+      "锋利度与共鸣程度挂钩。"
+    ],
+    "requirements": [
+      "由工匠握持并注入波长激活。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-tsubaki",
+    "category": "item",
+    "name": "武器·椿（暗器）",
+    "work": "噬魂师",
+    "tags": [
+      "武器",
+      "暗器",
+      "变形"
+    ],
+    "description": "忍者刀系的暗器型恶魔武器。",
+    "effects": [
+      "可变形为多种暗器形态供工匠使用。",
+      "适合快速连击与潜行作战。"
+    ],
+    "requirements": [
+      "由工匠握持并变形为所需暗器。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  },
+  {
+    "id": "souleater-spirit-sickle",
+    "category": "item",
+    "name": "武器·苏比利特（漆黑镰刀）",
+    "work": "噬魂师",
+    "tags": [
+      "武器",
+      "镰刀",
+      "死神武器"
+    ],
+    "description": "Host驻校死神武器苏比利特，本体为漆黑的镰刀。",
+    "effects": [
+      "本体是漆黑的镰刀，属于死神武器（Death Scythe）级别。",
+      "拥有极强的斩击力，可配合工匠进行灵魂共鸣技。"
+    ],
+    "requirements": [
+      "由工匠握持并同步波长使用。"
+    ],
+    "limits": [],
+    "costs": [],
+    "stages": []
+  }
+]
