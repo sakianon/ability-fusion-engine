@@ -856,12 +856,9 @@ function updatePresetPicker() {
   const button = panelRoot.querySelector("#afe-preset-select");
   const label = panelRoot.querySelector("#afe-preset-select-label");
   if (label) {
-    label.textContent = preset
-      ? preset.name
-      : (settings.presets.length ? "选择预设组…" : "暂无预设");
+    label.textContent = preset ? preset.name : "选择预设组";
   }
   if (button) {
-    button.disabled = settings.presets.length === 0;
     button.setAttribute("aria-expanded", String(Boolean(presetMenu && !presetMenu.hidden)));
   }
   if (presetMenu) {
@@ -1124,12 +1121,12 @@ function deleteSelectedPreset() {
     setStatus("先选择一个要删除的预设组。");
     return;
   }
-  if (!globalThis.confirm?.(`确定删除预设「${preset.name}」吗？当前选择不会改变。`)) return;
+  if (!globalThis.confirm?.(`确定删除预设「${preset.name}」吗？删除后会回到无预设状态，当前外挂也会清空。`)) return;
   settings.presets = settings.presets.filter((item) => item.id !== preset.id);
-  presetSelection = "";
   saveSettings();
   renderPresets();
-  setStatus(`已删除预设「${preset.name}」，当前选择未改变。`);
+  clearPresetAndLoadout();
+  setStatus(`已删除预设「${preset.name}」，已回到无预设状态并清空当前外挂。`);
 }
 
 function syncPresetControls({ fillName = false } = {}) {
@@ -1155,7 +1152,7 @@ function renderPresets() {
   const menu = ensurePresetMenu();
   const availableIds = new Set(abilities.map((ability) => ability.id));
   menu.replaceChildren();
-  menu.append(createPresetOption("", presets.length ? "选择预设组…" : "暂无预设", presetSelection === ""));
+  menu.append(createPresetOption("", "选择预设组", presetSelection === ""));
   for (const preset of presets) {
     const missing = abilities.length
       ? preset.selectedIds.filter((id) => !availableIds.has(id)).length
