@@ -962,6 +962,21 @@ function renderMasterSwitch() {
   panelRoot.querySelector("#afe-master-state").textContent = enabled ? "正在注入" : "已关闭";
 }
 
+function syncLoadoutHeight() {
+  if (!panelRoot) return;
+  const library = panelRoot.querySelector(".afe-library");
+  const loadout = panelRoot.querySelector(".afe-loadout");
+  if (!library || !loadout) return;
+  if (globalThis.matchMedia?.("(max-width: 880px)")?.matches) {
+    loadout.style.height = "";
+    return;
+  }
+  const previous = loadout.style.height;
+  loadout.style.height = "0px";
+  const height = Math.round(library.getBoundingClientRect().height);
+  loadout.style.height = height > 0 ? `${height}px` : previous;
+}
+
 function renderPanel({ animate = false } = {}) {
   if (!panelRoot) return;
   clearDomSubscriptions();
@@ -1060,6 +1075,8 @@ function renderPanel({ animate = false } = {}) {
   if (editorModal) subscribeDom(editorModal, "click", (event) => {
     if (event.target === event.currentTarget) closeAbilityEditor();
   });
+  subscribeDom(globalThis, "resize", syncLoadoutHeight);
+  syncLoadoutHeight();
 }
 
 function refreshPanel() {
@@ -1110,6 +1127,7 @@ async function openPanel() {
   if (!panelRoot) await mountPanel();
   if (!panelShell) return;
   panelShell.hidden = false;
+  syncLoadoutHeight();
   menuEntry?.setAttribute("aria-expanded", "true");
   documentKeyHandler ??= (event) => {
     if (event.key !== "Escape") return;

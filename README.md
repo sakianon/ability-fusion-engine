@@ -13,7 +13,7 @@
 - 用户可以通过模板新建条目，也可以编辑和删除自己创建的条目；
 - 用户条目、修改覆盖和删除记录保存到 `extensionSettings.ability-fusion-engine`，不会改写仓库里的内置数据文件；
 - 加入、取消、只看已选；
-- 已选列表固定高度，选择较多时在面板内滚动；
+- 已选列表与外挂资料库等高，选择较多时在面板内滚动并隐藏滚动条；
 - 选择保存到 `extensionSettings.ability-fusion-engine`；
 - 可把当前选择保存为多个「预设组」，支持应用、覆盖和删除；
 - 预设组保存到 `extensionSettings.ability-fusion-engine`；
