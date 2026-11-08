@@ -937,8 +937,13 @@ function handlePresetMenuClick(event) {
   if (!option) return;
   const presetId = option.dataset.id ?? "";
   closePresetMenu({ focusButton: true });
+  if (!presetId) {
+    clearPresetAndLoadout();
+    return;
+  }
+  const previousPresetId = presetSelection;
   setPresetSelection(presetId, { fillName: true });
-  if (presetId) applySelectedPreset();
+  applySelectedPreset({ previousPresetId });
 }
 
 function handlePresetMenuKeydown(event) {
@@ -1061,7 +1066,23 @@ function refreshSelectionUi({ animate = false } = {}) {
   renderLoadout(animate);
 }
 
-function applySelectedPreset() {
+function clearPresetAndLoadout() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const hadLoadout = settings.selectedIds.length > 0;
+  settings.selectedIds = [];
+  presetSelection = "";
+  const nameInput = panelRoot.querySelector("#afe-preset-name");
+  if (nameInput) nameInput.value = "";
+  saveSettings();
+  refreshSelectionUi({ animate: true });
+  syncPresetControls();
+  setStatus(hadLoadout
+    ? "已切换到无预设：预设选择和我的外挂都已清空。"
+    : "已切换到无预设：当前没有选择外挂。");
+}
+
+function applySelectedPreset({ previousPresetId = "" } = {}) {
   if (!panelRoot) return;
   const settings = getSettings();
   const preset = findPreset(settings, selectedPresetId());
@@ -1074,8 +1095,13 @@ function applySelectedPreset() {
   const missing = preset.selectedIds.length - nextIds.length;
 
   if (selectionIdsEqual(settings.selectedIds, nextIds)) {
-    setPresetSelection("");
-    setStatus(`当前选择已与预设「${preset.name}」一致，预设选择已归零。`);
+    if (previousPresetId === preset.id) {
+      clearPresetAndLoadout();
+      setStatus(`已取消预设「${preset.name}」，预设选择和我的外挂都已清空。`);
+    } else {
+      setPresetSelection(preset.id, { fillName: true });
+      setStatus(`已切换到预设「${preset.name}」；当前外挂内容与该预设一致。`);
+    }
     return;
   }
 
