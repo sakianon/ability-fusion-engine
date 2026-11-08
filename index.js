@@ -926,7 +926,7 @@ function syncPresetControls({ fillName = false } = {}) {
   const settings = getSettings();
   const preset = findPreset(settings, select?.value ?? "");
   const nameInput = panelRoot.querySelector("#afe-preset-name");
-  for (const id of ["#afe-preset-apply", "#afe-preset-overwrite", "#afe-preset-delete"]) {
+  for (const id of ["#afe-preset-overwrite", "#afe-preset-delete"]) {
     const button = panelRoot.querySelector(id);
     if (button) button.disabled = !preset;
   }
@@ -973,7 +973,7 @@ function syncLoadoutHeight() {
   }
   const previous = loadout.style.height;
   loadout.style.height = "0px";
-  const height = Math.round(library.getBoundingClientRect().height);
+  const height = library.getBoundingClientRect().height;
   loadout.style.height = height > 0 ? `${height}px` : previous;
 }
 
@@ -1035,9 +1035,11 @@ function renderPanel({ animate = false } = {}) {
     const remove = event.target.closest(".afe-remove-button");
     if (remove?.dataset.id) setSelected(remove.dataset.id, false);
   });
-  subscribeDom(panelRoot.querySelector("#afe-preset-select"), "change", () => syncPresetControls({ fillName: true }));
+  subscribeDom(panelRoot.querySelector("#afe-preset-select"), "change", (event) => {
+    syncPresetControls({ fillName: true });
+    if (event.currentTarget.value) applySelectedPreset();
+  });
   subscribeDom(panelRoot.querySelector("#afe-preset-save"), "click", savePresetAsNew);
-  subscribeDom(panelRoot.querySelector("#afe-preset-apply"), "click", applySelectedPreset);
   subscribeDom(panelRoot.querySelector("#afe-preset-overwrite"), "click", overwriteSelectedPreset);
   subscribeDom(panelRoot.querySelector("#afe-preset-delete"), "click", deleteSelectedPreset);
   subscribeDom(panelRoot.querySelector("#afe-preset-name"), "keydown", (event) => {
