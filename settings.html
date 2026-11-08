@@ -175,6 +175,23 @@
       </div>
       <div class="afe-loadout-meter" aria-hidden="true"><span></span></div>
       <p class="afe-loadout-note">生成前作为临时设定加入，不会改写角色卡正文。</p>
+      <section class="afe-presets" aria-labelledby="afe-presets-title">
+        <div class="afe-presets-heading">
+          <span id="afe-presets-title" class="afe-presets-title">预设组</span>
+          <span id="afe-preset-meta" class="afe-preset-meta">0 组</span>
+        </div>
+        <div class="afe-preset-row">
+          <select id="afe-preset-select" aria-label="选择预设组"><option value="">暂无预设</option></select>
+          <button id="afe-preset-apply" class="afe-preset-button" type="button" disabled>应用</button>
+          <button id="afe-preset-delete" class="afe-preset-button is-danger" type="button" disabled>删除</button>
+        </div>
+        <div class="afe-preset-row">
+          <input id="afe-preset-name" type="text" maxlength="40" placeholder="预设名称" aria-label="预设名称" autocomplete="off">
+          <button id="afe-preset-save" class="afe-preset-button is-primary" type="button">存为新预设</button>
+          <button id="afe-preset-overwrite" class="afe-preset-button" type="button" disabled>覆盖所选</button>
+        </div>
+        <p class="afe-preset-help">保存当前选择；应用预设会替换当前选择，不改注入开关。</p>
+      </section>
       <div id="afe-loadout-list" class="afe-loadout-list"></div>
       <p id="afe-loadout-empty" class="afe-loadout-empty"><span class="afe-empty-orbit" aria-hidden="true">◎</span>还没有选择。<br>从左侧资料库加入第一条外挂。</p>
       <div class="afe-loadout-footer"><span>提示词估算</span><strong id="afe-token-estimate">0 字</strong></div>

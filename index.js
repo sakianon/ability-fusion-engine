@@ -10,9 +10,12 @@ const DEFAULT_SETTINGS = Object.freeze({
   customAbilities: [],
   abilityOverrides: {},
   deletedIds: [],
+  presets: [],
 });
 
 const PAGE_SIZE = 6;
+const MAX_PRESETS = 50;
+const MAX_PRESET_NAME_LENGTH = 40;
 
 const CATEGORY_LABELS = Object.freeze({
   ability: "能力",
@@ -67,6 +70,7 @@ function getSettings() {
     deletedIds: Array.isArray(current.deletedIds)
       ? [...new Set(current.deletedIds.filter((id) => typeof id === "string"))]
       : [],
+    presets: normalizePresets(current.presets),
   };
   return context.extensionSettings[MODULE_ID];
 }
@@ -146,6 +150,28 @@ function normalizeAbilities(value) {
       costs: normalizeDetailItems(item.costs),
       stages: normalizeStages(item.stages),
     }));
+}
+
+function normalizePresets(value) {
+  if (!Array.isArray(value)) return [];
+  const seen = new Set();
+  const presets = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object") continue;
+    const id = typeof item.id === "string" ? item.id.trim() : "";
+    if (!id || seen.has(id)) continue;
+    const name = (typeof item.name === "string" ? item.name.trim() : "").slice(0, MAX_PRESET_NAME_LENGTH) || "未命名预设";
+    seen.add(id);
+    presets.push({
+      id,
+      name,
+      selectedIds: Array.isArray(item.selectedIds)
+        ? [...new Set(item.selectedIds.filter((id) => typeof id === "string" && id))]
+        : [],
+      updatedAt: Number.isFinite(item.updatedAt) ? item.updatedAt : 0,
+    });
+  }
+  return presets;
 }
 
 function normalizeStages(value) {
@@ -767,6 +793,169 @@ function renderLoadout(animate = false) {
   panelRoot.querySelector("#afe-token-estimate").textContent = `${selected.reduce((total, ability) => total + buildInjectionPrompt([ability]).length, 0)} 字`;
 }
 
+function makePresetId() {
+  const suffix = globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+  return `preset-${suffix}`;
+}
+
+function findPreset(settings, presetId) {
+  return settings.presets.find((preset) => preset.id === presetId) ?? null;
+}
+
+function selectedPresetId() {
+  return panelRoot?.querySelector("#afe-preset-select")?.value ?? "";
+}
+
+function uniquePresetName(name, presets, excludeId = "") {
+  const base = (name.trim() || "未命名预设").slice(0, MAX_PRESET_NAME_LENGTH);
+  const existing = new Set(
+    presets
+      .filter((preset) => preset.id !== excludeId)
+      .map((preset) => preset.name.toLowerCase()),
+  );
+  if (!existing.has(base.toLowerCase())) return base;
+  let index = 2;
+  while (index < 1000) {
+    const suffix = ` (${index})`;
+    const candidate = `${base.slice(0, MAX_PRESET_NAME_LENGTH - suffix.length)}${suffix}`;
+    if (!existing.has(candidate.toLowerCase())) return candidate;
+    index += 1;
+  }
+  return `${base.slice(0, MAX_PRESET_NAME_LENGTH - 8)}-${Date.now().toString().slice(-4)}`;
+}
+
+function savePresetAsNew() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  if (!settings.selectedIds.length) {
+    setStatus("当前没有选择外挂，先加入条目再保存预设。");
+    return;
+  }
+  if (settings.presets.length >= MAX_PRESETS) {
+    setStatus(`预设数量已达上限（${MAX_PRESETS} 组），请先删除不用的预设。`);
+    return;
+  }
+  const input = panelRoot.querySelector("#afe-preset-name");
+  const name = uniquePresetName(input?.value ?? "", settings.presets);
+  const preset = {
+    id: makePresetId(),
+    name,
+    selectedIds: [...settings.selectedIds],
+    updatedAt: Date.now(),
+  };
+  settings.presets = [preset, ...settings.presets];
+  saveSettings();
+  renderPanel();
+  const select = panelRoot.querySelector("#afe-preset-select");
+  if (select) select.value = preset.id;
+  if (input) input.value = name;
+  syncPresetControls();
+  setStatus(`已保存预设「${name}」，包含 ${preset.selectedIds.length} 项外挂。`);
+}
+
+function overwriteSelectedPreset() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const preset = findPreset(settings, selectedPresetId());
+  if (!preset) {
+    setStatus("先选择一个要覆盖的预设组。");
+    return;
+  }
+  if (!settings.selectedIds.length) {
+    setStatus("当前没有选择外挂，不能把预设覆盖为空。");
+    return;
+  }
+  if (!globalThis.confirm?.(`用当前选择覆盖预设「${preset.name}」吗？`)) return;
+  const input = panelRoot.querySelector("#afe-preset-name");
+  const name = uniquePresetName(input?.value || preset.name, settings.presets, preset.id);
+  preset.name = name;
+  preset.selectedIds = [...settings.selectedIds];
+  preset.updatedAt = Date.now();
+  settings.presets = [preset, ...settings.presets.filter((item) => item.id !== preset.id)];
+  saveSettings();
+  renderPanel();
+  const select = panelRoot.querySelector("#afe-preset-select");
+  if (select) select.value = preset.id;
+  if (input) input.value = name;
+  syncPresetControls();
+  setStatus(`已覆盖预设「${name}」，包含 ${preset.selectedIds.length} 项外挂。`);
+}
+
+function applySelectedPreset() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const preset = findPreset(settings, selectedPresetId());
+  if (!preset) {
+    setStatus("先选择一个要应用的预设组。");
+    return;
+  }
+  const availableIds = new Set(abilities.map((ability) => ability.id));
+  const nextIds = preset.selectedIds.filter((id) => availableIds.has(id));
+  const missing = preset.selectedIds.length - nextIds.length;
+  settings.selectedIds = [...new Set(nextIds)];
+  saveSettings();
+  renderPanel();
+  const select = panelRoot.querySelector("#afe-preset-select");
+  if (select) select.value = preset.id;
+  syncPresetControls();
+  setStatus(
+    missing
+      ? `已应用预设「${preset.name}」：${nextIds.length} 项可用，${missing} 项已失效。`
+      : `已应用预设「${preset.name}」，共 ${nextIds.length} 项外挂。`,
+  );
+}
+
+function deleteSelectedPreset() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const preset = findPreset(settings, selectedPresetId());
+  if (!preset) {
+    setStatus("先选择一个要删除的预设组。");
+    return;
+  }
+  if (!globalThis.confirm?.(`确定删除预设「${preset.name}」吗？当前选择不会改变。`)) return;
+  settings.presets = settings.presets.filter((item) => item.id !== preset.id);
+  saveSettings();
+  renderPanel();
+  setStatus(`已删除预设「${preset.name}」，当前选择未改变。`);
+}
+
+function syncPresetControls({ fillName = false } = {}) {
+  if (!panelRoot) return;
+  const select = panelRoot.querySelector("#afe-preset-select");
+  const settings = getSettings();
+  const preset = findPreset(settings, select?.value ?? "");
+  const nameInput = panelRoot.querySelector("#afe-preset-name");
+  for (const id of ["#afe-preset-apply", "#afe-preset-overwrite", "#afe-preset-delete"]) {
+    const button = panelRoot.querySelector(id);
+    if (button) button.disabled = !preset;
+  }
+  if (select) select.disabled = settings.presets.length === 0;
+  if (nameInput && preset && (fillName || !nameInput.value.trim())) nameInput.value = preset.name;
+}
+
+function renderPresets() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const select = panelRoot.querySelector("#afe-preset-select");
+  const meta = panelRoot.querySelector("#afe-preset-meta");
+  if (!select) return;
+  const current = select.value;
+  const presets = [...settings.presets].sort((a, b) => b.updatedAt - a.updatedAt);
+  const availableIds = new Set(abilities.map((ability) => ability.id));
+  select.replaceChildren(new Option(presets.length ? "选择预设组…" : "暂无预设", ""));
+  for (const preset of presets) {
+    const missing = abilities.length
+      ? preset.selectedIds.filter((id) => !availableIds.has(id)).length
+      : 0;
+    const suffix = missing ? `，${missing} 项失效` : "";
+    select.append(new Option(`${preset.name}（${preset.selectedIds.length} 项${suffix}）`, preset.id));
+  }
+  if (presets.some((preset) => preset.id === current)) select.value = current;
+  if (meta) meta.textContent = `${presets.length} 组`;
+  syncPresetControls();
+}
+
 function renderMasterSwitch() {
   const enabled = getSettings().enabled === true;
   panelRoot.querySelector("#afe-enabled").checked = enabled;
@@ -781,6 +970,7 @@ function renderPanel({ animate = false } = {}) {
   renderMasterSwitch();
   renderResults(animate);
   renderLoadout(animate);
+  renderPresets();
   setPanelError(dataLoadError);
 
   subscribeDom(panelRoot.querySelector("#afe-enabled"), "change", (event) => {
@@ -829,6 +1019,16 @@ function renderPanel({ animate = false } = {}) {
   subscribeDom(panelRoot.querySelector("#afe-loadout-list"), "click", (event) => {
     const remove = event.target.closest(".afe-remove-button");
     if (remove?.dataset.id) setSelected(remove.dataset.id, false);
+  });
+  subscribeDom(panelRoot.querySelector("#afe-preset-select"), "change", () => syncPresetControls({ fillName: true }));
+  subscribeDom(panelRoot.querySelector("#afe-preset-save"), "click", savePresetAsNew);
+  subscribeDom(panelRoot.querySelector("#afe-preset-apply"), "click", applySelectedPreset);
+  subscribeDom(panelRoot.querySelector("#afe-preset-overwrite"), "click", overwriteSelectedPreset);
+  subscribeDom(panelRoot.querySelector("#afe-preset-delete"), "click", deleteSelectedPreset);
+  subscribeDom(panelRoot.querySelector("#afe-preset-name"), "keydown", (event) => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    savePresetAsNew();
   });
   for (const button of panelRoot.querySelectorAll(".afe-category")) {
     subscribeDom(button, "click", () => {
