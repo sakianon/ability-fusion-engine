@@ -38,6 +38,9 @@ let detailTrigger = null;
 let workOptionsExpanded = false;
 let panelRoot = null;
 let panelShell = null;
+let presetSelection = "";
+let presetMenu = null;
+let presetMenuCleanup = null;
 let menuEntry = null;
 let menuEntryClickHandler = null;
 let menuEntryKeyHandler = null;
@@ -92,6 +95,15 @@ function subscribeDom(target, type, handler) {
 function clearDomSubscriptions() {
   for (const { target, type, handler } of domSubscriptions.splice(0)) {
     target.removeEventListener(type, handler);
+  }
+}
+
+function clearSubscriptionsWithin(root) {
+  for (let index = domSubscriptions.length - 1; index >= 0; index -= 1) {
+    const subscription = domSubscriptions[index];
+    if (!(subscription.target instanceof Node) || !root.contains(subscription.target)) continue;
+    subscription.target.removeEventListener(subscription.type, subscription.handler);
+    domSubscriptions.splice(index, 1);
   }
 }
 
@@ -265,11 +277,11 @@ function setSelected(id, selected) {
   saveSettings();
   const selectedOnly = panelRoot?.querySelector("#afe-selected-filter")?.getAttribute("aria-pressed") === "true";
   if (selectedOnly && !selected) {
-    refreshPanel();
+    renderResults();
   } else {
     updateAbilityCardSelection(id, selected);
-    renderLoadout();
   }
+  renderLoadout();
   setStatus(selected ? "已加入外挂，下次生成会带上它。" : "已取消外挂，下次生成不再带上它。");
 }
 
@@ -746,6 +758,7 @@ function renderResults(animate = false) {
   currentPage = Math.min(currentPage, totalPages);
   const start = (currentPage - 1) * PAGE_SIZE;
   results.classList.toggle("is-entering", animate);
+  clearSubscriptionsWithin(results);
   results.replaceChildren(...filtered.slice(start, start + PAGE_SIZE).map(createAbilityCard));
   panelRoot.querySelector("#afe-results-count").textContent = `${filtered.length} 条`;
   empty.hidden = filtered.length > 0;
@@ -803,7 +816,159 @@ function findPreset(settings, presetId) {
 }
 
 function selectedPresetId() {
-  return panelRoot?.querySelector("#afe-preset-select")?.value ?? "";
+  return presetSelection;
+}
+
+function setPresetSelection(presetId, { fillName = false } = {}) {
+  presetSelection = presetId || "";
+  syncPresetControls({ fillName });
+}
+
+function ensurePresetMenu() {
+  if (presetMenu?.isConnected) return presetMenu;
+  presetMenu = document.createElement("div");
+  presetMenu.id = "afe-preset-menu";
+  presetMenu.className = "afe-preset-menu";
+  presetMenu.setAttribute("role", "listbox");
+  presetMenu.setAttribute("aria-label", "预设组列表");
+  presetMenu.hidden = true;
+  presetMenu.addEventListener("click", handlePresetMenuClick);
+  presetMenu.addEventListener("keydown", handlePresetMenuKeydown);
+  document.body.append(presetMenu);
+  return presetMenu;
+}
+
+function createPresetOption(id, label, selected) {
+  const option = document.createElement("div");
+  option.className = "afe-preset-option";
+  option.dataset.id = id;
+  option.setAttribute("role", "option");
+  option.setAttribute("aria-selected", String(selected));
+  option.tabIndex = -1;
+  option.textContent = label;
+  return option;
+}
+
+function updatePresetPicker() {
+  if (!panelRoot) return;
+  const settings = getSettings();
+  const preset = findPreset(settings, presetSelection);
+  const button = panelRoot.querySelector("#afe-preset-select");
+  const label = panelRoot.querySelector("#afe-preset-select-label");
+  if (label) {
+    label.textContent = preset
+      ? preset.name
+      : (settings.presets.length ? "选择预设组…" : "暂无预设");
+  }
+  if (button) {
+    button.disabled = settings.presets.length === 0;
+    button.setAttribute("aria-expanded", String(Boolean(presetMenu && !presetMenu.hidden)));
+  }
+  if (presetMenu) {
+    for (const option of presetMenu.querySelectorAll(".afe-preset-option")) {
+      option.setAttribute("aria-selected", String(option.dataset.id === presetSelection));
+    }
+  }
+}
+
+function positionPresetMenu() {
+  if (!panelRoot || !presetMenu) return;
+  const button = panelRoot.querySelector("#afe-preset-select");
+  if (!button) return;
+  const rect = button.getBoundingClientRect();
+  const gap = 4;
+  const margin = 8;
+  const width = Math.max(rect.width, 180);
+  const maxLeft = Math.max(margin, globalThis.innerWidth - width - margin);
+  presetMenu.style.width = `${width}px`;
+  presetMenu.style.left = `${Math.min(Math.max(rect.left, margin), maxLeft)}px`;
+  const menuHeight = presetMenu.offsetHeight;
+  const below = rect.bottom + gap;
+  const above = rect.top - menuHeight - gap;
+  const fitsBelow = below + menuHeight <= globalThis.innerHeight - margin;
+  presetMenu.style.top = `${Math.max(margin, fitsBelow || above < margin ? below : above)}px`;
+}
+
+function openPresetMenu() {
+  if (!panelRoot) return;
+  const button = panelRoot.querySelector("#afe-preset-select");
+  if (!button || button.disabled) return;
+  const menu = ensurePresetMenu();
+  if (!menu.children.length) return;
+  closePresetMenu();
+  menu.hidden = false;
+  button.setAttribute("aria-expanded", "true");
+  positionPresetMenu();
+  const selected = menu.querySelector('.afe-preset-option[aria-selected="true"]')
+    ?? menu.querySelector(".afe-preset-option");
+  selected?.focus({ preventScroll: true });
+
+  const onPointerDown = (event) => {
+    if (menu.contains(event.target) || button.contains(event.target)) return;
+    closePresetMenu();
+  };
+  const onScroll = (event) => {
+    if (menu.contains(event.target)) return;
+    closePresetMenu();
+  };
+  const onResize = () => closePresetMenu();
+  document.addEventListener("pointerdown", onPointerDown, true);
+  document.addEventListener("scroll", onScroll, true);
+  globalThis.addEventListener("resize", onResize);
+  presetMenuCleanup = () => {
+    document.removeEventListener("pointerdown", onPointerDown, true);
+    document.removeEventListener("scroll", onScroll, true);
+    globalThis.removeEventListener("resize", onResize);
+  };
+}
+
+function closePresetMenu({ focusButton = false } = {}) {
+  if (!presetMenu) return;
+  presetMenu.hidden = true;
+  presetMenuCleanup?.();
+  presetMenuCleanup = null;
+  const button = panelRoot?.querySelector("#afe-preset-select");
+  if (button) button.setAttribute("aria-expanded", "false");
+  if (focusButton) button?.focus({ preventScroll: true });
+}
+
+function handlePresetMenuClick(event) {
+  const option = event.target.closest?.(".afe-preset-option");
+  if (!option) return;
+  const presetId = option.dataset.id ?? "";
+  closePresetMenu({ focusButton: true });
+  setPresetSelection(presetId, { fillName: true });
+  if (presetId) applySelectedPreset();
+}
+
+function handlePresetMenuKeydown(event) {
+  if (!presetMenu) return;
+  const options = [...presetMenu.querySelectorAll(".afe-preset-option")];
+  if (!options.length) return;
+  const index = options.indexOf(document.activeElement);
+  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    event.preventDefault();
+    const delta = event.key === "ArrowDown" ? 1 : -1;
+    const next = index < 0 ? 0 : Math.min(options.length - 1, Math.max(0, index + delta));
+    options[next].focus({ preventScroll: true });
+    return;
+  }
+  if (event.key === "Home" || event.key === "End") {
+    event.preventDefault();
+    options[event.key === "Home" ? 0 : options.length - 1].focus({ preventScroll: true });
+    return;
+  }
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    document.activeElement?.click?.();
+    return;
+  }
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closePresetMenu({ focusButton: true });
+    return;
+  }
+  if (event.key === "Tab") closePresetMenu();
 }
 
 function uniquePresetName(name, presets, excludeId = "") {
@@ -843,13 +1008,11 @@ function savePresetAsNew() {
     selectedIds: [...settings.selectedIds],
     updatedAt: Date.now(),
   };
-  settings.presets = [preset, ...settings.presets];
+  settings.presets = [...settings.presets, preset];
   saveSettings();
-  renderPanel();
-  const select = panelRoot.querySelector("#afe-preset-select");
-  if (select) select.value = preset.id;
+  presetSelection = preset.id;
+  renderPresets();
   if (input) input.value = name;
-  syncPresetControls();
   setStatus(`已保存预设「${name}」，包含 ${preset.selectedIds.length} 项外挂。`);
 }
 
@@ -871,14 +1034,31 @@ function overwriteSelectedPreset() {
   preset.name = name;
   preset.selectedIds = [...settings.selectedIds];
   preset.updatedAt = Date.now();
-  settings.presets = [preset, ...settings.presets.filter((item) => item.id !== preset.id)];
   saveSettings();
-  renderPanel();
-  const select = panelRoot.querySelector("#afe-preset-select");
-  if (select) select.value = preset.id;
+  presetSelection = preset.id;
+  renderPresets();
   if (input) input.value = name;
-  syncPresetControls();
   setStatus(`已覆盖预设「${name}」，包含 ${preset.selectedIds.length} 项外挂。`);
+}
+
+function selectionIdsEqual(left, right) {
+  if (left.length !== right.length) return false;
+  const selected = new Set(left);
+  return right.every((id) => selected.has(id));
+}
+
+function refreshSelectionUi({ animate = false } = {}) {
+  if (!panelRoot) return;
+  const selectedOnly = panelRoot.querySelector("#afe-selected-filter")?.getAttribute("aria-pressed") === "true";
+  if (selectedOnly) {
+    renderResults(animate);
+  } else {
+    for (const card of panelRoot.querySelectorAll(".afe-card")) {
+      const id = card.dataset.id;
+      if (id) updateAbilityCardSelection(id, isSelected(id));
+    }
+  }
+  renderLoadout(animate);
 }
 
 function applySelectedPreset() {
@@ -890,14 +1070,19 @@ function applySelectedPreset() {
     return;
   }
   const availableIds = new Set(abilities.map((ability) => ability.id));
-  const nextIds = preset.selectedIds.filter((id) => availableIds.has(id));
+  const nextIds = [...new Set(preset.selectedIds.filter((id) => availableIds.has(id)))];
   const missing = preset.selectedIds.length - nextIds.length;
-  settings.selectedIds = [...new Set(nextIds)];
+
+  if (selectionIdsEqual(settings.selectedIds, nextIds)) {
+    setPresetSelection("");
+    setStatus(`当前选择已与预设「${preset.name}」一致，预设选择已归零。`);
+    return;
+  }
+
+  settings.selectedIds = nextIds;
   saveSettings();
-  renderPanel();
-  const select = panelRoot.querySelector("#afe-preset-select");
-  if (select) select.value = preset.id;
-  syncPresetControls();
+  refreshSelectionUi({ animate: true });
+  setPresetSelection(preset.id, { fillName: true });
   setStatus(
     missing
       ? `已应用预设「${preset.name}」：${nextIds.length} 项可用，${missing} 项已失效。`
@@ -915,43 +1100,47 @@ function deleteSelectedPreset() {
   }
   if (!globalThis.confirm?.(`确定删除预设「${preset.name}」吗？当前选择不会改变。`)) return;
   settings.presets = settings.presets.filter((item) => item.id !== preset.id);
+  presetSelection = "";
   saveSettings();
-  renderPanel();
+  renderPresets();
   setStatus(`已删除预设「${preset.name}」，当前选择未改变。`);
 }
 
 function syncPresetControls({ fillName = false } = {}) {
   if (!panelRoot) return;
-  const select = panelRoot.querySelector("#afe-preset-select");
   const settings = getSettings();
-  const preset = findPreset(settings, select?.value ?? "");
+  const preset = findPreset(settings, presetSelection);
   const nameInput = panelRoot.querySelector("#afe-preset-name");
   for (const id of ["#afe-preset-overwrite", "#afe-preset-delete"]) {
     const button = panelRoot.querySelector(id);
     if (button) button.disabled = !preset;
   }
-  if (select) select.disabled = settings.presets.length === 0;
   if (nameInput && preset && (fillName || !nameInput.value.trim())) nameInput.value = preset.name;
+  updatePresetPicker();
 }
 
 function renderPresets() {
   if (!panelRoot) return;
   const settings = getSettings();
-  const select = panelRoot.querySelector("#afe-preset-select");
   const meta = panelRoot.querySelector("#afe-preset-meta");
-  if (!select) return;
-  const current = select.value;
-  const presets = [...settings.presets].sort((a, b) => b.updatedAt - a.updatedAt);
+  const presets = [...settings.presets];
+  if (presetSelection && !presets.some((preset) => preset.id === presetSelection)) presetSelection = "";
+  closePresetMenu();
+  const menu = ensurePresetMenu();
   const availableIds = new Set(abilities.map((ability) => ability.id));
-  select.replaceChildren(new Option(presets.length ? "选择预设组…" : "暂无预设", ""));
+  menu.replaceChildren();
+  menu.append(createPresetOption("", presets.length ? "选择预设组…" : "暂无预设", presetSelection === ""));
   for (const preset of presets) {
     const missing = abilities.length
       ? preset.selectedIds.filter((id) => !availableIds.has(id)).length
       : 0;
     const suffix = missing ? `，${missing} 项失效` : "";
-    select.append(new Option(`${preset.name}（${preset.selectedIds.length} 项${suffix}）`, preset.id));
+    menu.append(createPresetOption(
+      preset.id,
+      `${preset.name}（${preset.selectedIds.length} 项${suffix}）`,
+      preset.id === presetSelection,
+    ));
   }
-  if (presets.some((preset) => preset.id === current)) select.value = current;
   if (meta) meta.textContent = `${presets.length} 组`;
   syncPresetControls();
 }
@@ -960,21 +1149,6 @@ function renderMasterSwitch() {
   const enabled = getSettings().enabled === true;
   panelRoot.querySelector("#afe-enabled").checked = enabled;
   panelRoot.querySelector("#afe-master-state").textContent = enabled ? "正在注入" : "已关闭";
-}
-
-function syncLoadoutHeight() {
-  if (!panelRoot) return;
-  const library = panelRoot.querySelector(".afe-library");
-  const loadout = panelRoot.querySelector(".afe-loadout");
-  if (!library || !loadout) return;
-  if (globalThis.matchMedia?.("(max-width: 880px)")?.matches) {
-    loadout.style.height = "";
-    return;
-  }
-  const previous = loadout.style.height;
-  loadout.style.height = "0px";
-  const height = library.getBoundingClientRect().height;
-  loadout.style.height = height > 0 ? `${height}px` : previous;
 }
 
 function renderPanel({ animate = false } = {}) {
@@ -1035,10 +1209,18 @@ function renderPanel({ animate = false } = {}) {
     const remove = event.target.closest(".afe-remove-button");
     if (remove?.dataset.id) setSelected(remove.dataset.id, false);
   });
-  subscribeDom(panelRoot.querySelector("#afe-preset-select"), "change", (event) => {
-    syncPresetControls({ fillName: true });
-    if (event.currentTarget.value) applySelectedPreset();
-  });
+  const presetButton = panelRoot.querySelector("#afe-preset-select");
+  if (presetButton) {
+    subscribeDom(presetButton, "click", () => {
+      if (presetMenu && !presetMenu.hidden) closePresetMenu();
+      else openPresetMenu();
+    });
+    subscribeDom(presetButton, "keydown", (event) => {
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+      event.preventDefault();
+      openPresetMenu();
+    });
+  }
   subscribeDom(panelRoot.querySelector("#afe-preset-save"), "click", savePresetAsNew);
   subscribeDom(panelRoot.querySelector("#afe-preset-overwrite"), "click", overwriteSelectedPreset);
   subscribeDom(panelRoot.querySelector("#afe-preset-delete"), "click", deleteSelectedPreset);
@@ -1077,8 +1259,6 @@ function renderPanel({ animate = false } = {}) {
   if (editorModal) subscribeDom(editorModal, "click", (event) => {
     if (event.target === event.currentTarget) closeAbilityEditor();
   });
-  subscribeDom(globalThis, "resize", syncLoadoutHeight);
-  syncLoadoutHeight();
 }
 
 function refreshPanel() {
@@ -1129,7 +1309,6 @@ async function openPanel() {
   if (!panelRoot) await mountPanel();
   if (!panelShell) return;
   panelShell.hidden = false;
-  syncLoadoutHeight();
   menuEntry?.setAttribute("aria-expanded", "true");
   documentKeyHandler ??= (event) => {
     if (event.key !== "Escape") return;
@@ -1145,6 +1324,7 @@ function closePanel() {
   if (!panelShell) return;
   closeAbilityEditor({ restoreFocus: false });
   closeAbilityDetails({ restoreFocus: false });
+  closePresetMenu();
   panelShell.hidden = true;
   menuEntry?.setAttribute("aria-expanded", "false");
   if (documentKeyHandler) document.removeEventListener("keydown", documentKeyHandler);
@@ -1205,6 +1385,11 @@ function removePanel() {
   menuEntry = null;
   menuEntryClickHandler = null;
   menuEntryKeyHandler = null;
+  closePresetMenu();
+  presetMenu?.remove();
+  presetMenu = null;
+  presetMenuCleanup = null;
+  presetSelection = "";
   document.getElementById("afe-editor-modal")?.remove();
   document.getElementById("afe-detail-modal")?.remove();
   panelShell?.remove();

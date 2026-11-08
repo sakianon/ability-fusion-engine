@@ -165,6 +165,7 @@
       </div>
     </section>
 
+    <div class="afe-loadout-column">
     <aside class="afe-loadout" aria-labelledby="afe-loadout-title">
       <div class="afe-section-heading afe-loadout-heading">
         <div>
@@ -181,7 +182,10 @@
           <span id="afe-preset-meta" class="afe-preset-meta">0 组</span>
         </div>
         <div class="afe-preset-row afe-preset-pick-row">
-          <select id="afe-preset-select" aria-label="选择预设组"><option value="">暂无预设</option></select>
+          <button id="afe-preset-select" class="afe-preset-select" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="afe-preset-menu">
+            <span id="afe-preset-select-label">暂无预设</span>
+            <span class="afe-preset-caret" aria-hidden="true">⌄</span>
+          </button>
           <button id="afe-preset-delete" class="afe-preset-button is-danger" type="button" disabled>删除</button>
         </div>
         <div class="afe-preset-row afe-preset-save-row">
@@ -195,6 +199,7 @@
       <p id="afe-loadout-empty" class="afe-loadout-empty"><span class="afe-empty-orbit" aria-hidden="true">◎</span>还没有选择。<br>从左侧资料库加入第一条外挂。</p>
       <div class="afe-loadout-footer"><span>提示词估算</span><strong id="afe-token-estimate">0 字</strong></div>
     </aside>
+    </div>
   </div>
 
   <footer class="afe-footer">
